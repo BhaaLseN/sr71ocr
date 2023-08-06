@@ -7,7 +7,7 @@ For the original source see [www.sr-71.org](https://www.sr-71.org/blackbird/manu
 - [ ] Spellcheck
 - [ ] Cross-check the OCR against the original (again)
 - [ ] Create cross-references for plain-text (mainly figures and other sections)
-- [ ] Turn Warnings/Cautions/Notes into actual markup
+- [x] Turn Warnings/Cautions/Notes into actual markup
 - [ ] Move figures closer to their usage (or at least the most appropriate sub/section)
 - [ ] Split the large files into section (and maybe files)
 - [ ] Vectorize, redraw or at least touch-up images
