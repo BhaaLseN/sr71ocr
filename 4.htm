@@ -11847,8 +11847,8 @@
     <p>The technical objective cameras (TECHs) are turned on or off and pointed as the aircraft's along-track range to the next destination point coincides with the CP's along-track range to the next destination point. CPs bracket the target, with the turn-on control point at the same cross-track range as the target. The ANS computes the camera pointing angle required to cover the CP, and thus the target. (Actual target coordinates are not stored in the computer.) Camera CPs can be programmed along the turn line in Fixed-Range-To-Turn turns. Here the CP is located at the same radial distance from the turn line as the target.</p>
     <p>The ASARS utilizes control point information to generate required parameters which are sent via a 64 word serial data bus. It contains such items as: aircraft velocities, target vectors, gravity anomaly values and radar operating modes. This information allows the ASARS computer to generate the desired imaging commands.</p>
     <p>The mode commands to the TECH(s) are updated at each CP so that more than one sensor can be turned on or off at a single point. Dedicated CP's are required for ASARS operation. All CP's and FP's on a leg are processed on that leg, even if a mission planning error or a panel-filled change puts a CP or FP past the start turn point at the end of a leg.</p>
-    <p>ASARS Control Point MODE</p>
     <table border="1">
+      <caption>Figure 4-55: ASARS Control Point MODE</caption>
       <tbody>
         <tr>
           <td>
@@ -11953,7 +11953,6 @@
         </tr>
       </tbody>
     </table>
-    <p>Figure 4-55</p>
     <p>Control point information is displayed on the NCD panel. With the DATA SELECT switch in NORMAL the NCD can display either ASARS or non-ASARS fixpoint and control point ID's in SELECTED DATA window numbers 3 and 6. ASARS or non-ASARS information is alternately selectable via the ENTER/DISPLAY switch. ASARS control points in NORMAL are designated by AXXXX vice CXXXX for non-ASARS control points.</p>
     <p>ASARS control point mode information can be displayed on the NCD panel. This information is displayed in SELECTED DATA window number 3 with the DATA SELECT switch in CONT PT. ASARS control point mode information is shown in Figure 4-55.</p>
     <h3>Fix Points (FPs)</h3>
@@ -12046,8 +12045,8 @@
       <u>after</u>
       <span>the current "next tape-filled point" of each type will be utilized in the normal ANS sequence and no Track Leg Update is required (see Figure 4-56).</span>
     </p>
-    <p>ASARS Control Point CODE</p>
     <table border="1">
+      <caption>Figure 4-58: ASARS Control Point CODE</caption>
       <tbody>
         <tr>
           <td>
@@ -12127,7 +12126,6 @@
         </tr>
       </tbody>
     </table>
-    <p>Figure 4-58</p>
     <div class="note">
       <p>A FP/CP/DP in the 40-List must be deleted before a correction/modification can be made to that numbered point.</p>
     </div>
@@ -12157,8 +12155,8 @@
     <p>Skipping to a DP after starting great-circle navigation does not erase CP or FP operation on the original programmed leg following the current next DP. Consequently, skipping to D00011 to select the alternate route does not eliminate the sensor operation on the leg from D00002 to D00003. On the other hand, skipping to D00006 while enroute to D00004 will not eliminate the CP's and FP's along the original leg from D00004 to D00005, and the system will process these points. In this case, the sensors could be operated in their manual modes until back on the programmed mission course.</p>
     <h3>Direct Steer</h3>
     <p>The direct-steer procedure results in an immediate change in destination. When commanded, the ANS computes a new greatcircle course from the present position to the destination point selected or coordinates entered by the RSO. The aircraft turns to the new course immediately after the DIR STEER switch is pressed. The ANS computes new great-circle courses to the selected DP or coordinates until the aircraft has turned to within 2 degrees relative bearing to the destination. This results in the most direct path to the destination. If aircraft track subsequently deviates more than 2 degrees from command course, the direct steer is automatically restarted. When the DIRECT STEER procedure is performed, ANS operate commands to the sensors are turned off. The ADD ANYTIME FP and OPPORTUNITY Viewsight Fix procedures are usable while in DIRECT STEER if the aircraft track remains within 2 degrees of the bearing to the DP during the Fix procedure.</p>
-    <h3>ANS Bank Angle Vs Turn Radius For Various Mach Numbers Fat = -56°</h3>
     <table border="1">
+      <caption>Figure 4-59: ANS Bank Angle Vs Turn Radius For Various Mach Numbers (FAT = -56°)</caption>
       <tbody>
         <tr>
           <td>
@@ -13136,16 +13134,15 @@
         </tr>
       </tbody>
     </table>
-    <p>Figure 4-59</p>
     <h3>Track Leg Update</h3>
     <p>The Track Leg Update procedure allows the RSO to change the current ANS track leg. Any track leg segment in the mission may be selected. The RSO fills the ID code number of the beginning DP of the leg he desires.</p>
     <figure>
       <img src="images/4-60.jpg" alt="" />
       <figcaption>Figure 4-60: ANS Turn Radius Vs. True Airspeed &amp; bank Angle</figcaption>
     </figure>
-    <h3>Navigation Modes Vs Alignment Methods</h3>
     <table border="1">
-      <tbody>
+      <caption>Figure 4-61: Navigation Modes vs Alignment Methods</caption>
+      <thead>
         <tr>
           <td colspan="2">
             <p>NAVIGATION MODE</p>
@@ -13154,82 +13151,111 @@
             <p>ALIGNMENT METHOD WITH NDC -1070 COMPUTER</p>
           </td>
         </tr>
+      </thead>
+      <tbody>
         <tr>
-          <td>
-            <p>GROUND ACTIVATION</p>
+          <td class="rotate">
+            <p>
+              <b>GROUND ACTIVATION</b>
+            </p>
           </td>
           <td>
-            <p>ASTRO INERTIAL</p>
-            <p>INERTIAL ONLY</p>
+            <p>
+              <b>ASTRO INERTIAL</b>
+            </p>
+            <p>
+              <b>INERTIAL ONLY</b>
+            </p>
           </td>
           <td>
-            <p>GYROCOMPASSING</p>
-            <ul>
+            <p>
+              <b>GYROCOMPASSING (95 min 55 sec)</b>
+            </p>
+            <ul class="list-dash">
               <li>
-                <p>- Warm up 60 min</p>
+                <p>Warm up (60 min)</p>
               </li>
               <li>
-                <p>• Coarse align 6 min</p>
+                <p>Coarse align (6 min)</p>
               </li>
               <li>
-                <p>- Fine align 29 min 55 sec</p>
-              </li>
-            </ul>
-            <p>1st align - 12 min 15 sec 95 min 55 sec</p>
-            <p>slew 90° - 1 min 30 sec</p>
-            <p>2nd align- 16 min 10 sec</p>
-            <p>RAPID</p>
-            <ul>
-              <li>
-                <p>- Warmup 60 min )</p>
-              </li>
-              <li>
-                <p>- Coarse align 6 min &gt; 78 min 15 sec</p>
-              </li>
-              <li>
-                <p>- Fine align 12 min )</p>
+                <p>Fine align (29 min 55 sec)</p>
+                <ul class="list-none">
+                  <li>
+                    <p>1st align (12 min 15 sec)</p>
+                  </li>
+                  <li>
+                    <p>slew 90° (1 min 30 sec)</p>
+                  </li>
+                  <li>
+                    <p>2nd align (16 min 10 sec)</p>
+                  </li>
+                </ul>
               </li>
             </ul>
-            <p>GROUND HOT START</p>
-            <ul>
+            <p>
+              <b>RAPID (78 min 15 sec)</b>
+            </p>
+            <ul class="list-dash">
               <li>
-                <p>- Coarse align 50 sec ( 90 sec</p>
+                <p>Warmup (60 min)</p>
               </li>
               <li>
-                <p>- Restart 30 sec (</p>
+                <p>Coarse align (6 min)</p>
+              </li>
+              <li>
+                <p>Fine align (12 min)</p>
+              </li>
+            </ul>
+            <p>
+              <b>GROUND HOT START (90 sec)</b>
+            </p>
+            <ul class="list-dash">
+              <li>
+                <p>Coarse align (50 sec)</p>
+              </li>
+              <li>
+                <p>Restart (30 sec)</p>
               </li>
             </ul>
           </td>
         </tr>
         <tr>
-          <td>
+          <td class="rotate">
             <p>INFLIGHT ACTIVATION</p>
           </td>
           <td>
-            <p>AIRSTART</p>
+            <p>
+              <b>AIRSTART</b>
+            </p>
           </td>
           <td>
-            <p>AIRSTART</p>
-            <ul>
+            <p>
+              <b>AIRSTART</b>
+            </p>
+            <ul class="list-dash">
               <li>
-                <p>- Coarse Align Phase Until platform is rough leveled (&lt; 40 arc min)</p>
+                <p>Coarse Align Phase Until platform is rough leveled (&lt; 40 arc min)</p>
               </li>
               <li>
-                <p>- Restart Until platform is leveled (&lt; 21 arc min)</p>
+                <p>Restart Until platform is leveled (&lt; 21 arc min)</p>
               </li>
               <li>
-                <p>- Navigate Phase Continuous after platform leveling</p>
+                <p>Navigate Phase Continuous after platform leveling</p>
+                <dl>
+                  <dt>Dead Reckon</dt>
+                  <dd>Continuous from FILL PP (during coarse align) to ★ ON (steady)</dd>
+                  <dt>Search for Star A &amp; B</dt>
+                  <dd>Continuous from platform leveling + 5 min to ★ ON illumination (steady)</dd>
+                  <dt>Airmass-damped, astro inertial navigation</dt>
+                  <dd>Continuous after ★ ON illumination (steady)</dd>
+                </dl>
               </li>
             </ul>
-            <p>Dead Reckon Continuous from FILL PP (during coarse align) to * ON (steady)</p>
-            <p>Search for Star Continuous from platform leveling ♦ 5 min A &amp; B to * ON illumination (steady)</p>
-            <p>Airmass-damped, Continuous after * ON illumination</p>
-            <p>Astro Inertial (steady) navigation</p>
           </td>
         </tr>
       </tbody>
     </table>
-    <p>Figure 4-61</p>
     <p>The ANS then initializes to the leg from that DP to the next sequential tape-filled or 40-List DP. Great-circle navigation and sensor control are immediately conducted relative to this new leg. The ANS sequences through all FP's and CP's on the new leg up to the current computed along-track position, where sensor commands will be as programmed for that point on the track; normal auto-nav steering is performed, using a 30-degree approach to the new track, if necessary.</p>
     <p>The RSO should perform a track leg update during a Hot or Cold Airstart and Ground Hot Start since the computer automatically reinitializes to the first track leg segment on the mission tape at system turn-on.</p>
     <div class="note">
@@ -13237,9 +13263,9 @@
     </div>
     <h3>ANS OPERATION</h3>
     <p>The ANS must be warmed up and aligned before flight. The methods for ground and air alignment and their association with various navigation modes is outlined in Figure 4-61.</p>
-    <h3>Chronometer/operation Options</h3>
     <table border="1">
-      <tbody>
+      <caption>Figure 4-62: Chronometer/operation Options</caption>
+      <thead>
         <tr>
           <td>
             <p>Status of Chronometer Installed</p>
@@ -13251,12 +13277,11 @@
             <p>Hot Start Program Retained</p>
           </td>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>
-            <p>A.</p>
-          </td>
-          <td>
-            <p>Accurate, GO</p>
+            <p>A. Accurate, GO</p>
           </td>
           <td>
             <p>Any</p>
@@ -13267,10 +13292,7 @@
         </tr>
         <tr>
           <td>
-            <p>B.</p>
-          </td>
-          <td>
-            <p>Inaccurate, GO</p>
+            <p>B. Inaccurate, GO</p>
           </td>
           <td>
             <p>Do not fill DAY/TIME. INERTIAL ONLY selected after align.</p>
@@ -13281,10 +13303,7 @@
         </tr>
         <tr>
           <td>
-            <p>C.</p>
-          </td>
-          <td>
-            <p>Inaccurate, GO</p>
+            <p>C. Inaccurate, GO</p>
           </td>
           <td>
             <p>Fill DAY/TIME - ASTRO INERTIAL selected after align.</p>
@@ -13295,10 +13314,7 @@
         </tr>
         <tr>
           <td>
-            <p>D.</p>
-          </td>
-          <td>
-            <p>NO/GO or Chronometer disconnected or not installed.</p>
+            <p>D. NO/GO or Chronometer disconnected or not installed.</p>
           </td>
           <td>
             <p>
@@ -13315,7 +13331,6 @@
         </tr>
       </tbody>
     </table>
-    <h3>Figure 4-62</h3>
     <p>Prior to ground alignment, verify that the prescribed mission program is in the computer and that the portable chronometer is installed and operating. Power and cooling air are required continuously through warmup, alignment, and navigation. Once alignment has started, a power interruption of more than 1 second will require realignment. Normally, warmup and alignment are performed on ground power and cooling air with transfer to aircraft power and cooling air after engine start, but can be performed on aircraft power and cooling air after engine start.</p>
     <p>Tape 13 is compatible with increased altitude resolution from DAFICS. This feature requires hardware changes to DAFICS. To verify correct system configuration the RSO must check proper altitude scaling by performing the Altitude Scaling Test routine. This routine compares the ANS altitude to the TDI. The altitude readings must agree, otherwise, notify maintenance.</p>
     <p>When operating from an alternate base without ANS support personnel, the chronometer day/time accuracy must be checked. If a flight with an accurate chronometer installed terminates at an alternate base, the chronometer can be (a) maintained indefinitely in an accurate GO state by connecting ground power and cooling to the aircraft with the MODE switch OFF and the aft cockpit ANS essential DC circuit breaker in, or (b) left in the aircraft after normal shutdown procedures are completed. In the latter case, if the battery ON/OFF switch is left in the ON position, the chronometer battery will run down in approximately 24 hours and the chronometer will stop. After power is reapplied to the aircraft and the battery ON/OFF switch is in the ON position, the chronometer should display a GO status and begin to charge its internal battery. If the chronometer is in a GO status, but merely incorrectly set, fill DAY/TIME during C/A and operate in the ASTRO INERTIAL mode. (In a ground hot start, the C/A mode lasts only 60 seconds.) After filling DAY/TIME, the difference between RSO filled values and chronometer values is retained as a bias term to update the computer time following power dropouts of less than 1 second. Thus, astro inertial navigation should function normally. Power dropouts that exceed 1 second will not be compensated for.</p>
@@ -13386,58 +13401,50 @@
     <ol class="list-number">
       <li>
         <p>MODE switch - WARM UP.</p>
+        <ol class="list-alpha">
+          <li>
+            <p>MAL light - On steady.</p>
+          </li>
+          <li>
+            <p>MODE window - Blank.</p>
+          </li>
+          <li>
+            <p>TEMP LIMIT light - Off.</p>
+            <p>Turn MODE switch to OFF if TEMP LIMIT light illuminates.</p>
+          </li>
+          <li>
+            <p>TEMP TOLR light - Off, on, or flashing.</p>
+          </li>
+        </ol>
       </li>
-    </ol>
-    <ol class="list-alpha">
-      <li>
-        <p>MAL light - On steady.</p>
-      </li>
-      <li>
-        <p>MODE window - Blank.</p>
-      </li>
-      <li>
-        <p>TEMP LIMIT light - Off.</p>
-      </li>
-    </ol>
-    <p>Turn MODE switch to OFF if TEMP LIMIT light illuminates.</p>
-    <ol class="list-alpha" start="4">
-      <li>
-        <p>TEMP TOLR light - Off, on, or flashing.</p>
-      </li>
-    </ol>
-    <ol class="list-number" start="2">
       <li>
         <p>MAG/GRID switch - MAG illuminated.</p>
       </li>
       <li>
         <p>MODE switch - ALIGN, ASTRO INERTIAL, or INERTIAL ONLY.</p>
+        <p>Allow 5 minutes in WARM-UP before selecting an alignment mode.</p>
+        <ol class="list-alpha">
+          <li>
+            <p>MAL light - Flashing.</p>
+          </li>
+          <li>
+            <p>MODE window - C/A.</p>
+          </li>
+          <li>
+            <p>PRESENT LATITUDE and LONGITUDE windows - Blank.</p>
+          </li>
+          <li>
+            <p>SELECTED DATA windows - Blank.</p>
+          </li>
+        </ol>
       </li>
-    </ol>
-    <p>Allow 5 minutes in WARM-UP before selecting an alignment mode.</p>
-    <ol class="list-alpha">
-      <li>
-        <p>MAL light - Flashing.</p>
-      </li>
-      <li>
-        <p>MODE window - C/A.</p>
-      </li>
-      <li>
-        <p>PRESENT LATITUDE and LONGITUDE windows - Blank.</p>
-      </li>
-      <li>
-        <p>SELECTED DATA windows - Blank.</p>
-      </li>
-    </ol>
-    <ol class="list-number" start="4">
       <li>
         <p>Check GMT and Julian Day using TIME Display.</p>
+        <p>If either GMT or Julian Day are in error replace the chronometer and restart the alignment. If a chronometer replacement is not available, fill DAY and TIME as accurately as possible. Time error greater than 2 seconds may result in star tracking but with erroneous ANS updating. If accurate star tracking cannot be accomplished, the ANS may be operated in the INERTIAL ONLY Mode.</p>
+        <div class="note">
+          <p>The ANS may be initialized without TIME only if INERTIAL ONLY is selected and MODE START is depressed.</p>
+        </div>
       </li>
-    </ol>
-    <p>If either GMT or Julian Day are in error replace the chronometer and restart the alignment. If a chronometer replacement is not available, fill DAY and TIME as accurately as possible. Time error greater than 2 seconds may result in star tracking but with erroneous ANS updating. If accurate star tracking cannot be accomplished, the ANS may be operated in the INERTIAL ONLY Mode.</p>
-    <div class="note">
-      <p>The ANS may be initialized without TIME only if INERTIAL ONLY is selected and MODE START is depressed.</p>
-    </div>
-    <ol class="list-number" start="5">
       <li>
         <p>
           <span>For</span>
@@ -13467,10 +13474,8 @@
     <ol class="list-number" start="6">
       <li>
         <p>Use aircraft heading for TRUE HEADING UPDATE.</p>
+        <p>Enter known, accurate aircraft true heading, using the TRUE HEADING UPDATE procedure.</p>
       </li>
-    </ol>
-    <p>Enter known, accurate aircraft true heading, using the TRUE HEADING UPDATE procedure.</p>
-    <ol class="list-number" start="7">
       <li>
         <p>Use INS true heading for TRUE HEADING UPDATE.</p>
         <p>Verify the INS is aligned and operating in NORM or NAV mode. Display INS true heading and insert these values into the ANS using the TRUE HEADING UPDATE routine.</p>
@@ -13483,18 +13488,18 @@
     <ol class="list-number" start="8">
       <li>
         <p>Fill present position and initial altitude (field elevation).</p>
+        <p>When coarse alignment is complete:</p>
+        <ol class="list-alpha">
+          <li>
+            <p>For gyrocompassing alignment, MODE window displays F/A for at least 30 minutes.</p>
+          </li>
+          <li>
+            <p>For rapid alignment, MODE window displays F/A for at least 12 minutes.</p>
+          </li>
+        </ol>
+        <p>When the minimum alignment time has elapsed, present position is displayed in the PRESENT LATITUDE and LONGITUDE counters. After this occurs, and just before taxi, start navigation by performing steps 9 and 10.</p>
       </li>
     </ol>
-    <p>When coarse alignment is complete:</p>
-    <ol class="list-alpha">
-      <li>
-        <p>For gyrocompassing alignment, MODE window displays F/A for at least 30 minutes.</p>
-      </li>
-      <li>
-        <p>For rapid alignment, MODE window displays F/A for at least 12 minutes.</p>
-      </li>
-    </ol>
-    <p>When the minimum alignment time has elapsed, present position is displayed in the PRESENT LATITUDE and LONGITUDE counters. After this occurs, and just before taxi, start navigation by performing steps 9 and 10.</p>
     <p>Before taxiing:</p>
     <ol class="list-number" start="9">
       <li>
@@ -13529,11 +13534,11 @@
       </li>
       <li>
         <p>MODE START - Press.</p>
-      </li>
-    </ol>
-    <ol class="list-alpha">
-      <li>
-        <p>MODE window - F/A.</p>
+        <ol class="list-alpha">
+          <li>
+            <p>MODE window - F/A.</p>
+          </li>
+        </ol>
       </li>
     </ol>
     <p>Prior to start of taxi, initiate navigation by performing steps 3 and 4.</p>
@@ -13558,51 +13563,43 @@
     <ol class="list-number">
       <li>
         <p>MODE switch - WARM UP.</p>
+        <ol class="list-alpha">
+          <li>
+            <p>MAL light - On steady.</p>
+          </li>
+          <li>
+            <p>MODE window - Blank.</p>
+          </li>
+          <li>
+            <p>TEMP LIMIT light - Off.</p>
+            <p>Turn MODE switch to OFF if TEMP LIMIT light illuminates.</p>
+          </li>
+          <li>
+            <p>TEMP TOLR light - Off, on, or flashing.</p>
+          </li>
+        </ol>
       </li>
-    </ol>
-    <ol class="list-alpha">
-      <li>
-        <p>MAL light - On steady.</p>
-      </li>
-      <li>
-        <p>MODE window - Blank.</p>
-      </li>
-      <li>
-        <p>TEMP LIMIT light - Off.</p>
-      </li>
-    </ol>
-    <p>Turn MODE switch to OFF if TEMP LIMIT light illuminates.</p>
-    <ol class="list-alpha" start="4">
-      <li>
-        <p>TEMP TOLR light - Off, on, or flashing.</p>
-      </li>
-    </ol>
-    <ol class="list-number" start="2">
       <li>
         <p>MODE switch - ASTRO INERTIAL or INERTIAL ONLY.</p>
+        <ol class="list-alpha">
+          <li>
+            <p>MAL light - Flashing.</p>
+          </li>
+          <li>
+            <p>MODE window - C/A.</p>
+          </li>
+          <li>
+            <p>PRESENT LATITUDE and LONGITUDE windows - Blank.</p>
+          </li>
+          <li>
+            <p>SELECTED DATA - Blank.</p>
+          </li>
+        </ol>
       </li>
-    </ol>
-    <ol class="list-alpha">
-      <li>
-        <p>MAL light - Flashing.</p>
-      </li>
-      <li>
-        <p>MODE window - C/A.</p>
-      </li>
-      <li>
-        <p>PRESENT LATITUDE and LONGITUDE windows - Blank.</p>
-      </li>
-      <li>
-        <p>SELECTED DATA - Blank.</p>
-      </li>
-    </ol>
-    <ol class="list-number" start="3">
       <li>
         <p>Check GMT &amp; Julian Day using TIME display.</p>
+        <p>If either GMT or Julian Day are in error, replace the chronometer and realign the ANS. If a chronometer replacement is not available, fill DAY and TIME as accurately as possible. TIME error greater than 2 seconds may result in star tracking but with erroneous ANS updating. If accurate star tracking cannot be accomplished, the ANS may be operated in the INERTIAL ONLY mode.</p>
       </li>
-    </ol>
-    <p>If either GMT or Julian Day are in error, replace the chronometer and realign the ANS. If a chronometer replacement is not available, fill DAY and TIME as accurately as possible. TIME error greater than 2 seconds may result in star tracking but with erroneous ANS updating. If accurate star tracking cannot be accomplished, the ANS may be operated in the INERTIAL ONLY mode.</p>
-    <ol class="list-number" start="4">
       <li>
         <p>HOT switch - Press.</p>
       </li>
@@ -13612,8 +13609,6 @@
           <p>If true heading and/or present position are changed (or not accurate) since previous shutdown, turn system OFF and perform a Rapid or Gyrocompass alignment.</p>
         </div>
       </li>
-    </ol>
-    <ol class="list-number" start="6">
       <li>
         <p>Use TRACK LEG UPDATE for initial DP.</p>
       </li>
@@ -13631,20 +13626,20 @@
       </li>
       <li>
         <p>MODE START - Press.</p>
-      </li>
-    </ol>
-    <ol class="list-alpha">
-      <li>
-        <p>MODE window - A-I or I/O.</p>
+        <ol class="list-alpha">
+          <li>
+            <p>MODE window - A-I or I/O.</p>
+          </li>
+        </ol>
       </li>
     </ol>
     <p>When aligned on runway and no "A" star:</p>
     <ol class="list-number" start="11">
       <li>
         <p>Do RUNWAY HEADING ALIGNMENT.</p>
+        <p>Not required if at least one star has been tracked (flashing star ON light).</p>
       </li>
     </ol>
-    <p>Not required if at least one star has been tracked (flashing star ON light).</p>
     <h3>Cold Airstart Alignment</h3>
     <div class="note">
       <p>If a power dropout has occurred, skip to step 3 if HOT or MODE START has not been pressed after power returns.</p>
@@ -13652,42 +13647,34 @@
     <ol class="list-number">
       <li>
         <p>MODE switch - OFF.</p>
+        <ol class="list-alpha">
+          <li>
+            <p>All NCD panel lights &amp; windows -Extinguished/Blank.</p>
+          </li>
+        </ol>
       </li>
-    </ol>
-    <ol class="list-alpha">
-      <li>
-        <p>All NCD panel lights &amp; windows -Extinguished/Blank.</p>
-      </li>
-    </ol>
-    <ol class="list-number" start="2">
       <li>
         <p>MODE switch - WARM UP.</p>
+        <ol class="list-alpha">
+          <li>
+            <p>MAL light - On steady.</p>
+          </li>
+          <li>
+            <p>MODE window - Blank.</p>
+          </li>
+          <li>
+            <p>TEMP LIMIT light - Off.</p>
+            <p>Turn MODE switch to OFF if TEMP LIMIT light illuminates.</p>
+          </li>
+          <li>
+            <p>TEMP TOLR light - Off, on, or flashing.</p>
+          </li>
+        </ol>
       </li>
-    </ol>
-    <ol class="list-alpha">
-      <li>
-        <p>MAL light - On steady.</p>
-      </li>
-      <li>
-        <p>MODE window - Blank.</p>
-      </li>
-      <li>
-        <p>TEMP LIMIT light - Off.</p>
-      </li>
-    </ol>
-    <p>Turn MODE switch to OFF if TEMP LIMIT light illuminates.</p>
-    <ol class="list-alpha" start="4">
-      <li>
-        <p>TEMP TOLR light - Off, on, or flashing.</p>
-      </li>
-    </ol>
-    <ol class="list-number" start="3">
       <li>
         <p>Adjust to straight and level flight.</p>
+        <p>Make necessary heading, altitude, and airspeed changes before continuing since the aircraft should be maintained as steady as possible throughout the airstart until the star ON illuminates, especially during C/A.</p>
       </li>
-    </ol>
-    <p>Make necessary heading, altitude, and airspeed changes before continuing since the aircraft should be maintained as steady as possible throughout the airstart until the star ON illuminates, especially during C/A.</p>
-    <ol class="list-number" start="4">
       <li>
         <p>MODE switch - AIRSTART.</p>
         <ol class="list-alpha">
