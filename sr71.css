@@ -100,6 +100,20 @@ ol.alternative-items li:not(:first-child)::before {
   left: 5em;
 }
 
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+dt {
+  grid-column-start: 1;
+}
+dd {
+  grid-column-start: 2;
+}
+dl.list-dash dd::before {
+  content: "- ";
+}
+
 .change-deleted {
   text-decoration: line-through;
 }
@@ -140,4 +154,35 @@ td.rotate :first-child {
 
 .redacted {
   background-color: black;
+}
+
+.warning, .caution, .note {
+  border: 1px solid black;
+}
+.warning {
+  background-color: red;
+}
+.caution {
+  background-color: yellow;
+}
+.note {
+  background-color: lightblue;
+}
+.warning::before {
+  content: "WARNING";
+  display: block;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+.caution::before {
+  content: "Caution";
+  display: block;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+.note::before {
+  content: "Note";
+  display: block;
+  font-weight: bold;
+  border-bottom: 1px solid black;
 }
