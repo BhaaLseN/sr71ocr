@@ -100,6 +100,20 @@ ol.alternative-items li:not(:first-child)::before {
   left: 5em;
 }
 
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+dt {
+  grid-column-start: 1;
+}
+dd {
+  grid-column-start: 2;
+}
+dl.list-dash dd::before {
+  content: "- ";
+}
+
 .change-deleted {
   text-decoration: line-through;
 }
