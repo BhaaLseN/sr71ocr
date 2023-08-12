@@ -512,7 +512,7 @@
     <h2>UPDATE Switch</h2>
     <p>Commands the ANS to correct computed position, heading, reinitialize the star tracker, or change the current track leg.</p>
     <h2>DP/TURN Switch</h2>
-    <p>This push-button switch selects the source for the pilot's HSI range indicator. The DP/TURN switch is enabled when the ANS DATA switch is in TEST; pressing ENTER/DISPLAY will then illuminate the "DP" or "TURN" legend in the switch (corresponding to the mode presently selected); pressing the DP/TURN switch will change the mode and illuminate the other legend. When "DP" is illuminated, the pilot's HSI range indicator will read distance to the ANS destination point (DP); when "TURN" is illuminated, the pilot's HSI range indicator will read distance to the ANS-computed turn point. Refer to Horizontal Situation Indicator, Range Indicator, Section L</p>
+    <p>This push-button switch selects the source for the pilot's HSI range indicator. The DP/TURN switch is enabled when the ANS DATA switch is in TEST; pressing ENTER/DISPLAY will then illuminate the "DP" or "TURN" legend in the switch (corresponding to the mode presently selected); pressing the DP/TURN switch will change the mode and illuminate the other legend. When "DP" is illuminated, the pilot's HSI range indicator will read distance to the ANS destination point (DP); when "TURN" is illuminated, the pilot's HSI range indicator will read distance to the ANS-computed turn point. Refer to Horizontal Situation Indicator, Range Indicator, Section I.</p>
     <h2>C/TEST Switch</h2>
     <p>Used to perform a panel light test and to display ANS tape data and internal ANS conditions when used in conjunction with the TEST position of the DATA switch.</p>
     <h2>SELECTED DATA Indicators</h2>
@@ -2369,8 +2369,7 @@
     <h2>Point-ID Code</h2>
     <p>Every tape-filled or 40-List mission point has an identification code. The code consists of a letter and five digits, referred to in the following text as digits 1, 2, 3, 4, and 5, counting from the left. This is the order in which the point-ID code is entered in the NCD panel. A letter C/C1, F/F1 or D designates the point as a control point, fixpoint, or destination point, respectively, and appears in the left-most display of the SELECTED DATA 6 window when a mission point is selected for display. When modifying a mission, this part of the ID code is entered by selecting FIXPOINT, CONT PT, or DEST POINT on the DATA switch.</p>
     <p>Digits 3 thru 5 of the ID code denote the number assigned to each tape-filled CP, FP, and DP. Tape-filled points are numbered from 001 for the first CP, FP, and DP, to 127. In general, the points on the primary mission are numbered in sequence followed by the points on alternate legs. However, the sequence is not really important since the next point number of each type is listed with each tape-filled mission point; i.e., the data for DP 002 can define DP013 as the next DP, or vice versa. The same applies to CP's and FP's.</p>
-    <p>As shown on Figure 4-8, DP's which are the start points for alternate legs are doubly defined. This means that the same geographic point is contained in two different locations with different number and different next-point numbers (example: D00003 and</p>
-    <p>D00011). The alternate leg is selected by skipping to D00011 when on leg 1. Note that the alternate path rejoins the primary mission at D00007; thus, both D00006 and D00012 list D00007 as the next DP. 40-List (ADD or REPLACE) points are defined relative to tape-filled points; digits 3 thru 5 define the tape-filled point to be replaced, or the tape-filled or panel-replaced point following the point(s) to be added.</p>
+    <p>As shown on Figure 4-8, DP's which are the start points for alternate legs are doubly defined. This means that the same geographic point is contained in two different locations with different number and different next-point numbers (example: D00003 and D00011). The alternate leg is selected by skipping to D00011 when on leg 1. Note that the alternate path rejoins the primary mission at D00007; thus, both D00006 and D00012 list D00007 as the next DP. 40-List (ADD or REPLACE) points are defined relative to tape-filled points; digits 3 thru 5 define the tape-filled point to be replaced, or the tape-filled or panel-replaced point following the point(s) to be added.</p>
     <p>Digit 2 is the "add" number for panel-filled ADD points. Digit 2 can range from 1 to 7 for the first through seventh points to be added ahead of the tape-filled or panel-replaced point of the same type defined by digits 3 thru 5, where add point X10YZ is the first add point encountered in the mission, ahead of point 000YZ with add point X20YZ the second, etc. Digit 2 is zero for tape-filled points or replaced points. Digit 2 is the left-most digit in the SELECTED DATA window 6 when a mission modification is performed or a mission point is displayed.</p>
     <p>Digit 1 is a zero for all tape-filled points, replaced control or fix points, and 40-list destination points. When adding fix or control points, however, digit 1 is used by the computer to determine the track leg location of the new added point. If the add point is after the last tape-filled point of its type on its track leg, this digit is 1; if the add point is before the last tape-filled point of its type on its track leg, then the digit is a zero. Digit 1 appears as Cl or Fl in the letter position of the SELECTED DATA 6 counter during a mission modification or mission point display operation (when ID code is entered). It also appears when a point is displayed.</p>
     <h2>Sensor Selection Code</h2>
@@ -4798,7 +4797,7 @@
         <p>BDHI HDG select switch - INS.</p>
       </li>
       <li>
-        <p>BDHI No. 1 needle select switch -TACAN.</p>
+        <p>BDHI No. 1 needle select switch - TACAN.</p>
       </li>
       <li>
         <p>DATA switch - FIX POINT.</p>
@@ -5447,7 +5446,6 @@
         <p>NEXT DP window displays the next destination point identification number (four digits). The first (left) digit is blank if the DP is not an added point, or the actual ADD NUMBER (1 thru 7) if the DP is an added point. Until present position has been filled, the NEXT DP window will be blank.</p>
       </li>
     </ol>
-    <!-- continue here -->
     <h3>DISPLAY TAPE NUMBERS</h3>
     <p>In any "operate" mode:</p>
     <ol class="list-number">
@@ -7867,7 +7865,7 @@
         <p>The values of slant and along-track range errors appear in the respective counters on the RCD control panel.</p>
       </li>
     </ol>
-    <p>To transmit measured error data to the ANS;</p>
+    <p>To transmit measured error data to the ANS:</p>
     <ol class="list-number" start="4">
       <li>
         <p>READ ERR pushbutton - READ ERR.</p>
@@ -7991,7 +7989,7 @@
     <h3>Optical Bar Camera Control Panel</h3>
     <p>An optical bar camera control panel, labeled NOSE OBC, replaces the radar control panel on the right console in the aft cockpit. See Figure 4-29.</p>
     <h3>Power Control Switch &amp; Indicator Light</h3>
-    <p>An alternate action pushbutton POWER switch (guarded) controls ac and dc power to the OBC System, and indicates a failure condition. A white OBC legend is illuminated in the upper half of the switch. Operation of this switch alternately applies standby power to the OBC or de-energizes the system</p>
+    <p>An alternate action pushbutton POWER switch (guarded) controls ac and dc power to the OBC System, and indicates a failure condition. A white OBC legend is illuminated in the upper half of the switch. Operation of this switch alternately applies standby power to the OBC or de-energizes the system.</p>
     <p>A green ON legend illuminates in the lower left quadrant of the switch when the OBC System is energized. In the standby condition, the lens drive and heater circuits are energized and the film supply spool is under partial power to retain film tension.</p>
     <p>A red FAIL legend in the lower right quarter of the POWER switch illuminates to indicate failure during self test or while operating. The FAIL indication can occur as a result of film depletion or improper skew bar air supply. In these cases, the camera reverts to the standby condition if in an operating mode. A FAIL indication can also be caused by abnormal forward motion compensation (FMC), improper film advance, center of format signal malfunction, malfunction of the capping shutter or if the film has jammed and the film remaining counter is not cycling. In cases where the film has not jammed, the camera will continue to operate.</p>
     <div class="note">
@@ -8388,7 +8386,7 @@
     <h3>V/H SOURCE Selector Switch</h3>
     <p>A five-position V/H SOURCE selector switch is on the PWR &amp; SENSOR control panel. It selects the V/H source signal for the V/H bus. V/H bus voltage is regulated by the ANS computer when NAV is selected. Before S/B R-2538, viewsight signals are provided when the switch is in VWSGT. In MAN, the RSO regulates the signal using the manual control knob on the V/H indicator. The LH TECH and RH TECH positions are not functional.</p>
     <h3>V/H MONITOR Switch</h3>
-    <p>With an optical viewsight installed, a five position V/H MONITOR switch is on the viewsight control panel. It controls the display shown by the V/H indicator A-needle. In NAV, the A-needle displays V/H signals from the ANS. In VS, the A-needle displays V/H signals from the viewsight. In BUS, the A-needle displays the V/H bus signal supplied to the camera(s). The LH and RH TECH positions are not functional</p>
+    <p>With an optical viewsight installed, a five position V/H MONITOR switch is on the viewsight control panel. It controls the display shown by the V/H indicator A-needle. In NAV, the A-needle displays V/H signals from the ANS. In VS, the A-needle displays V/H signals from the viewsight. In BUS, the A-needle displays the V/H bus signal supplied to the camera(s). The LH and RH TECH positions are not functional.</p>
     <figure>
       <img src="images/4-30.jpg" alt="" />
       <figcaption>Figure 4-30: V/H Chart</figcaption>
@@ -9242,15 +9240,12 @@
     <p>The GO display, FAIL display, threat warning indicators, and H LO and H HI. activity indicators are powered by the 28 V monitored dc bus through the DEF CONT circuit breaker on the RSO's right console. Panel and title lights for the DEF power switches, the RESET switch, and the TEST switch are powered by essential ac bus power through the L console PNL circuit breaker on the RSO's left console. All other lights on the DEF panel are powered by the essential ac bus through the L console LGD circuit breaker on the RSO's left console.</p>
     <p>Lamp test for the DEF control panel is accomplished by pressing the LAMP TEST switch on the PWR &amp; SENSOR control panel. This tests all indicators on the DEF warning panel and all lights and displays on the DEF control panel except the Go and Fail displays. Only the GO will illuminate in the Go display (A, C, M, LO, and HI will not illuminate), and only the A, M, LO, and HI will illuminate in the Fail display (FAIL, HOT and COMP will not illuminate).</p>
     <h3>DEF WARNING PANEL</h3>
-    <p>The DEF warning panel is on the RSO's instrument panel, right of the viewsight. It directs the RSO's attention to the DEF control panel if a threat or failure involves the DEF systems. See Figure 4-37. Seven red or amber warning legends are on the panel; these are <span class="redacted">REDACTED</span></p>
-    <p>
-      <span class="redacted">REDACTED</span> DEF FAIL illuminates when FAIL, HOT, or COMP is displayed in the Fail display on the DEF control panel. The other warning indicators repeat like indicators on the DEF panel, and therefore illuminate simultaneously with those indicators. <span class="redacted">REDACTED</span>.</p>
+    <p>The DEF warning panel is on the RSO's instrument panel, right of the viewsight. It directs the RSO's attention to the DEF control panel if a threat or failure involves the DEF systems. See Figure 4-37. Seven red or amber warning legends are on the panel; these are <span class="redacted">REDACTED</span>. DEF FAIL illuminates when FAIL, HOT, or COMP is displayed in the Fail display on the DEF control panel. The other warning indicators repeat like indicators on the DEF panel, and therefore illuminate simultaneously with those indicators. <span class="redacted">REDACTED</span>.</p>
     <p>The significance of the various warnings is discussed under the descriptions of the associated DEF systems. Power for indicators on the warning panel is supplied by the monitored dc bus through the DEF CONT circuit breaker on the RSO's right console.</p>
     <h3>DEF A2 SYSTEM</h3>
     <p>DEF A2 is a <span class="redacted">REDACTED</span> jammer ECM system with two sets of receive and transmit antennas, and a gaseous nitrogen system to pressurize they transmit waveguides. DEF A2 can respond to signals typical of <span class="redacted">REDACTED</span> radars in the <span class="redacted">REDACTED</span> band frequency ranges of <span class="redacted">REDACTED</span> antennas receive signals from emitters below the aircraft. The system identifies threat aircraft in the left or right forward quadrants.</p>
     <p class="redacted">Deleted IAW SR71 SCG - 23 Sept 96</p>
-    <p>DEF A2 can be installed in the forward right chine bay (Compartment D). See Figure 4-37. The antennas and waveguides are permanently installed. The left and right transmit antennas protrude slightly from the lower surfaces of the chines, opposite the pilot's cockpit. The receive antennas are located aft of cut-outs on the left and right sides of the nose chines. The DEF A2 system is interfaced with the MRS, the Radar, and the EMR system. <span class="redacted">REDACTED</span></p>
-    <p>DEF A2 signals are applied to the AR-1700 recorder when mission requirements dictate. DEF A2 operation, indication, and control data is recorded by MRS.</p>
+    <p>DEF A2 can be installed in the forward right chine bay (Compartment D). See Figure 4-37. The antennas and waveguides are permanently installed. The left and right transmit antennas protrude slightly from the lower surfaces of the chines, opposite the pilot's cockpit. The receive antennas are located aft of cut-outs on the left and right sides of the nose chines. The DEF A2 system is interfaced with the MRS, the Radar, and the EMR system. <span class="redacted">REDACTED</span>. DEF A2 signals are applied to the AR-1700 recorder when mission requirements dictate. DEF A2 operation, indication, and control data is recorded by MRS.</p>
     <p>Electrical power to DEF A2 is supplied from the essential ac bus and the monitored dc bus through circuit breakers in the C-bay. See Figure 4-38.</p>
     <p>Cooling air is supplied directly to the DEF A2 repeater through an air duct and hose, which are connected to the aircraft cooling air duct during DEF A2 installation. Air flow is from the right mission bay air manifold and is controlled by the right mission bay air shutoff valve.</p>
     <h2>DEF A2 Threat Warning &amp; Activity Indicators</h2>
@@ -9507,8 +9502,7 @@
     <p>Electrical power to DEF H is supplied from the left generator ac bus through the 3-phase circuit breaker in the C-bay and from the monitored dc bus through the DEF F circuit breaker on the RSO's right console. See Figure 4-40.</p>
     <p>Cooling air is supplied directly to the DEF H unit through an air inlet opening which mates with the airplane cooling air duct during DEF H installation in the aircraft. Air flow is controlled by the left mission bay air shutoff valve. The evaporative cooler acts as a heat sink for coolant fluid after it is heated.</p>
     <h3>DEF H Threat Warning &amp; Activity Indicators</h3>
-    <p>Threat warning is provided by the DEF H system</p>
-    <p>Illumination of these legends reflect receipt of radar threats meeting preprogrammed parameters.</p>
+    <p>Threat warning is provided by the DEF H system <span class="redacted">REDACTED</span>. Illumination of these legends reflect receipt of radar threats meeting preprogrammed parameters.</p>
     <figure>
       <img src="images/4-40.jpg" alt="" />
       <figcaption>Figure 4-40: DEF H System Signal Flow</figcaption>
@@ -9549,9 +9543,7 @@
     <p>
       <span class="redacted">REDACTED</span>.</p>
     <p>During <span class="redacted">REDACTED</span> operation, only <span class="redacted">REDACTED</span> mode lights illuminate. If jamming is desired in both low and high bands, at least one <span class="redacted">REDACTED</span> mode light must be illuminated in each band.</p>
-    <p>Manual operation can be selected when the</p>
-    <p>
-      <span class="redacted">REDACTED</span>. Manual is indicated by illumination of either the F or H legend, and at least one M mode light. If jamming is desired in both the low and high bands, at least one M mode light must be illuminated in each band.</p>
+    <p>Manual operation can be selected when the <span class="redacted">REDACTED</span>. Manual is indicated by illumination of either the F or H legend, and at least one M mode light. If jamming is desired in both the low and high bands, at least one M mode light must be illuminated in each band.</p>
     <p>
       <span class="redacted">REDACTED</span> the alternate state can be selected using the following procedure.</p>
     <h3>
@@ -9579,8 +9571,7 @@
         <p>Test switch - On, then Off.</p>
       </li>
     </ol>
-    <p>Mode selection is accomplished by setting the SYSTEM SELECT switch to the appropriate position (F/H LO or F/H HI), and then momentarily turning the numbered <span class="redacted">REDACTED</span>. Selection of operating modes can be made while the system is either in S or O. Refer to the</p>
-    <p>Mode Switches under the DEF Control Panel, this section.</p>
+    <p>Mode selection is accomplished by setting the SYSTEM SELECT switch to the appropriate position (F/H LO or F/H HI), and then momentarily turning the numbered <span class="redacted">REDACTED</span>. Selection of operating modes can be made while the system is either in S or O. Refer to the Mode Switches under the DEF Control Panel, this section.</p>
     <div class="note">
       <p>It is not necessary that any of the six mode selections be in effect at a given time. Jamming is inhibited if all modes are cancelled, but the threat warning indicators remain operative.</p>
     </div>
@@ -9639,7 +9630,7 @@
     <div class="warning">
       <p>Because of the dangerous rf radiation levels, do not turn on the DEF H system transmitters while on the ground unless all four antennas are covered with hoods, and maintenance personnel are on interphone.</p>
     </div>
-    <p>To turn on DEF H;</p>
+    <p>To turn on DEF H:</p>
     <ol class="list-number">
       <li>
         <p>F/H power switch - Press to illuminate ON.</p>
@@ -10585,7 +10576,7 @@
     <h3>UPDATE Switch</h3>
     <p>Commands the ANS to correct computed position, heading, reinitialize the star tracker, or change the current track leg.</p>
     <h3>DP/TURN Switch</h3>
-    <p>This push-button switch selects the source for the pilot's HSI range indicator. The DP/TURN switch is enabled when the ANS DATA switch is in TEST; pressing ENTER/DISPLAY will then illuminate the "DP" or "TURN" legend in the switch (corresponding to the mode presently selected); pressing the DP/TURN switch will change the mode and illuminate the other legend. When "DP" is illuminated, the pilot's HSI range indicator will read distance to the ANS destination point (DP); when "TURN" is illuminated, the pilot's HSI range indicator will read distance to the ANS-computed turn point. Refer to Horizontal Situation Indicator, Range Indicator, Section L</p>
+    <p>This push-button switch selects the source for the pilot's HSI range indicator. The DP/TURN switch is enabled when the ANS DATA switch is in TEST; pressing ENTER/DISPLAY will then illuminate the "DP" or "TURN" legend in the switch (corresponding to the mode presently selected); pressing the DP/TURN switch will change the mode and illuminate the other legend. When "DP" is illuminated, the pilot's HSI range indicator will read distance to the ANS destination point (DP); when "TURN" is illuminated, the pilot's HSI range indicator will read distance to the ANS-computed turn point. Refer to Horizontal Situation Indicator, Range Indicator, Section I.</p>
     <h3>C/TEST Switch</h3>
     <p>Used to perform a panel light test and to display ANS tape data and internal ANS conditions when used in conjunction with the TEST position of the DATA switch.</p>
     <h3>SELECTED DATA Indicators</h3>
@@ -11267,7 +11258,7 @@
     <h2>Malfunction Indicator</h2>
     <p>The ANS malfunction indicator, labeled MAL, is a red panel light that can be off, on-steady, or on-flashing. Generally, the MAL light is off during normal operation, on-steady when the ANS is in the WARM UP mode, and on-flashing when a system self test has failed. (Refer to ANS MALFUNCTION PROCEDURES for detailed description.)</p>
     <h2>COMPUTER PROGRAM</h2>
-    <p>The basic instructions and constants for computer operation are contained in the main program tape which is loaded into the computer permanent memory. The computer program is loaded in two parts, a basic main program tape and a correction tape (if needed). In addition, a general instrument constant (GIC) tape, star catalog (SYY1, SYY2) tape, and mission tape are loaded. Each ASTRO INERTIAL (A-D unit has its own GIC tape which defines gyro, accelerometer, resolver, etc. parameters unique to the respective A-l unit. Annual revisions are made to the star catalog tapes.</p>
+    <p>The basic instructions and constants for computer operation are contained in the main program tape which is loaded into the computer permanent memory. The computer program is loaded in two parts, a basic main program tape and a correction tape (if needed). In addition, a general instrument constant (GIC) tape, star catalog (SYY1, SYY2) tape, and mission tape are loaded. Each ASTRO INERTIAL (A-D unit has its own GIC tape which defines gyro, accelerometer, resolver, etc. parameters unique to the respective A-I unit. Annual revisions are made to the star catalog tapes.</p>
     <table border="1">
       <caption>Figure 4-51: Star Data Usage</caption>
       <thead>
@@ -11984,7 +11975,7 @@
     <p>The three-digit sensor selection code designates which sensor shall be turned on and/or remain on, at a panel-filled control point.</p>
     <p>The first and second digits control L and R TECH camera operation. The third digit is always zero. When control points are added or replaced, take care not to disrupt prior turn-on commands to the TECH cameras. If, for example, the L TECH was automatically turned on 50 nm prior to an add R TECH control point, and the mission planner intended it to remain on for a total 100 nm swath, the add-control point sensor assignment code would be 110. This would tell the computer to leave the L TECH on at the new control point and that the R TECH will be turned on. This is necessary because each CP will turn sensors off without an "on" marker in the sensor code.</p>
     <h3>Left-Right Camera Pointing Code</h3>
-    <p>The left-right marker designates which TECH camera to operate. When adding or replacing</p>
+    <p>The left-right marker designates which TECH camera to operate. When adding or replacing TECH camera control points, insert L000 or R000 for control points to the left or right of course respectively. Verify code insertion in the SELECTED DATA window 5 (R or L plus three numeric digits).</p>
     <table border="1">
       <caption>Figure 4-57: Sensor Selection Code</caption>
       <thead>
@@ -12035,7 +12026,6 @@
         </tr>
       </tfoot>
     </table>
-    <p>TECH camera control points, insert L000 or R000 for control points to the left or right of course respectively. Verify code insertion in the SELECTED DATA window 5 (R or L plus three numeric digits).</p>
     <h3>ASARS Control Point Code</h3>
     <p>A five digit code designates which feature of the ASARS will be activated at a panel-filled control point.</p>
     <p>Digit 1 is used to select the dual spot mode. Digit 2 selects rewind and/or downlink options. Digit 3 specifies resolution and frequency characteristics. Digit 4 defines the mode and Digit 5 controls the recorder status. Digits 1 thru 4 are displayed in SELECTED DATA window 5 as they are entered. Selection of 1 for Digit number 5 will be indicated by illumination of the TECH L light. These codes are shown in Figure 4-58.</p>
@@ -14828,7 +14818,6 @@
         </ol>
       </li>
     </ol>
-    <p></p>
     <h3>DISPLAY NEXT NON-ASARS FP, CP, DP</h3>
     <p>MODE switch in ASTRO-INERTIAL, INERTIAL ONLY, DEAD RECKON, or AIR START position; MODE window displays any mode.</p>
     <ol class="list-number">
