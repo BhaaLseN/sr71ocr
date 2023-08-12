@@ -81,10 +81,6 @@
       <u>3 navigation position updates</u>
       <span>(depending on Schuler cycle period) and a steady C star light to eliminate the total residual error.</span>
     </p>
-    <h3>System Components</h3>
-    <p>The navigation system has three major assemblies: the control and display panel, the portable chronometer, and the guidance group. The control and display panel (Figure 4-3), located on the aft cockpit right console, is used to activate the system, select modes of operation, insert and monitor navigational data, modify the mission flight plan, and observe operating status.</p>
-    <p>A portable chronometer, in the aft cockpit supplies Greenwich Mean Time (GMT) (accurate to one-hundredth of a second) and the Julian date to establish the orientation of the Earth in inertial space for astro-inertial operations. The chronometer is set in the base shop, using a time standard set up to receive WWV time signals. Day can be set up to 511, thus allowing use of the computer star catalog into the next calendar year. A fully-charged, self-contained battery permits timekeeping for up to 24 hours without other power. Chronometer outputs are enabled only when aircraft power is applied. There is a GO, NO-GO indicator on the chronometer. GO indicates that either external or battery power is available and that the chronometer is operable, but does not indicate that the correct day and time is set. NO-GO indicates that chronometer outputs are unreliable.</p>
-    <p>The guidance group contains the electronic and optical-mechanical equipment for navigation and avionics subsystems control. The guidance group is mounted in the fuselage aft of the rear cockpit to provide an upward 78-degree cone of vision for the star-tracking telescope. The axis of the cone is vertical when the aircraft pitch angle is 7-1/2 degrees. The guidance group includes an inertially stabilized platform and associated electronic and electromechanical components required to control (1) its attitude, (2) a startracking telescope, and (3) the electronic and electromechanical components for pointing, servo-controlling, and discrimination of telescope photo-detections. A digital computer computes auto-navigation, guidance and avionics control, and maintains a continuously updated account of navigational status and coordinate values. The computer also stores instrument and mathematical coefficients, predetermined data references that define stars, and the mission flight plan. The computer initiates and evaluates self-tests periodically throughout the operating interval. Software corrections to the star data are provided for: (1) the shock wave over the window that refracts the star light and (2) pressure and temperature gradients (differentials) acting on the window causing optical lens effects.</p>
     <table border="1">
       <caption>Figure 4-2: Navigation Mode Probable Radial Error</caption>
       <thead>
@@ -223,6 +219,10 @@
         </tr>
       </tfoot>
     </table>
+    <h3>System Components</h3>
+    <p>The navigation system has three major assemblies: the control and display panel, the portable chronometer, and the guidance group. The control and display panel (Figure 4-3), located on the aft cockpit right console, is used to activate the system, select modes of operation, insert and monitor navigational data, modify the mission flight plan, and observe operating status.</p>
+    <p>A portable chronometer, in the aft cockpit supplies Greenwich Mean Time (GMT) (accurate to one-hundredth of a second) and the Julian date to establish the orientation of the Earth in inertial space for astro-inertial operations. The chronometer is set in the base shop, using a time standard set up to receive WWV time signals. Day can be set up to 511, thus allowing use of the computer star catalog into the next calendar year. A fully-charged, self-contained battery permits timekeeping for up to 24 hours without other power. Chronometer outputs are enabled only when aircraft power is applied. There is a GO, NO-GO indicator on the chronometer. GO indicates that either external or battery power is available and that the chronometer is operable, but does not indicate that the correct day and time is set. NO-GO indicates that chronometer outputs are unreliable.</p>
+    <p>The guidance group contains the electronic and optical-mechanical equipment for navigation and avionics subsystems control. The guidance group is mounted in the fuselage aft of the rear cockpit to provide an upward 78-degree cone of vision for the star-tracking telescope. The axis of the cone is vertical when the aircraft pitch angle is 7-1/2 degrees. The guidance group includes an inertially stabilized platform and associated electronic and electromechanical components required to control (1) its attitude, (2) a startracking telescope, and (3) the electronic and electromechanical components for pointing, servo-controlling, and discrimination of telescope photo-detections. A digital computer computes auto-navigation, guidance and avionics control, and maintains a continuously updated account of navigational status and coordinate values. The computer also stores instrument and mathematical coefficients, predetermined data references that define stars, and the mission flight plan. The computer initiates and evaluates self-tests periodically throughout the operating interval. Software corrections to the star data are provided for: (1) the shock wave over the window that refracts the star light and (2) pressure and temperature gradients (differentials) acting on the window causing optical lens effects.</p>
     <h3>Navigation Control And Display Panel (NCD)</h3>
     <p>The NCD (Figure 4-3) on the aft cockpit right console controls the ANS.</p>
     <div class="note">
@@ -517,15 +517,6 @@
     <p>Used to perform a panel light test and to display ANS tape data and internal ANS conditions when used in conjunction with the TEST position of the DATA switch.</p>
     <h2>SELECTED DATA Indicators</h2>
     <p>The indicators or windows consist of six separate sets of digital displays. Various operating parameters are displayed in the indicators during the panel fill, mission modification, update, and alignment routines as shown in Figure 4-4.</p>
-    <h2>Present Data Indicators</h2>
-    <p>The PRESENT LATITUDE and PRESENT LONGITUDE windows show the present position coordinates in degrees and minutes. During ground alignment, the coordinates are blank until fine alignment is completed.</p>
-    <p>The WIND DIR and WIND VEL window displays the wind direction in degrees and the wind velocity in knots. The window displays zeros until airborne.</p>
-    <p>The TIME-TO-TURN window displays the time-to-turn in hours, minutes, and seconds. The window is blank until the aircraft is moving.</p>
-    <p>The RANGE TO DP window displays the range to the DP in nautical miles. The window is blank until present position coordinates are entered.</p>
-    <p>The NEXT DP window displays the next destination point number. The window is blank until the present position coordinates are entered.</p>
-    <h2>Sensor Indicators</h2>
-    <p>The TECH L and R, and SLR indicator lights illuminate during display of control points or fix points to indicate programmed sensor activity at the selected point. The SLR light is not illuminated during display of viewsight fixpoints. During NORMAL display, these lights illuminate during actual ANS on-time commands and are extinguished by standby control point commands. The lights do not illuminate during manual sensor operation.</p>
-    <p>These lights also illuminate to verify sensor selection when adding or replacing control points.</p>
     <table border="1">
       <caption>Figure 4-4: Data in Selected Data Windows for Panel Routines</caption>
       <tbody>
@@ -990,6 +981,15 @@
       </tbody>
     </table>
     <h2>Star ON Indicator Light</h2>
+    <h2>Present Data Indicators</h2>
+    <p>The PRESENT LATITUDE and PRESENT LONGITUDE windows show the present position coordinates in degrees and minutes. During ground alignment, the coordinates are blank until fine alignment is completed.</p>
+    <p>The WIND DIR and WIND VEL window displays the wind direction in degrees and the wind velocity in knots. The window displays zeros until airborne.</p>
+    <p>The TIME-TO-TURN window displays the time-to-turn in hours, minutes, and seconds. The window is blank until the aircraft is moving.</p>
+    <p>The RANGE TO DP window displays the range to the DP in nautical miles. The window is blank until present position coordinates are entered.</p>
+    <p>The NEXT DP window displays the next destination point number. The window is blank until the present position coordinates are entered.</p>
+    <h2>Sensor Indicators</h2>
+    <p>The TECH L and R, and SLR indicator lights illuminate during display of control points or fix points to indicate programmed sensor activity at the selected point. The SLR light is not illuminated during display of viewsight fixpoints. During NORMAL display, these lights illuminate during actual ANS on-time commands and are extinguished by standby control point commands. The lights do not illuminate during manual sensor operation.</p>
+    <p>These lights also illuminate to verify sensor selection when adding or replacing control points.</p>
     <p>The light indicates the status of star tracking as described in the Computer Program section. Steady illumination of the light indicates that a minimum of two different stars have been tracked within the last 5 minutes.</p>
     <h2>MODE Window</h2>
     <p>The MODE window displays a legend which shows the operating phase of the ANS. The MODE window also displays an error message in the event of an operator error and may indicate recommended action in case of system malfunction. The malfunction indications are described in the Malfunction Indicator and the ANS MALFUNCTION PROCEDURES paragraphs. The MODE window indications are:</p>
@@ -10581,15 +10581,6 @@
     <p>Used to perform a panel light test and to display ANS tape data and internal ANS conditions when used in conjunction with the TEST position of the DATA switch.</p>
     <h3>SELECTED DATA Indicators</h3>
     <p>The indicators or windows consist of six separate sets of digital displays. Various operating parameters are displayed in the indicators during the panel fill, mission modification, update, and alignment routines as shown in Figure 4-50.</p>
-    <h3>Present Data Indicators</h3>
-    <p>The PRESENT LATITUDE and PRESENT LONGITUDE windows show the present position coordinates in degrees and minutes. During ground alignment, the coordinates are blank until fine alignment is completed.</p>
-    <p>The WIND DIR and WIND VEL window displays the wind direction in degrees and the wind velocity in knots. The window displays zeros until airborne.</p>
-    <p>The TIME-TO-TURN window displays the time-to-turn in hours, minutes, and seconds. The window is blank until the aircraft is moving.</p>
-    <p>The RANGE TO DP window displays the range to the DP in nautical miles. The window is blank until present position coordinates are entered.</p>
-    <p>The NEXT DP window displays the next destination point number. The window is blank until the present position coordinates are entered.</p>
-    <h3>Sensor Indicators</h3>
-    <p>The TECH L and R, and SLR indicator lights illuminate during display of control points or fix points to indicate programmed sensor activity at the selected point. The SLR light is not illuminated during display of viewsight fixpoints. During NORMAL display, these lights illuminate during actual ANS on-time commands and are extinguished by standby control point commands. The lights do not illuminate during manual sensor operation.</p>
-    <p>These lights also illuminate to verify sensor selection when adding or replacing control points.</p>
     <table border="1">
       <caption>Figure 4-50: Data in Selected Data Windows for Panel Routines (TAPE 13)</caption>
       <tbody>
@@ -11120,6 +11111,15 @@
       </tbody>
     </table>
     <h2>Star ON Indicator Light</h2>
+    <h3>Present Data Indicators</h3>
+    <p>The PRESENT LATITUDE and PRESENT LONGITUDE windows show the present position coordinates in degrees and minutes. During ground alignment, the coordinates are blank until fine alignment is completed.</p>
+    <p>The WIND DIR and WIND VEL window displays the wind direction in degrees and the wind velocity in knots. The window displays zeros until airborne.</p>
+    <p>The TIME-TO-TURN window displays the time-to-turn in hours, minutes, and seconds. The window is blank until the aircraft is moving.</p>
+    <p>The RANGE TO DP window displays the range to the DP in nautical miles. The window is blank until present position coordinates are entered.</p>
+    <p>The NEXT DP window displays the next destination point number. The window is blank until the present position coordinates are entered.</p>
+    <h3>Sensor Indicators</h3>
+    <p>The TECH L and R, and SLR indicator lights illuminate during display of control points or fix points to indicate programmed sensor activity at the selected point. The SLR light is not illuminated during display of viewsight fixpoints. During NORMAL display, these lights illuminate during actual ANS on-time commands and are extinguished by standby control point commands. The lights do not illuminate during manual sensor operation.</p>
+    <p>These lights also illuminate to verify sensor selection when adding or replacing control points.</p>
     <p>The light indicates the status of star tracking as described in the Computer Program section. Steady illumination of the light indicates that a minimum of two different stars have been tracked within the last 5 minutes.</p>
     <h2>MODE Window</h2>
     <p>The MODE window displays a legend which shows the operating phase of the ANS. The MODE window also displays an error message in the event of an operator error and may indicate recommended action in case of system malfunction. The malfunction indications are described in the Malfunction Indicator and the ANS MALFUNCTION PROCEDURES paragraphs. The MODE window indications are:</p>
