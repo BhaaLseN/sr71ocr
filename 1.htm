@@ -3373,7 +3373,7 @@
       <p>Emergency fuel dumping must be terminated by positioning the dump switch to OFF (or FUEL DUMP) or all tanks will empty.</p>
     </div>
     <p>The nominal dump rate is 2500 pounds per minute for both FUEL DUMP and EMER switch positions, but the rate varies with the amount of fuel remaining and the number of boost pumps operating. (Refer to Section II, Fuel Dumping). Power for the circuit is furnished by the essential dc bus through the fuel DUMP CONT circuit breaker on the pilot's left console.</p>
-    <p>Emergency Fuel Shutoff Switches</p>
+    <h4>Emergency Fuel Shutoff Switches</h4>
     <p>Independent emergency fuel shutoff switches for each engine are located on the pilot's right instrument side panel. The switches operate dc powered relays which control ac motor driven gate valves in the engine fuel lines. (See Figure 1-37). When the switches are in the guarded (fuel on) down position, the relays are deenergized and the gate valves are open and held open by the gate valve motors. When a shutoff switch is moved to the up (fuel off) position, its relay is energized and the corresponding gate valve motor closes the valve. Allow three to five seconds for the valve to close and shut off the fuel supply to that engine. This also isolates the fuel cooling loop for that side. (See Figure 1-39. ) The valve remains closed as long as the relay is energized. The valve opens if the dc relay is deenergized and ac power is available.</p>
     <p>Control power for the emergency fuel shutoff switch relays is provided from the essential dc bus through the L and R ENG SHUT OFF circuit breakers on the pilot's left console. Operating power for the shutoff valve motors is supplied from the essential ac bus through circuit breakers in the E-Bay.</p>
     <h2>Fuel Quantity Selector Switch</h2>
@@ -7261,9 +7261,7 @@
         </tr>
       </tbody>
     </table>
-    <p>
-      <u>SAS Control</u>
-    </p>
+    <h4>SAS Control</h4>
     <p>SAS engagement is controlled by an engage solenoid on each transfer valve. The solenoids must be energized to permit hydraulic flow into the transfer valve and engage the SAS. With the solenoid deenergized, hydraulic flow is shut off and the SAS is disengaged as SAS electronic inputs cannot position control surfaces when hydraulic flow to the transfer valves is shut off. The SAS is normally engaged (solenoids energized) by operating the SAS control switches to ON. The SAS may be disengaged manually by moving the control switches to OFF, or automatically by DAFICS.</p>
     <h4>SAS Redundancy</h4>
     <p>Basic SAS system redundancy is provided by the presence of two channels in each axis. Either channel alone is capable of providing satisfactory damping in the respective axis. SAS reliability is further assured by the fact that a single electrical or hydraulic failure cannot result in loss of both channels in any axis.</p>
@@ -7311,11 +7309,11 @@
     <h2>Yaw SAS Logic</h2>
     <h4>Sensors</h4>
     <p>Yaw sensor failure can be either a rate gyro or lateral accelerometer. Yaw rate gyro failures are indicated by a steady A, B, or M YAW SENSOR light. Lateral accelerometer failures are indicated by a flashing A, B, or M YAW SENSOR light. If the same yaw rate gyro and lateral accelerometer fail (A, B or M sensor), that YAW SENSOR light will be on steady. Computer sensor select capability for yaw rate gyros is the same as for pitch rate gyros, therefore, yaw SAS is available for single or dual gyro failures (if analytical redundancy is operative). Analytical redundancy is not provided for lateral accelerometers. Computer sensor select capability for lateral accelerometers is the same as for pitch rate gyros when analytical redundancy is not available, therefore, yaw SAS is not operative with dual lateral accelerometer failures.</p>
-    <p>Servos</p>
+    <h4>Servos</h4>
     <p>Computer servo monitoring is the same as pitch SAS.</p>
     <p>Yaw servo LVDT primary and secondary monitors are the same as for pitch SAS.</p>
     <h2>Roll SAS Logic</h2>
-    <p>Sensors</p>
+    <h4>Sensors</h4>
     <p>Computer sensor select capability averages the A and B gyro outputs and uses that signal for A and B computer SAS control. If A and B gyro outputs exceed tracking requirement (first failure) both gyros are compared with the analytical redundancy derived roll rate signal. The remaining gyro that is within tolerance is selected and used for A and B computer SAS control (the ROLL SENSOR light on function selector and SAS OUT light on annunciator panel are turned on).</p>
     <p>If analytical redundancy is not available (flashing BIT FAIL light), when first gyro failure occurs both roll SAS channels are disengaged (roll sensor light on function selector and SAS OUT light on annunciator panel are turned on). With analytical redundancy a second failure disengages roll SAS (ROLL SENSOR light on function selector and SAS OUT light on annunciator panel remain ON).</p>
     <h4>Servos</h4>
@@ -9644,16 +9642,16 @@
       <dd>Emergency. Responds to interrogations in Modes 1, 2 and 3A. Mode 3A responds with code 7700. Mode C and 4 operate normally if selected. The switch must be pulled out before it can be rotated to EMER.</dd>
     </dl>
     <h2>Mode l, 2, 3A and C Controls</h2>
-    <p>Mode 1, 2, 3A and C Control Switches</p>
+    <h4>Mode 1, 2, 3A and C Control Switches</h4>
     <p>Four three-position toggle switches select Modes 1, 2, 3A and C. The ON (center) position places the corresponding mode in operation and the OUT (down) position disables the corresponding mode. The momentary TEST (up) position is used to test each mode. Continuous illumination of the TEST indicator light, while a mode control switch is held in TEST and the master selector switch is in NORM, indicates successful self-test of that mode.</p>
     <p>Mode C responds with altitude information pulses in addition to the framing pulses (for tracking) sent in Mode 3A.</p>
-    <p>RAD-OUT-MON Switch</p>
+    <h4>RAD-OUT-MON Switch</h4>
     <p>The three-position RAD-OUT-MON switch is provided for testing and monitoring the IFF system. The spring-loaded momentary RAD position is used with ground equipment for maintenance test. In the MON (monitoring) position, the TEST light will illuminate intermittently when responding to radar in-terrogations in the mode(s) selected. In the OUT position, the TEST light will only respond to self-test inputs using the mode control switches and will not indicate response to radar interrogation.</p>
-    <p>Mode 1 and 3A Code Selector Switches</p>
+    <h4>Mode 1 and 3A Code Selector Switches</h4>
     <p>Six thumb-wheel switches select the codes for Mode 1 and Mode 3A. The two switches on the left select Mode 1 codes and the other four switches select Mode 3A codes. The left Mode 1 switch is numbered 0 through 7, the other is numbered 0 through 3 on each half of the drum. The Mode 3A switches are numbered 0 through 7.</p>
-    <p>Identification-of-Position Switch</p>
+    <h4>Identification-of-Position Switch</h4>
     <p>The three position identification-of-position (I/P) switch controls transmission of I/P pulse groups. The I/P timer is energized for thirty seconds when the switch is momentarily held in spring-loaded IDENT, and I/P replies will be made if a Mode 1, 2, or 3A interrogation is recognized within thirty seconds. The I/P pulse group is not transmitted when the I/P switch is in OUT. The MIC position is in-active.</p>
-    <p>Test Indicator Light</p>
+    <h4>Test Indicator Light</h4>
     <p>A rotate-to-dim, press-to-test, green TEST light indicates satisfactory operation of the transponder. With the master selector switch in NORM, the light illuminates when a mode switch (1, 2, 3A, or C) is placed in TEST if the self-test is satisfactory. When the system is operating (master selector switch in LOW or NORM), and the RAD-OUT-MON switch is in MON, the light blinks when the IFF responds to interrogation in the mode(s) selected.</p>
     <figure>
       <img src="images/1-74.jpg" alt="" />
@@ -9856,15 +9854,15 @@
     </table>
     <h2>Mode 4 Controls</h2>
     <p>Mode 4 is also controlled by the master selector switch.</p>
-    <p>Mode 4 Code Select Switch</p>
+    <h4>Mode 4 Code Select Switch</h4>
     <p>The Mode 4 code select switch is labeled ZERO, B, A, and HOLD. Placing the switch in ZERO cancels (zeroizes) both the code settings. The switch must be pulled out before it can be rotated to ZERO. When the switch is in A or B, the transponder will respond to Mode 4 interrogation sources using the same code. The spring-loaded HOLD position is used (before power is removed from the transponder) to retain codes when the aircraft is on the ground.</p>
     <div class="note">
       <p>Weight must be on the nosegear before the HOLD position is functional.</p>
     </div>
     <p>To retain code settings, the switch must be held in HOLD for at least 5 seconds and transponder power must be left on for an additional 15 seconds. Otherwise, the code settings may not be mechanically latched and will zeroize when the master selector switch is turned off or power is disconnected.</p>
-    <p>Mode 4 Reply Light</p>
+    <h4>Mode 4 Reply Light</h4>
     <p>A rotate-to-dim, press-to-test, green REPLY light illuminates when the Mode 4 indication switch is in either AUDIO or LIGHT, if transponder Mode 4 replies are satisfactory. Press-to-test is only operative in the AUDIO or LIGHT position.</p>
-    <p>Mode 4 Indication Switch</p>
+    <h4>Mode 4 Indication Switch</h4>
     <p>A three-position AUDIO-OUT-LIGHT toggle switch controls Mode 4 indications.</p>
     <p>W/O SB R-2668, with the indication switch in AUDIO (up), an audio tone is heard in the aft cockpit only if a proper Mode 4 interrogation is received, and the REPLY light illuminates when Mode 4 generates a reply.</p>
     <p>With SB R-2668, with the indication switch in AUDIO (up) an audio tone is heard in the aft cockpit if Mode 4 does not respond to a proper interrogation and the REPLY light will not illuminate.</p>
@@ -9872,11 +9870,9 @@
       <p>The RSO's IFR COM knob controls the volume of the Mode 4 audio.</p>
     </div>
     <p>In LIGHT (down), the REPLY light illuminates without audio when Mode 4 replies are transmitted. In OUT (center), both light and audio indications are inoperative.</p>
-    <p>Mode 4 On-Out Switch</p>
+    <h4>Mode 4 On-Out Switch</h4>
     <p>A two-position toggle switch controls Mode 4 operation. A Mode 4 response cannot be transmitted unless: ON (up) is selected; the Master Selector Switch is in LOW, NORM, or EMER; and the Mode 4 code has not been zeroized. The switch must be pulled out to be moved to OUT (down).</p>
-    <p>
-      <u>Mode 4 IFF Caution Light</u>
-    </p>
+    <h4>Mode 4 IFF Caution Light</h4>
     <p>A rotate-to-dim, amber IFF CAUTION light, is located on the RSO instrument panel. The light illuminates each time the transponder fails to reply to a proper interrogation. If the Mode 4 codes are zeroized, or if self-test detects a system fault, the light will be on steady. Pressing the LAMP TEST switch checks the light.</p>
     <h3>IFF Normal Operation</h3>
     <h2>Modes 1, 2, 3A and C</h2>
@@ -10342,7 +10338,7 @@
         <p>SLEW control - REV or FWD, as required.</p>
       </li>
     </ol>
-    <p>RSO's MAP PROJECTOR</p>
+    <h2>RSO's MAP PROJECTOR</h2>
     <p>The RSO's map projector system includes the projector, projector controls, and a 9 by 9-inch display screen. Some map projector controls are located on the viewsight control panel (Figure 4-33 without S/B R-2538, Figure 4-33A with S/B R-2538). When the RCD is installed, the map projector is mounted on the floor and projects onto a hinged viewing screen below the RCD. When the RCD is not installed, the projector is mounted horizontally at a higher position on the bottom of the instrument panel, and projection is then onto the display screen mounted in place of the RCD.</p>
     <div class="note">
       <p>The map film continues to move when data film is selected for viewing, even though the film is not projected. The rate of movement always corresponds to 250 nautical miles per inch.</p>

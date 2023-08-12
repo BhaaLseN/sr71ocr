@@ -1681,10 +1681,10 @@
     <p>Once on course, the aircraft should usually be within 300 feet of the commanded course, except in turns. Actual position of the track is dependent on ANS navigation accuracy.</p>
     <h2>ANS Steering Turn Modes</h2>
     <p>The mission planner can choose one of two different turn modes at each DP. These modes determine where the turn start to the next great circle leg will occur and the amount of bank angle commanded during the turn.</p>
-    <p>Auto-Range-To-Turn</p>
+    <h4>Auto-Range-To-Turn</h4>
     <p>The system computes the turn radius based on a 32° bank angle and the groundspeed at the start turn point. Once the turn is initiated, it is identical to the turn described in the Fixed-Range-To-Turn paragraphs.</p>
     <p>Auto-Range-To-Turn should be used for subsonic turns to prevent high bank angles at heavy weights. Current groundspeed and the heading change from present course to next are used to compute and initiate an automatic turn (termed by the mission planners as Turn Start Automatic, or TSA). The TSA point varies since it depends on groundspeed. If actual groundspeed is different from planned groundspeed, the TSA will not occur where planned and the aircraft will not follow the turn line depicted on the strip map. However, if there are no other disturbances, the aircraft should make the turn at a 32° bank angle.</p>
-    <p>Fixed-Range-To-Turn</p>
+    <h4>Fixed-Range-To-Turn</h4>
     <p>Fixed-Range-To-Turn is used by the mission planners for turns that indicate critical sensor legs and turns where strict adherence to the planned turn line is required. In this mode, the mission planner specifies a constant turn radius at a particular DP. The TSA point is a fixed distance plus a variable distance from the DP. The fixed distance is determined by the programmed turn radius and the change in course; it would be equal to turn radius on a 90° turn. The variable distance ranges from 0 to 4.5 nm, depending on groundspeed, and compensates for the distance required to roll into the turn. During the turn, commanded bank angle is the sum of two components. One component is the nominal bank required to achieve the programmed turn radius at the current ground speed. The second component trims bank angle trim as a function of the radial speed and position relative to the programmed radius so that the aircraft follows the planned turn line throughout the turn. If a transient causes the aircraft to deviate from the turn line, bank angle trim varies within ±10° to return to the turn line.</p>
     <figure>
       <img src="images/4-8.jpg" alt="" />
@@ -1701,11 +1701,11 @@
     <p>In normal operation, the aircraft will follow the turn line and roll out onto the next leg within 0.2 nm. Overshoots and undershoots will degrade sensor performance if the maneuver to get onto track is outside sensor stabilization limits. For the TECH camera(s), roll and pitch rate should be less than 0.3 per second for good photography.</p>
     <p>With the CAPRE radar, cross track velocity must be less than 35 fps in the programmed mode or 20 fps in the auto mode for good mapping. Figure 4-9 shows distances required to obtain cross track velocities within limits at standard cruise conditions. During most of the settle out distance, roll rates will be slight and suitable for good photography.</p>
     <p>During a SKIP TO operation, the same fixed turn radius is used, but a different TSA and turn line will result if the next leg is different from the planned leg.</p>
-    <p>Manual Steering</p>
+    <h4>Manual Steering</h4>
     <p>The ANS provides navigation information so the pilot can manually steer the aircraft. The bank steering bar on the ADI indicates the error between aircraft roll angle and ANS bank angle command and centers when the two are equal. Centering the bar steers the aircraft on the same path as AUTONAV steering.</p>
     <p>The pitch steering bar of the ADI indicates altitude rate (0 to ±3484 fpm) and is used to maintain altitude.</p>
     <p>The HSI displays true heading, command course, range to next DP, and cross track deviation (0 to ± 1 nm). These displays are relative to the turn line during turns or the great circle leg following turns; the range value represents the distance around the turn plus distance along the next leg.</p>
-    <p>Control Points (CPs)</p>
+    <h4>Control Points (CPs)</h4>
     <p>The technical objective cameras (TECHs) are turned on or off and pointed as the aircraft's along-track range to the next destination point coincides with the CP's along-track range to the next destination point. CPs bracket the target, with the turn-on control point at the same cross-track range as the target. The ANS computes the camera pointing angle required to cover the CP, and thus the target. (Actual target coordinates are not stored in the computer.) Camera CPs can be programmed along the turn line in Fixed-Range-To-Turn turns. Here the CP is located at the same radial distance from the turn line as the target.</p>
     <table border="1">
       <caption>Figure 4-9: Distance To Obtain Stable Cross Track Velocities</caption>
@@ -1843,7 +1843,7 @@
     </table>
     <p>The CAPRE side-looking radar (SLR) is controlled similarly to the cameras. In addition to the mode and range commands, the navigation system supplies altitude, groundspeed, cross track, vertical velocity, and aircraft attitude to the radar. These parameters permit compensation for aircraft motion while mapping. Programmed map swath, and a mapping progression marker transmitted every 2.5 n.m. are also supplied.</p>
     <p>The mode commands to the TECH(s) and the SLR are updated at each CP and FP so that more than one sensor can be turned on or off at a single point. All CP's and FP's on a leg are processed on that leg, even if a mission planning error or a panel filled change puts a CP or FP past the start turn point at the end of a leg.</p>
-    <p>Fix Points (FPs)</p>
+    <h4>Fix Points (FPs)</h4>
     <p>FPs are accurately known and readily identifiable points along the mission path that are used in measuring ANS position error with the SLR and RCD (Radar Correlator Display), viewsight or TACAN. FPs are used to determine ANS error at the time of the fix. The ANS can be corrected by depressing the UPDATE button, or the routine can be terminated without updating the ANS by depressing the MAN CLEAR pushbutton.</p>
     <p>The SLR is automatically turned on and pointed a prescribed distance in advance of the FP as determined by the mission planner. When the aircraft passes the FP, a MARK light appears at the bottom center of the RCD, the display stops moving, and the ANS transmits the computed fixpoint slant range to the radar. A right-angle "L" mark appears on the RCD 50 seconds later. The RSO measures ANS position error by first zeroing on the "L" mark and then moving the crosshairs to the actual fixpoint.</p>
     <p>The MARK light extinguishes when the "L" mark moves into view. ANS errors appear as north-south and east-west values on the NCD after the radar READ ERR switch is pressed.</p>
@@ -7778,23 +7778,23 @@
     <p>The RCD is a self-contained unit in the forward portion of the aft cockpit. It operates in conjunction with, but is independent of the radar recorder(s). The RCD operates when RCD power is applied and only when the SLR is in operation since it uses SLR doppler phase history video to produce an inflight display for navigation. The display moves downward at a rate proportional to ground speed and is normally 50 seconds (25 nautical miles at cruise speed and altitude) behind aircraft position. The RCD map display is 15 nautical miles wide. This display must be stopped for target evaluation and navigation fixpoint error determination.</p>
     <h3>RCD Control Panel</h3>
     <p>The RCD control panel (figure 4-27) is below and to the right of the radar map display. At the left of the panel is a crosshair control. In the center are error readout position counters. There are six display indicator and control switches on the right side of the panel.</p>
-    <p>Crosshair Control</p>
+    <h4>Crosshair Control</h4>
     <p>The CROSSHAIR control moves in all directions but is spring-loaded to return to the center neutral position. When the control is moved from the neutral position, the crosshairs on the radar map display move in the direction of control movement at a rate proportional to the displacement.</p>
-    <p>Slant-Range Error Readout</p>
+    <h4>Slant-Range Error Readout</h4>
     <p>A three-digit counter, labeled SLANT RANGE - NMI, indicates lateral error to the nearest one-tenth nm between predicted ANS fixpoint location, as indicated by the illuminated "L" marker on the radar display, and the actual location of the fix on the radar. An adjacent indicator displays LEFT or RIGHT to indicate direction of crosshair displacement from the ANS computed position. Although the maximum counter indication is 99.9 nautical miles, the system will only display an error up to 15 nm.</p>
-    <h3>Along-Track Error Readout</h3>
+    <h4>Along-Track Error Readout</h4>
     <p>A three-digit ALONG TRACK - NMI counter indicates distance to the nearest one-tenth nm along track between predicted fixpoint location, as indicated by the "L" marker on the radar display, and actual fixpoint location on the radar. An adjacent indicator shows the direction of crosshair displacement, FWD or AFT, from the ANS computed position. The maximum error displayed is 12 nm, although the counters go up to 99.9 nm.</p>
-    <p>Read Error Control Switch (READ ERR)</p>
+    <h4>Read Error Control Switch (READ ERR)</h4>
     <p>This pushbutton switch transmits position error information from the RCD to the ANS. Depressing the switch during tape-filled Radar fixing causes the error data, generated by the position of the crosshairs on the RCD radar display, to appear in SELECTED DATA windows one and four on the ANS NCD panel. The error is displayed as N/S and E/W components in nautical miles and tenths of nautical miles. The READ ERR legend illuminates when the SLR begins manual or automatic operation.</p>
-    <p>Map Storage Control Switch</p>
+    <h4>Map Storage Control Switch</h4>
     <p>This pushbutton switch labeled HOLD/FULL is disabled.</p>
-    <p>RCD Power Switch</p>
+    <h4>RCD Power Switch</h4>
     <p>The RCD pushbutton power switch is labeled PWR in the top half, OFF and ON in the bottom half. The switch should be left in the ON position if operation of the RCD is desired. The OFF position is used only for emergency removal of RCD power or recycling the RCD in specific RCD BIT-Light malfunctions.</p>
-    <h3>Crosshair Readout Zero Control Switch</h3>
+    <h4>Crosshair Readout Zero Control Switch</h4>
     <p>The crosshair readout zero control pushbutton switch, labeled ZERO in the top and WAIT in the lower half, electrically zeros the crosshair position on the radar display during position error determination. The ZERO legend illuminates when the SLR begins manual or automatic operation. Depressing the pushbutton when the RCD crosshairs are positioned over the intersection of the horizontal and vertical traces of the "L" on the radar display provides an electrical zero reference point for subsequent crosshair movement. WATT illuminates when the pushbutton is depressed, and stays on for five seconds. This provides time for the SLANT RANGE and ALONG TRACK counters to go to zero. The crosshairs can be positioned on the precise radar fix aimpoint after the WAIT light is off.</p>
-    <h3>Display Motion Control Switch</h3>
+    <h4>Display Motion Control Switch</h4>
     <p>The display motion control pushbutton switch, labeled MOT (motion) in the top half, R (run) in the lower right quarter, and S (stop) in the lower left quarter, stops the radar map display motion (as required for fix taking) during SLR operation. The legends R and S Illuminate alternately as the pushbutton is depressed to start or stop radar map travel. The MOT legend illuminates when the SLR begins manual or automatic operation.</p>
-    <h3>RCD Operate Control Switch</h3>
+    <h4>RCD Operate Control Switch</h4>
     <p>
       <span>The self-illuminated, operate control pushbutton switch is labeled RCD in the top half, R (run) in the lower right quarter, and S (standby) in the lower left quarter. When power is applied to the SLR with ON illuminated on the RCD power switch, the RCD and S legends illuminate. When the SLR receives a continuous operate command (in automatic or manual mode), the R legend illuminates, the RCD starts to run, and imagery becomes visible in 50 seconds. While the SLR</span>
       <u>operate</u>
@@ -7806,7 +7806,7 @@
       <span>ated),</span>
       <span>and operating the switch has no effect. When a radar operate command is removed, the RCD does not immediately stop, but requires approximately 50 seconds for the S legend to illuminate and imagery on the radar screen to cease before going into standby mode.</span>
     </p>
-    <h3>Video Gain Control</h3>
+    <h4>Video Gain Control</h4>
     <p>This thumbwheel on the right side of the RCD control panel is disabled.</p>
     <h3>Film Remaining Counter</h3>
     <p>A four-digit, decreasing, RCD film remaining counter, labeled N MILES of FILM REMAIN, is located on a small panel to the left of the navigation map projector screen. The counter is preset to 3000 by pushing a reset button above the panel when the RCD film magazine is loaded. It continuously displays the amount of RCD film remaining in nautical miles.</p>
