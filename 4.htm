@@ -11985,9 +11985,9 @@
     <p>The first and second digits control L and R TECH camera operation. The third digit is always zero. When control points are added or replaced, take care not to disrupt prior turn-on commands to the TECH cameras. If, for example, the L TECH was automatically turned on 50 nm prior to an add R TECH control point, and the mission planner intended it to remain on for a total 100 nm swath, the add-control point sensor assignment code would be 110. This would tell the computer to leave the L TECH on at the new control point and that the R TECH will be turned on. This is necessary because each CP will turn sensors off without an "on" marker in the sensor code.</p>
     <h3>Left-Right Camera Pointing Code</h3>
     <p>The left-right marker designates which TECH camera to operate. When adding or replacing</p>
-    <h3>Sensor Selection Code</h3>
     <table border="1">
-      <tbody>
+      <caption>Figure 4-57: Sensor Selection Code</caption>
+      <thead>
         <tr>
           <td>
             <p>SENSOR</p>
@@ -11996,6 +11996,8 @@
             <p>CODE</p>
           </td>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>
             <p>L TECH</p>
@@ -12024,14 +12026,15 @@
             <p>0</p>
           </td>
         </tr>
+      </tbody>
+      <tfoot>
         <tr>
           <td colspan="4">
             <p>Verify code insertion on panel by illumination of appropriate sensor indicator.</p>
           </td>
         </tr>
-      </tbody>
+      </tfoot>
     </table>
-    <p>Figure 4-57</p>
     <p>TECH camera control points, insert L000 or R000 for control points to the left or right of course respectively. Verify code insertion in the SELECTED DATA window 5 (R or L plus three numeric digits).</p>
     <h3>ASARS Control Point Code</h3>
     <p>A five digit code designates which feature of the ASARS will be activated at a panel-filled control point.</p>
