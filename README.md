@@ -9,7 +9,17 @@ For the original source see [www.sr-71.org](https://www.sr-71.org/blackbird/manu
 - [ ] Create cross-references for plain-text (mainly figures and other sections)
 - [x] Turn Warnings/Cautions/Notes into actual markup
 - [ ] Move figures closer to their usage (or at least the most appropriate sub/section)
-- [ ] Split the large files into section (and maybe files)
+  - [ ] Section I
+  - [ ] Section IA
+  - [ ] Section II
+  - [ ] Section III
+  - [ ] Section IV
+  - [ ] Section V
+  - [ ] Section VI
+  - [ ] Section VII
+  - [x] Appendix
+- [x] Split the large files into section
+  - [ ] Split the large files into multiple files
 - [ ] Vectorize, redraw or at least touch-up images
 - [ ] OCR the other manuals:
   - [ ] Functional Check Flight Procedures [SR-71-6CF-1](https://www.sr-71.org/blackbird/sr-71-6cf-1/)
