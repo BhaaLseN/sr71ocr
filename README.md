@@ -4,7 +4,7 @@ This is an [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) of
 For the original source see [www.sr-71.org](https://www.sr-71.org/blackbird/manual/).
 
 ## TODO List
-- [ ] Spellcheck
+- [x] Spellcheck
 - [ ] Cross-check the OCR against the original (again)
 - [ ] Create cross-references for plain-text (mainly figures and other sections)
 - [x] Turn Warnings/Cautions/Notes into actual markup
