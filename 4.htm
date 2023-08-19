@@ -4245,7 +4245,7 @@
             </li>
             <li>
               <p>Check True Heading and Update if required.</p>
-              <p>An accurate True Heading should be displayed during C/A since the ANS uses the current INS magnetic heading and the last computed value of ΔPSIM, (this value normally equates to magnetic variation since it is the difference between the ANS inertial true heading and INS magnetic heading). If a heading error exists in the INS, ΔPSIM will be MAG VAR plus or minus INS heading error. ΔPSIM is updated every 4 minutes along with the DR position update and is also computed whenever ANS power is lost. If the aircraft does not fly through more than 1-1/2° of variation from the time this value is computed until RES appears in the MODE window, the ANS heading should be accurate enough to track stars. If MAG VAR is filled, the computed value of MAG VAR ( Δ PSIM) is superseded. A true heading error could result from adding a geographically accurate MAG VAR to an inaccurate INS magnetic heading. In any case filling MAG VAR will only change true heading and true heading display when in C/A. Fill MAG VAR has no effect on heading or heading display in RES or A-I. If a true heading update routine is performed during C/A or ENT, the updated true heading will not be displayed until RES. True heading may be updated and displayed in RES or A-L The TRUE HEADING UPDATE routine will override the fill MAG VAR routine regardless of their sequence. The inertial frame uses the true heading at the end of C/A to begin inertial navigation.</p>
+              <p>An accurate True Heading should be displayed during C/A since the ANS uses the current INS magnetic heading and the last computed value of ΔPSIM, (this value normally equates to magnetic variation since it is the difference between the ANS inertial true heading and INS magnetic heading). If a heading error exists in the INS, ΔPSIM will be MAG VAR plus or minus INS heading error. ΔPSIM is updated every 4 minutes along with the DR position update and is also computed whenever ANS power is lost. If the aircraft does not fly through more than 1-1/2° of variation from the time this value is computed until RES appears in the MODE window, the ANS heading should be accurate enough to track stars. If MAG VAR is filled, the computed value of MAG VAR (ΔPSIM) is superseded. A true heading error could result from adding a geographically accurate MAG VAR to an inaccurate INS magnetic heading. In any case filling MAG VAR will only change true heading and true heading display when in C/A. Fill MAG VAR has no effect on heading or heading display in RES or A-I. If a true heading update routine is performed during C/A or ENT, the updated true heading will not be displayed until RES. True heading may be updated and displayed in RES or A-I. The TRUE HEADING UPDATE routine will override the fill MAG VAR routine regardless of their sequence. The inertial frame uses the true heading at the end of C/A to begin inertial navigation.</p>
               <p>The RSO has three options for true heading in the ANS: do nothing and let the last computed value of the MAG VAR (ΔPSIM) determine the true heading; fill a true heading (using tanker heading for example); or fill MAG VAR. If INS heading appears normal, the first option is recommended.</p>
             </li>
             <li>
@@ -7540,8 +7540,8 @@
       <p>Two rotary mode selector (MODE SEL) switches on the PWR &amp; SENSOR control panel, one for each camera, select the desired mode during manual operation. The switch is effective only when the respective CONT switch illuminates M and has three operating mode positions, labeled 1, 2, or 3:</p>
       <p>MODE 1 (all):</p>
       <p>Single exposures at 1.1 per second at the selected pointing angle.</p>
-      <h3>Mode 2</h3>
-      <h3>-11 HR-308B:</h3>
+      <p>MODE 2</p>
+      <p>-11 HR-308B:</p>
       <p>Single exposures at a V/R controlled rate which provides <span class="redacted">REDACTED</span> overlap between successive exposures at the selected pointing angle.</p>
       <p>-21 HR-308B and HR-308C:</p>
       <p>Single exposures every 1.25 seconds alternating between 4 degrees greater and 4 degrees less than the selected pointing angle.</p>
@@ -7562,7 +7562,7 @@
       <p>A self-illuminated camera operate push-button switch, labeled OPR in the top half, is provided for each camera. The lower left quarter of the switch is labeled SRT (start) and the lower right quarter STP (stop); SRT and STP illuminate alternately as the push-button is pressed. The switch is effective only when its related control switch is in manual (M) position. The OPR portion of the switch illuminates immediately for the -21 HR-308B and HR-308C, or in approximately 30 seconds for the -11 HR-308B after the power switch is actuated to ON. Either version of HR-308B camera can operate as soon as power is on with no image degradation. Due to stabilization delay the HR-308C should not be operated until 15 seconds after OPR illuminates. If the CONT switch is in M (manual), verify that the OPR switch is in STP until camera operation is desired.</p>
       <h2>FMC Selector Switch</h2>
       <p>Self-illuminated FMC selector push-button switches, one for each camera, select the signal source for forward motion compensation. The top half of the push-button is labeled FMC and the legend illuminates when its respective camera power switch is on. The lower left quarter of the switch is labeled V/H and the lower right quarter is labeled V/R. The V/H and V/R legends illuminate alternately when the push-button is actuated. When the V/R legend illuminates, the camera is using the primary source of FMC input. When the V/H legend illuminates, the camera is using an alternate source of FMC input. The signals selected as primary and alternate sources are:</p>
-      <h4>-11 HR-308B Normal Operation:</h4>
+      <p>-11 HR-308B Normal Operation:</p>
       <ol class="list-alpha">
         <li>
           <p>FMC switch - V/R; V/H source switch - NAV.</p>
@@ -7578,7 +7578,7 @@
           </div>
         </li>
       </ol>
-      <h4>-21 HR-308B Normal Operation:</h4>
+      <p>-21 HR-308B Normal Operation:</p>
       <ol class="list-alpha">
         <li>
           <p>FMC switch - V/R; V/H source switch - NAV.</p>
@@ -7595,7 +7595,7 @@
           <p>Set V/H source switch to VWSGT or MAN.</p>
         </li>
       </ol>
-      <h4>HR-308C Normal Operation:</h4>
+      <p>HR-308C Normal Operation:</p>
       <ol class="list-alpha">
         <li>
           <p>FMC switch - V/R; V/H source switch - NAV.</p>
@@ -8697,7 +8697,7 @@
         <h4>Viewsight Grid Illumination Control</h4>
         <p>A viewsight grid illumination control on the left end of the viewsight control panel controls grid illumination. Full counterclockwise is off.</p>
         <h4>VIEWSIGHT RATE Control Knob</h4>
-        <p>This rotary variable control synchronizes the traveling grid to correspond with terrain view travel across the viewright display, when VS is selected with the MONITOR switch.</p>
+        <p>This rotary variable control synchronizes the traveling grid to correspond with terrain view travel across the viewsight display, when VS is selected with the MONITOR switch.</p>
         <h4>Viewsight Diffuser Screen</h4>
         <p>The diffuser screen has a vertical grid surface, and is hinged at the top with a detent latch to hold it in a stowed position. Without the diffuser the full screen image is visible only when the eye is 20 inches from the screen, and within 3/4 inches of the optical axis. As the eye is brought closer to the screen, the visible image disc diameter becomes smaller. When the diffuser is used, the viewer has two eye position capabilities in which lateral eye position is not critical. (Although the vertical dimension will vary when the eye is brought closer than 20 inches to the screen, the visible image will now be rectangular, having a constant, full horizontal dimension.)</p>
       </section>
@@ -8717,7 +8717,7 @@
             <p>Grid ILLUM - As desired.</p>
           </li>
         </ol>
-        <p>To use the viewright V/H signal:</p>
+        <p>To use the viewsight V/H signal:</p>
         <ol class="list-number" start="5">
           <li>
             <p>V/H power switch - ON.</p>
@@ -9269,8 +9269,8 @@
         <h4>DEF Control Panel</h4>
         <!-- big redaction notice -->
         <div>
-    Data deleted is classified IAW SR-71 Program Security Classification Guide, dated 23 September 1996.
-    </div>
+        Data deleted is classified IAW SR-71 Program Security Classification Guide, dated 23 September 1996.
+        </div>
         <p>The Go display shows the system selected by the SYSTEM SELECT switch (unless the system is not installed in the aircraft). The system designation remains illuminated until repositioning the SYSTEM SELECT switch extinguishes the designator. The word GO does not appear in the Go display until a self-test is satisfactory. A failure condition after self-test will not extinguish the GO.</p>
         <p>Normally, the Fail display is blank. FAIL and the corresponding system designator illuminate if a system malfunction is detected. HOT or COMP (computer) also can appear instead of FAIL. The HOT display applies to DEF A2 and H systems. COMP applies only to DEF H. More than one legend can be displayed simultaneously. In this event, it is possible for the FAIL, HOT, and/or COMP legends to be superimposed.</p>
         <p>GO and FAIL can illuminate almost simultaneously during system tests. Except for selftests of the DEF H and M systems, a GO display is locked in when it appears. It stays illuminated until the SYSTEM SELECT switch is repositioned. FAIL can appear as a result of a subsequent failure during the self-test sequence, or as a result of a failure of another system while the self-test is in progress. (In this latter case, another legend would appear in the Fail display.)</p>
@@ -9634,15 +9634,12 @@
       <div class="note">
         <p>The HI band status switch must be in O before the <span class="redacted">REDACTED</span> status switch can be set to O.</p>
       </div>
-      <p>
-        <span class="redacted">REDACTED</span>
-      </p>
+      <p class="redacted">REDACTED</p>
       <p>
         <span class="redacted">REDACTED</span> and provides an output to the AR-1700 recorder of the EIP system. The IU then controls the jamming pulses generated by the transmitting systems. The transmitting systems are designated as low-band <span class="redacted">REDACTED</span> and high band <span class="redacted">REDACTED</span> coverage). Each consists of <span class="redacted">REDACTED</span>.</p>
       <p>During manual operation, each band can be driven by commands from the DEF control panel to <span class="redacted">REDACTED</span> (<span class="redacted">REDACTED</span> three modes).</p>
       <p>During <span class="redacted">REDACTED</span> operation, except for system transmit functions, the DEF H operates identically to <span class="redacted">REDACTED</span> operation. Upon receiving information from DEF C2, DEF H will transmit predetermined <span class="redacted">REDACTED</span> frequencies as determined by the LO and HI Mode selections. The <span class="redacted">REDACTED</span> jamming in the <span class="redacted">REDACTED</span> state is either computer controlled predetermined broad band <span class="redacted">REDACTED</span> depending on whether <span class="redacted">REDACTED</span> selected. If either of these modes selected, <span class="redacted">REDACTED</span> jamming is <span class="redacted">REDACTED</span> the corresponding band.</p>
-      <h3>
-        <span class="redacted">REDACTED</span>.</h3>
+      <p class="redacted">REDACTED.</p>
       <p>The threat recognition characteristics and DEF H transmitted output characteristics are programmed in the computer prior to flight. See Figure 4-41.</p>
       <p>DEF H is installed in the forward left bay (K Bay). See Figure 4-38. DEF H operates in conjunction with the DEF C2 receiver system and the EIP AR-1700 recorder. It also supplies transmit, self-test results, mode select, system status, and fault data to the MRS.</p>
       <p>Electrical power to DEF H is supplied from the left generator AC bus through the 3-phase circuit breaker in the C-bay and from the monitored DC bus through the DEF F circuit breaker on the RSO's right console. See Figure 4-40.</p>
@@ -9686,14 +9683,12 @@
         <p>If DEF H is turned off inadvertently it can be reactivated at any time during the three minute cycle-out period. Otherwise, a full five minute warm-up is required.</p>
       </div>
       <p>System operating states are selected by using switches on the DEF control panel. The F and H legends on the F/H power switch, in conjunction with the A and M mode lights, indicate the existing operational state.</p>
-      <p>
-        <span class="redacted">REDACTED</span>.</p>
+      <p class="redacted">REDACTED.</p>
       <p>During <span class="redacted">REDACTED</span> operation, only <span class="redacted">REDACTED</span> mode lights illuminate. If jamming is desired in both low and high bands, at least one <span class="redacted">REDACTED</span> mode light must be illuminated in each band.</p>
       <p>Manual operation can be selected when the <span class="redacted">REDACTED</span>. Manual is indicated by illumination of either the F or H legend, and at least one M mode light. If jamming is desired in both the low and high bands, at least one M mode light must be illuminated in each band.</p>
       <p>
         <span class="redacted">REDACTED</span> the alternate state can be selected using the following procedure.</p>
-      <h3>
-        <span class="redacted">REDACTED</span>.</h3>
+      <p class="redacted">REDACTED.</p>
       <ol class="list-alpha">
         <li>
           <p>SYSTEM SELECT switch - F/H LO or F/H HI.</p>
@@ -13920,7 +13915,7 @@
             </li>
             <li>
               <p>Check True Heading and Update if required.</p>
-              <p>An accurate True Heading should be displayed during C/A since the ANS uses the current INS magnetic heading and the last computed value of ΔPSIM, (this value normally equates to magnetic variation since it is the difference between the ANS inertial true heading and INS magnetic heading). If a heading error exists in the INS, ΔPSIM will be MAG VAR plus or minus INS heading error. ΔPSIM is updated every 4 minutes along with the DR position update and is also computed whenever ANS power is lost. If the aircraft does not fly through more than 1-1/2° of variation from the time this value is computed until RES appears in the MODE window, the ANS heading should be accurate enough to track stars. If MAG VAR is filled, the computed value of MAG VAR (ΔPSIM) is superseded. A true heading error could result from adding a geographically accurate MAG VAR to an inaccurate INS magnetic heading. In any case filling MAG VAR will only change true heading and true heading display when in C/A. Fill MAG VAR has no effect on heading or heading display in RES or A-L If a true heading update routine is performed during C/A or ENT, the updated true heading will not be displayed until RES. True heading may be updated and displayed in RES or A-L The TRUE HEADING UPDATE routine will override the fill MAG VAR routine regardless of their sequence. The inertial frame uses the true heading at the end of C/A to begin inertial navigation.</p>
+              <p>An accurate True Heading should be displayed during C/A since the ANS uses the current INS magnetic heading and the last computed value of ΔPSIM, (this value normally equates to magnetic variation since it is the difference between the ANS inertial true heading and INS magnetic heading). If a heading error exists in the INS, ΔPSIM will be MAG VAR plus or minus INS heading error. ΔPSIM is updated every 4 minutes along with the DR position update and is also computed whenever ANS power is lost. If the aircraft does not fly through more than 1-1/2° of variation from the time this value is computed until RES appears in the MODE window, the ANS heading should be accurate enough to track stars. If MAG VAR is filled, the computed value of MAG VAR (ΔPSIM) is superseded. A true heading error could result from adding a geographically accurate MAG VAR to an inaccurate INS magnetic heading. In any case filling MAG VAR will only change true heading and true heading display when in C/A. Fill MAG VAR has no effect on heading or heading display in RES or A-I. If a true heading update routine is performed during C/A or ENT, the updated true heading will not be displayed until RES. True heading may be updated and displayed in RES or A-I. The TRUE HEADING UPDATE routine will override the fill MAG VAR routine regardless of their sequence. The inertial frame uses the true heading at the end of C/A to begin inertial navigation.</p>
               <p>The RSO has three options for true heading in the ANS: do nothing and let the last computed value of the MAG VAR (ΔPSIM) determine the true heading; fill a true heading (using tanker heading for example); or fill MAG VAR. If INS heading appears normal, the first option is recommended.</p>
             </li>
             <li>
