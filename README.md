@@ -10,7 +10,7 @@ For the original source see [www.sr-71.org](https://www.sr-71.org/blackbird/manu
 - [x] Turn Warnings/Cautions/Notes into actual markup
 - [ ] Move figures closer to their usage (or at least the most appropriate sub/section)
   - [x] Section I
-  - [ ] Section IA
+  - [x] Section IA
   - [ ] Section II
   - [ ] Section III
   - [ ] Section IV
