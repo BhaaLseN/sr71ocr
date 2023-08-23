@@ -13,7 +13,7 @@ For the original source see [www.sr-71.org](https://www.sr-71.org/blackbird/manu
   - [x] Section IA
   - [x] Section II
   - [x] Section III
-  - [ ] Section IV
+  - [x] Section IV
   - [ ] Section V
   - [ ] Section VI
   - [ ] Section VII
