@@ -14,7 +14,7 @@ For the original source see [www.sr-71.org](https://www.sr-71.org/blackbird/manu
   - [x] Section II
   - [x] Section III
   - [x] Section IV
-  - [ ] Section V
+  - [x] Section V
   - [ ] Section VI
   - [ ] Section VII
   - [x] Appendix
