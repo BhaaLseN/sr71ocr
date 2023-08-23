@@ -11,7 +11,7 @@ For the original source see [www.sr-71.org](https://www.sr-71.org/blackbird/manu
 - [ ] Move figures closer to their usage (or at least the most appropriate sub/section)
   - [x] Section I
   - [x] Section IA
-  - [ ] Section II
+  - [x] Section II
   - [ ] Section III
   - [ ] Section IV
   - [ ] Section V
