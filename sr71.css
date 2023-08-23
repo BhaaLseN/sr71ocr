@@ -196,3 +196,29 @@ article[data-title]::before, section[data-title]::before {
   border-left: 1px dashed black;
   border-right: 1px dashed black;
 }
+
+h1 {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: upper-case;
+}
+h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: upper-case;
+}
+h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+h5 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
