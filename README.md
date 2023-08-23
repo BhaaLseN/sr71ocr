@@ -8,15 +8,15 @@ For the original source see [www.sr-71.org](https://www.sr-71.org/blackbird/manu
 - [ ] Cross-check the OCR against the original (again)
 - [ ] Create cross-references for plain-text (mainly figures and other sections)
 - [x] Turn Warnings/Cautions/Notes into actual markup
-- [ ] Move figures closer to their usage (or at least the most appropriate sub/section)
+- [x] Move figures closer to their usage (or at least the most appropriate sub/section)
   - [x] Section I
   - [x] Section IA
   - [x] Section II
   - [x] Section III
   - [x] Section IV
   - [x] Section V
-  - [ ] Section VI
-  - [ ] Section VII
+  - [x] Section VI
+  - [x] Section VII
   - [x] Appendix
 - [x] Split the large files into section
   - [ ] Split the large files into multiple files
