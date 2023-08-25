@@ -25,7 +25,7 @@
         <img src="images/5-1_2.jpg" alt="" />
         <figcaption>Figure 5-1 (Sheet 2 of 2): Instrument Markings</figcaption>
       </figure>
-      <h2>Airspeed-Mach Meter</h2>
+      <h2 id="airspeed-mach-meter">Airspeed-Mach Meter</h2>
       <p>The limit hand of the airspeed-mach meter is set to indicate 460 KIAS at sea level.</p>
     </section>
     <section>
@@ -36,9 +36,9 @@
         <p>Any fuel other than JP-7 (such as JP-4, JP-5, or JP-8) is considered an emergency fuel and may be used only when refueling must be accomplished to avoid loss of the aircraft. Operation with emergency fuels is restricted to speeds below Mach 1.5. Rate of climb is not restricted. If fuels other than JP-7 are used, record it as a discrepancy in AFTO Form 781.</p>
       </section>
     </section>
-    <section>
+    <section id="engine-operating-limits">
       <h1>Engine Operating Limits</h1>
-      <section>
+      <section id="engine-operating-limits-inflight-shutdown">
         <h3>In-Flight Shutdown</h3>
         <p>After any in-flight shutdown, a report must be made if the fuel shut-off valve was operated and/or if windmilling speeds less than 3400 RPM were experienced.</p>
         <p>While in-flight, intentional engine shutdown is not permitted during normal operation unless specifically authorized.</p>
@@ -46,7 +46,7 @@
       <section>
         <h3>Exhaust Gas Temperature (EGT)</h3>
         <p>The nominal operating bands, limits for continuous operation, and emergency operating zones are a function of compressor inlet temperature (CIT) as shown in <a href="#fig-5-2">Figure 5-2</a>.</p>
-        <h4>Ground Operation</h4>
+        <h4 id="egt-limits-ground-operation">Ground Operation</h4>
         <p>The EGT limit for starting and for all ground operations with the RPM at or below idle is 565°C.</p>
         <h5>Start</h5>
         <p>Shut down the engine if EGT exceeds 565°C during start. If EGT exceeds 565° but is less than 649°C record in the AFTO Form 781 the number of excursions and peak EGTs. The engine is limited to five excursions between 565°C and 649°C before it must be removed and inspected.</p>
@@ -86,7 +86,7 @@
           <figcaption>Figure 5-2 (Sheet 2 of 2): Engine Operating Schedules and Limits</figcaption>
         </figure>
       </section>
-      <section>
+      <section id="cit">
         <h3>Compressor Inlet Temperature (CIT)</h3>
         <p>With both inlet guide vanes (IGVs) cambered, the maximum allowable compressor inlet temperature is 427°C.</p>
         <p>With an IGV in axial (IGV light illuminated), 150°C must not be exceeded, and continued operation with CIT above 125°C is not permitted (approximately Mach 2.0).</p>
@@ -96,7 +96,7 @@
         <p>Engine speed should not exceed the higher value shown by <a href="#fig-5-2">Figure 5-2</a> for the nominal operating band. Report engine speeds above 7450 RPM below 300°C CIT, and 7300 RPM above 300°C CIT as an engine overspeed. Include maximum RPM attained, CIT, and accumulated time above the limit.</p>
         <p>The allowable RPM fluctuation is ±1%.</p>
       </section>
-      <section>
+      <section id="oil-pressure-limits">
         <h3>Oil Pressure</h3>
         <p>35 psi is the minimum oil pressure permitted at idle RPM. Oil pressure below 35 psi is unsafe and requires that a landing be made as soon as possible using the minimum thrust required to sustain flight. The engine may have to be shut down.</p>
         <p>In-flight oil pressures between 35 and 40 psi are undesirable but acceptable.</p>
@@ -108,12 +108,12 @@
         <p>Random ENP fluctuations of ±4% are acceptable in-flight (if RPM is within limits). Cyclic ENP fluctuations should be reported.</p>
       </section>
     </section>
-    <section>
+    <section id="max-weight">
       <h1>Maximum Weight</h1>
       <p>The maximum gross weight for takeoff and landing is not limited; however, when feasible, routine full-stop landings should be made with no more than 10,000 pounds of fuel. The maximum fuel load recommended for touch-and-go landings is 25,000 pounds remaining.</p>
       <p>The maximum gross weight capability for single-engine flight is presented in Part II of the Appendix.</p>
     </section>
-    <section>
+    <section id="load-factor-limits">
       <h1>Load Factor Limits</h1>
       <p>Limit load factors are shown by <a href="#fig-5-5">Figure 5-5</a>. The diagrams presented for symmetrical flight are also applicable to entry into turns with normal bank angles. Allowable load factors applicable to rolling flight (abrupt maneuvers as a result of rapid control displacement) are especially identified and have a minimum limit of 1 g. Specific limits are shown for flight at Mach 3.2, 2.6, and at Mach 2.0 or less and for subsonic cruise and transonic penetration at forward C.G. Limit speeds and load factors applicable to operation at intermediate speeds above Mach 2.0 are obtained from sheets <a href="#fig-5-5-4">4</a> and <a href="#fig-5-5-5">5</a> of <a href="#fig-5-5">Figure 5-5</a>.</p>
       <p>The following rule of thumb may be used for operational limit load factors for symmetrical flight:</p>
@@ -212,7 +212,7 @@
     </section>
     <section>
       <h1>Flight Envelope Limits</h1>
-      <p>Refer to Figures <a href="#fig-5-3">5-3</a> and <a href="#fig-5-4">5-4</a> for summarized Mach, airspeed, angle of attack, altitude and bank angle limits and restrictions. Refer to Center of Gravity Limits, this section, for speed limits with C.G. forward of 17%.</p>
+      <p>Refer to Figures <a href="#fig-5-3">5-3</a> and <a href="#fig-5-4">5-4</a> for summarized Mach, airspeed, angle of attack, altitude and bank angle limits and restrictions. Refer to <a href="#cg-limits">Center of Gravity Limits, this section</a>, for speed limits with C.G. forward of 17%.</p>
       <figure id="fig-5-3">
         <img src="images/5-3.jpg" alt="" />
         <figcaption>Figure 5-3: Limit Speed and Altitude Envelope</figcaption>
@@ -231,7 +231,7 @@
         <p>Mach 2.6 is the maximum speed without an inert atmosphere in the fuel tanks. To achieve an inert atmosphere in the tanks, LN<sub>2</sub> must be available and fueling to the ground shutoff level must be accomplished prior to flight or aerial refueling must be accomplished to a minimum level of 65,000 lb.</p>
         <p>During descent from flight above Mach 2.6 with fuel tank pressurization failure, 250 KEAS minimum airspeed is permissible during subsonic loiter between FL 400 and FL 350.</p>
       </section>
-      <section>
+      <section id="airspeed">
         <h3>Airspeed</h3>
         <div class="warning">
           <p>Monitor flight instruments during autopilot operation. Assure that speed does not exceed the normal operating envelope.</p>
@@ -242,7 +242,7 @@
           <span>below FL 250 unless angle of attack limits would be exceeded.</span>
         </p>
       </section>
-      <section>
+      <section id="angle-of-attack">
         <h3>Angle of Attack</h3>
         <p>The maximum angle of attack limit is the stick shaker boundary or the following (whichever occurs first):</p>
         <ul class="list-none">
@@ -259,7 +259,7 @@
             <p>14° below FL 250.</p>
           </li>
         </ul>
-        <p>Angle of attack limits are valid only if airspeed and C.G. limits specified in this section are observed.</p>
+        <p>Angle of attack limits are valid only if <a href="#airspeed">airspeed</a> and <a href="#cg-limits">C.G. limits</a> specified in this section are observed.</p>
         <p>With a normally operating automatic pitch warning system, do not position the APW (pusher/shaker) switch to OFF.</p>
         <p>If either the stick shaker or pusher/shaker warning is activated, reduce angle of attack immediately. Operation in flight conditions such that the shaker warning is on continuously is not permitted. The pitch boundary indicator (FBI) should be cross-checked with the angle of attack when operating near the angle of attack limits or PBI shaker boundary.</p>
         <div class="warning">
@@ -277,7 +277,7 @@
         <p>
           <span>Flight at or above the Maximum Altitude</span>
           <u>Cruise</u>
-          <span>profile (for the existing Mach, gross weight, and ambient temperature) is restricted to non-turning flight. A descent of approximately 2000 feet below the Maximum Altitude Cruise profile (i.e. to the Intermediate Altitude Cruise Profile) prior to turn entry is recommended. Refer to Maximum Afterburner Ceiling Profile and Maximum Altitude Cruise Profile, Section VI.</span>
+          <span>profile (for the existing Mach, gross weight, and ambient temperature) is restricted to non-turning flight. A descent of approximately 2000 feet below the Maximum Altitude Cruise profile (i.e. to the Intermediate Altitude Cruise Profile) prior to turn entry is recommended. Refer to <a href="6.htm#max-afterburner-ceiling-profile">Maximum Afterburner Ceiling Profile</a> and <a href="6.htm#max-altitude-cruise-profile">Maximum Altitude Cruise Profile, Section VI</a>.</span>
         </p>
       </section>
     </section>
@@ -293,12 +293,12 @@
         <span>or with more than 25,000 pounds of fuel remaining are prohibited. Planned single-engine missed approaches/go-arounds will be initiated not lower than 300 feet above the ground.</span>
       </p>
     </section>
-    <section>
+    <section id="descent">
       <h1>Rate of Descent</h1>
       <p>Rate of descent must be limited so as to maintain positive fuel tank pressure when sustained speeds have exceeded Mach 2.6.</p>
       <p>While above Mach 1.8, the maximum rate of descent should be such that rate of deceleration does not exceed 1.0 Mach number in 3 minutes. There is no limitation on rate of deceleration while below Mach 1.8.</p>
     </section>
-    <section>
+    <section id="cg-limits">
       <h1>Center of Gravity</h1>
       <p>Use the C.G. indicator and pitch trim to determine center of gravity location. However, both systems are subject to indicator and system tolerance. Computed and indicated C.G. should agree within 0.5% during stabilized cruise conditions and on the ground (after allowing for the effect of the three-point attitude on the computed C.G. value). When supersonic, pitch trim indications should conform with values derived from <a href="6.htm#fig-6-7">Figure 6-7</a> within 1°. If C.G. is suspected to be aft of the prescribed limit, correct the condition with fuel forward transfer.</p>
       <h2>Subsonic Operation</h2>
@@ -365,7 +365,7 @@
       </section>
       <section>
         <h3>Fuel System</h3>
-        <h4>Use of Forward Transfer</h4>
+        <h4 id="fuel-forward-transfer">Use of Forward Transfer</h4>
         <p>In-flight, with C.G. between 14.5% and 17%, no more than half of the remaining fuel may be transferred to tank 1; otherwise, the load factor limits shown by <a href="#fig-5-5-3">sheet 3 of Figure 5-5</a> are not valid.</p>
         <h4>Refueling Door</h4>
         <p>If the air-refueling door is open while supersonic, write up in AFTO 781 the temperature encountered and duration of exposure.</p>
@@ -378,13 +378,13 @@
         <h3>Canopy</h3>
         <p>The canopy shall be opened or closed only when the aircraft is stationary. Maximum taxi speed with a canopy open is 40 knots. Gusts or strong winds should be considered as a portion of the 40-knot speed limit.</p>
       </section>
-      <section>
+      <section id="landing-gear-limits">
         <h3>Landing Gear</h3>
         <h4>Touchdown Sink Rates</h4>
         <p>The main landing gear is designed for landing sink speeds at touchdown which decrease from 600 feet per minute at 68,000 pounds to 360 feet per minute at 125,000 pounds gross weight. Landing at gross weights above 125,000 lb is not recommended. However, if a landing must be accomplished before weight can be reduced to this value, the sink rate at touchdown should not exceed 300 feet per minute. Side loads during takeoff, landing, and taxiing must be kept to a minimum, as landing gear side-load strength is critical during ground maneuvering.</p>
         <h4>Maximum Speed</h4>
         <p>In-flight, gear door strength limits the airspeed with gear down to 300 KEAS or Mach 0.7, whichever is less, with a maximum permissible sideslip angle of 10°. Maximum permissible speeds are 300 KEAS or Mach 0.9, whichever is less, with gear down when sideslip does not exceed 5°.</p>
-        <h4>Crosswind Limits</h4>
+        <h4 id="landing-gear-crosswind-limits">Crosswind Limits</h4>
         <p>Because of the loads imposed on the landing gear system, operation with crosswind components above 30 knots is not recommended.</p>
         <p>Crosswind components between 25 and 30 knots represent a cautionary area. See <a href="appendix.htm#fig-A2-1">Appendix Figure A2-1</a>. A decision to land with winds of this magnitude should consider all related factors, i.e., weather, runway surface condition, airdrome facilities, and availability of a suitable alternate.</p>
         <p>
@@ -440,7 +440,7 @@
           <u>Maximum</u>
           <span>initial</span>
           <u>KIAS</u>
-          <span>for a one-time stop using the maximum brake energy is shown in <a href="#fig-5-9">Figure 5-9</a>. Headwind components may be added to values shown, and tailwind components must be subtracted. Refer to Part II of the Appendix for information on maximum refusal speeds and heavy-weight landings.</span>
+          <span>for a one-time stop using the maximum brake energy is shown in <a href="#fig-5-9">Figure 5-9</a>. Headwind components may be added to values shown, and tailwind components must be subtracted. Refer to <a href="appendix.htm#part2">Part II of the Appendix</a> for information on maximum refusal speeds and heavy-weight landings.</span>
         </p>
         <figure id="fig-5-9">
           <img src="images/5-9.jpg" alt="" />

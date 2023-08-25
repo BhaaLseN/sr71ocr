@@ -6,7 +6,7 @@
     <link type="text/css" rel="stylesheet" href="sr71.css"></link>
   </head>
   <body>
-    <section>
+    <section id="ans">
       <h1>Astroinertial Navigation System (ANS) Tape 12</h1>
       <p>The ANS is an inertial navigation system employing a star tracker to eliminate gyro drift and to limit position error. The system provides a steering signal to the autopilot for guiding the aircraft automatically along a predetermined flight path. It provides heading, attitude, and position information to cockpit displays. The ANS can control the CAPRE side-looking radar and technical objective cameras for imaging operations. The ANS supplies navigational data to the electromagnetic - reconnaissance sensor and mission data to the mission recorder system. See <a href="#fig-4-1">Figure 4-1</a> for an ANS functional diagram.</p>
       <figure id="fig-4-1">
@@ -521,8 +521,8 @@
         <p>Used to command the ANS computer to accept panel-filled data or to display selected data.</p>
         <h4>UPDATE Switch</h4>
         <p>Commands the ANS to correct computed position, heading, reinitialize the star tracker, or change the current track leg.</p>
-        <h4>DP/TURN Switch</h4>
-        <p>This push-button switch selects the source for the pilot's HSI range indicator. The DP/TURN switch is enabled when the ANS DATA switch is in TEST; pressing ENTER/DISPLAY will then illuminate the "DP" or "TURN" legend in the switch (corresponding to the mode presently selected); pressing the DP/TURN switch will change the mode and illuminate the other legend. When "DP" is illuminated, the pilot's HSI range indicator will read distance to the ANS destination point (DP); when "TURN" is illuminated, the pilot's HSI range indicator will read distance to the ANS-computed turn point. Refer to Horizontal Situation Indicator, Range Indicator, Section I.</p>
+        <h4 id="ncd-dp-turn-switch">DP/TURN Switch</h4>
+        <p>This push-button switch selects the source for the pilot's HSI range indicator. The DP/TURN switch is enabled when the ANS DATA switch is in TEST; pressing ENTER/DISPLAY will then illuminate the "DP" or "TURN" legend in the switch (corresponding to the mode presently selected); pressing the DP/TURN switch will change the mode and illuminate the other legend. When "DP" is illuminated, the pilot's HSI range indicator will read distance to the ANS destination point (DP); when "TURN" is illuminated, the pilot's HSI range indicator will read distance to the ANS-computed turn point. Refer to <a href="1.htm#hsi-range-indicator">Horizontal Situation Indicator, Range Indicator, Section I</a>.</p>
         <h4>C/TEST Switch</h4>
         <p>Used to perform a panel light test and to display ANS tape data and internal ANS conditions when used in conjunction with the TEST position of the DATA switch.</p>
         <h4>SELECTED DATA Indicators</h4>
@@ -1002,7 +1002,7 @@
         <h4>Star ON Indicator Light</h4>
         <p>The light indicates the status of star tracking as described in the Computer Program section. Steady illumination of the light indicates that a minimum of two different stars have been tracked within the last 5 minutes.</p>
         <h4>MODE Window</h4>
-        <p>The MODE window displays a legend which shows the operating phase of the ANS. The MODE window also displays an error message in the event of an operator error and may indicate recommended action in case of system malfunction. The malfunction indications are described in the Malfunction Indicator and the ANS MALFUNCTION PROCEDURES paragraphs. The MODE window indications are:</p>
+        <p>The MODE window displays a legend which shows the operating phase of the ANS. The MODE window also displays an error message in the event of an operator error and may indicate recommended action in case of system malfunction. The malfunction indications are described in <a href="#malfunction-indicator-12">the Malfunction Indicator</a> and <a href="#ans-malfunction-12">the ANS MALFUNCTION PROCEDURES paragraphs</a>. The MODE window indications are:</p>
         <table border="1">
           <thead>
             <tr>
@@ -1134,14 +1134,14 @@
           </tbody>
         </table>
         <h4>Temperature Limit/Tolerance Indicator</h4>
-        <p>The temperature limit and tolerance indicator, labeled TEMP LIMIT/TOLR is a split-function indicator which displays monitored cooling air flow and system internal temperatures. The top half of the indicator is red with the LIMIT legend visible when lighted. The bottom half of the indicator is amber, with the TOLR legend (tolerance) visible when lighted. (Refer to ANS MALFUNCTION PROCEDURES.)</p>
+        <p>The temperature limit and tolerance indicator, labeled TEMP LIMIT/TOLR is a split-function indicator which displays monitored cooling air flow and system internal temperatures. The top half of the indicator is red with the LIMIT legend visible when lighted. The bottom half of the indicator is amber, with the TOLR legend (tolerance) visible when lighted. (Refer to <a href="#ans-malfunction-12">ANS MALFUNCTION PROCEDURES</a>.)</p>
         <h4>Malfunction Indicator</h4>
-        <p>The ANS malfunction indicator, labeled MAL, is a red panel light that can be off, on-steady, or on-flashing. Generally, the MAL light is off during normal operation, on-steady when the ANS is in the WARM UP mode, and on-flashing when a system self test has failed. (Refer to ANS MALFUNCTION PROCEDURES for detailed description.)</p>
+        <p>The ANS malfunction indicator, labeled MAL, is a red panel light that can be off, on-steady, or on-flashing. Generally, the MAL light is off during normal operation, on-steady when the ANS is in the WARM UP mode, and on-flashing when a system self test has failed. (Refer to <a href="#ans-malfunction-12">ANS MALFUNCTION PROCEDURES</a> for detailed description.)</p>
       </section>
       <section>
         <h3>Computer Program</h3>
         <p>The basic instructions and constants for computer operation are contained in the main program tape which is loaded into the computer permanent memory. The computer program is loaded in two parts, a basic main program tape and a correction tape (if needed). In addition, a general instrument constant (GIC) tape, star catalog (SYY1, SYY2) tape, and mission tape are loaded. Each ASTRO INERTIAL (A-I) unit has its own GIC tape which defines gyro, accelerometer, resolver, etc. parameters unique to the respective A-I unit. Annual revisions are made to the star catalog tapes. The main program tape currently used is Tape 10639512 (Tape 12).</p>
-        <h4>Astro Inertial Navigation</h4>
+        <h4 id="ainav-12">Astro Inertial Navigation</h4>
         <p>The ANS operates in typical inertial navigation fashion. Outputs from two 2-axis gyros drive the platform gimbals to isolate three orthogonally mounted accelerometers from changes in aircraft attitude. The gyros and accelerometers are mounted on the platform's azimuth gimbal (stable element). The accelerometer outputs are components of aircraft velocity change. If the azimuth gimbal is not kept level, the accelerometers also measure a component of acceleration due to gravity and position errors are produced.</p>
         <p>In INERTIAL ONLY, the computer uses the accelerometer outputs to calculate aircraft velocity and change in position, and gyro torquing rates. The gyro torquing rates (signals proportional to aircraft velocity plus earth's rate) are applied to the gyros to maintain the azimuth gimbal (and thus the accelerometers) level with respect to the earth. The success of inertial navigation is due to the fact that any system error eventually causes the accelerometers to go off level and measure a component of gravity which introduces an error that tends to cancel the original error. For example, if an accelerometer develops a null shift that appears to be an aircraft acceleration to the north, the platform will be torqued to keep up with the apparent aircraft motion over the earth's surface. Thus if the platform were level, it becomes tipped off level resulting in accelerometer measurement of gravity which looks like aircraft acceleration to the south. This characteristic of inertial systems is called Schuler tuning.</p>
         <p>The star tracking function improves knowledge of accelerometer orientation in azimuth and eliminates the effects of gyro drift. Star search is initiated when astro-inertial mode is selected after completion of alignment. Selection of the star is made by the computer as a function of latitude, longitude, day of year, time of day, aircraft pitch and roll, and location of the sun. Aircraft pitch and roll determine the orientation of the star tracker window. For a given latitude, longitude, time of day and year, a particular star should be at a particular azimuth and elevation. If the star tracker measurements show that the star is not at the expected azimuth and elevation, there is an error in computed latitude and longitude and/or an error in platform orientation. Since the telescope is mounted on the platform, the star tracker measures the angular difference between the physical triad formed by the platform axes and the computational triad formed by the vertical through the computed position and the calculated orientation of the platform in azimuth. Thus the system cannot directly distinguish between a computed position error and a platform orientation error but, based on statistical probabilities determined by prestored error models and flight dynamics preceding the measurement, (as modeled by a Kalman filter, described later) it will attempt to optimally adjust the various navigational parameters.</p>
@@ -1685,7 +1685,7 @@
         <p>Dead reckoning is the process of computing change in position using heading, speed, and elapsed time. True airspeed from DAFICS (M computer) is used with RSO entered values of wind speed and direction to approximate ground speed. Heading is provided from the INS and is magnetic heading except that ANS inertial heading is used following coarse alignment in a hot or cold air start.</p>
         <p>When INS mag heading is being used, the RSO must periodically fill local magnetic variation so that computed true heading will have minimum error. When dead reckon data is not being used, magnetic variation need not be filled since the ANS itself computes a new magnetic variation every four minutes.</p>
       </section>
-      <section>
+      <section id="mission-tape-program-12">
         <h3>Mission Tape Program</h3>
         <p>The mission profile is defined in terms of destination points (DP), control points (CP), and fix points (FP), and the sensor operations associated with these points. Destination points delineate the prescribed mission track; they are intersections of the intended great circle legs. Control points and fix points permit automatic activation of imaging sensors, and fix points define preferred navigational references. The mission plan is loaded into the computer memory on a mission tape prior to preflight operations. The mission tape can be programmed to hold up to 127 DP, 127 FP, and 127 CP (381 total). Additional temporary memory is provided for 40 point modification operations, known as the "40-List". The modifications may be performed using the Control and Display panel anytime power is supplied to the panel. Up to 40 add and/or replace operations and unlimited skip-to operations, are provided. In addition, there are special Anytime and Opportunity fix point procedures which do not use the 40-List. The mission tape may include a primary flight plan with one or more alternate routes that the crew may elect to follow by exercising the skip-to, direct steer, or track leg update options. The add and replace options of the 40-List permit additional alternate paths to be formulated, and allow last-minute changes to sensor activity on programmed legs.</p>
         <p>The data loaded into specified cells of the computer memory are identified by function and order of use in the mission plan (D00003, C00007, F00021, etc.). Each point is further defined by its coordinates, its sensor-usage, applicable pointing parameters, and reference to the next consecutive point or points. The destination points reference the next point of all three classes. The information programmed for each type of point is listed in <a href="#fig-4-11">Figure 4-11</a>.</p>
@@ -1700,9 +1700,9 @@
         <h4>ANS Steering Turn Modes</h4>
         <p>The mission planner can choose one of two different turn modes at each DP. These modes determine where the turn start to the next great circle leg will occur and the amount of bank angle commanded during the turn.</p>
         <h5>Auto-Range-To-Turn</h5>
-        <p>The system computes the turn radius based on a 32° bank angle and the ground speed at the start turn point. Once the turn is initiated, it is identical to the turn described in the Fixed-Range-To-Turn paragraphs.</p>
+        <p>The system computes the turn radius based on a 32° bank angle and the ground speed at the start turn point. Once the turn is initiated, it is identical to the turn described in <a href="#fixed-range-to-turn-12">the Fixed-Range-To-Turn paragraphs</a>.</p>
         <p>Auto-Range-To-Turn should be used for subsonic turns to prevent high bank angles at heavy weights. Current ground speed and the heading change from present course to next are used to compute and initiate an automatic turn (termed by the mission planners as Turn Start Automatic, or TSA). The TSA point varies since it depends on ground speed. If actual ground speed is different from planned ground speed, the TSA will not occur where planned and the aircraft will not follow the turn line depicted on the strip map. However, if there are no other disturbances, the aircraft should make the turn at a 32° bank angle.</p>
-        <h5>Fixed-Range-To-Turn</h5>
+        <h5 id="fixed-range-to-turn-12">Fixed-Range-To-Turn</h5>
         <p>Fixed-Range-To-Turn is used by the mission planners for turns that indicate critical sensor legs and turns where strict adherence to the planned turn line is required. In this mode, the mission planner specifies a constant turn radius at a particular DP. The TSA point is a fixed distance plus a variable distance from the DP. The fixed distance is determined by the programmed turn radius and the change in course; it would be equal to turn radius on a 90° turn. The variable distance ranges from 0 to 4.5 nm, depending on ground speed, and compensates for the distance required to roll into the turn. During the turn, commanded bank angle is the sum of two components. One component is the nominal bank required to achieve the programmed turn radius at the current ground speed. The second component trims bank angle trim as a function of the radial speed and position relative to the programmed radius so that the aircraft follows the planned turn line throughout the turn. If a transient causes the aircraft to deviate from the turn line, bank angle trim varies within ±10° to return to the turn line.</p>
         <p>Range to destination as displayed on the HSI and the NCD includes distance around a turn rather than the length of the great circle from present position to destination. This distance around the turn is also used in computing time to turn for the NORMAL display.</p>
         <p>Turn steering automatically terminates when aircraft track is within 2° of the command course, the new track is crossed, or the theoretical tangency point is passed.</p>
@@ -1711,7 +1711,7 @@
           <p>During preflight planning, do not schedule any turns above Mach 2.9 which have a radius smaller than can be maintained using a 42° bank angle.</p>
         </div>
         <p>Turns should be planned to require at least three degrees less than the planned bank angles limits. This provides a margin to accommodate aircraft trim requirements and/or greater ground speed than expected. However, when below Mach 2.9, bank angles of up to 44 degrees may be scheduled if justified by operational requirements. Crews should monitor ANS ground speed prior to and during turns and prevent ground speed from exceeding the maximum value at which the planned track can be accomplished within bank angle limits.</p>
-        <p>When scheduling turns with greater than 35° bank angle, allow for expected altitude loss if maximum power will not maintain level flight. Refer to Parts V &amp; VI of the Performance Data appendix and to <a href="6.htm#fig-6-8">the ceiling altitude data, Figure 6-8, in Section VI</a>. When scheduling turns requiring 42° bank angle at speeds above Mach 3.0, consider the altitude at the turn (which is a function of weight) and the programmed Mach. For a given weight and bank angle it may be necessary to decrease altitude, which at a given Mach may increase the KEAS to the KEAS limit. Turns at maximum scheduled bank angles must not be programmed for such heavy weights that the maximum KEAS limit for normal operation would be exceeded. A descent of approximately 2500 to 3000 feet below the maximum range altitude may have to be made before entering a 42° bank turn.</p>
+        <p>When scheduling turns with greater than 35° bank angle, allow for expected altitude loss if maximum power will not maintain level flight. Refer to Parts <a href="appendix.htm#part5">V</a> &amp; <a href="appendix.htm#part6">VI</a> of the Performance Data appendix and to <a href="6.htm#fig-6-8">the ceiling altitude data, Figure 6-8, in Section VI</a>. When scheduling turns requiring 42° bank angle at speeds above Mach 3.0, consider the altitude at the turn (which is a function of weight) and the programmed Mach. For a given weight and bank angle it may be necessary to decrease altitude, which at a given Mach may increase the KEAS to the KEAS limit. Turns at maximum scheduled bank angles must not be programmed for such heavy weights that the maximum KEAS limit for normal operation would be exceeded. A descent of approximately 2500 to 3000 feet below the maximum range altitude may have to be made before entering a 42° bank turn.</p>
         <p>In normal operation, the aircraft will follow the turn line and roll out onto the next leg within 0.2 nm. Overshoots and undershoots will degrade sensor performance if the maneuver to get onto track is outside sensor stabilization limits. For the TECH camera(s), roll and pitch rate should be less than 0.3° per second for good photography.</p>
         <p>With the CAPRE radar, cross track velocity must be less than 35 fps in the programmed mode or 20 fps in the auto mode for good mapping. <a href="#fig-4-9">Figure 4-9</a> shows distances required to obtain cross track velocities within limits at standard cruise conditions. During most of the settle out distance, roll rates will be slight and suitable for good photography.</p>
         <p>During a SKIP TO operation, the same fixed turn radius is used, but a different TSA and turn line will result if the next leg is different from the planned leg.</p>
@@ -1902,7 +1902,7 @@
         <p>If desired, the ANS computed position can be corrected by pressing the UPDATE switch; otherwise, press the MAN CLEAR switch to clear the measurement data. If FPs are used for updating, the ANS adjusts position, platform level, velocity, and heading based on the Kalman filter weighing matrices. The amounts applied to each of these parameters are optimized for the existing mode. Generally, corrections will not be necessary in the ASTRO INERTIAL mode although the measurement should be made to check the system.</p>
         <p>Sensor operation may also be commanded at FPs. The point of execution will be at the along track position determined by the FP abeam point plus the range-to-turn-on value in the FP data of the mission tape. The TECH(s) may be turned on or off at any tape-filled FP. The camera(s) will be pointed and have the modes programmed at previous CPs. The SLR may be turned on or off at any tape-filled FP and may be repointed if the FP is not a TACAN FP.</p>
       </section>
-      <section>
+      <section id="mission-modification-12">
         <h3>Mission Modification</h3>
         <p>The tape-filled mission program can be modified through the NCD panel. Up to 40 sets of data (40-List) may be entered to replace or add to previously stored mission points. In addition, the operator can skip any number of tape-filled or panel-filled destination points, or change destination. There are also special panel-filled fixpoints called Anytime or Opportunity fixpoints that are exclusive of the 40-List.</p>
         <table border="1" id="fig-4-11">
@@ -3863,7 +3863,7 @@
         </table>
         <div class="note">
           <p>
-            <span>Takeoff without a chronometer or with a NO/GO is permitted but not recommended, ANS mode options are the same for any of these conditions, but are subject to conditions discussed under Power Dropout and Chronometer Failure in this section under</span>
+            <span>Takeoff without a chronometer or with a NO/GO is permitted but not recommended, ANS mode options are the same for any of these conditions, but are subject to conditions discussed under <a href="#power-dropout-12">Power Dropout</a> and <a href="#chronometer-failure-12">Chronometer Failure in this section</a> under</span>
             <u>Malfunction Indicator</u>
             <span>. Also refer to</span>
             <u>Flashing MAL Light On During Ground Operation and Flashing MAL Light On In Flight</u>
@@ -3899,11 +3899,11 @@
         <h4>Takeoff</h4>
         <p>If the runway heading alignment routine is used, maintain takeoff roll parallel to runway centerline. This alignment is automatically terminated at lift-off by a switch on the left main landing gear strut. The RSO must press the UPDATE or MAN CLEAR push-button to end the procedure.</p>
         <h4>In-Flight</h4>
-        <p>After takeoff, the tape-filled mission plan will be followed automatically except as modified by panel-filled inputs. Generally, the autopilot is engaged in the auto-nav mode to simplify flying the mission. Refer to Mission Tape Program and Mission Modification, this section, for a more complete discussion of navigation and sensor control.</p>
+        <p>After takeoff, the tape-filled mission plan will be followed automatically except as modified by panel-filled inputs. Generally, the autopilot is engaged in the auto-nav mode to simplify flying the mission. Refer to <a href="#mission-tape-program-12">Mission Tape Program</a> and <a href="#mission-modification-12">Mission Modification, this section</a>, for a more complete discussion of navigation and sensor control.</p>
         <p>Position fixes, using the TACAN, SLR, and viewsight should be made at frequent intervals to verify and, if necessary, refine computed position. The ANS errors measured by these systems are displayed on the NCD panel and may be cleared or entered into the ANS to correct present position. This is especially important in the alternate navigation modes.</p>
         <p>TACAN FP accuracy is inherently worse than the viewsight, radar, or ANS fixes, so updates of the ANS by TACAN should only be entered when the ANS is positively known to have large errors.</p>
         <p>The ANS software will weight the correction according to prestored accuracy estimates for the type of fixpoint and its current estimate of ANS accuracy. Hence the update command by the RSO will result in only a portion of the displayed error being accepted. The Remote Update routine will, however, always make a total position update by the amount commanded. On other types of fix updates, if either the latitude or longitude correction requested is greater than 5 nautical miles, the total amount will be accepted.</p>
-        <p>The NCD panel star ON light is an important indicator during astro-inertial and air start operation. If the star ON light is out during astro-inertial operation, system error will increase at the inertial-only rate and extra effort should be made to check computed position. If the star ON light is on, astro-inertial performance will generally be good. Refer to Astro-Inertial Navigation, this section.</p>
+        <p>The NCD panel star ON light is an important indicator during astro-inertial and air start operation. If the star ON light is out during astro-inertial operation, system error will increase at the inertial-only rate and extra effort should be made to check computed position. If the star ON light is on, astro-inertial performance will generally be good. Refer to <a href="#ainav-12">Astro-Inertial Navigation, this section</a>.</p>
         <h4>Airstart Alignment</h4>
         <p>Should there be an airborne power interruption or temporary malfunction, it may be possible to realign the ANS using the air start procedure. A period of coarse alignment to level the platform is followed by a period when it may be possible to accurately level the platform for precision navigation by performing a series of fixes.</p>
         <p>Present position can be entered any time after initiating the air start procedure and is updated continuously thereafter by dead reckoning computations. If present position has not been filled by the time the coarse align phase has been completed, the MODE window will indicate ENT (Enter data).</p>
@@ -3918,7 +3918,7 @@
         <div class="note">
           <p>In these procedures, only the indications that change as a result of procedural steps are listed. Assume that the display does not change if the indication of a particular display is not listed.</p>
           <p>The L and R TECH and SLR NCD indicators will be off unless otherwise specified.</p>
-          <p>The MAL indicator must be off at all times except: it must be on steady while in the WARM UP mode and flash when the MODE switch has been turned from OFF or WARM UP to ALIGN, ASTRO INERTIAL, INERTIAL ONLY, DEAD RECKON, or AIR START; and must extinguish after the MODE START, HOT, or RAPID switch is pressed. Refer to the Emergency Procedures paragraph if the MAL light illuminates under any other circumstances.</p>
+          <p>The MAL indicator must be off at all times except: it must be on steady while in the WARM UP mode and flash when the MODE switch has been turned from OFF or WARM UP to ALIGN, ASTRO INERTIAL, INERTIAL ONLY, DEAD RECKON, or AIR START; and must extinguish after the MODE START, HOT, or RAPID switch is pressed. Refer to <a href="#ans-malfunction-12">the Emergency Procedures paragraph</a> if the MAL light illuminates under any other circumstances.</p>
           <p>"Operate" positions of the MODE switch means ALIGN, ASTRO INERTIAL, INERTIAL ONLY, DEAD RECKON, or AIR START.</p>
           <p>If ERR is indicated in the MODE window, press the MAN CLEAR switch and restart the procedure.</p>
           <p>ENT is displayed following the minimum coarse alignment period when present position/heading has not been filled.</p>
@@ -4178,7 +4178,7 @@
             </li>
           </ol>
         </section>
-        <section data-title="Cold Airstart">
+        <section data-title="Cold Airstart" id="cold-air-start-alignment-12">
           <h3>Cold Airstart Alignment</h3>
           <div class="note">
             <p>If a power dropout has occurred, skip to step 3 if HOT or MODE START has not been pressed after power returns.</p>
@@ -4452,7 +4452,7 @@
               <ol class="list-alpha">
                 <li>
                   <p>MAL light - Off.</p>
-                  <p>If on, refer to Emergency Procedures paragraph.</p>
+                  <p>If on, refer to <a href="#ans-malfunction-12">Emergency Procedures paragraph</a>.</p>
                 </li>
                 <li>
                   <p>MODE window - D/R.</p>
@@ -5554,7 +5554,7 @@
           </ol>
         </section>
       </section>
-      <section data-title="Malfunction Procedures">
+      <section data-title="Malfunction Procedures" id="ans-malfunction-12">
         <h3>ANS Malfunction Procedures</h3>
         <p>The ANS provides warning indications of some malfunctions or conditions external to the ANS that could lead to an ANS malfunction. All malfunctions are not detected, so the crew should not depend entirely on warning indications.</p>
         <h4>Temperature Limit/Tolerance Indicator</h4>
@@ -5704,15 +5704,15 @@
             <span>turn the ANS off unless the TEMP LIMIT light illuminates.</span>
           </p>
         </div>
-        <h4>Malfunction Indicator (MAL Light)</h4>
+        <h4 id="malfunction-indicator-12">Malfunction Indicator (MAL Light)</h4>
         <p>The MODE window usually indicates action to be taken when the MAL light is flashing. Several of the conditions for a MAL light are synonymous with conditions for nav-not-ready indications described under the Warning Indication section. <a href="#fig-4-19">Figure 4-19</a> lists general ANS malfunction and nav-not-ready conditions.</p>
         <div class="note">
           <p>When the MAL light illuminates, the RSO's annunciator panel ANS FAIL light, and the pilot's annunciator panel ANS REF caution light illuminate.</p>
         </div>
-        <h5>Power Dropout</h5>
+        <h5 id="power-dropout-12">Power Dropout</h5>
         <p>A decrease of the ANS AC supply voltage to less than 103 volts per phase causes the computer to stop operating regardless of mode. Voltage drop can be caused by a primary power transient, opening of the ANS 3-phase essential AC or essential DC circuit breaker(s), or turning the MODE switch to OFF or WARM UP. When power returns, the computer determines power dropout duration by comparing chronometer day and time with the day and time stored in memory at power loss.</p>
         <p>If the power dropout is less than one second, operation resumes as though nothing occurred except star tracking is suspended for 70-seconds.</p>
-        <p>If the power dropout is greater than one second, the system returns to C/A, the MAL light illuminates, the MODE window indicates C/A, and all display counters clear. If the RSO presses the HOT switch, the system proceeds with an automatic restart (hot air start or ground hot start). If, instead, the RSO selects AIR START with the MODE switch and presses the MODE START switch, the system starts a COLD air start. Refer to COLD Air Start Alignment, this section.</p>
+        <p>If the power dropout is greater than one second, the system returns to C/A, the MAL light illuminates, the MODE window indicates C/A, and all display counters clear. If the RSO presses the HOT switch, the system proceeds with an automatic restart (hot air start or ground hot start). If, instead, the RSO selects AIR START with the MODE switch and presses the MODE START switch, the system starts a COLD air start. Refer to <a href="#cold-air-start-alignment-12">COLD Air Start Alignment, this section</a>.</p>
         <div class="note">
           <p>If the system is HOT started and then a COLD air start is desired, return the MODE switch to OFF. If the MODE START switch is pressed in any MODE other than AIR START, the system must be turned off to initiate a COLD air start.</p>
         </div>
@@ -5722,7 +5722,7 @@
         <div class="note">
           <p>Complete loss of AC or DC power to the guidance group will cause all ANS NCD panel lights and windows to extinguish/go blank.</p>
         </div>
-        <h5>Chronometer Failure</h5>
+        <h5 id="chronometer-failure-12">Chronometer Failure</h5>
         <p>The system checks the chronometer day and time inputs when the MODE switch is turned to an "operate" mode and after a power dropout. If the chronometer inputs are not present, a chronometer failure has occurred. This is indicated by a flashing MAL light, clearing of the present position display, and I/O in the MODE window. The system will return to a coarse align condition. The MAL light will not clear without corrective action. On the ground, the alternatives are to replace the chronometer, perform the fill Day and Time routine, or to select INERTIAL ONLY. A Hot Air Start may be possible after a chronometer failure if the Fill Day and Time procedure is used.</p>
         <p>Incorrect chronometer day or time does not result in a chronometer malfunction, only incorrect inputs. With a chronometer failure, in the event of any power dropout (even less than one second), the MAL light will illuminate since the system cannot determine dropout duration.</p>
         <div class="note">
@@ -5749,7 +5749,7 @@
         <p>There is a good probability that the platform will recover, and ANS performance should be approximately equivalent to that of a Hot Air Start. To engage the system and remove the NAV-NOT-READY flags, the RSO must place the MODE switch to DEAD RECKON, press the MODE START switch, then place the MODE switch to ASTRO INERTIAL or INERTIAL ONLY position, and press the MODE START switch again.</p>
         <h5>Computer Failure</h5>
         <p>The MAL light illumination circuitry is such that the computer must supply a periodic signal to keep the MAL light out. If a computer failure occurs which prevents proper sequencing of the computer program, the MAL light does not receive the periodic signal and illuminates. In general, no MODE window indication is provided, since the computer is no longer operating; however, the computer could cause random control panel display changes while coming to a stop. No RSO operation will extinguish the MAL light, once on, except possibly moving the MODE switch to OFF and restarting. In most cases, the ANS will be unusable until the computer is replaced.</p>
-        <h5>Yaw Encoding Failure</h5>
+        <h5 id="yaw-encoding-failure-12">Yaw Encoding Failure</h5>
         <p>If the ANS computer self test routine detects a failure in the Yaw Gimbal Angle encoding function, the NCD panel Mode window changes to ENC, the MAL light flashes, and the synthesized heading back-up mode activates. Pressing MAN CLEAR extinguishes the flashing MAL light and removes the ENC indication but does not remove the malfunction. "Synthesized heading" is true ground track and is output to the HSI and BDHI compass cards and NCD panel as true heading. Aircraft drift/sideslip results in true heading error. ANS navigation capability is not affected by this failure, nor are auto-nav operation, normal ANS displays or panel routines. INS magnetic heading displayed on the NCD panel is not affected. Radar system imaging may be degraded. Other sensor systems are not affected.</p>
         <h5>Mission Tape Destination Point Error</h5>
         <p>If the aircraft is at index (turn start) and a destination point is specified which does not exist in the mission tape, the next destination point in the normal mission tape sequence is assumed and the aircraft is automatically directed to that point. The MODE window displays DP * and the SELECTED DATA windows flash their contents at a one and a half second rate. MAN CLEAR and DISPLAY must be pressed to restore normal NCD panel operation and to verify correct navigation. If not on the correct track, DIR STEER or Track Leg Update as required.</p>
@@ -6204,7 +6204,7 @@
             <p>If the MODE window has changed to C/A and the SD windows are cleared, a power dropout in excess of 1 second has occurred. If a GROUND HOT START is desired, complete the GROUND HOT START checklist. If a GROUND HOT START is not desired, turn the MODE switch to OFF and perform another ground alignment.</p>
           </li>
           <li>
-            <p>If the mode window has changed to ENC and the SD true heading is in question, the yaw encoding has malfunctioned. "Synthesized heading" (true ground track output to the HSI and BDHI compass cards and NCD panel) cannot be accurately calculated when not moving. Pressing MAN clear extinguishes the flashing MAL light and removes the ENC indication but does not remove the malfunction. Replace the ANS guidance group. Refer to YAW Encoding Failure, this section.</p>
+            <p>If the mode window has changed to ENC and the SD true heading is in question, the yaw encoding has malfunctioned. "Synthesized heading" (true ground track output to the HSI and BDHI compass cards and NCD panel) cannot be accurately calculated when not moving. Pressing MAN clear extinguishes the flashing MAL light and removes the ENC indication but does not remove the malfunction. Replace the ANS guidance group. Refer to <a href="#yaw-encoding-failure-12">YAW Encoding Failure, this section</a>.</p>
           </li>
           <li>
             <p>If the MODE window has changed to I/O and the SD windows are not affected, the platform collimator light (artificial star) has not been tracked. This is most likely due to the platform collimator bulb being burned out. Otherwise it is a tracker malfunction. This malfunction only occurs at the end of C/A or ENT. If the ANS guidance group cannot be replaced, press the MAN CLEAR switch to extinguish the MAL light. The MODE window will initialize normally. Attempt to track stars in ASTRO INERTIAL. If stars cannot be tracked, fly in INERTIAL ONLY.</p>
@@ -6255,7 +6255,7 @@
             <p>If the MODE window has changed to C/A and the SD windows are cleared, a power dropout in excess of 1 second has occurred. Attempt a HOT AIR START procedure. Otherwise press MAN CLEAR, select DEAD RECKON with the MODE switch, and complete DEAD RECKON mode checklist. A COLD AIR START may then be performed. The COLD AIR START is also necessary if the HOT AIR START is unsuccessful.</p>
           </li>
           <li>
-            <p>If the mode window has changed to ENC and the SD windows are not affected, the yaw encoding has malfunctioned. "Synthesized heading" (true ground track) is output to the HSI and BDHI compass cards and NCD panel as true heading. Pressing MAN clear extinguishes the flashing MAL light and removes the ENC indication but does not remove the malfunction. Refer to Yaw Encoding Failure, this section.</p>
+            <p>If the mode window has changed to ENC and the SD windows are not affected, the yaw encoding has malfunctioned. "Synthesized heading" (true ground track) is output to the HSI and BDHI compass cards and NCD panel as true heading. Pressing MAN clear extinguishes the flashing MAL light and removes the ENC indication but does not remove the malfunction. Refer to <a href="#yaw-encoding-failure-12">Yaw Encoding Failure, this section</a>.</p>
           </li>
           <li>
             <p>If the MODE window has changed to I/O and the SD windows are cleared, a power dropout with no day and/or time available from the chronometer is indicated. Turn the MODE switch OFF and perform a COLD AIR START. If DEAD RECKON mode is preferable to a COLD AIR START, press MAN CLEAR to initialize the system. Select INERTIAL ONLY and MODE START to extinguish the flashing MAL Light. Then select DEAD RECKON and complete the DEAD RECKON checklist.</p>
@@ -6293,7 +6293,7 @@
         </p>
       </section>
     </section>
-    <section data-title="Inertial Navigation System">
+    <section data-title="Inertial Navigation System" id="ins">
       <h1>Inertial Navigation System (INS)</h1>
       <p>The SKN-2417 INS is the source of inertially derived magnetic reference for the basic flight instruments and radio navigation aids. It also provides aircraft attitude and navigation information. The INS consists of the inertial navigation unit (INU), the inertial control panel (ICP) and the INU battery.</p>
       <p>The system provides present position, ground speed and steering, distance, and en route time to 10 destinations and 3 mark points. Destination points may be entered or changed any time the system has power applied and are retained in the computer memory after power is removed. Mark points are entered in memory by a panel routine which allows sequential and repetitive marking of present position in the 3 mark points A, B and C.</p>
@@ -6750,7 +6750,7 @@
                 <p>MISC</p>
               </td>
               <td colspan="4">
-                <p>The MISC position is used to display and/or enter various INS parameters. Of primary interest to the operator (RSO) is the entry of altitude into the system at various points in the mission in order to prevent degradation of system navigation performance. Refer to Altitude Update.</p>
+                <p>The MISC position is used to display and/or enter various INS parameters. Of primary interest to the operator (RSO) is the entry of altitude into the system at various points in the mission in order to prevent degradation of system navigation performance. Refer to <a href="#ins-altitude-update">Altitude Update</a>.</p>
               </td>
             </tr>
           </tbody>
@@ -6762,7 +6762,7 @@
                 <p>
                   <u>/2\</u> No meaningful data is presented with this display option selected.</p>
                 <p>
-                  <u>/3\</u> If Fail 1 or Fail 2 appears refer to INS Fault Indication Clearing.</p>
+                  <u>/3\</u> If Fail 1 or Fail 2 appears refer to <a href="#ins-fault-indication-clear">INS Fault Indication Clearing</a>.</p>
               </td>
             </tr>
           </tfoot>
@@ -7022,7 +7022,7 @@
             </div>
           </li>
         </ol>
-        <h4>Altitude Update</h4>
+        <h4 id="ins-altitude-update">Altitude Update</h4>
         <p>The INS is a stand alone system and does not receive altitude inputs. Altitude updating will prevent system accuracy from degrading due to large altitude transients. Altitude may be updated at the discretion of the operator. Suggested points for altitude updates based on normal mission profiles are incorporated in aircrew checklists.</p>
         <ol class="list-number">
           <li>
@@ -7109,7 +7109,7 @@
           <span>in view the INS is operating in ATT; if the power OFF flag is in view there is an INS platform (attitude) malfunction.</span>
         </p>
         <p>An INS malfunction that illuminates the INS REF annunciator caution light can be considered a hard failure. There is a remote possibility of clearing a malfunction inflight by attempting the INS Fault Indication Clearing Procedure. There are seven additional malfunctions that could occur which do not illuminate the INS REF light. Two cause degraded accuracy, three cause erroneous, blank or frozen ICP displays, and the remaining two do not affect system performance. None of the seven are evident through the aircraft warning system, but they can be viewed on the ICP with the DATA switch set to TEST. See <a href="#fig-4-21">Figure 4-21</a>.</p>
-        <h4>INS Fault Indication Clearing Procedure</h4>
+        <h4 id="ins-fault-indication-clear">INS Fault Indication Clearing Procedure</h4>
         <ol class="list-number">
           <li>
             <p>DATA switch - TEST, Alpha display reads INS.</p>
@@ -7256,7 +7256,7 @@
         <p>Failures of INS attitude output servos could cause frozen attitude displays (including inputs to DAFICS), rapidly changing attitude values, or gradually increasing attitude errors. This is particularly dangerous at night or in IFR conditions, especially if the pilot's attitude reference select switch is in INS and the auto pilot is engaged. An ANR light (flashing DAFICS PREFLIGHT red FAIL light) could indicate that the selected attitude reference is erroneous. Monitor other attitude references (ANS platform and pilot's standby attitude indicator) to detect INS attitude errors as soon as possible.</p>
       </section>
     </section>
-    <section>
+    <section id="sensors">
       <h1>Sensor Systems</h1>
       <p>The following sensor systems are available:</p>
       <ol class="list-number">
@@ -7285,7 +7285,7 @@
           <p>Viewsight.</p>
         </li>
         <li>
-          <p>Map projectors (two). (Refer to Section I).</p>
+          <p>Map projectors (two). (Refer to <a href="1.htm#map-projectors">Section I</a>).</p>
         </li>
         <li>
           <p>Exposure control system.</p>
@@ -8273,7 +8273,7 @@
           </li>
           <li>
             <p>Exposure control system - Set.</p>
-            <p>Refer to Exposure Control Normal Procedures, this section.</p>
+            <p>Refer to <a href="#exposure-control-normal">Exposure Control Normal Procedures, this section</a>.</p>
           </li>
           <li>
             <p>OBC Mode switch - As briefed.</p>
@@ -9091,7 +9091,7 @@
       <p>A self-illuminated exposure system control push-button switch on the PWR &amp; SENSOR control panel has a white-illuminated EXPOS legend, in the upper half of the push-button. A green-illuminated ON legend, in the lower left portion of the switch, illuminates alternately when the push-button is depressed. The exposure control system is energized when ON is illuminated. A red-illuminated FAIL legend in the lower right portion of the switch illuminates to indicate loss of power to, or within the exposure control unit. When the FAIL legend illuminates, and the push-button is depressed to extinguish the ON and FAIL legends, a voltage corresponding to nominal exposure (approximately 25-degree sun angle) will be supplied to the cameras from the PWR &amp; SENSOR control panel.</p>
       <h3>Exposure Control Knob</h3>
       <p>The exposure control knob (<a href="#fig-4-34">Figure 4-34</a>) is on the left instrument panel. The control is set to a sun angle determined from mission planning data. A triangular index is provided for setting the control. The LOW REFL and HIGH REFL index dots are not used. Setting this knob accurately provides correctly scaled voltage to each type of camera for proper exposure control.</p>
-      <h3>Exposure Control Normal Procedures</h3>
+      <h3 id="exposure-control-normal">Exposure Control Normal Procedures</h3>
       <p>To operate the exposure control system:</p>
       <ol class="list-number">
         <li>
@@ -9247,7 +9247,7 @@
           <div class="note">
             <ul class="list-disc">
               <li>
-                <p>While on the ground, C.G. computed using the manual C.G. computer should be corrected to allow for the effect of level rather than flight attitude. Refer to Section II, Starting Engines.</p>
+                <p>While on the ground, C.G. computed using the manual C.G. computer should be corrected to allow for the effect of level rather than flight attitude. Refer to <a href="2.htm#starting-engines">Section II, Starting Engines</a>.</p>
               </li>
               <li>
                 <p>On the ground, when tank 6 is not full, use tank 6A and 6B scale. Fuel distribution must be obtained from mission loading form.</p>
@@ -9257,7 +9257,7 @@
         </li>
       </ol>
     </section>
-    <section>
+    <section id="def">
       <h1>Defensive (DEF) Systems</h1>
       <p>
         <span>The DEF systems defend the aircraft by electronic means. Arbitrarily assigned letters designate and identify the systems. Systems A2, C2, H and M are currently operational. The DEF equipment installed varies. DEF systems are controlled and monitored by the RSO, using the DEF control panel, on the left console. In addition to the advisory light display on the DEF control panel, a series of DEF advisory lights are arranged on the DEF warning panel, located to the right of the radar RCD display. There are no DEF controls or displays in the forward cockpit.</span>
@@ -9351,7 +9351,7 @@
         <p>The threat warning light legends, directly associated systems, and corresponding activity indicator lights are discussed under the descriptions of the associated DEF systems.</p>
         <h4>Status Switches</h4>
         <p>Seven alternate action switches are provided to control the standby (S)/operate (O) state of the DEF systems installed. Only those five switches associated with DEF A2, H, and M systems are functional. DEF C2B does not have a standby state; it is either on or off as determined by pressing a DEF power switch (A, M, or F/H). The status switch system designation legend illuminates when the associated power switch is ON. The status switch S legend illuminates at the end of system warm-up, as the W legend on the associated power switch extinguishes, to indicate that the associated system is in a standby state. Pressing the status switch extinguishes the S legend and illuminates the O legend and begins system operation. Pressing the status switch alternately shifts the system to operate (O) or standby (S). The DEF H system <span class="redacted">REDACTED</span> S/O switch will not function like the other status switches until the HI operate status switch is on.</p>
-        <h4>Auto/Manual Mode Switches</h4>
+        <h4 id="def-mode-switches">Auto/Manual Mode Switches</h4>
         <p>The SYSTEM SELECT switch and three 3-position, self-centering AUTO/MAN mode switches control the operating modes of the DEF H system in the low and high frequency ranges. The mode selection in effect is indicated by illumination of the corresponding numbered automatic (A) or manual (M) mode indicator lights located in two rows along the bottom edge of the control panel.</p>
         <p class="redacted">Deleted IAW SR71 SCG 23 Sep 96</p>
         <p>Mode selection is accomplished by positioning the SYSTEM SELECT switch to H LO or to H HI, and then momentarily turning the numbered AUTO/MAN mode switches to the required AUTO or MAN position. The switches are spring-loaded to the neutral position. Mode selection can be made while in either S or O.</p>
@@ -9432,7 +9432,7 @@
         </li>
         <li>
           <p>Self-test - Complete.</p>
-          <p>Refer to DEF A2 Self-Test.</p>
+          <p>Refer to <a href="#def-a2-selftest">DEF A2 Self-Test</a>.</p>
         </li>
       </ol>
       <p>To return to the S mode:</p>
@@ -9452,7 +9452,7 @@
           </div>
         </li>
       </ol>
-      <h2>DEF A2 Self-test</h2>
+      <h2 id="def-a2-selftest">DEF A2 Self-test</h2>
       <p>Self-tests must be accomplished in the operate mode with the SYSTEM SELECT switch in A. During self-test, a self-generated  pulse signal is introduced into the left channel to check the <span class="redacted">REDACTED</span> mode, and a self-generated <span class="redacted">REDACTED</span> signal is introduced into the right channel to check the mode. The test takes ten seconds.</p>
       <div class="warning">
         <p>Due to the <span class="redacted">REDACTED</span> radiation levels generated by a DEF external transmission, set DEF systems to standby and do not conduct self-test during air refueling.</p>
@@ -9490,7 +9490,7 @@
           </ol>
         </li>
       </ol>
-      <p>If any of the above indications do not appear and/or the FAIL/HOT legend illuminates, refer to DEF A2 Malfunction Procedures.</p>
+      <p>If any of the above indications do not appear and/or the FAIL/HOT legend illuminates, refer to <a href="#def-a2-malfunction">DEF A2 Malfunction Procedures</a>.</p>
       <div class="note">
         <p>Any self-test can be terminated while the test is in progress by repositioning the SYSTEM SELECT switch. However, a self-test of the same system or another system cannot be started until completion of the original test duration period.</p>
       </div>
@@ -9500,7 +9500,7 @@
           <p>Return the system to S unless operational conditions dictate otherwise.</p>
         </li>
       </ol>
-      <h2>DEF A2 Malfunction Procedures</h2>
+      <h2 id="def-a2-malfunction">DEF A2 Malfunction Procedures</h2>
       <div class="note">
         <p>The control panel RESET switch will not reset DEF A2.</p>
       </div>
@@ -9576,7 +9576,7 @@
         </li>
         <li>
           <p>System self-test - Complete.</p>
-          <p>Refer to DEF C2 Self-Test procedures.</p>
+          <p>Refer to <a href="#def-c2-selftest">DEF C2 Self-Test procedures</a>.</p>
         </li>
       </ol>
       <p>To turn off DEF C2.</p>
@@ -9586,7 +9586,7 @@
           <p>System C2 remains on if A, M, or F/H power is ON.</p>
         </li>
       </ol>
-      <h2>DEF C2 Self-Test</h2>
+      <h2 id="def-c2-selftest">DEF C2 Self-Test</h2>
       <p>DEF C2 must be tested independently, as self-tests of DEF A2, DEF M, or DEF H do not include DEF C2. The test takes 12 seconds.</p>
       <p>To self-test DEF C2:</p>
       <ol class="list-number">
@@ -9613,11 +9613,11 @@
           <p>The GO legend in the Go display illuminates immediately and stays illuminated until the SYSTEM SELECT switch is repositioned.</p>
         </li>
       </ol>
-      <p>If any of the above indications do not appear, refer to the DEF C2 Malfunction Procedures.</p>
+      <p>If any of the above indications do not appear, refer to <a href="#def-c2-malfunction">the DEF C2 Malfunction Procedures</a>.</p>
       <div class="note">
         <p>Any self-test can be terminated by repositioning the SYSTEM SELECT switch during the test or by pressing the TEST switch again to extinguish ON. However, a self-test of the same system or of another system cannot be started until completion of the original test duration period.</p>
       </div>
-      <h2>DEF C2 Malfunction Procedures</h2>
+      <h2 id="def-c2-malfunction">DEF C2 Malfunction Procedures</h2>
       <p>There is no direct indication of a DEF C2 failure. Indirect indications are the absence of a GO legend in the Go display and/or no illumination of the <span class="redacted">REDACTED</span> warning legends during a self-test.</p>
       <p>
         <span>Additionally, a DEF C2 failure</span>
@@ -9719,7 +9719,7 @@
           <p>Test switch - On, then Off.</p>
         </li>
       </ol>
-      <p>Mode selection is accomplished by setting the SYSTEM SELECT switch to the appropriate position (F/H LO or F/H HI), and then momentarily turning the numbered <span class="redacted">REDACTED</span>. Selection of operating modes can be made while the system is either in S or O. Refer to the Mode Switches under the DEF Control Panel, this section.</p>
+      <p>Mode selection is accomplished by setting the SYSTEM SELECT switch to the appropriate position (F/H LO or F/H HI), and then momentarily turning the numbered <span class="redacted">REDACTED</span>. Selection of operating modes can be made while the system is either in S or O. Refer to <a href="#def-mode-switches">the Mode Switches under the DEF Control Panel, this section</a>.</p>
       <div class="note">
         <p>It is not necessary that any of the six mode selections be in effect at a given time. Jamming is inhibited if all modes are canceled, but the threat warning indicators remain operative.</p>
       </div>
@@ -9814,7 +9814,7 @@
         </li>
         <li>
           <p>Self-test - Complete.</p>
-          <p>Refer to DEF H Self-Test.</p>
+          <p>Refer to <a href="#def-h-selftest">DEF H Self-Test</a>.</p>
         </li>
       </ol>
       <p>To return to standby:</p>
@@ -9840,7 +9840,7 @@
           </div>
         </li>
       </ol>
-      <h2>DEF H Self-Test</h2>
+      <h2 id="def-h-selftest">DEF H Self-Test</h2>
       <p>DEF H self-test permits a quick check of the system operating condition. Although the visual indications last 31 seconds, the actual self-test requires approximately five seconds. During self-test all threat indicator legends, <span class="redacted">REDACTED</span> illuminate steady for 26 seconds.</p>
       <p>Other indications are illumination of the GO legend, approximate ten second illumination of the LO and HI-band <span class="redacted">REDACTED</span> legends, and a one-second illumination of warning and JAM legends. The self-test can be accomplished either in standby or operate, with or without an <span class="redacted">REDACTED</span> selected.</p>
       <p>However, the transmit portions <span class="redacted">REDACTED</span> cannot be tested unless the system is in operate with an <span class="redacted">REDACTED</span> selected for the band to be tested.</p>
@@ -9902,7 +9902,7 @@
           </ol>
         </li>
       </ol>
-      <p>If any of the above indications do not appear and/or the FAIL/HOT/COMP legend illuminates, refer to the DEF H Malfunction Procedures.</p>
+      <p>If any of the above indications do not appear and/or the FAIL/HOT/COMP legend illuminates, refer to <a href="#def-h-malfunction">the DEF H Malfunction Procedures</a>.</p>
       <div class="note">
         <p>Any self-test can be terminated by repositioning the SYSTEM SELECT switch during the test or by depressing the TEST switch again to extinguish ON. A self-test of the same system or of another system can not be started until completion of the original test duration period.</p>
       </div>
@@ -10015,14 +10015,14 @@
         <li>
           <p>Repeat steps 3 through 8 for the HI band.</p>
           <p>No <span class="redacted">REDACTED</span> lights will illuminate for HI mode 3.</p>
-          <p>If any of the above indications do not appear and/or the FAIL/HOT/COMP legend illuminates, refer to the DEF H Malfunction Procedures.</p>
+          <p>If any of the above indications do not appear and/or the FAIL/HOT/COMP legend illuminates, refer to <a href="#def-h-malfunction">the DEF H Malfunction Procedures</a>.</p>
         </li>
         <li>
           <p>LO and HI status switches - Press to illuminate S.</p>
           <p>Return the system to standby (S) unless operational conditions dictate otherwise.</p>
         </li>
       </ol>
-      <h2>DEF H Malfunction Procedures</h2>
+      <h2 id="def-h-malfunction">DEF H Malfunction Procedures</h2>
       <p>DEF H failures are indicated by illumination of the FAIL, HOT, or COMP legends on the Fail display, illumination of the FAIL legend on the FAIL RESET switch, non-illumination or extinguishing of the <span class="redacted">REDACTED</span> legends (when jamming should occur), or a combination thereof. In roost cases, a return to normal operation is accomplished by pressing the FAIL RESET switch (hereafter referred to as the RESET switch) after the TEST switch ON legend extinguishes.</p>
       <div class="note">
         <p>The DEF FAIL legend on the DEF Warning Panel illuminates whenever a FAIL, HOT or COMP legend is illuminated on the DEF control panel Fail display.</p>
@@ -10110,7 +10110,7 @@
         </li>
         <li>
           <p>Self-test - Complete.</p>
-          <p>Refer to DEF M Self-Test.</p>
+          <p>Refer to <a href="#def-m-selftest">DEF M Self-Test</a>.</p>
         </li>
       </ol>
       <p>To return to standby:</p>
@@ -10129,7 +10129,7 @@
           </div>
         </li>
       </ol>
-      <h2>DEF M Self-Test</h2>
+      <h2 id="def-m-selftest">DEF M Self-Test</h2>
       <p>Self-test may be accomplished in standby or operate. A self-test in standby can produce a GO indication, but the system jamming capability will not have been tested. Therefore, self-test is normally accomplished in operate.</p>
       <p>Self-tests are performed with the SYSTEM SELECT switch set to M. A self-test requires 5 seconds although all checks are completed within the first 1.5 seconds. During self-test in operate a transmission of less than 1 second will occur.</p>
       <div class="warning">
@@ -10777,7 +10777,7 @@
         <h4>UPDATE Switch</h4>
         <p>Commands the ANS to correct computed position, heading, reinitialize the star tracker, or change the current track leg.</p>
         <h4>DP/TURN Switch</h4>
-        <p>This push-button switch selects the source for the pilot's HSI range indicator. The DP/TURN switch is enabled when the ANS DATA switch is in TEST; pressing ENTER/DISPLAY will then illuminate the "DP" or "TURN" legend in the switch (corresponding to the mode presently selected); pressing the DP/TURN switch will change the mode and illuminate the other legend. When "DP" is illuminated, the pilot's HSI range indicator will read distance to the ANS destination point (DP); when "TURN" is illuminated, the pilot's HSI range indicator will read distance to the ANS-computed turn point. Refer to Horizontal Situation Indicator, Range Indicator, Section I.</p>
+        <p>This push-button switch selects the source for the pilot's HSI range indicator. The DP/TURN switch is enabled when the ANS DATA switch is in TEST; pressing ENTER/DISPLAY will then illuminate the "DP" or "TURN" legend in the switch (corresponding to the mode presently selected); pressing the DP/TURN switch will change the mode and illuminate the other legend. When "DP" is illuminated, the pilot's HSI range indicator will read distance to the ANS destination point (DP); when "TURN" is illuminated, the pilot's HSI range indicator will read distance to the ANS-computed turn point. Refer to <a href="1.htm#hsi-range-indicator">Horizontal Situation Indicator, Range Indicator, Section I</a>.</p>
         <h4>C/TEST Switch</h4>
         <p>Used to perform a panel light test and to display ANS tape data and internal ANS conditions when used in conjunction with the TEST position of the DATA switch.</p>
         <h4>SELECTED DATA Indicators</h4>
@@ -11323,7 +11323,7 @@
         <h4>Star ON Indicator Light</h4>
         <p>The light indicates the status of star tracking as described in the Computer Program section. Steady illumination of the light indicates that a minimum of two different stars have been tracked within the last 5 minutes.</p>
         <h4>MODE Window</h4>
-        <p>The MODE window displays a legend which shows the operating phase of the ANS. The MODE window also displays an error message in the event of an operator error and may indicate recommended action in case of system malfunction. The malfunction indications are described in the Malfunction Indicator and the ANS MALFUNCTION PROCEDURES paragraphs. The MODE window indications are:</p>
+        <p>The MODE window displays a legend which shows the operating phase of the ANS. The MODE window also displays an error message in the event of an operator error and may indicate recommended action in case of system malfunction. The malfunction indications are described in <a href="#malfunction-indicator-13">the Malfunction Indicator</a> and <a href="#ans-malfunction-13">the ANS MALFUNCTION PROCEDURES paragraphs</a>. The MODE window indications are:</p>
         <table border="1">
           <thead>
             <tr>
@@ -11455,14 +11455,14 @@
           </tbody>
         </table>
         <h4>Temperature Limit/Tolerance Indicator</h4>
-        <p>The temperature limit and tolerance indicator, labeled TEMP LIMIT/TOLR is a split-function indicator which displays monitored cooling air flow and system internal temperatures. The top half of the indicator is red with the LIMIT legend visible when lighted. The bottom half of the indicator is amber, with the TOLR legend (tolerance) visible when lighted. (Refer to ANS MALFUNCTION PROCEDURES.)</p>
+        <p>The temperature limit and tolerance indicator, labeled TEMP LIMIT/TOLR is a split-function indicator which displays monitored cooling air flow and system internal temperatures. The top half of the indicator is red with the LIMIT legend visible when lighted. The bottom half of the indicator is amber, with the TOLR legend (tolerance) visible when lighted. (Refer to <a href="#ans-malfunction-13">ANS MALFUNCTION PROCEDURES</a>.)</p>
         <h4>Malfunction Indicator</h4>
-        <p>The ANS malfunction indicator, labeled MAL, is a red panel light that can be off, on-steady, or on-flashing. Generally, the MAL light is off during normal operation, on-steady when the ANS is in the WARM UP mode, and on-flashing when a system self test has failed. (Refer to ANS MALFUNCTION PROCEDURES for detailed description.)</p>
+        <p>The ANS malfunction indicator, labeled MAL, is a red panel light that can be off, on-steady, or on-flashing. Generally, the MAL light is off during normal operation, on-steady when the ANS is in the WARM UP mode, and on-flashing when a system self test has failed. (Refer to <a href="#ans-malfunction-13">ANS MALFUNCTION PROCEDURES</a> for detailed description.)</p>
       </section>
       <section>
         <h3>Computer Program</h3>
         <p>The basic instructions and constants for computer operation are contained in the main program tape which is loaded into the computer permanent memory. The computer program is loaded in two parts, a basic main program tape and a correction tape (if needed). In addition, a general instrument constant (GIC) tape, star catalog (SYY1, SYY2) tape, and mission tape are loaded. Each ASTRO INERTIAL (A-D unit has its own GIC tape which defines gyro, accelerometer, resolver, etc. parameters unique to the respective A-I unit. Annual revisions are made to the star catalog tapes.</p>
-        <h4>Astro Inertial Navigation</h4>
+        <h4 id="ainav-13">Astro Inertial Navigation</h4>
         <p>The ANS operates in typical inertial navigation fashion. Outputs from two 2-axis gyros drive the platform gimbals to isolate three orthogonally mounted accelerometers from changes in aircraft attitude. The gyros and accelerometers are mounted on the platform's azimuth gimbal (stable element). The accelerometer outputs are components of aircraft velocity change. If the azimuth gimbal is not kept level, the accelerometers also measure a component of acceleration due to gravity and position errors are produced.</p>
         <p>In INERTIAL ONLY, the computer uses the accelerometer outputs to calculate aircraft velocity and change in position, and gyro torquing rates. The gyro torquing rates (signals proportional to aircraft velocity plus earth's rate) are applied to the gyros to maintain the azimuth gimbal (and thus the accelerometers) level with respect to the earth. The success of inertial navigation is due to the fact that any system error eventually causes the accelerometers to go off level and measure a component of gravity which introduces an error that tends to cancel the original error. For example, if an accelerometer develops a null shift that appears to be an aircraft acceleration to the north, the platform will be torqued to keep up with the apparent aircraft motion over the earth's surface. Thus if the platform were level, it becomes tipped off level resulting in accelerometer measurement of gravity which looks like aircraft acceleration to the south. This characteristic of inertial systems is called Schuler tuning.</p>
         <p>The star tracking function improves knowledge of accelerometer orientation in azimuth and eliminates the effects of gyro drift. Star search is initiated when astro-inertial mode is selected after completion of alignment. Selection of the star is made by the computer as a function of latitude, longitude, day of year, time of day, aircraft pitch and roll, and location of the sun. Aircraft pitch and roll determine the orientation of the star tracker window. For a given latitude, longitude, time of day and year, a particular star should be at a particular azimuth and elevation. If the star tracker measurements show that the star is not at the expected azimuth and elevation, there is an error in computed latitude and longitude and/or an error in platform orientation. Since the telescope is mounted on the platform, the star tracker measures the angular difference between the physical triad formed by the platform axes and the computational triad formed by the vertical through the computed position and the calculated orientation of the platform in azimuth. Thus the system cannot directly distinguish between a computed position error and a platform orientation error but, based on statistical probabilities determined by prestored error models and flight dynamics preceding the measurement, (as modeled by a Kalman filter, described later) it will attempt to optimally adjust the various navigational parameters.</p>
@@ -12006,7 +12006,7 @@
         <p>Dead reckoning is the process of computing change in position using heading, speed, and elapsed time. True airspeed from DAFICS (M computer) is used with RSO entered values of wind speed and direction to approximate ground speed. Heading is provided from the INS and is magnetic heading except that ANS inertial heading is used following coarse alignment in a hot or cold air start.</p>
         <p>When INS mag heading is being used, the RSO must periodically fill local magnetic variation so that computed true heading will have minimum error. When dead reckon data is not being used, magnetic variation need not be filled since the ANS itself computes a new magnetic variation every four minutes.</p>
       </section>
-      <section>
+      <section id="mission-tape-program-13">
         <h3>Mission Tape Program</h3>
         <p>The mission profile is defined in terms of destination points (DP), control points (CP), and fix points (FP), and the sensor operations associated with these points. Destination points delineate the prescribed mission track; they are intersections of the intended great circle legs. Control points and fix points permit automatic activation of imaging sensors, and fix points define preferred navigational references. The mission plan is loaded into the computer memory on a mission tape prior to preflight operations. The mission tape can be programmed to hold up to 256 DP, 256 FP, and 1023 CP (1535 total). Additional temporary memory is provided for 40 point modification operations, known as the "40-List". The modifications may be performed using the Control and Display panel anytime power is supplied to the panel. Up to 40 add and/or replace operations and unlimited skip-to operations, are provided. In addition, there are special Anytime and Opportunity fix point procedures which do not use the 40-List. The mission tape may include a primary flight plan with one or more alternate routes that the crew may elect to follow by exercising the skip-to, direct steer, or track leg update options. The add and replace options of the 40-List permit additional alternate paths to be formulated, and allow last-minute changes to sensor activity on programmed legs.</p>
         <p>The data loaded into specified cells of the computer memory are identified by function and order of use in the mission plan (D00003, C00007, F00021, etc.). Each point is further defined by its coordinates, its sensor-usage, applicable pointing parameters, and reference to the next consecutive point or points. The destination points reference the next point of all three classes.</p>
@@ -12021,9 +12021,9 @@
         <h4>ANS Steering Turn Modes</h4>
         <p>The mission planner can choose one of two different turn modes at each DP. These modes determine where the turn start to the next great circle leg will occur and the amount of bank angle commanded during the turn.</p>
         <h5>Auto-Range-To-Turn</h5>
-        <p>The system computes the turn radius based on a 32° bank angle and the ground speed at the start turn point. Once the turn is initiated, it is identical to the turn described in the Fixed-Range-To-Turn paragraphs.</p>
+        <p>The system computes the turn radius based on a 32° bank angle and the ground speed at the start turn point. Once the turn is initiated, it is identical to the turn described in <a href="#fixed-range-to-turn-13">the Fixed-Range-To-Turn paragraphs</a>.</p>
         <p>Auto-Range-To-Turn should be used for subsonic turns to prevent high bank angles at heavy weights. Current ground speed and the heading change from present course to next are used to compute and initiate an automatic turn (termed by the mission planners as Turn Start Automatic, or TSA). The TSA point varies since it depends on ground speed. If actual ground speed is different from planned ground speed, the TSA will not occur where planned and the aircraft will not follow the turn line depicted on the strip map. However, if there are no other disturbances, the aircraft should make the turn at a 32° bank angle.</p>
-        <h5>Fixed-Range-To-Turn</h5>
+        <h5 id="fixed-range-to-turn-13">Fixed-Range-To-Turn</h5>
         <p>Fixed-Range-To-Turn is used by the mission planners for turns that indicate critical sensor legs and turns where strict adherence to the planned turn line is required. In this mode, the mission planner specifies a constant turn radius at a particular DP. The TSA point is a fixed distance plus a variable distance from the DP. The fixed distance is determined by the programmed turn radius and the change in course; it would be equal to turn radius on a 90° turn. The variable distance ranges from 0 to 4.5 nm, depending on ground speed, and compensates for the distance required to roll into the turn. During the turn, commanded bank angle is the sum of two components. One component is the nominal bank required to achieve the programmed turn radius at the current ground speed. The second component trims bank angle trim as a function of the radial speed and position relative to the programmed radius so that the aircraft follows the planned turn line throughout the turn. If a transient causes the aircraft to deviate from the turn line, bank angle trim varies within ±10° to return to the turn line.</p>
         <p>Range to destination as displayed on the HSI and the NCD includes distance around a turn rather than the length of the great circle from present position to destination. This distance around the turn is also used in computing time to turn for the NORMAL display.</p>
         <p>Turn steering automatically terminates when aircraft track is within 2° of the command course, the new track is crossed, or the theoretical tangency point is passed.</p>
@@ -12032,7 +12032,7 @@
           <p>During preflight planning, do not schedule any turns above Mach 2.9 which have a radius smaller than can be maintained using a 42° bank angle.</p>
         </div>
         <p>Turns should be planned to require at least three degrees less than the planned bank angles limits. This provides a margin to accommodate aircraft trim requirements and/or greater ground speed than expected. However, when below Mach 2.9, bank angles of up to 44 degrees may be scheduled if justified by operational requirements. Crews should monitor ANS ground speed prior to and during turns and prevent ground speed from exceeding the maximum value at which the planned track can be accomplished within bank angle limits.</p>
-        <p>When scheduling turns with greater than 35° bank angle, allow for expected altitude loss if maximum power will not maintain level flight. Refer to Parts V &amp; VI of the Performance Data appendix and to <a href="6.htm#fig-6-8">the ceiling altitude data, Figure 6-8, in Section VI</a>. When scheduling turns requiring 42° bank angle at speeds above Mach 3.0, consider the altitude at the turn (which is a function of weight) and the programmed Mach. For a given weight and bank angle it may be necessary to decrease altitude, which at a given Mach may increase the KEAS to the KEAS limit. Turns at maximum scheduled bank angles must not be programmed for such heavy weights that the maximum KEAS limit for normal operation would be exceeded. A descent of approximately 2500 to 3000 feet below the maximum range altitude may have to be made before entering a 42° bank turn.</p>
+        <p>When scheduling turns with greater than 35° bank angle, allow for expected altitude loss if maximum power will not maintain level flight. Refer to Parts <a href="appendix.htm#part5">V</a> &amp; <a href="appendix.htm#part6">VI</a> of the Performance Data appendix and to <a href="6.htm#fig-6-8">the ceiling altitude data, Figure 6-8, in Section VI</a>. When scheduling turns requiring 42° bank angle at speeds above Mach 3.0, consider the altitude at the turn (which is a function of weight) and the programmed Mach. For a given weight and bank angle it may be necessary to decrease altitude, which at a given Mach may increase the KEAS to the KEAS limit. Turns at maximum scheduled bank angles must not be programmed for such heavy weights that the maximum KEAS limit for normal operation would be exceeded. A descent of approximately 2500 to 3000 feet below the maximum range altitude may have to be made before entering a 42° bank turn.</p>
         <p>In normal operation, the aircraft will follow the turn line and roll out onto the next leg within 0.2 nm. ASARS will be unaffected by maneuvering. For the TECH camera(s), roll and pitch rate should be less than 0.3° per second for good photography. During most of the settle out distance, roll rates will be slight and suitable for good photography.</p>
         <p>During a SKIP TO operation, the same fixed turn radius is used, but a different TSA and turn line will result if the next leg is different from the planned leg.</p>
         <h5>Manual Steering</h5>
@@ -12164,7 +12164,7 @@
         <p>If desired, the ANS computed position can be corrected by pressing the UPDATE switch; otherwise, press the MAN CLEAR switch to clear the measurement data. If FPs are used for updating, the ANS adjusts position, platform level, velocity, and heading based on the Kalman filter weighing matrices. The amounts applied to each of these parameters are optimized for the existing mode. Generally, corrections will not be necessary in the ASTRO INERTIAL mode although the measurement should be made to check the system.</p>
         <p>Non-ASARS sensor operation may also be planned and commanded at FPs. The point of execution will be at the along track position determined by the FP abeam point plus the range-to-turn-on value in the FP data of the mission tape. The TECH(s) may be turned on or off at any tape-filled FP. The camera(s) will be pointed and have the modes programmed at previous CPs. ASARS does not utilize a non-ASARS CP or FP.</p>
       </section>
-      <section>
+      <section id="mission-modification-13">
         <h3>Mission Modification</h3>
         <p>The tape-filled mission program can be modified through the NCD panel. Up to 40 sets of data (40-List) may be entered to replace or add to previously stored mission points. In addition, the operator can skip any number of tape-filled or panel-filled destination points, or change destination. There are also special panel-filled fixpoints called Anytime or Opportunity fixpoints that are exclusive of the 40-List.</p>
         <h4>Add or Replace CP-FP-DP Routine</h4>
@@ -13469,7 +13469,7 @@
         <p>After filling DAY/TIME a Hot Air Start cannot be performed and a new ground alignment or Cold Air Start is required. Chronometer options are listed in <a href="#fig-4-62">Figure 4-62</a>.</p>
         <div class="note">
           <p>
-            <span>Takeoff without a chronometer or with a NO/GO is permitted but not recommended. ANS mode options are the same for any of these conditions, but are subject to conditions discussed under Power Dropout and Chronometer Failure in this section under</span>
+            <span>Takeoff without a chronometer or with a NO/GO is permitted but not recommended. ANS mode options are the same for any of these conditions, but are subject to conditions discussed under <a href="#power-dropout-13">Power Dropout</a> and <a href="#chronometer-failure-13">Chronometer Failure in this section</a> under</span>
             <u>Malfunction Indicator.</u>
             <span>Also refer to</span>
             <u>Flashing MAL Light On During Ground Operation and Flashing MAL Light On In Flight,</u>
@@ -13573,11 +13573,11 @@
         <h4>Takeoff</h4>
         <p>If the runway heading alignment routine is used, maintain takeoff roll parallel to runway centerline. This alignment is automatically terminated at lift-off by a switch on the left main landing gear strut. The RSO must press the UPDATE or MAN CLEAR push-button to end the procedure.</p>
         <h4>In-Flight</h4>
-        <p>After takeoff, the tape-filled mission plan will be followed automatically except as modified by panel-filled inputs. Generally, the autopilot is engaged in the auto-nav mode to simplify flying the mission. Refer to Mission Tape Program and Mission Modification, this section, for a more complete discussion of navigation and sensor control.</p>
+        <p>After takeoff, the tape-filled mission plan will be followed automatically except as modified by panel-filled inputs. Generally, the autopilot is engaged in the auto-nav mode to simplify flying the mission. Refer to <a href="#mission-tape-program-13">Mission Tape Program</a> and <a href="#mission-modification-13">Mission Modification, this section</a>, for a more complete discussion of navigation and sensor control.</p>
         <p>Position fixes, using the TACAN, ASARS, and viewsight should be made at frequent intervals to verify and, if necessary, refine computed position. The ANS errors measured by these systems are displayed on the NCD panel and may be cleared or entered into the ANS to correct present position. This is especially important in the alternate navigation modes.</p>
         <p>TACAN FP accuracy is inherently worse than the viewsight, ASARS, or ANS fixes, so updates of the ANS by TACAN should only be entered when the ANS is positively known to have large errors.</p>
         <p>The ANS software will weight the correction according to prestored accuracy estimates for the type of fixpoint and its current estimate of ANS accuracy. Hence the update command by the RSO will result in only a portion of the displayed error being accepted. The Remote Update routine will, however, always make a total position update by the amount commanded. On other types of fix updates, if either the latitude or longitude correction requested is greater than 5 nautical miles, the total amount will be accepted.</p>
-        <p>The NCD panel star ON light is an important indicator during astro-inertial and air start operation. If the star ON light is out during astro-inertial operation, system error will increase at the inertial-only rate and extra effort should be made to check computed position. If the star ON light is on, astro-inertial performance will generally be good. Refer to Astro-Inertial Navigation, this section.</p>
+        <p>The NCD panel star ON light is an important indicator during astro-inertial and air start operation. If the star ON light is out during astro-inertial operation, system error will increase at the inertial-only rate and extra effort should be made to check computed position. If the star ON light is on, astro-inertial performance will generally be good. Refer to <a href="#ainav-13">Astro-Inertial Navigation, this section</a>.</p>
         <h4>Airstart Alignment</h4>
         <p>Should there be an airborne power interruption or temporary malfunction, it may be possible to realign the. ANS using the air start procedure. A period of coarse alignment to level the platform is followed by a period when it may be possible to accurately level the platform for precision navigation by performing a series of fixes.</p>
         <p>Present position can be entered any time after initiating the air start procedure and is updated continuously thereafter by dead-reckoning computations. If present position has not been filled by the time the coarse align phase has been completed, the MODE window will indicate ENT (Enter data).</p>
@@ -13592,7 +13592,7 @@
         <div class="note">
           <p>In these procedures, only the indications that change as a result of procedural steps are listed. Assume that the display does not change if the indication of a particular display is not listed.</p>
           <p>The L and R TECH and SLR NCD indicators will be off unless otherwise specified.</p>
-          <p>The MAL indicator must be off at all times except: it must be on steady while in the WARM UP mode and flash when the MODE switch has been turned from OFF or WARM UP to ALIGN, ASTRO INERTIAL, INERTIAL ONLY, DEAD RECKON, or AIR START; and must extinguish after the MODE START, HOT, or RAPID switch is pressed. Refer to the Emergency Procedures paragraph if the MAL light illuminates under any other circumstances.</p>
+          <p>The MAL indicator must be off at all times except: it must be on steady while in the WARM UP mode and flash when the MODE switch has been turned from OFF or WARM UP to ALIGN, ASTRO INERTIAL, INERTIAL ONLY, DEAD RECKON, or AIR START; and must extinguish after the MODE START, HOT, or RAPID switch is pressed. Refer to <a href="#ans-malfunction-13">the Emergency Procedures paragraph</a> if the MAL light illuminates under any other circumstances.</p>
           <p>"Operate" positions of the MODE switch means ALIGN, ASTRO INERTIAL, INERTIAL ONLY, DEAD RECKON, or AIR START.</p>
           <p>If ERR is indicated in the MODE window, press the MAN CLEAR switch and restart the procedure.</p>
           <p>ENT is displayed following the minimum coarse alignment period when present position/heading has not been filled.</p>
@@ -13848,7 +13848,7 @@
             </li>
           </ol>
         </section>
-        <section data-title="Cold Airstart">
+        <section data-title="Cold Airstart" id="cold-air-start-alignment-13">
           <h3>Cold Airstart Alignment</h3>
           <div class="note">
             <p>If a power dropout has occurred, skip to step 3 if HOT or MODE START has not been pressed after power returns.</p>
@@ -14122,7 +14122,7 @@
               <ol class="list-alpha">
                 <li>
                   <p>MAL light - Off.</p>
-                  <p>If on, refer to Emergency Procedures paragraph.</p>
+                  <p>If on, refer to <a href="#ans-malfunction-13">Emergency Procedures paragraph</a>.</p>
                 </li>
                 <li>
                   <p>MODE window - D/R.</p>
@@ -15319,7 +15319,7 @@
           </ol>
         </section>
       </section>
-      <section data-title="Malfunction Procedures">
+      <section data-title="Malfunction Procedures" id="ans-malfunction-13">
         <h3>ANS Malfunction Procedures</h3>
         <p>The ANS provides warning indications of some malfunctions or conditions external to the ANS that could lead to an ANS malfunction. All malfunctions are not detected, so the crew should not depend entirely on warning indications.</p>
         <h4>Temperature Limit/Tolerance Indicator</h4>
@@ -15468,7 +15468,7 @@
             <span>turn the ANS off unless the TEMP LIMIT light illuminates.</span>
           </p>
         </div>
-        <h4>Malfunction Indicator (MAL Light)</h4>
+        <h4 id="malfunction-indicator-13">Malfunction Indicator (MAL Light)</h4>
         <p>The MODE window usually indicates action to be taken when the MAL light is flashing. Several of the conditions for a MAL light are synonymous with conditions for nav-not-ready indications described under the Warning Indication section. <a href="#fig-4-19">Figure 4-19</a> lists general ANS malfunction and nav-not-ready conditions.</p>
         <div class="note">
           <p>When the MAL light illuminates, the RSO's annunciator panel ANS FAIL light, and the pilot's annunciator panel ANS REF caution light illuminate.</p>
@@ -15848,10 +15848,10 @@
             </tr>
           </tfoot>
         </table>
-        <h5>Power Dropout</h5>
+        <h5 id="power-dropout-13">Power Dropout</h5>
         <p>A decrease of the ANS AC supply voltage to less than 103 volts per phase causes the computer to stop operating regardless of mode. Voltage drop can be caused by a primary power transient, opening of the ANS 3-phase essential AC or essential DC circuit breaker(s), or turning the MODE switch to OFF or WARM UP. When power returns, the computer determines power dropout duration by comparing chronometer day and time with the day and time stored in memory at power loss.</p>
         <p>If the power dropout is less than one second, operation resumes as though nothing occurred except star tracking is suspended for 70-seconds.</p>
-        <p>If the power dropout is greater than one second, the system returns to C/A, the MAL light illuminates, the MODE window indicates C/A, and all display counters clear. If the RSO presses the HOT switch, the system proceeds with an automatic restart (hot air start or ground hot start). If, instead, the RSO selects AIR START with the MODE switch and presses the MODE START switch, the system starts a COLD air start. Refer to COLD Air Start Alignment, this section.</p>
+        <p>If the power dropout is greater than one second, the system returns to C/A, the MAL light illuminates, the MODE window indicates C/A, and all display counters clear. If the RSO presses the HOT switch, the system proceeds with an automatic restart (hot air start or ground hot start). If, instead, the RSO selects AIR START with the MODE switch and presses the MODE START switch, the system starts a COLD air start. Refer to <a href="#cold-air-start-alignment-13">COLD Air Start Alignment, this section</a>.</p>
         <div class="note">
           <ul class="list-disc">
             <li>
@@ -15865,7 +15865,7 @@
             </li>
           </ul>
         </div>
-        <h5>Chronometer Failure</h5>
+        <h5 id="chronometer-failure-13">Chronometer Failure</h5>
         <p>The system checks the chronometer day and time inputs when the MODE switch is turned to an "operate" mode and after a power dropout. If the chronometer inputs are not present, a chronometer failure has occurred. This is indicated by a flashing MAL light, clearing of the present position display, and I/O in the MODE window. The system will return to a coarse align condition. The MAL light will not clear without corrective action. On the ground, the alternatives are to replace the chronometer, perform the fill Day and Time routine, or to select INERTIAL ONLY. A Hot Air Start may be possible after a chronometer failure if the Fill Day and Time procedure is used.</p>
         <p>Incorrect chronometer day or time does not result in a chronometer malfunction, only incorrect inputs. With a chronometer failure, in the event of any power dropout (even less than one second), the MAL light will illuminate since the system cannot determine dropout duration.</p>
         <div class="note">
@@ -15892,7 +15892,7 @@
         <p>There is a good probability that the platform will recover, and ANS performance should be approximately equivalent to that of a Hot Air Start. To engage the system and remove the NAV-NOT-READY flags, the RSO must place the MODE switch to DEAD RECKON, press the MODE START switch, then place the MODE switch to ASTRO INERTIAL or INERTIAL ONLY position, and press the MODE START switch again.</p>
         <h5>Computer Failure</h5>
         <p>The MAL light illumination circuitry is such that the computer must supply a periodic signal to keep the MAL light out. If a computer failure occurs which prevents proper sequencing of the computer program, the MAL light does not receive the periodic signal and illuminates. In general, no MODE window indication is provided, since the computer is no longer operating; however, the computer could cause random control panel display changes while coming to a stop. No RSO operation will extinguish the MAL light, once on, except possibly moving the MODE switch to OFF and restarting. In most cases, the ANS will be unusable until the computer is replaced.</p>
-        <h5>Yaw Encoding Failure</h5>
+        <h5 id="yaw-encoding-failure-13">Yaw Encoding Failure</h5>
         <p>If the ANS computer self test routine detects a failure in the Yaw Gimbal Angle encoding function, the NCD panel Mode window changes to ENC, the MAL light flashes, and the synthesized heading back-up mode activates. Pressing MAN CLEAR extinguishes the flashing MAL light and removes the ENC indication but does not remove the malfunction. "Synthesized heading" is true ground track and is output to the HSI and BDHI compass cards and NCD panel as true heading. Aircraft drift/sideslip results in true heading error. ANS navigation capability is not affected by this failure, nor are auto-nav operation, normal ANS displays or panel routines. INS magnetic heading displayed on the NCD panel is not affected. ASARS and other sensor systems are not affected.</p>
         <h5>Mission Tape Destination Point Error</h5>
         <p>If the aircraft is at index (turn start) and a destination point is specified which does not exist in the mission tape, the next destination point in the normal mission tape sequence is assumed and the aircraft is automatically directed to that point. The MODE window displays DP * and the SELECTED DATA windows flash their contents at a one and a half second rate. MAN CLEAR and DISPLAY must be pressed to restore normal NCD panel operation and to verify correct navigation. If not on the correct track, DIR STEER or Track Leg Update as required.</p>
@@ -15973,7 +15973,7 @@
             <p>If the MODE window has changed to C/A and the SD windows are cleared, a power dropout in excess of 1 second has occurred. If a GROUND HOT START is desired, complete the GROUND HOT START checklist. If a GROUND HOT START is not desired, turn the MODE switch to OFF and perform another ground alignment.</p>
           </li>
           <li>
-            <p>If the mode window has changed to ENC and the SD true heading is in question, the yaw encoding has malfunctioned. "Synthesized heading" (true ground track output to the HSI and BDHI compass cards and NCD panel) cannot be accurately calculated when not moving. Pressing MAN clear extinguishes the flashing MAL light and removes the ENC indication but does not remove the malfunction. Replace the ANS guidance group. Refer to YAW Encoding Failure, this section.</p>
+            <p>If the mode window has changed to ENC and the SD true heading is in question, the yaw encoding has malfunctioned. "Synthesized heading" (true ground track output to the HSI and BDHI compass cards and NCD panel) cannot be accurately calculated when not moving. Pressing MAN clear extinguishes the flashing MAL light and removes the ENC indication but does not remove the malfunction. Replace the ANS guidance group. Refer to <a href="#yaw-encoding-failure-13">YAW Encoding Failure, this section</a>.</p>
           </li>
           <li>
             <p>If the MODE window has changed to I/O and the SD windows are not affected, the platform collimator light (artificial star) has not been tracked. This is most likely due to the platform collimator bulb being burned out. Otherwise it is a tracker malfunction. This malfunction only occurs at the end of C/A or ENT. If the ANS guidance group cannot be replaced, press the MAN CLEAR switch to extinguish the MAL light. The MODE window will initialize normally. Attempt to track stars in ASTRO INERTIAL. If stars cannot be tracked, fly in INERTIAL ONLY.</p>
@@ -16024,7 +16024,7 @@
             <p>If the MODE window has changed to C/A and the SD windows are cleared, a power dropout in excess of 1 second has occurred. Attempt a HOT AIR START procedure. Otherwise press MAN CLEAR, select DEAD RECKON with the MODE switch, and complete DEAD RECKON mode checklist. A COLD AIR START may then be performed. The COLD AIR START is also necessary if the HOT AIR START is unsuccessful.</p>
           </li>
           <li>
-            <p>If the mode window has changed to ENC and the SD windows are not affected, the yaw encoding has malfunctioned. "Synthesized heading" (true ground track) is output to the HSI and BDHI compass cards and NCD panel as true heading. Pressing MAN clear extinguishes the flashing MAL light and removes the ENC indication but does not remove the malfunction. Refer to Yaw Encoding Failure, this section.</p>
+            <p>If the mode window has changed to ENC and the SD windows are not affected, the yaw encoding has malfunctioned. "Synthesized heading" (true ground track) is output to the HSI and BDHI compass cards and NCD panel as true heading. Pressing MAN clear extinguishes the flashing MAL light and removes the ENC indication but does not remove the malfunction. Refer to <a href="#yaw-encoding-failure-13">Yaw Encoding Failure, this section</a>.</p>
           </li>
           <li>
             <p>If the MODE window has changed to I/O and the SD windows are cleared, a power dropout with no day and/or time available from the chronometer is indicated. Turn the MODE switch OFF and perform a COLD AIR START. If DEAD RECKON mode is preferable to a COLD AIR START, press MAN CLEAR to initialize the system. Select INERTIAL ONLY and MODE START to extinguish the flashing MAL Light. Then select DEAD RECKON and complete the DEAD RECKON checklist.</p>
