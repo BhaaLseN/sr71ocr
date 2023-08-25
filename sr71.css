@@ -154,6 +154,7 @@ td.rotate :first-child {
 
 .redacted {
   background-color: black;
+  color: black;
 }
 
 .warning, .caution, .note {
