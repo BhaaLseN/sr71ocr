@@ -8,14 +8,14 @@
   <body>
     <section>
       <h1>Astroinertial Navigation System (ANS) Tape 12</h1>
-      <p>The ANS is an inertial navigation system employing a star tracker to eliminate gyro drift and to limit position error. The system provides a steering signal to the autopilot for guiding the aircraft automatically along a predetermined flight path. It provides heading, attitude, and position information to cockpit displays. The ANS can control the CAPRE side-looking radar and technical objective cameras for imaging operations. The ANS supplies navigational data to the electromagnetic - reconnaissance sensor and mission data to the mission recorder system. See Figure 4-1 for an ANS functional diagram.</p>
-      <figure>
+      <p>The ANS is an inertial navigation system employing a star tracker to eliminate gyro drift and to limit position error. The system provides a steering signal to the autopilot for guiding the aircraft automatically along a predetermined flight path. It provides heading, attitude, and position information to cockpit displays. The ANS can control the CAPRE side-looking radar and technical objective cameras for imaging operations. The ANS supplies navigational data to the electromagnetic - reconnaissance sensor and mission data to the mission recorder system. See <a href="#fig-4-1">Figure 4-1</a> for an ANS functional diagram.</p>
+      <figure id="fig-4-1">
         <img src="images/4-1.jpg" alt="" />
         <figcaption>Figure 4-1: Navigation and Sensor Control System</figcaption>
       </figure>
       <section>
         <h3>System Interfaces</h3>
-        <p>The ANS provides signals for aircraft systems as seen in Figure 4-1. The following equipment is either controlled by or receives inputs from the ANS:</p>
+        <p>The ANS provides signals for aircraft systems as seen in <a href="#fig-4-1">Figure 4-1</a>. The following equipment is either controlled by or receives inputs from the ANS:</p>
         <ol class="list-number">
           <li>
             <p>DAFICS (for Autopilot and SAS analytical redundancy (ANR)).</p>
@@ -69,25 +69,25 @@
       </section>
       <section>
         <h3>Modes of Operation</h3>
-        <p>The navigation system has four navigation modes: (1) astro inertial, (2) inertial only, (3) air start (airspeed-damped astro inertial), and (4) dead reckoning. Figure 4-2 summarizes the navigational errors expected in each mode. The mode to be employed depends on the time for activation and alignment, and whether the aircraft is on the ground or airborne when the ANS is turned on. Astro inertial is the preferred mode.</p>
+        <p>The navigation system has four navigation modes: (1) astro inertial, (2) inertial only, (3) air start (airspeed-damped astro inertial), and (4) dead reckoning. <a href="#fig-4-2">Figure 4-2</a> summarizes the navigational errors expected in each mode. The mode to be employed depends on the time for activation and alignment, and whether the aircraft is on the ground or airborne when the ANS is turned on. Astro inertial is the preferred mode.</p>
         <h4>ASTRO INERTIAL Mode</h4>
         <p>In this mode, navigation errors will be relatively small, depending on the alignment method, and do not increase with mission duration. As soon as the system begins navigating the star tracker automatically begins to search for stars. Stars are normally tracked at night and during the day provided good sky conditions exist. A 61 star catalog is stored in the ANS computer. Either normal or special coverage for the SR-71B trainer can be provided. The sun, moon and planets are not used by the star-tracker. At least two different stars must be tracked for optimum performance. The star tracker measures the difference between the inertial platform orientation and celestial computed position. Data derived from stars is used to correct true heading, computed position, computed velocity, platform tilt, and gyro drift rates. Measured gyro drift rates are stored in the computer memory and are used to improve any subsequent inertial only navigation. This sequence eliminates the unbounded position error growth characteristic of pure inertial systems.</p>
         <p>In a normal mission, either a rapid or gyro compassing alignment is performed prior to navigation. These alignments require 18 minutes and 36 minutes respectively, exclusive of warmup time. A ground hot start can be performed on a system previously aligned and shut down or on a system which has been shut down after operation in the astro inertial or inertial-only mode, provided the aircraft has not been moved. A runway heading alignment is recommended after a rapid alignment or a ground hot start. A heading update may or may not be required.</p>
         <h4>INERTIAL-ONLY Mode</h4>
         <p>INERTIAL-ONLY mode, in which only the inertial portion of the astroinertial system is employed, is recommended when the star-tracking capability of the navigation system is impaired. In this mode, navigation errors are unbounded.</p>
         <h4>AIRSTART Mode</h4>
-        <p>The airspeed-damped, astro inertial (air start) mode, which uses both the inertial platform and star tracker, is intended for: (1) scramble-initiated flights when the system is not prepared for a ground hot start, and (2) restart in flight. In this mode, errors can be large at first but should damp down with time to the values in Figure 4-2. Dead reckoning data are used for present position until three different stars have been acquired (steady illumination of the star ON light). Star acquisition is critical for accurate navigation.</p>
+        <p>The airspeed-damped, astro inertial (air start) mode, which uses both the inertial platform and star tracker, is intended for: (1) scramble-initiated flights when the system is not prepared for a ground hot start, and (2) restart in flight. In this mode, errors can be large at first but should damp down with time to the values in <a href="#fig-4-2">Figure 4-2</a>. Dead reckoning data are used for present position until three different stars have been acquired (steady illumination of the star ON light). Star acquisition is critical for accurate navigation.</p>
         <h4>Dead Reckon Mode (DR)</h4>
         <p>If the ANS inertial platform fails, navigation may continue using dead reckoning. In DEAD RECKON mode the ANS computer navigates using heading from the INS, true airspeed from the DAFICS (M computer) and inflight winds filled by the RSO. Position error increases proportional to errors in these inputs.</p>
       </section>
       <section>
         <h3>System Errors</h3>
         <p>
-          <span>Error values in Figure 4-2 are based on the high altitude flight profiles. Abnormal flight profiles (low-altitude, race-track, touch-and-go, etc.,) may result in errors in excess of the listed values. The error values listed are probable radial errors (CEP's); therefore, under normal system operation, the listed errors will be exceeded about half the time. When star tracking is lost, a residual position error may develop that will not be totally eliminated when star tracking resumes. It might take as many as</span>
+          <span>Error values in <a href="#fig-4-2">Figure 4-2</a> are based on the high altitude flight profiles. Abnormal flight profiles (low-altitude, race-track, touch-and-go, etc.,) may result in errors in excess of the listed values. The error values listed are probable radial errors (CEP's); therefore, under normal system operation, the listed errors will be exceeded about half the time. When star tracking is lost, a residual position error may develop that will not be totally eliminated when star tracking resumes. It might take as many as</span>
           <u>3 navigation position updates</u>
           <span>(depending on Schuler cycle period) and a steady C star light to eliminate the total residual error.</span>
         </p>
-        <table border="1">
+        <table border="1" id="fig-4-2">
           <caption>Figure 4-2: Navigation Mode Probable Radial Error</caption>
           <thead>
             <tr>
@@ -228,17 +228,17 @@
       </section>
       <section>
         <h3>System Components</h3>
-        <p>The navigation system has three major assemblies: the control and display panel, the portable chronometer, and the guidance group. The control and display panel (Figure 4-3), located on the aft cockpit right console, is used to activate the system, select modes of operation, insert and monitor navigational data, modify the mission flight plan, and observe operating status.</p>
+        <p>The navigation system has three major assemblies: the control and display panel, the portable chronometer, and the guidance group. The control and display panel (<a href="#fig-4-3">Figure 4-3</a>), located on the aft cockpit right console, is used to activate the system, select modes of operation, insert and monitor navigational data, modify the mission flight plan, and observe operating status.</p>
         <p>A portable chronometer, in the aft cockpit supplies Greenwich Mean Time (GMT) (accurate to one-hundredth of a second) and the Julian date to establish the orientation of the Earth in inertial space for astro-inertial operations. The chronometer is set in the base shop, using a time standard set up to receive WWV time signals. Day can be set up to 511, thus allowing use of the computer star catalog into the next calendar year. A fully-charged, self-contained battery permits timekeeping for up to 24 hours without other power. Chronometer outputs are enabled only when aircraft power is applied. There is a GO, NO-GO indicator on the chronometer. GO indicates that either external or battery power is available and that the chronometer is operable, but does not indicate that the correct day and time is set. NO-GO indicates that chronometer outputs are unreliable.</p>
         <p>The guidance group contains the electronic and optical-mechanical equipment for navigation and avionics subsystems control. The guidance group is mounted in the fuselage aft of the rear cockpit to provide an upward 78-degree cone of vision for the star-tracking telescope. The axis of the cone is vertical when the aircraft pitch angle is 7-1/2 degrees. The guidance group includes an inertially stabilized platform and associated electronic and electromechanical components required to control (1) its attitude, (2) a star-tracking telescope, and (3) the electronic and electromechanical components for pointing, servo-controlling, and discrimination of telescope photo-detections. A digital computer computes auto-navigation, guidance and avionics control, and maintains a continuously updated account of navigational status and coordinate values. The computer also stores instrument and mathematical coefficients, predetermined data references that define stars, and the mission flight plan. The computer initiates and evaluates self-tests periodically throughout the operating interval. Software corrections to the star data are provided for: (1) the shock wave over the window that refracts the star light and (2) pressure and temperature gradients (differentials) acting on the window causing optical lens effects.</p>
       </section>
       <section data-title="Navigation Control/Display Panel">
         <h3>Navigation Control and Display Panel (NCD)</h3>
-        <p>The NCD (Figure 4-3) on the aft cockpit right console controls the ANS.</p>
+        <p>The NCD (<a href="#fig-4-3">Figure 4-3</a>) on the aft cockpit right console controls the ANS.</p>
         <div class="note">
           <p>The positions of the ANS controls and the last push-button operations are recorded once each 0.832 seconds by the MRS. Events can be marked by using the ANS keyboard.</p>
         </div>
-        <figure>
+        <figure id="fig-4-3">
           <img src="images/4-3.jpg" alt="" />
           <figcaption>Figure 4-3: Navigation Control and Display Panel</figcaption>
         </figure>
@@ -526,8 +526,8 @@
         <h4>C/TEST Switch</h4>
         <p>Used to perform a panel light test and to display ANS tape data and internal ANS conditions when used in conjunction with the TEST position of the DATA switch.</p>
         <h4>SELECTED DATA Indicators</h4>
-        <p>The indicators or windows consist of six separate sets of digital displays. Various operating parameters are displayed in the indicators during the panel fill, mission modification, update, and alignment routines as shown in Figure 4-4.</p>
-        <table border="1">
+        <p>The indicators or windows consist of six separate sets of digital displays. Various operating parameters are displayed in the indicators during the panel fill, mission modification, update, and alignment routines as shown in <a href="#fig-4-4">Figure 4-4</a>.</p>
+        <table border="1" id="fig-4-4">
           <caption>Figure 4-4: Data in Selected Data Windows for Panel Routines</caption>
           <tbody>
             <tr>
@@ -1145,8 +1145,8 @@
         <p>The ANS operates in typical inertial navigation fashion. Outputs from two 2-axis gyros drive the platform gimbals to isolate three orthogonally mounted accelerometers from changes in aircraft attitude. The gyros and accelerometers are mounted on the platform's azimuth gimbal (stable element). The accelerometer outputs are components of aircraft velocity change. If the azimuth gimbal is not kept level, the accelerometers also measure a component of acceleration due to gravity and position errors are produced.</p>
         <p>In INERTIAL ONLY, the computer uses the accelerometer outputs to calculate aircraft velocity and change in position, and gyro torquing rates. The gyro torquing rates (signals proportional to aircraft velocity plus earth's rate) are applied to the gyros to maintain the azimuth gimbal (and thus the accelerometers) level with respect to the earth. The success of inertial navigation is due to the fact that any system error eventually causes the accelerometers to go off level and measure a component of gravity which introduces an error that tends to cancel the original error. For example, if an accelerometer develops a null shift that appears to be an aircraft acceleration to the north, the platform will be torqued to keep up with the apparent aircraft motion over the earth's surface. Thus if the platform were level, it becomes tipped off level resulting in accelerometer measurement of gravity which looks like aircraft acceleration to the south. This characteristic of inertial systems is called Schuler tuning.</p>
         <p>The star tracking function improves knowledge of accelerometer orientation in azimuth and eliminates the effects of gyro drift. Star search is initiated when astro-inertial mode is selected after completion of alignment. Selection of the star is made by the computer as a function of latitude, longitude, day of year, time of day, aircraft pitch and roll, and location of the sun. Aircraft pitch and roll determine the orientation of the star tracker window. For a given latitude, longitude, time of day and year, a particular star should be at a particular azimuth and elevation. If the star tracker measurements show that the star is not at the expected azimuth and elevation, there is an error in computed latitude and longitude and/or an error in platform orientation. Since the telescope is mounted on the platform, the star tracker measures the angular difference between the physical triad formed by the platform axes and the computational triad formed by the vertical through the computed position and the calculated orientation of the platform in azimuth. Thus the system cannot directly distinguish between a computed position error and a platform orientation error but, based on statistical probabilities determined by prestored error models and flight dynamics preceding the measurement, (as modeled by a Kalman filter, described later) it will attempt to optimally adjust the various navigational parameters.</p>
-        <p>To aid in describing star tracker logic, stars are given arbitrary labels depending on if they are the first, second, or third star tracked after the beginning of an operation. These are listed in Figure 4-5 with definitions and a summary of the usage of star tracker measured errors. In all cases, the end result of tracking two different stars is to align the computational triad with the platform triad or vice versa. A single star cannot be used to correct all errors since errors about the axis from the platform through that star are not measured. After the initial two stars are acquired, the normal interval between loss of track from one star to tracking the next star is about 30 seconds at altitude. Since the platform is almost continually brought into alignment with the computational triad, gyro errors have an almost negligible effect. The predominant ANS errors are those due to gyro drift that develop before stars are acquired and when star tracking is interrupted such as during aerial refueling. The star tracking data is used to update computed values of gyro drift to minimize error growth during any subsequent lapses in star tracking.</p>
-        <table border="1">
+        <p>To aid in describing star tracker logic, stars are given arbitrary labels depending on if they are the first, second, or third star tracked after the beginning of an operation. These are listed in <a href="#fig-4-5">Figure 4-5</a> with definitions and a summary of the usage of star tracker measured errors. In all cases, the end result of tracking two different stars is to align the computational triad with the platform triad or vice versa. A single star cannot be used to correct all errors since errors about the axis from the platform through that star are not measured. After the initial two stars are acquired, the normal interval between loss of track from one star to tracking the next star is about 30 seconds at altitude. Since the platform is almost continually brought into alignment with the computational triad, gyro errors have an almost negligible effect. The predominant ANS errors are those due to gyro drift that develop before stars are acquired and when star tracking is interrupted such as during aerial refueling. The star tracking data is used to update computed values of gyro drift to minimize error growth during any subsequent lapses in star tracking.</p>
+        <table border="1" id="fig-4-5">
           <caption>Figure 4-5: Star Data Usage</caption>
           <thead>
             <tr>
@@ -1207,11 +1207,11 @@
           </tbody>
         </table>
         <p>Star selection, tracker scan rate, and search patterns depend on many factors and are all under computer control. The computer selects a star by going through the star catalog which is arranged in order of decreasing star brightness until it finds a star that is within the window aperture, not within 10° of zenith (not within 5° of zenith for trainer aircraft), and not within 12-1/2° of the sun. The tracker telescope is commanded to search for the selected star using a variable sized pattern which is symmetrical about the computed star position.</p>
-        <p>The star search pattern is an expanding rectangular spiral which starts at the side of the pattern and then passes across the computed star position. See Figure 4-6. Maximum A star pattern size is a function of search rate so that all A star searches are completed within 23 minutes.</p>
+        <p>The star search pattern is an expanding rectangular spiral which starts at the side of the pattern and then passes across the computed star position. See <a href="#fig-4-6">Figure 4-6</a>. Maximum A star pattern size is a function of search rate so that all A star searches are completed within 23 minutes.</p>
         <p>If the star is detected during this search, confirmation and re confirmation patterns are made. If these are successful, the star is considered tracked, and elevation and azimuth errors are determined by the star actual position relative to its computed position. Search and track operations are discontinued if the star moves out of the window, the sky is too bright, or a position update is performed. The computer then goes to the next brightest star available, except that when a position update is performed, star search begins at the top of the star list (brightest star).</p>
         <p>There are four scan rates which can be used in star search. Scan rate depends on star magnitude and sky brightness. The fastest is used on a bright star in a dim background while the slowest is used on a dim star in a bright background.</p>
-        <p>The search patterns are chosen as a function of the type of alignment and whether an A, B, or C star is being searched. See Figure 4-6. This table also lists the star ON light activity during star tracking operations.</p>
-        <table border="1">
+        <p>The search patterns are chosen as a function of the type of alignment and whether an A, B, or C star is being searched. See <a href="#fig-4-6">Figure 4-6</a>. This table also lists the star ON light activity during star tracking operations.</p>
+        <table border="1" id="tab-4-6">
           <caption>Figure 4-6: Search Patterns and Star-ON Light Indications</caption>
           <thead>
             <tr>
@@ -1533,7 +1533,7 @@
             </tr>
           </tbody>
         </table>
-        <figure>
+        <figure id="fig-4-6">
           <img src="images/4-6.jpg" alt="" />
           <figcaption>Figure 4-6: Search Patterns and Star-ON Light Indications</figcaption>
         </figure>
@@ -1551,8 +1551,8 @@
           </ol>
         </div>
         <h4>Star Tracking Techniques</h4>
-        <p>The star ON light provides the RSO with a guide for actions (listed in Figure 4-7) to optimize star tracking. Star tracking is automatic but the operator can assist the system in overcoming conditions such as overcasts, changes of sky background brightness, long periods of ground time after system initialization to A-I mode, refueling, and periods when tracking is not being accomplished. The operator should attempt to commence tracking stars as soon as possible to prevent or eliminate position error growth.</p>
-        <table border="1">
+        <p>The star ON light provides the RSO with a guide for actions (listed in <a href="#fig-4-7">Figure 4-7</a>) to optimize star tracking. Star tracking is automatic but the operator can assist the system in overcoming conditions such as overcasts, changes of sky background brightness, long periods of ground time after system initialization to A-I mode, refueling, and periods when tracking is not being accomplished. The operator should attempt to commence tracking stars as soon as possible to prevent or eliminate position error growth.</p>
+        <table border="1" id="fig-4-7">
           <caption>Figure 4-7: Crew Actions To Optimize Star Tracking</caption>
           <thead>
             <tr>
@@ -1688,8 +1688,8 @@
       <section>
         <h3>Mission Tape Program</h3>
         <p>The mission profile is defined in terms of destination points (DP), control points (CP), and fix points (FP), and the sensor operations associated with these points. Destination points delineate the prescribed mission track; they are intersections of the intended great circle legs. Control points and fix points permit automatic activation of imaging sensors, and fix points define preferred navigational references. The mission plan is loaded into the computer memory on a mission tape prior to preflight operations. The mission tape can be programmed to hold up to 127 DP, 127 FP, and 127 CP (381 total). Additional temporary memory is provided for 40 point modification operations, known as the "40-List". The modifications may be performed using the Control and Display panel anytime power is supplied to the panel. Up to 40 add and/or replace operations and unlimited skip-to operations, are provided. In addition, there are special Anytime and Opportunity fix point procedures which do not use the 40-List. The mission tape may include a primary flight plan with one or more alternate routes that the crew may elect to follow by exercising the skip-to, direct steer, or track leg update options. The add and replace options of the 40-List permit additional alternate paths to be formulated, and allow last-minute changes to sensor activity on programmed legs.</p>
-        <p>The data loaded into specified cells of the computer memory are identified by function and order of use in the mission plan (D00003, C00007, F00021, etc.). Each point is further defined by its coordinates, its sensor-usage, applicable pointing parameters, and reference to the next consecutive point or points. The destination points reference the next point of all three classes. The information programmed for each type of point is listed in Figure 4-11.</p>
-        <figure>
+        <p>The data loaded into specified cells of the computer memory are identified by function and order of use in the mission plan (D00003, C00007, F00021, etc.). Each point is further defined by its coordinates, its sensor-usage, applicable pointing parameters, and reference to the next consecutive point or points. The destination points reference the next point of all three classes. The information programmed for each type of point is listed in <a href="#fig-4-11">Figure 4-11</a>.</p>
+        <figure id="fig-4-8">
           <img src="images/4-8.jpg" alt="" />
           <figcaption>Figure 4-8: Typical Destination-Point Plan</figcaption>
         </figure>
@@ -1706,16 +1706,16 @@
         <p>Fixed-Range-To-Turn is used by the mission planners for turns that indicate critical sensor legs and turns where strict adherence to the planned turn line is required. In this mode, the mission planner specifies a constant turn radius at a particular DP. The TSA point is a fixed distance plus a variable distance from the DP. The fixed distance is determined by the programmed turn radius and the change in course; it would be equal to turn radius on a 90° turn. The variable distance ranges from 0 to 4.5 nm, depending on ground speed, and compensates for the distance required to roll into the turn. During the turn, commanded bank angle is the sum of two components. One component is the nominal bank required to achieve the programmed turn radius at the current ground speed. The second component trims bank angle trim as a function of the radial speed and position relative to the programmed radius so that the aircraft follows the planned turn line throughout the turn. If a transient causes the aircraft to deviate from the turn line, bank angle trim varies within ±10° to return to the turn line.</p>
         <p>Range to destination as displayed on the HSI and the NCD includes distance around a turn rather than the length of the great circle from present position to destination. This distance around the turn is also used in computing time to turn for the NORMAL display.</p>
         <p>Turn steering automatically terminates when aircraft track is within 2° of the command course, the new track is crossed, or the theoretical tangency point is passed.</p>
-        <p>The sum of the nominal commanded bank angle and the bank angle trim is limited to the ANS maximum bank angle command of 45 degrees. Refer to Figures 4-14 and 4-15 for bank angle vs speed and turn radius information.</p>
+        <p>The sum of the nominal commanded bank angle and the bank angle trim is limited to the ANS maximum bank angle command of 45 degrees. Refer to Figures <a href="#fig-4-14">4-14</a> and <a href="#fig-4-15">4-15</a> for bank angle vs speed and turn radius information.</p>
         <div class="note">
           <p>During preflight planning, do not schedule any turns above Mach 2.9 which have a radius smaller than can be maintained using a 42° bank angle.</p>
         </div>
         <p>Turns should be planned to require at least three degrees less than the planned bank angles limits. This provides a margin to accommodate aircraft trim requirements and/or greater ground speed than expected. However, when below Mach 2.9, bank angles of up to 44 degrees may be scheduled if justified by operational requirements. Crews should monitor ANS ground speed prior to and during turns and prevent ground speed from exceeding the maximum value at which the planned track can be accomplished within bank angle limits.</p>
-        <p>When scheduling turns with greater than 35° bank angle, allow for expected altitude loss if maximum power will not maintain level flight. Refer to Parts V &amp; VI of the Performance Data appendix and to the ceiling altitude data, Figure 6-8, in Section VI. When scheduling turns requiring 42° bank angle at speeds above Mach 3.0, consider the altitude at the turn (which is a function of weight) and the programmed Mach. For a given weight and bank angle it may be necessary to decrease altitude, which at a given Mach may increase the KEAS to the KEAS limit. Turns at maximum scheduled bank angles must not be programmed for such heavy weights that the maximum KEAS limit for normal operation would be exceeded. A descent of approximately 2500 to 3000 feet below the maximum range altitude may have to be made before entering a 42° bank turn.</p>
+        <p>When scheduling turns with greater than 35° bank angle, allow for expected altitude loss if maximum power will not maintain level flight. Refer to Parts V &amp; VI of the Performance Data appendix and to <a href="6.htm#fig-6-8">the ceiling altitude data, Figure 6-8, in Section VI</a>. When scheduling turns requiring 42° bank angle at speeds above Mach 3.0, consider the altitude at the turn (which is a function of weight) and the programmed Mach. For a given weight and bank angle it may be necessary to decrease altitude, which at a given Mach may increase the KEAS to the KEAS limit. Turns at maximum scheduled bank angles must not be programmed for such heavy weights that the maximum KEAS limit for normal operation would be exceeded. A descent of approximately 2500 to 3000 feet below the maximum range altitude may have to be made before entering a 42° bank turn.</p>
         <p>In normal operation, the aircraft will follow the turn line and roll out onto the next leg within 0.2 nm. Overshoots and undershoots will degrade sensor performance if the maneuver to get onto track is outside sensor stabilization limits. For the TECH camera(s), roll and pitch rate should be less than 0.3° per second for good photography.</p>
-        <p>With the CAPRE radar, cross track velocity must be less than 35 fps in the programmed mode or 20 fps in the auto mode for good mapping. Figure 4-9 shows distances required to obtain cross track velocities within limits at standard cruise conditions. During most of the settle out distance, roll rates will be slight and suitable for good photography.</p>
+        <p>With the CAPRE radar, cross track velocity must be less than 35 fps in the programmed mode or 20 fps in the auto mode for good mapping. <a href="#fig-4-9">Figure 4-9</a> shows distances required to obtain cross track velocities within limits at standard cruise conditions. During most of the settle out distance, roll rates will be slight and suitable for good photography.</p>
         <p>During a SKIP TO operation, the same fixed turn radius is used, but a different TSA and turn line will result if the next leg is different from the planned leg.</p>
-        <table border="1">
+        <table border="1" id="fig-4-9">
           <caption>Figure 4-9: Distance To Obtain Stable Cross Track Velocities</caption>
           <thead>
             <tr>
@@ -1861,7 +1861,7 @@
         <p>FPs are accurately known and readily identifiable points along the mission path that are used in measuring ANS position error with the SLR and RCD (Radar Correlator Display), viewsight or TACAN. FPs are used to determine ANS error at the time of the fix. The ANS can be corrected by depressing the UPDATE button, or the routine can be terminated without updating the ANS by depressing the MAN CLEAR push-button.</p>
         <p>The SLR is automatically turned on and pointed a prescribed distance in advance of the FP as determined by the mission planner. When the aircraft passes the FP, a MARK light appears at the bottom center of the RCD, the display stops moving, and the ANS transmits the computed fixpoint slant range to the radar. A right-angle "L" mark appears on the RCD 50 seconds later. The RSO measures ANS position error by first zeroing on the "L" mark and then moving the crosshairs to the actual fixpoint.</p>
         <p>The MARK light extinguishes when the "L" mark moves into view. ANS errors appear as north-south and east-west values on the NCD after the radar READ ERR switch is pressed.</p>
-        <figure>
+        <figure id="fig-4-10">
           <img src="images/4-10.jpg" alt="" />
           <figcaption>Figure 4-10: Typical Add/Replace Plan for Fix and Control Points</figcaption>
         </figure>
@@ -1905,7 +1905,7 @@
       <section>
         <h3>Mission Modification</h3>
         <p>The tape-filled mission program can be modified through the NCD panel. Up to 40 sets of data (40-List) may be entered to replace or add to previously stored mission points. In addition, the operator can skip any number of tape-filled or panel-filled destination points, or change destination. There are also special panel-filled fixpoints called Anytime or Opportunity fixpoints that are exclusive of the 40-List.</p>
-        <table border="1">
+        <table border="1" id="fig-4-11">
           <caption>Figure 4-11: Mission Point Data</caption>
           <thead>
             <tr>
@@ -2388,17 +2388,17 @@
           </tfoot>
         </table>
         <h4>Add or Replace CP-FP-DP Routine</h4>
-        <p>The mission tape is stored in the tape-filled memory of the computer. Panel-filled data for mission modification is stored in the panel-filled memory of the computer. Only Add or Replace modifications use the 40 panel-filled memory cells. Data required for each type of point, both panel-filled 40 List and tape-filled points, is listed in Figure 4-11. If necessary, the RSO can clear any or all of the mission modification data entered into the panel-filled memory and enter new data in the same 40 memory spaces. Detailed knowledge of the tape-filled mission is required to modify that mission, especially when control points or fixpoints are added or replaced.</p>
+        <p>The mission tape is stored in the tape-filled memory of the computer. Panel-filled data for mission modification is stored in the panel-filled memory of the computer. Only Add or Replace modifications use the 40 panel-filled memory cells. Data required for each type of point, both panel-filled 40 List and tape-filled points, is listed in <a href="#fig-4-11">Figure 4-11</a>. If necessary, the RSO can clear any or all of the mission modification data entered into the panel-filled memory and enter new data in the same 40 memory spaces. Detailed knowledge of the tape-filled mission is required to modify that mission, especially when control points or fixpoints are added or replaced.</p>
         <h4>Point-ID Code</h4>
         <p>Every tape-filled or 40-List mission point has an identification code. The code consists of a letter and five digits, referred to in the following text as digits 1, 2, 3, 4, and 5, counting from the left. This is the order in which the point-ID code is entered in the NCD panel. A letter C/C1, F/F1 or D designates the point as a control point, fixpoint, or destination point, respectively, and appears in the left-most display of the SELECTED DATA 6 window when a mission point is selected for display. When modifying a mission, this part of the ID code is entered by selecting FIXPOINT, CONT PT, or DEST POINT on the DATA switch.</p>
         <p>Digits 3 thru 5 of the ID code denote the number assigned to each tape-filled CP, FP, and DP. Tape-filled points are numbered from 001 for the first CP, FP, and DP, to 127. In general, the points on the primary mission are numbered in sequence followed by the points on alternate legs. However, the sequence is not really important since the next point number of each type is listed with each tape-filled mission point; i.e., the data for DP 002 can define DP013 as the next DP, or vice versa. The same applies to CP's and FP's.</p>
-        <p>As shown on Figure 4-8, DP's which are the start points for alternate legs are doubly defined. This means that the same geographic point is contained in two different locations with different number and different next-point numbers (example: D00003 and D00011). The alternate leg is selected by skipping to D00011 when on leg 1. Note that the alternate path rejoins the primary mission at D00007; thus, both D00006 and D00012 list D00007 as the next DP. 40-List (ADD or REPLACE) points are defined relative to tape-filled points; digits 3 thru 5 define the tape-filled point to be replaced, or the tape-filled or panel-replaced point following the point(s) to be added.</p>
+        <p>As shown on <a href="#fig-4-8">Figure 4-8</a>, DP's which are the start points for alternate legs are doubly defined. This means that the same geographic point is contained in two different locations with different number and different next-point numbers (example: D00003 and D00011). The alternate leg is selected by skipping to D00011 when on leg 1. Note that the alternate path rejoins the primary mission at D00007; thus, both D00006 and D00012 list D00007 as the next DP. 40-List (ADD or REPLACE) points are defined relative to tape-filled points; digits 3 thru 5 define the tape-filled point to be replaced, or the tape-filled or panel-replaced point following the point(s) to be added.</p>
         <p>Digit 2 is the "add" number for panel-filled ADD points. Digit 2 can range from 1 to 7 for the first through seventh points to be added ahead of the tape-filled or panel-replaced point of the same type defined by digits 3 thru 5, where add point X10YZ is the first add point encountered in the mission, ahead of point 000YZ with add point X20YZ the second, etc. Digit 2 is zero for tape-filled points or replaced points. Digit 2 is the left-most digit in the SELECTED DATA window 6 when a mission modification is performed or a mission point is displayed.</p>
         <p>Digit 1 is a zero for all tape-filled points, replaced control or fix points, and 40-list destination points. When adding fix or control points, however, digit 1 is used by the computer to determine the track leg location of the new added point. If the add point is after the last tape-filled point of its type on its track leg, this digit is 1; if the add point is before the last tape-filled point of its type on its track leg, then the digit is a zero. Digit 1 appears as Cl or Fl in the letter position of the SELECTED DATA 6 counter during a mission modification or mission point display operation (when ID code is entered). It also appears when a point is displayed.</p>
         <h4>Sensor Selection Code</h4>
         <p>The three-digit sensor selection code designates which sensor shall be turned on and/or remain on, at a panel-filled control point.</p>
         <p>When control points are added or replaced, take care not to disrupt prior turn-on commands to the TECH cameras or SLR system. If, for example, the L TECH was automatically turned on 50 nm prior to an add R TECH control point, and the mission planner intended it to remain on for a total 100 nm swath, the add-control point sensor assignment code would be 110. This would tell the computer to leave the L TECH on at the new control point and that the R TECH will be turned on. This is necessary because each CP will turn sensors off without an "on" marker in the sensor code.</p>
-        <table border="1">
+        <table border="1" id="fig-4-12">
           <caption>Figure 4-12: Sensor Selection Code</caption>
           <thead>
             <tr>
@@ -2463,8 +2463,8 @@
           </tfoot>
         </table>
         <h4>Left-Right Start Range Code</h4>
-        <p>The left-right marker and start range code (three digits in the range code column of Figure 4-13) designate which side of the aircraft to point and the distance from nadir to the area to be mapped (near edge of the radar beam, when the SLR is selected for use with fix-points or control points). The panel-filled start range code is limited to the SLR five-mile recorder strip width noted in the first column of the table. When adding or replacing TECH camera control points, insert L00.0 or R00.0 for control points to the left or right of course respectively. Verify code insertion in the SELECTED DATA window 5 (R or L plus three numeric digits).</p>
-        <table border="1">
+        <p>The left-right marker and start range code (three digits in the range code column of <a href="#fig-4-13">Figure 4-13</a>) designate which side of the aircraft to point and the distance from nadir to the area to be mapped (near edge of the radar beam, when the SLR is selected for use with fix-points or control points). The panel-filled start range code is limited to the SLR five-mile recorder strip width noted in the first column of the table. When adding or replacing TECH camera control points, insert L00.0 or R00.0 for control points to the left or right of course respectively. Verify code insertion in the SELECTED DATA window 5 (R or L plus three numeric digits).</p>
+        <table border="1" id="fig-4-13">
           <caption>
             <p>Figure 4-13: Start Range Code</p>
             <p>-Capre Radar-</p>
@@ -2651,7 +2651,7 @@
         <p>
           <span>Any filled 40-List points located</span>
           <u>after</u>
-          <span>the current "next tape-filled point" of each type will be utilized in the normal ANS sequence and no Track Leg Update is required (see Figure 4-10).</span>
+          <span>the current "next tape-filled point" of each type will be utilized in the normal ANS sequence and no Track Leg Update is required (see <a href="#fig-4-10">Figure 4-10</a>).</span>
         </p>
         <div class="note">
           <p>A FP/CP/DP in the 40-List must be deleted before a correction/modification can be made to that numbered point.</p>
@@ -2660,11 +2660,11 @@
         <p>The ANS does not automatically stop processing CP's and FP's on the original tape-filled leg when navigating on a leg from a tape-filled DP to an added or replaced DP; or from a replaced DP to any type of DP. In these cases, the CP's and FP's on the original leg are processed relative to the new leg. In general, pointing and mapping commands will be incorrect, and unless all CP's and FP's can be projected on to the new leg, a sensor could be commanded on but not off. Therefore, the sensors should be operated in their manual modes or tape-filled CP's and FP's should be replaced. No CP's and FP's are processed when navigating from an added DP to any type of DP.</p>
         <p>After a power dropout, pressing RAPID or MODE START on the ground with the MAL light flashing will erase the 40-List. Anytime a rapid or gyrocompass ground alignment is performed, 40-List data must be re-entered. 40-List data is not deleted if the HOT switch is pressed with the MAL light flashing or a cold air start is performed. Therefore, 40-List data is retained for a ground hot start, cold air start, or a hot air start. Pressing the MODE START switch without the MAL light flashing has no effect on the 40-List.</p>
         <h4>Torn Radius for Panel-Filled DPs</h4>
-        <p>A turn radius can be filled with any panel-filled DP to get a fixed-range-to-turn at that DP. This data is filled in nautical miles with three digits and appears in the SELECTED DATA window 3. If no turn radius is filled, the system calculates the turn radius based on current ground speed and a 32 bank angle. Figure 4-14 lists turn radius values for various Mach numbers and bank angles.</p>
+        <p>A turn radius can be filled with any panel-filled DP to get a fixed-range-to-turn at that DP. This data is filled in nautical miles with three digits and appears in the SELECTED DATA window 3. If no turn radius is filled, the system calculates the turn radius based on current ground speed and a 32 bank angle. <a href="#fig-4-14">Figure 4-14</a> lists turn radius values for various Mach numbers and bank angles.</p>
         <div class="note">
           <p>A turn radius for a bank angle greater than 35° will only be commanded by the autopilot if the original programmed bank angle for that turn start point (TSP) was greater than 35°. The autopilot will otherwise be limited to 35°.</p>
         </div>
-        <table border="1">
+        <table border="1" id="fig-4-14">
           <caption>Figure 4-14: ANS Bank Angle vs. Turn Radius for Various Mach Numbers FAT = -56°</caption>
           <thead>
             <tr>
@@ -3643,7 +3643,7 @@
             </tr>
           </tfoot>
         </table>
-        <figure>
+        <figure id="fig-4-15">
           <img src="images/4-15.jpg" alt="" />
           <figcaption>Figure 4-15: ANS Turn Radius vs. True Airspeed &amp; Bank Angle</figcaption>
         </figure>
@@ -3659,7 +3659,7 @@
         <p>The Opportunity viewsight fix allows the RSO to update ANS present position using a visually identified point which has not been tape or panel-filled into the ANS. In this procedure the RSO aligns the cursor and presses the READ switch as in a normal view sight fix routine. As the coordinates of the opportunity point are not previously stored in the computer, the initial display of ANS corrections is meaningless. However, these initial corrections are cleared when the RSO fills the latitude, longitude, and elevation of the opportunity point. When the ENTER/DISPLAY switch is pressed after coordinate entry, new errors are displayed. The RSO can then either clear the errors or enter the corrections.</p>
         <p>The RSO can repeat the coordinate entry if an error is made in the initial entry by pressing the ENTER/DISPLAY switch and reentering all data required. However, if ERR is displayed in the MODE window, MAN CLEAR must be pressed to terminate the routine and no update is possible.</p>
         <h4>Skip to DP Routine</h4>
-        <p>The following examples refer to Figure 4-8.</p>
+        <p>The following examples refer to <a href="#fig-4-8">Figure 4-8</a>.</p>
         <p>When the skip-to routine is performed, the following DP number associated with the current next DP is replaced with the skipped-to DP number. This procedure can be used to select an alternate route in flight. For example, perform skip to D00011 while en route from D00001 to D00002 and before reaching the range-to-turn to D00003, to select the alternate route from D00002 to D00011 to D00012, etc. This procedure could also be used to skip any portion of the programmed mission. For example, to skip from D00004 to D00006, perform a "skip to D00006" while en route from D00003 to D00004 and before reaching the range-to-turn to D00005. Do not perform a skip from a doubly defined destination to its alternate destination since this creates a zero-length leg and unpredictable navigation results. For example, do not perform a "skip to D00011" after reaching the range-to-turn to D00003 and en route to D00003 since the leg from D00003 to D00011 has zero length.</p>
         <p>Skipping to a DP after starting great circle navigation does not erase CP or FP operation on the original programmed leg following the current next DP. Consequently, skipping to D00011 to select the alternate route does not eliminate the sensor operation on the leg from D00002 to D00003. On the other hand, skipping to D00006 while en route to D00004 will not eliminate the CP's and FP's along the original leg from D00004 to D00005, and the system will process these points. In this case, the sensors should be operated in their manual modes until back on the programmed mission course.</p>
         <h4>Direct Steer</h4>
@@ -3673,8 +3673,8 @@
       </section>
       <section data-title="Operation">
         <h3>ANS Operation</h3>
-        <p>The ANS must be warmed up and aligned before flight. The methods for ground and air alignment and their association with various navigation modes is outlined in Figure 4-16.</p>
-        <table border="1">
+        <p>The ANS must be warmed up and aligned before flight. The methods for ground and air alignment and their association with various navigation modes is outlined in <a href="#fig-4-16">Figure 4-16</a>.</p>
+        <table border="1" id="fig-4-16">
           <caption>Figure 4-16: Navigation Modes vs. Alignment Methods</caption>
           <thead>
             <tr>
@@ -3792,8 +3792,8 @@
         </table>
         <p>Prior to ground alignment, verify that the prescribed mission program is in the computer and that the portable chronometer is installed and operating. Power and cooling air are required continuously through warmup, alignment, and navigation. Once alignment has started, a power interruption of more than 1 second will require realignment. Normally, warmup and alignment are performed on ground power and cooling air with transfer to aircraft power and cooling air after engine start, but can be performed on aircraft power and cooling air after engine start.</p>
         <p>When operating from an alternate base without ANS support personnel, the chronometer day/time accuracy must be checked. If a flight with an accurate chronometer installed terminates at an alternate base, the chronometer can be (a) maintained indefinitely in an accurate GO state by connecting ground power and cooling to the aircraft with the MODE switch OFF and the aft cockpit ANS essential DC circuit breaker in, or (b) left in the aircraft after normal shutdown procedures are completed. In the latter case, if the battery ON/OFF switch is left in the ON position, the chronometer battery will run down in approximately 24 hours and the chronometer will stop. After power is reapplied to the aircraft and the battery ON/OFF switch is in the ON position, the chronometer should display a GO status and begin to charge its internal battery. If the chronometer is in a GO status, but merely incorrectly set, fill DAY/TIME during C/A and operate in the ASTRO INERTIAL mode. (In a ground hot start, the C/A mode lasts only 60 seconds.) After filling DAY/TIME, the difference between RSO filled values and chronometer values is retained as a bias term to update the computer time following power dropouts of less than 1 second. Thus, astro inertial navigation should function normally. Power dropouts that exceed 1 second will not be compensated for.</p>
-        <p>After filling DAY/TIME a Hot Air Start cannot be performed and a new ground alignment or Cold Air Start is required. Chronometer options are listed in Figure 4-17.</p>
-        <table border="1">
+        <p>After filling DAY/TIME a Hot Air Start cannot be performed and a new ground alignment or Cold Air Start is required. Chronometer options are listed in <a href="#fig-4-17">Figure 4-17</a>.</p>
+        <table border="1" id="fig-4-17">
           <caption>Figure 4-17: Chronometer/Operation Options</caption>
           <thead>
             <tr>
@@ -5561,8 +5561,8 @@
         <p>The LIMIT portion of the indicator is unlighted when temperatures within the ANS are normal. The red LIMIT can illuminate either steady or flashing. A steady light indicates that the temperature of the astro-inertial instrument housing or the cooling air at the computer inlet is above nominal limits. Steady illumination after initial turn-on is caused by system over-temperature. A flashing light indicates that ANS cooling airflow is less then 2.5 pounds per minute. To prevent damage, turn the ANS off when the temperature LIMIT indicator comes on.</p>
         <p>When the LIMIT light illuminates, the RSO's annunciator panel ANS FAIL light, and the pilot's annunciator panel ANS REF caution light illuminate.</p>
         <p>When the TEMP TOLR light is unlighted, the platform temperature is in the range for optimum system performance. The amber TOLR light illuminates either steady or flashing. Steady illumination signifies that platform temperature is below normal. A flashing light signifies that temperature is above normal.</p>
-        <p>Figure 4-18 lists ANS temperature warning indications, conditions and recommended actions.</p>
-        <table border="1">
+        <p><a href="#fig-4-18">Figure 4-18</a> lists ANS temperature warning indications, conditions and recommended actions.</p>
+        <table border="1" id="fig-4-18">
           <caption>Figure 4-18: ANS Temperature Warnings</caption>
           <thead>
             <tr>
@@ -5705,7 +5705,7 @@
           </p>
         </div>
         <h4>Malfunction Indicator (MAL Light)</h4>
-        <p>The MODE window usually indicates action to be taken when the MAL light is flashing. Several of the conditions for a MAL light are synonymous with conditions for nav-not-ready indications described under the Warning Indication section. Figure 4-19 lists general ANS malfunction and nav-not-ready conditions.</p>
+        <p>The MODE window usually indicates action to be taken when the MAL light is flashing. Several of the conditions for a MAL light are synonymous with conditions for nav-not-ready indications described under the Warning Indication section. <a href="#fig-4-19">Figure 4-19</a> lists general ANS malfunction and nav-not-ready conditions.</p>
         <div class="note">
           <p>When the MAL light illuminates, the RSO's annunciator panel ANS FAIL light, and the pilot's annunciator panel ANS REF caution light illuminate.</p>
         </div>
@@ -5755,7 +5755,7 @@
         <p>If the aircraft is at index (turn start) and a destination point is specified which does not exist in the mission tape, the next destination point in the normal mission tape sequence is assumed and the aircraft is automatically directed to that point. The MODE window displays DP * and the SELECTED DATA windows flash their contents at a one and a half second rate. MAN CLEAR and DISPLAY must be pressed to restore normal NCD panel operation and to verify correct navigation. If not on the correct track, DIR STEER or Track Leg Update as required.</p>
         <h4>Warning Indications</h4>
         <p>
-          <span>The ANS uses a variety of cockpit warnings. Figure 4-19 lists these displays. In some cases, these displays alert the RSO to problems that may affect</span>
+          <span>The ANS uses a variety of cockpit warnings. <a href="#fig-4-19">Figure 4-19</a> lists these displays. In some cases, these displays alert the RSO to problems that may affect</span>
           <u>eventual</u>
           <span>mission success. In other cases, however, these display indicators warn the crew that ANS outputs are inaccurate and/or</span>
           <u>unsafe</u>
@@ -5764,7 +5764,7 @@
           <span>indicators</span>
           <u>must be recognized and responded to instinctively by the flight crew.</u>
         </p>
-        <table border="1">
+        <table border="1" id="fig-4-19">
           <caption>Figure 4-19: ANS Warning Indications</caption>
           <thead>
             <tr>
@@ -6345,8 +6345,8 @@
       </section>
       <section data-title="Inertial Control Panel">
         <h3>Inertial Control Panel (ICP)</h3>
-        <p>The ICP (Figure 4-20) is on the aft cockpit left console.</p>
-        <figure>
+        <p>The ICP (<a href="#fig-4-20">Figure 4-20</a>) is on the aft cockpit left console.</p>
+        <figure id="fig-4-20">
           <img src="images/4-20.jpg" alt="" />
           <figcaption>Figure 4-20: Inertial Control Panel (ICP)</figcaption>
         </figure>
@@ -6538,8 +6538,8 @@
         </dl>
         <p>The INS remains in inertial navigation at all switch positions between NAV and ATT.</p>
         <h5>DATA Switch</h5>
-        <p>Used in conjunction with the DATA OPT push-button to establish what data is called from the computer for display, or what data may be keyed for entry into the computer. Refer to Figure 4-21 for data options.</p>
-        <table border="1">
+        <p>Used in conjunction with the DATA OPT push-button to establish what data is called from the computer for display, or what data may be keyed for entry into the computer. Refer to <a href="#fig-4-21">Figure 4-21</a> for data options.</p>
+        <table border="1" id="fig-4-21">
           <caption>Figure 4-21: Inertial Control Panel Data Displays</caption>
           <thead>
             <tr>
@@ -6778,7 +6778,7 @@
         <h5>MODE SEL Light</h5>
         <p>The light illuminates when manual magnetic variation is selected. It illuminates during a maintenance self-test and extinguishes after 5 minutes when the test is complete.</p>
         <h5>DATA OPT Push-button</h5>
-        <p>Used in conjunction with the DATA switch to select the displays available at each DATA switch position. See Figure 4-21.</p>
+        <p>Used in conjunction with the DATA switch to select the displays available at each DATA switch position. See <a href="#fig-4-21">Figure 4-21</a>.</p>
         <h5>MARK Push-button</h5>
         <p>Enters present position into computer memory for recall as a point of interest. After 3 sequential MARK points have been accomplished (A, B and C) subsequent marking erases the previous point(s) in order (A, B, C).</p>
         <h5>UPDT Push-button</h5>
@@ -7088,7 +7088,7 @@
         <h4>Marking Procedure</h4>
         <p>Any point overflown may be "marked" for subsequent use or reference. Depressing the MARK push-button will cause MKA, MKB or MKC to appear in the Alpha display. The left and right displays continue to display present position. After 10 seconds the Alpha display returns to normal operation. The marked point can then be displayed by setting the destination wheel to A, B, or C and the DATA switch to DEST. The system will maintain three points at any time. Repetitive marking erases the previously marked points in order.</p>
         <h4>DATA Displays</h4>
-        <p>Data is displayed using the DATA switch and DATA OPT push-button. Repositioning the DATA switch selects the first display of that position. Remaining displays for a given DATA switch position are selected by depressing the DATA OPT push-button. See Figure 4-21 for data displays available.</p>
+        <p>Data is displayed using the DATA switch and DATA OPT push-button. Repositioning the DATA switch selects the first display of that position. Remaining displays for a given DATA switch position are selected by depressing the DATA OPT push-button. See <a href="#fig-4-21">Figure 4-21</a> for data displays available.</p>
         <h4>Attitude Mode (ATT)</h4>
         <p>In ATT mode the INS operates as an inertial attitude and heading reference platform. The ATT mode is entered automatically in the event of computer failure or may be selected by the operator.</p>
         <p>The ATT mode is entered by rotating the FUNCTION switch clockwise and pressing before reaching the ATT position. The INS remains in ATT mode until the FUNCTION switch is OFF.</p>
@@ -7108,7 +7108,7 @@
           <u>not</u>
           <span>in view the INS is operating in ATT; if the power OFF flag is in view there is an INS platform (attitude) malfunction.</span>
         </p>
-        <p>An INS malfunction that illuminates the INS REF annunciator caution light can be considered a hard failure. There is a remote possibility of clearing a malfunction inflight by attempting the INS Fault Indication Clearing Procedure. There are seven additional malfunctions that could occur which do not illuminate the INS REF light. Two cause degraded accuracy, three cause erroneous, blank or frozen ICP displays, and the remaining two do not affect system performance. None of the seven are evident through the aircraft warning system, but they can be viewed on the ICP with the DATA switch set to TEST. See Figure 4-21.</p>
+        <p>An INS malfunction that illuminates the INS REF annunciator caution light can be considered a hard failure. There is a remote possibility of clearing a malfunction inflight by attempting the INS Fault Indication Clearing Procedure. There are seven additional malfunctions that could occur which do not illuminate the INS REF light. Two cause degraded accuracy, three cause erroneous, blank or frozen ICP displays, and the remaining two do not affect system performance. None of the seven are evident through the aircraft warning system, but they can be viewed on the ICP with the DATA switch set to TEST. See <a href="#fig-4-21">Figure 4-21</a>.</p>
         <h4>INS Fault Indication Clearing Procedure</h4>
         <ol class="list-number">
           <li>
@@ -7118,7 +7118,7 @@
                 <p>If Left and Right displays read "O" - No action required.</p>
               </li>
               <li>
-                <p>If Left display reads FAIL 1 or FAIL 2 (Figure 4-22) - Perform steps 2 through 4.</p>
+                <p>If Left display reads FAIL 1 or FAIL 2 (<a href="#fig-4-22">Figure 4-22</a>) - Perform steps 2 through 4.</p>
               </li>
             </ol>
           </li>
@@ -7132,7 +7132,7 @@
             <p>DATA OPT - Press, Alpha display reads INS, MODE SEL light OFF. If FAIL 1 or FAIL 2 reoccurs, notify maintenance.</p>
           </li>
         </ol>
-        <table border="1">
+        <table border="1" id="fig-4-22">
           <caption>Figure 4-22: INS "No Warning" Malfunctions</caption>
           <thead>
             <tr>
@@ -7294,7 +7294,7 @@
           <p>Mission Recorder System (MRS).</p>
         </li>
       </ol>
-      <table border="1">
+      <table border="1" id="fig-4-23">
         <caption>Figure 4-23: Sensor Comparison Chart</caption>
         <thead>
           <tr>
@@ -7507,7 +7507,7 @@
           </tr>
         </tbody>
       </table>
-      <figure>
+      <figure id="fig-4-24">
         <img src="images/4-24.jpg" alt="" />
         <figcaption>Figure 4-24: Sensor Component and DEF Equipment Locations</figcaption>
       </figure>
@@ -7526,7 +7526,7 @@
           </li>
         </ul>
       </div>
-      <figure>
+      <figure id="fig-4-25">
         <img src="images/4-25.jpg" alt="" />
         <figcaption>Figure 4-25: Power and Sensor Control Panel</figcaption>
       </figure>
@@ -7766,8 +7766,8 @@
       <p>The self-illuminated radar push-button power switch has a white illuminated RADAR legend in the top half and is located on the PWR &amp; SENSOR control panel. The ON portion of the push-button alternately illuminates and extinguishes as the push-button is depressed. The FAIL portion of the push-button illuminates when the SLR fails self-test. Illumination of the FAIL light illuminates the SENSOR FAIL light on the RSO annunciator panel. Removing RADAR power or a successful SLR self-test extinguishes the FAIL light.</p>
       <section>
         <h3>Radar Control Panel</h3>
-        <p>The radar control panel on the RSO's right console controls the SLR. See Figure 4-26.</p>
-        <figure>
+        <p>The radar control panel on the RSO's right console controls the SLR. See <a href="#fig-4-26">Figure 4-26</a>.</p>
+        <figure id="fig-4-26">
           <img src="images/4-26.jpg" alt="" />
           <figcaption>Figure 4-26: CAPRE SLR Control Panel</figcaption>
         </figure>
@@ -7880,8 +7880,8 @@
         <h3>Recorder Correlator Display (RCD)</h3>
         <p>The RCD is a self-contained unit in the forward portion of the aft cockpit. It operates in conjunction with, but is independent of the radar recorder(s). The RCD operates when RCD power is applied and only when the SLR is in operation since it uses SLR doppler phase history video to produce an inflight display for navigation. The display moves downward at a rate proportional to ground speed and is normally 50 seconds (25 nautical miles at cruise speed and altitude) behind aircraft position. The RCD map display is 15 nautical miles wide. This display must be stopped for target evaluation and navigation fixpoint error determination.</p>
         <h4>RCD Control Panel</h4>
-        <p>The RCD control panel (figure 4-27) is below and to the right of the radar map display. At the left of the panel is a crosshair control. In the center are error readout position counters. There are six display indicator and control switches on the right side of the panel.</p>
-        <figure>
+        <p>The RCD control panel (<a href="#fig-4-27">Figure 4-27</a>) is below and to the right of the radar map display. At the left of the panel is a crosshair control. In the center are error readout position counters. There are six display indicator and control switches on the right side of the panel.</p>
+        <figure id="fig-4-27">
           <img src="images/4-27.jpg" alt="" />
           <figcaption>Figure 4-27: RCD Control Panels</figcaption>
         </figure>
@@ -7990,7 +7990,7 @@
       <p>Cyclic rate of the camera is controlled automatically by the frame overlap requirement of the mode selected, and by V/H forward motion compensation.</p>
       <p>Three operating modes can be selected in flight. Two <span class="redacted">REDACTED</span>, which result in <span class="redacted">REDACTED</span>, provide either <span class="redacted">REDACTED</span> of successive frames. In the <span class="redacted">REDACTED</span> is automatic. The nominal convergence angle is twelve degrees (approximately six degrees fore and aft tilt angle) in the <span class="redacted">REDACTED</span> mode.</p>
       <p>Control and operating power for the camera is provided from the monitored DC bus. Three phase AC power for the shroud, camera heaters and thermal control system is provided from the essential AC bus. Circuit breakers are located in the C-Bay.</p>
-      <table border="1">
+      <table border="1" id="fig-4-28">
         <caption>Figure 4-28: OBC Film Size and Exposures</caption>
         <thead>
           <tr>
@@ -8058,7 +8058,7 @@
       </table>
       <h2>OBC Air Supply and Temperature Control</h2>
       <p>Camera temperature in flight is controlled automatically by cockpit exhaust air and cold air from the air conditioning system. In addition, electrically operated heaters are provided for the lens system and in the camera shroud.</p>
-      <p>Air for the skew bar and air cage is obtained from the canopy seal supply line (upstream from the canopy seal control valves) and operates as a cushion to separate the film from the surface of the skew bars where the film path changes direction. Figure 1-71 depicts airflow to the OBC system.</p>
+      <p>Air for the skew bar and air cage is obtained from the canopy seal supply line (upstream from the canopy seal control valves) and operates as a cushion to separate the film from the surface of the skew bars where the film path changes direction. <a href="1.htm#fig-1-71">Figure 1-71</a> depicts airflow to the OBC system.</p>
       <p>Refrigerated air for the OBC is supplied by an extension of the cold air supply manifold in the forward chine bay. It is normally directed into a shroud above and on each side of the rotating lens system. It then exhausts into the nose compartment. Flow from the supply manifold is filtered and controlled by a barometrically sensitive valve which is open above approximately 45,000 feet. Flow into the lens shroud is also controlled by a diverter valve which opens into the nose compartment and reduces flow to the lens shroud when the camera lens system temperature decreases to a pre-set value. Air supplied from the chine bay manifold is capable of over-cooling the OBC lens system to some extent. This is overcome by electric heaters which maintain the optical bar temperature at approximately 105°F.</p>
       <p>Conditioned air exhausted from the cockpit through the nose air shutoff valve is ducted to the top, front, and back of the nose compartment. From the front, it is directed aft to a shroud around the camera hatch windows. A T-bar outlet supplies cool air to the space near the top of the camera electronics compartment and film transport shroud. Air is also directed toward each side of the camera shroud. Another source of cockpit exhaust air is provided by a small sonic venturi. This air is ducted to the camera power transistor locations at each side of the aft end of the camera assembly. These OBC compartment air supply ducts can also be supplied through a ground air connection located under the air exit louvers on the left side of the nose.</p>
       <div class="caution">
@@ -8090,8 +8090,8 @@
       </div>
       <section data-title="OBC Control Panel">
         <h3>Optical Bar Camera Control Panel</h3>
-        <p>An optical bar camera control panel, labeled NOSE OBC, replaces the radar control panel on the right console in the aft cockpit. See Figure 4-29.</p>
-        <figure>
+        <p>An optical bar camera control panel, labeled NOSE OBC, replaces the radar control panel on the right console in the aft cockpit. See <a href="#fig-4-29">Figure 4-29</a>.</p>
+        <figure id="fig-4-29">
           <img src="images/4-29.jpg" alt="" />
           <figcaption>Figure 4-29: Optical Bar Camera Control Panel</figcaption>
         </figure>
@@ -8174,7 +8174,7 @@
         <p>Illumination of the white 10 or 55 legend indicates a <span class="redacted">REDACTED</span> been selected with <span class="redacted">REDACTED</span> frame overlap, respectively. The selection sequence repeats from <span class="redacted">REDACTED</span>.</p>
         <h4>Film Counter</h4>
         <p>The FILM REMAIN counter indicates the number of exposures remaining. At typical cruise conditions, the counter decreases approximately one unit per 1 3/4 seconds of camera operation <span class="redacted">REDACTED</span> is selected. The interval is approximately 3 1/2 seconds in the <span class="redacted">REDACTED</span>.</p>
-        <p>A spring loaded reset button is below the indicator window. The counter rotates to <span class="redacted">REDACTED</span> when the button is pressed. The counter is reset to <span class="redacted">REDACTED</span> or <span class="redacted">REDACTED</span> by the ground crew before flight. The indication should not be readjusted by the RSO. Refer to Figure 4-28 for the number of exposures vs film load. Counter progression beyond 0000 results in decreasing numbers from 9999.</p>
+        <p>A spring loaded reset button is below the indicator window. The counter rotates to <span class="redacted">REDACTED</span> when the button is pressed. The counter is reset to <span class="redacted">REDACTED</span> or <span class="redacted">REDACTED</span> by the ground crew before flight. The indication should not be readjusted by the RSO. Refer to <a href="#fig-4-28">Figure 4-28</a> for the number of exposures vs film load. Counter progression beyond 0000 results in decreasing numbers from 9999.</p>
         <h4>Film Drive Light</h4>
         <p>An indicator light displays a white FILM DRIVE legend while the camera is operating. The light is extinguished with the OPERATE switch indicating OPR/STP.</p>
         <p>With the OPERATE switch Indicating OPR/SRT, the light is turned on by the FILM REMAIN counter. A holding circuit holds the light on for six seconds after the counter is pulsed. Receipt of another impulse during this period resets the light time interval Since it is controlled by the FILM REMAIN counter pulses, the light will not illuminate or extinguish immediately when the OPERATE switch is actuated.</p>
@@ -8491,12 +8491,12 @@
     <section>
       <h1>V/H (FMC) System</h1>
       <p>The V/H (Velocity/Height ratio) or FMC (Forward Motion Compensation) system provides DC voltage signals through the V/H bus to the cameras to improve photographic resolution. These signals cause the camera mirror or film platen to move in such a way that the terrain image remains stationary on the film during exposure while the aircraft moves forward. The voltages are scaled to represent the angular rate of aircraft forward motion relative to the terrain. The units of motion used are milliradians per second (mr/-sec).</p>
-      <p>Two types of signals can be developed. V/H is provided when the signal represents movement of the aircraft relative to a point directly beneath the aircraft (its nadir point). V/H is approximately the same as true airspeed divided by aircraft altitude. The signal can be generated by the ANS computer, from the optical viewsight system, or by manual inputs using a control on the V/H indicator. At 1835 KTAS and 77,500 feet elevation, V/H = 40 mr/sec. This is illustrated by Figure 4-30. V/R (velocity/range ratio) allows photographic reconnaissance while turning; that is, when the desired ratio is that of aircraft speed relative to a surface point on the aircraft vertical axis. This is approximately the same as true airspeed divided by (altitude/cosine of the bank angle). V/H and V/R arc the same at zero bank angle for vertically oriented cameras.</p>
+      <p>Two types of signals can be developed. V/H is provided when the signal represents movement of the aircraft relative to a point directly beneath the aircraft (its nadir point). V/H is approximately the same as true airspeed divided by aircraft altitude. The signal can be generated by the ANS computer, from the optical viewsight system, or by manual inputs using a control on the V/H indicator. At 1835 KTAS and 77,500 feet elevation, V/H = 40 mr/sec. This is illustrated by <a href="#fig-4-30">Figure 4-30</a>. V/R (velocity/range ratio) allows photographic reconnaissance while turning; that is, when the desired ratio is that of aircraft speed relative to a surface point on the aircraft vertical axis. This is approximately the same as true airspeed divided by (altitude/cosine of the bank angle). V/H and V/R arc the same at zero bank angle for vertically oriented cameras.</p>
       <p>Both signals can be modified automatically for camera pointing angle commands and aircraft rate of turn to assure optimum FMC. In some cases, the camera using the signal makes an internally computed adjustment. In others, depending on the type of camera, the ANS computer adjusts the signal.</p>
       <p>With an optical viewsight installed, four controls operate the V/H system: the V/H Power and V/H Source switches on the Power and Sensor panel, the V/H Monitor switch on the viewsight control panel, and the manual control knob on the V/H indicator on the instrument panel. The traveling grid on the viewsight can be used to check the V/H signal when the viewsight is in wide angle. The Viewsight Rate control can be used to adjust the speed at which the traveling grid moves across the viewsight screen if the grid motion does not correspond exactly to motion of the terrain display.</p>
       <p>With a video viewsight installed (S/B R-2538), three controls operate the V/H system: the V/H Power and V/H Source switches on the Power and Sensor panel, and the manual control knob on the V/H indicator on the instrument panel.</p>
       <p>Operating power for the V/H system is provided from the essential AC bus through a V/H circuit breaker in the C-Bay.</p>
-      <figure>
+      <figure id="fig-4-30">
         <img src="images/4-30.jpg" alt="" />
         <figcaption>Figure 4-30: V/H Chart</figcaption>
       </figure>
@@ -8592,14 +8592,14 @@
     <section>
       <h1>Optical Viewsight</h1>
       <p>Without S/B R-2538, the viewsight in the aft cockpit has a 9-inch diameter optical display at the top of the instrument panel. This ground viewing optical instrument allows the RSO to obtain visual fixes to update the ANS present position, measure V/H, and obtain data for manual operation of the camera systems.</p>
-      <p>Two fields of view can be used. If the wide angle 136° field is selected, a demagnification ratio of 6:1 occurs and the on-axis resolution at the nadir is approximately 149 feet at normal cruising altitude. The viewsight display is centered at an angle approximately 14-1/2 degrees forward of the nadir. See Figure 4-31. The narrow angle selection provides a demagnification ratio of 2:1 and an on-axis resolution of approximately 46 feet at nadir at cruise altitudes.</p>
+      <p>Two fields of view can be used. If the wide angle 136° field is selected, a demagnification ratio of 6:1 occurs and the on-axis resolution at the nadir is approximately 149 feet at normal cruising altitude. The viewsight display is centered at an angle approximately 14-1/2 degrees forward of the nadir. See <a href="#fig-4-31">Figure 4-31</a>. The narrow angle selection provides a demagnification ratio of 2:1 and an on-axis resolution of approximately 46 feet at nadir at cruise altitudes.</p>
       <p>The viewsight controls are located on the Power and Sensor control panel, the optical viewsight control panel, and on the bezel of the view sight display. Short, traveling grid lines across the longitudinal center line of the optical display are used for V/H monitoring and adjustment. The grid lines are displayed only when the wide angle field of view is selected.</p>
       <p>The viewsight is unstabilized and will reflect all pitch and roll excursions of the aircraft; however, the ANS compensates for these excursions during automatic view sight fixing operations.</p>
-      <figure>
+      <figure id="fig-4-31">
         <img src="images/4-31.jpg" alt="" />
         <figcaption>Figure 4-31: Optical Viewsight Interface Diagram</figcaption>
       </figure>
-      <figure>
+      <figure id="fig-4-32">
         <img src="images/4-32.jpg" alt="" />
         <figcaption>Figure 4-32: Optical Viewsight Displays</figcaption>
       </figure>
@@ -8620,8 +8620,8 @@
       <p>A VIEWSIGHT RETICLE illumination control on the viewsight control panel varies the intensity of reticle illumination.</p>
       <section data-title="Viewsight Control Panel">
         <h3>Optical Viewsight Control Panel</h3>
-        <p>An optical viewsight control panel (Figure 4-33) is located in the center of the aft cockpit instrument panel. The panel contains controls and indicators which are a part of the V/H and nav map projection systems, and are described with those systems.</p>
-        <figure>
+        <p>An optical viewsight control panel (<a href="#fig-4-33">Figure 4-33</a>) is located in the center of the aft cockpit instrument panel. The panel contains controls and indicators which are a part of the V/H and nav map projection systems, and are described with those systems.</p>
+        <figure id="fig-4-33">
           <img src="images/4-33.jpg" alt="" />
           <figcaption>Figure 4-33: Optical Viewsight Control Panel</figcaption>
         </figure>
@@ -8778,9 +8778,9 @@
       <p>There are two fields of view (FOV). The wide angle FOV is 114 degrees (one-fifth minification) with image resolution of approximately 450 feet at cruise altitudes. The narrow angle FOV is 44 degrees (one-half minification) with image resolution of approximately 225 feet at cruise altitudes.</p>
       <p>At a 7.5 degree aircraft deck angle the video imagery is centered about a point 14.5 degrees forward of nadir.</p>
       <p>In wide angle FOV the viewed angle is 79.7 degrees forward and 31.9 degrees aft of nadir. In narrow FOV the viewed angle is 39.8 degrees forward and 2.2 degrees aft of nadir.</p>
-      <p>The viewsight display is at top center of the RSO instrument panel (Figure 4-33A) with system controls to the left of the display on the VIEWSIGHT CONT panel.</p>
+      <p>The viewsight display is at top center of the RSO instrument panel (<a href="#fig-4-33A">Figure 4-33A</a>) with system controls to the left of the display on the VIEWSIGHT CONT panel.</p>
       <p>The viewsight is unstabilized and will reflect all pitch and roll excursions of the aircraft; however, the ANS compensates for these excursions during automatic viewsight fixing operations.</p>
-      <figure>
+      <figure id="fig-4-33A">
         <img src="images/4-33A.jpg" alt="" />
         <figcaption>Figure 4-33A: Video Viewsight</figcaption>
       </figure>
@@ -8894,7 +8894,7 @@
       </table>
       <section data-title="Viewsight Controls">
         <h3>Video Viewsight Controls</h3>
-        <figure>
+        <figure id="fig-4-33B">
           <img src="images/4-33B.jpg" alt="" />
           <figcaption>Figure 4-33B: Video Viewsight Interface Diagram</figcaption>
         </figure>
@@ -8902,7 +8902,7 @@
         <p>The alternate action push-button power switch is on the PWR &amp; SENSOR control panel. A green ON legend illuminates when power is applied to the viewsight. The FAIL portion of the switch is not functional.</p>
         <h4>Viewsight Control Panel</h4>
         <h5>Field of View Switch</h5>
-        <p>The two-position FIELD OF VIEW switch selects either wide (up) or narrow (down) FOV. See Figure 4-33D.</p>
+        <p>The two-position FIELD OF VIEW switch selects either wide (up) or narrow (down) FOV. See <a href="#fig-4-33D">Figure 4-33D</a>.</p>
         <h5>Reticle Illumination Switch</h5>
         <p>The rotary RETICLE ILLUM control varies the reticle intensity independently of the display controls.</p>
         <h3>Video Viewsight Display Controls</h3>
@@ -8915,14 +8915,14 @@
         <h5>Brightness Switch (BRT)</h5>
         <p>The BRT switch at the bottom left corner adjusts video brightness.</p>
         <h4>Viewsight Bezel Switches</h4>
-        <p>There are 20 unmarked push-button bezel switches (five on each side of the display). The switches are numbered clockwise starting with switch number 1 on the bottom left-hand side. Only eight switches are active. Except for switches 19 and 20, all are alternate action switches. See Figure 4-33A.</p>
+        <p>There are 20 unmarked push-button bezel switches (five on each side of the display). The switches are numbered clockwise starting with switch number 1 on the bottom left-hand side. Only eight switches are active. Except for switches 19 and 20, all are alternate action switches. See <a href="#fig-4-33A">Figure 4-33A</a>.</p>
         <h4>Ambient Brightness Sensors</h4>
         <p>Two light sensors on the bottom edge of the video display housing automatically vary the display gain for changing cockpit light conditions.</p>
       </section>
       <section data-title="Viewsight Displays">
         <h3>Video Viewsight Displays</h3>
-        <p>Bezel push-button switch functions and legends change with each of the three viewsight pages (Figure 4-33C).</p>
-        <figure>
+        <p>Bezel push-button switch functions and legends change with each of the three viewsight pages (<a href="#fig-4-33C">Figure 4-33C</a>).</p>
+        <figure id="fig-4-33C">
           <img src="images/4-33C.jpg" alt="" />
           <figcaption>Figure 4-33C: Video Displays</figcaption>
         </figure>
@@ -8966,7 +8966,7 @@
             <p>BW-W-CUR 40° (wide FOV, cursor at 40° left or right)</p>
           </li>
         </ul>
-        <figure>
+        <figure id="fig-4-33D">
           <img src="images/4-33D.jpg" alt="" />
           <figcaption>Figure 4-33D: Video Fields Of View (FOV)</figcaption>
         </figure>
@@ -9023,7 +9023,7 @@
         <ol class="list-number">
           <li>
             <p>VIEWSIGHT CAL-NEED - Press.</p>
-            <p>Calibration page replaces menu page (Figure 4-32B). If CAL IN MEM in view press and hold CAL DELETE for 5 seconds.</p>
+            <p>Calibration page replaces menu page (<a href="#fig-4-33C">Figure 4-33C</a>). If CAL IN MEM in view press and hold CAL DELETE for 5 seconds.</p>
           </li>
         </ol>
         <p>With BW-W-CUR 0° displayed:</p>
@@ -9083,14 +9083,14 @@
     <section>
       <h1>Exposure Control System</h1>
       <p>An exposure control system provides a scaled voltage signal to the cameras to control the exposure for different conditions of sun angle and terrain brightness. Sun angle, measured from the horizon, is the basic reference for the exposure setting. The rotary selector has 10 sun angle values between 5 and 90, and is set manually by the RSO. Each increment equals one-half stop of exposure setting. In most cases, mission planners will determine correct exposure settings. When mission planning data is not available or is invalid due to a delay in takeoff, the ANS sun angle display and RSO observations of terrain reflectivity can be used to set the CAMERA EXPOS control.</p>
-      <figure>
+      <figure id="fig-4-34">
         <img src="images/4-34.jpg" alt="" />
         <figcaption>Figure 4-34: Exposure Control</figcaption>
       </figure>
       <h2>Exposure System Control Switch</h2>
       <p>A self-illuminated exposure system control push-button switch on the PWR &amp; SENSOR control panel has a white-illuminated EXPOS legend, in the upper half of the push-button. A green-illuminated ON legend, in the lower left portion of the switch, illuminates alternately when the push-button is depressed. The exposure control system is energized when ON is illuminated. A red-illuminated FAIL legend in the lower right portion of the switch illuminates to indicate loss of power to, or within the exposure control unit. When the FAIL legend illuminates, and the push-button is depressed to extinguish the ON and FAIL legends, a voltage corresponding to nominal exposure (approximately 25-degree sun angle) will be supplied to the cameras from the PWR &amp; SENSOR control panel.</p>
       <h3>Exposure Control Knob</h3>
-      <p>The exposure control knob (Figure 4-34) is on the left instrument panel. The control is set to a sun angle determined from mission planning data. A triangular index is provided for setting the control. The LOW REFL and HIGH REFL index dots are not used. Setting this knob accurately provides correctly scaled voltage to each type of camera for proper exposure control.</p>
+      <p>The exposure control knob (<a href="#fig-4-34">Figure 4-34</a>) is on the left instrument panel. The control is set to a sun angle determined from mission planning data. A triangular index is provided for setting the control. The LOW REFL and HIGH REFL index dots are not used. Setting this knob accurately provides correctly scaled voltage to each type of camera for proper exposure control.</p>
       <h3>Exposure Control Normal Procedures</h3>
       <p>To operate the exposure control system:</p>
       <ol class="list-number">
@@ -9224,7 +9224,7 @@
     <section data-title="Center of Gravity Calculator">
       <h1>Center of Gravity (CG) Calculator</h1>
       <p>The C.G. calculator is a circular slide rule designed to determine aircraft C.G.. The calculator consists of a fixed plate, a rotating plate, and a cursor. The front of the fixed plate has a graduated moment index scale. The rear of the fixed plate has constant C.G. lines in percent reference chord. The rotating plate has individual fuel tank moments, graduated to the same angular moment scale as the front fixed scale, however, these moment scales are labeled in increments of pounds from zero to full quantity. The cursor rotates about the center of the fixed and rotating plates. The front of the cursor has a hairline and the back of the cursor has a weight scale in addition to a matching hairline.</p>
-      <figure>
+      <figure id="fig-4-35">
         <img src="images/4-35.jpg" alt="" />
         <figcaption>Figure 4-35: Center Of Gravity Calculator</figcaption>
       </figure>
@@ -9264,12 +9264,12 @@
       </p>
       <section data-title="Control Panel">
         <h3>DEF Control Panel</h3>
-        <p>The controls and displays needed to operate all DEF systems are consolidated on a single panel on the RSO's left console. Power control switches, threat warning lights, and status and activity indicators for each system are arranged in rows on the right side of the panel. The rotary controls and lights on the left side are used for fail indications, system reset, testing, and operating mode selection. Two projection displays at the forward edge of the left side provide "GO" and "FAIL" condition advisory information. Refer to Figure 4-36.</p>
+        <p>The controls and displays needed to operate all DEF systems are consolidated on a single panel on the RSO's left console. Power control switches, threat warning lights, and status and activity indicators for each system are arranged in rows on the right side of the panel. The rotary controls and lights on the left side are used for fail indications, system reset, testing, and operating mode selection. Two projection displays at the forward edge of the left side provide "GO" and "FAIL" condition advisory information. Refer to <a href="#fig-4-36">Figure 4-36</a>.</p>
         <h4>Go and Fail Displays</h4>
         <p>The Go and Fail displays are forward of the mode switches. Go and Fail condition information and DEF system designations are projected on the face of the two displays. The displays indicate results of operator-initiated tests and failures detected during system self-monitor tests. The following legends are provided:</p>
-        <figure>
+        <figure id="fig-4-36">
           <img src="images/4-inline1.jpg" alt="" />
-          <figcaption>Go and Fail Displays</figcaption>
+          <figcaption>Figure 4-36: Go and Fail Displays</figcaption>
         </figure>
         <p>(FAIL, COMP, and HOT indications appear in the same position)</p>
         <p>LO and HI legends both refer to DEF H. The FAIL, COMP (computer), and HOT legends are red; all others are white. During the warning and control panel lamp test, GO should appear on the Go display and A, LO and HI should appear on the Fail display. There is no DEF C2 designator in the Fail display.</p>
@@ -9386,9 +9386,9 @@
       </section>
       <section data-title="Warning Panel">
         <h3>DEF Warning Panel</h3>
-        <p>The DEF warning panel is on the RSO's instrument panel, right of the viewsight. It directs the RSO's attention to the DEF control panel if a threat or failure involves the DEF systems. See Figure 4-37. Seven red or amber warning legends are on the panel; these are <span class="redacted">REDACTED</span>. DEF FAIL illuminates when FAIL, HOT, or COMP is displayed in the Fail display on the DEF control panel. The other warning indicators repeat like indicators on the DEF panel, and therefore illuminate simultaneously with those indicators. <span class="redacted">REDACTED</span>.</p>
+        <p>The DEF warning panel is on the RSO's instrument panel, right of the viewsight. It directs the RSO's attention to the DEF control panel if a threat or failure involves the DEF systems. See <a href="#fig-4-37">Figure 4-37</a>. Seven red or amber warning legends are on the panel; these are <span class="redacted">REDACTED</span>. DEF FAIL illuminates when FAIL, HOT, or COMP is displayed in the Fail display on the DEF control panel. The other warning indicators repeat like indicators on the DEF panel, and therefore illuminate simultaneously with those indicators. <span class="redacted">REDACTED</span>.</p>
         <p>The significance of the various warnings is discussed under the descriptions of the associated DEF systems. Power for indicators on the warning panel is supplied by the monitored DC bus through the DEF CONT circuit breaker on the RSO's right console.</p>
-        <figure>
+        <figure id="fig-4-37">
           <img src="images/4-37.jpg" alt="" />
           <figcaption>Figure 4-37: DEF Equipment Location</figcaption>
         </figure>
@@ -9398,10 +9398,10 @@
       <h1>DEF A2 System</h1>
       <p>DEF A2 is a <span class="redacted">REDACTED</span> jammer ECM system with two sets of receive and transmit antennas, and a gaseous nitrogen system to pressurize they transmit waveguides. DEF A2 can respond to signals typical of <span class="redacted">REDACTED</span> radars in the <span class="redacted">REDACTED</span> band frequency ranges of <span class="redacted">REDACTED</span> antennas receive signals from emitters below the aircraft. The system identifies threat aircraft in the left or right forward quadrants.</p>
       <p class="redacted">Deleted IAW SR71 SCG - 23 Sept 96</p>
-      <p>DEF A2 can be installed in the forward right chine bay (Compartment D). See Figure 4-37. The antennas and waveguides are permanently installed. The left and right transmit antennas protrude slightly from the lower surfaces of the chines, opposite the pilot's cockpit. The receive antennas are located aft of cut-outs on the left and right sides of the nose chines. The DEF A2 system is interfaced with the MRS, the Radar, and the EMR system. <span class="redacted">REDACTED</span>. DEF A2 signals are applied to the AR-1700 recorder when mission requirements dictate. DEF A2 operation, indication, and control data is recorded by MRS.</p>
-      <p>Electrical power to DEF A2 is supplied from the essential AC bus and the monitored DC bus through circuit breakers in the C-bay. See Figure 4-38.</p>
+      <p>DEF A2 can be installed in the forward right chine bay (Compartment D). See <a href="#fig-4-37">Figure 4-37</a>. The antennas and waveguides are permanently installed. The left and right transmit antennas protrude slightly from the lower surfaces of the chines, opposite the pilot's cockpit. The receive antennas are located aft of cut-outs on the left and right sides of the nose chines. The DEF A2 system is interfaced with the MRS, the Radar, and the EMR system. <span class="redacted">REDACTED</span>. DEF A2 signals are applied to the AR-1700 recorder when mission requirements dictate. DEF A2 operation, indication, and control data is recorded by MRS.</p>
+      <p>Electrical power to DEF A2 is supplied from the essential AC bus and the monitored DC bus through circuit breakers in the C-bay. See <a href="#fig-4-38">Figure 4-38</a>.</p>
       <p>Cooling air is supplied directly to the DEF A2 repeater through an air duct and hose, which are connected to the aircraft cooling air duct during DEF A2 installation. Air flow is from the right mission bay air manifold and is controlled by the right mission bay air shutoff valve.</p>
-      <figure>
+      <figure id="fig-4-38">
         <img src="images/4-38.jpg" alt="" />
         <figcaption>Figure 4-38: DEF A2 System Signal Flow</figcaption>
       </figure>
@@ -9537,10 +9537,10 @@
       <h1>DEF C2 System</h1>
       <p>The DEF C2 system receives and processes <span class="redacted">REDACTED</span> signals in the <span class="redacted">REDACTED</span> frequency band of <span class="redacted">REDACTED</span>. The DEF C2 receiver is associated with <span class="redacted">REDACTED</span> operation of the DEF H system.</p>
       <p class="redacted">Deleted IAW SR71 SCG - 23 Sept 96</p>
-      <p>When installed, DEF C2 system components are on the forward right chine bay door (Compartment D). See Figure 4-37. Components include the DEF C2 receiver, band antenna, band-pass filter, DEF C2 power relay, and electrical and coaxial cables. DEF C2 operates in conjunction with DEF H and the MRS.</p>
-      <p>Electrical power to DEF C2 is supplied from the monitored DC bus through a circuit breaker in the C-bay. See Figure 4-39.</p>
+      <p>When installed, DEF C2 system components are on the forward right chine bay door (Compartment D). See <a href="#fig-4-37">Figure 4-37</a>. Components include the DEF C2 receiver, band antenna, band-pass filter, DEF C2 power relay, and electrical and coaxial cables. DEF C2 operates in conjunction with DEF H and the MRS.</p>
+      <p>Electrical power to DEF C2 is supplied from the monitored DC bus through a circuit breaker in the C-bay. See <a href="#fig-4-39">Figure 4-39</a>.</p>
       <p>Cooling air is supplied to the components on the DEF C2 door by air supplied to the right chine bay from the right mission bay cooling air manifold.</p>
-      <figure>
+      <figure id="fig-4-39">
         <img src="images/4-39.jpg" alt="" />
         <figcaption>Figure 4-39: DEF C2 System Signal Flow</figcaption>
       </figure>
@@ -9647,17 +9647,17 @@
       <p>During manual operation, each band can be driven by commands from the DEF control panel to <span class="redacted">REDACTED</span> (<span class="redacted">REDACTED</span> three modes).</p>
       <p>During <span class="redacted">REDACTED</span> operation, except for system transmit functions, the DEF H operates identically to <span class="redacted">REDACTED</span> operation. Upon receiving information from DEF C2, DEF H will transmit predetermined <span class="redacted">REDACTED</span> frequencies as determined by the LO and HI Mode selections. The <span class="redacted">REDACTED</span> jamming in the <span class="redacted">REDACTED</span> state is either computer controlled predetermined broad band <span class="redacted">REDACTED</span> depending on whether <span class="redacted">REDACTED</span> selected. If either of these modes selected, <span class="redacted">REDACTED</span> jamming is <span class="redacted">REDACTED</span> the corresponding band.</p>
       <p class="redacted">REDACTED.</p>
-      <p>The threat recognition characteristics and DEF H transmitted output characteristics are programmed in the computer prior to flight. See Figure 4-41.</p>
-      <p>DEF H is installed in the forward left bay (K Bay). See Figure 4-38. DEF H operates in conjunction with the DEF C2 receiver system and the EIP AR-1700 recorder. It also supplies transmit, self-test results, mode select, system status, and fault data to the MRS.</p>
-      <p>Electrical power to DEF H is supplied from the left generator AC bus through the 3-phase circuit breaker in the C-bay and from the monitored DC bus through the DEF F circuit breaker on the RSO's right console. See Figure 4-40.</p>
+      <p>The threat recognition characteristics and DEF H transmitted output characteristics are programmed in the computer prior to flight. See <a href="#fig-4-41">Figure 4-41</a>.</p>
+      <p>DEF H is installed in the forward left bay (K Bay). See <a href="#fig-4-38">Figure 4-38</a>. DEF H operates in conjunction with the DEF C2 receiver system and the EIP AR-1700 recorder. It also supplies transmit, self-test results, mode select, system status, and fault data to the MRS.</p>
+      <p>Electrical power to DEF H is supplied from the left generator AC bus through the 3-phase circuit breaker in the C-bay and from the monitored DC bus through the DEF F circuit breaker on the RSO's right console. See <a href="#fig-4-40">Figure 4-40</a>.</p>
       <p>Cooling air is supplied directly to the DEF H unit through an air inlet opening which mates with the airplane cooling air duct during DEF H installation in the aircraft. Air flow is controlled by the left mission bay air shutoff valve. The evaporative cooler acts as a heat sink for coolant fluid after it is heated.</p>
-      <figure>
+      <figure id="fig-4-40">
         <img src="images/4-40.jpg" alt="" />
         <figcaption>Figure 4-40: DEF H System Signal Flow</figcaption>
       </figure>
       <h2>DEF H Threat Warning &amp; Activity Indicators</h2>
       <p>Threat warning is provided by the DEF H system <span class="redacted">REDACTED</span>. Illumination of these legends reflect receipt of radar threats meeting pre-programmed parameters.</p>
-      <figure>
+      <figure id="fig-4-41">
         <img src="images/4-41.jpg" alt="" />
         <figcaption>Figure 4-41: DEF C - H Interfaces (Jamming Only)</figcaption>
       </figure>
@@ -10080,9 +10080,9 @@
       <p>DEF M indications on the DEF control panel are provided to the MRS for postflight analysis. Except for electrical power and cooling requirements, DEF M does not interface with any other aircraft or DEF systems.</p>
       <p>The DEF M unit, located on a rack in the D-bay, is ground programmable through the User Data Memory module (UDM). Programs are selected in <span class="redacted">REDACTED</span> bands; each band center is programmable in <span class="redacted">REDACTED</span>. The bands may overlap, be adjacent or nonadjacent, in any combination.</p>
       <p>DEF M uses a single <span class="redacted">REDACTED</span> antenna <span class="redacted">REDACTED</span> and is time-shared between the receive and transmit functions. The antenna is located on the fuselage bottom centerline at FS 315, forward of the viewsight window and is protected by a slightly protruding fiberglass radome.</p>
-      <p>Electrical power is supplied to DEF M from the essential AC and monitored DC buses through circuit breakers in the C-bay. See Figure 4-42.</p>
+      <p>Electrical power is supplied to DEF M from the essential AC and monitored DC buses through circuit breakers in the C-bay. See <a href="#fig-4-42">Figure 4-42</a>.</p>
       <p>Cooling air is supplied to the DEF M unit through an inlet plenum and hose connected to the D-bay cooling air duct. Air flow is from the right mission bay air manifold which is controlled by the right bay air shut-off valve.</p>
-      <figure>
+      <figure id="fig-4-42">
         <img src="images/4-42.jpg" alt="" />
         <figcaption>Figure 4-42: DEF M System Signal Flow</figcaption>
       </figure>
@@ -10263,14 +10263,14 @@
     </section>
     <section>
       <h1>Astroinertial Navigation System (ANS) Tape 13</h1>
-      <p>The ANS is an inertial navigation system employing a star tracker to eliminate gyro drift and to limit position error. The system provides a steering signal to the autopilot for guiding the aircraft automatically along a predetermined flight path. It provides heading, attitude, and position information to cockpit displays. The ANS can control the Advanced Synthetic Aperture Radar System (ASARS) and technical objective cameras (TECH) for imaging operations. The ANS supplies navigational data to the electromagnetic - reconnaissance (EIP) sensor and mission data to the mission recorder system (MRS). See Figure 4-47 for an ANS functional diagram.</p>
-      <figure>
+      <p>The ANS is an inertial navigation system employing a star tracker to eliminate gyro drift and to limit position error. The system provides a steering signal to the autopilot for guiding the aircraft automatically along a predetermined flight path. It provides heading, attitude, and position information to cockpit displays. The ANS can control the Advanced Synthetic Aperture Radar System (ASARS) and technical objective cameras (TECH) for imaging operations. The ANS supplies navigational data to the electromagnetic - reconnaissance (EIP) sensor and mission data to the mission recorder system (MRS). See <a href="#fig-4-47">Figure 4-47</a> for an ANS functional diagram.</p>
+      <figure id="fig-4-47">
         <img src="images/4-47.jpg" alt="" />
         <figcaption>Figure 4-47: Navigation and Sensor Control System</figcaption>
       </figure>
       <section>
         <h3>System Interfaces</h3>
-        <p>The ANS provides signals for aircraft systems as seen in Figure 4-47. The following equipment is either controlled by or receives inputs from the ANS:</p>
+        <p>The ANS provides signals for aircraft systems as seen in <a href="#fig-4-47">Figure 4-47</a>. The following equipment is either controlled by or receives inputs from the ANS:</p>
         <ol class="list-number">
           <li>
             <p>DAFICS (for Autopilot and SAS analytical redundancy (ANR)).</p>
@@ -10324,25 +10324,25 @@
       </section>
       <section>
         <h3>Modes of Operation</h3>
-        <p>The navigation system has four navigation modes: (1) astro inertial, (2) inertial only, (3) air start (airspeed-damped astro inertial), and (4) dead reckoning. Figure 4-48 summarizes the navigational errors expected in each mode. The mode to be employed depends on the time for activation and alignment, and whether the aircraft is on the ground or airborne when the ANS is turned on. Astro inertial is the preferred mode.</p>
+        <p>The navigation system has four navigation modes: (1) astro inertial, (2) inertial only, (3) air start (airspeed-damped astro inertial), and (4) dead reckoning. <a href="#fig-4-48">Figure 4-48</a> summarizes the navigational errors expected in each mode. The mode to be employed depends on the time for activation and alignment, and whether the aircraft is on the ground or airborne when the ANS is turned on. Astro inertial is the preferred mode.</p>
         <h4>ASTRO INERTIAL Mode</h4>
         <p>In this mode, navigation errors will be relatively small, depending on the alignment method, and do not increase with mission duration. As soon as the system begins navigating the star tracker automatically begins to search for stars. Stars are normally tracked at night and during the day provided good sky conditions exist. A 61 star catalog is stored in the ANS computer. Either normal or special coverage for the SR-71B trainer can be provided. The sun, moon and planets are not used by the star-tracker. At least two different stars must be tracked for optimum performance. The star tracker measures the difference between the inertial platform orientation and celestial computed position. Data derived from stars is used to correct true heading, computed position, computed velocity, platform tilt, and gyro drift rates. Measured gyro drift rates are stored in the computer memory and are used to improve any subsequent inertial only navigation. This sequence eliminates the unbounded position error growth characteristic of pure inertial systems.</p>
         <p>In a normal mission, either a rapid or gyro compassing alignment is performed prior to navigation. These alignments require 18 minutes and 36 minutes respectively, exclusive of warmup time. A ground hot start can be performed on a system previously aligned and shut down or on a system which has been shut down after operation in the astro inertial or inertial-only mode, provided the aircraft has not been moved. A runway heading alignment is recommended after a rapid alignment or a ground hot start. A heading update may or may not be required.</p>
         <h4>INERTIAL-ONLY Mode</h4>
         <p>INERTIAL-ONLY mode, in which only the inertial portion of the astroinertial system is employed, is recommended when the star-tracking capability of the navigation system is impaired. In this mode, navigation errors are unbounded.</p>
         <h4>AIRSTART Mode</h4>
-        <p>The airspeed-damped, astro inertial (air start) mode, which uses both the inertial platform and star tracker, is intended for: (1) scramble-initiated flights when the system is not prepared for a ground hot start, and (2) restart in flight. In this mode, errors can be large at first but should damp down with time to the values in Figure 4-48. Dead reckoning data are used for present position until three different stars have been acquired (steady illumination of the star ON light). Star acquisition is critical for accurate navigation.</p>
+        <p>The airspeed-damped, astro inertial (air start) mode, which uses both the inertial platform and star tracker, is intended for: (1) scramble-initiated flights when the system is not prepared for a ground hot start, and (2) restart in flight. In this mode, errors can be large at first but should damp down with time to the values in <a href="#fig-4-48">Figure 4-48</a>. Dead reckoning data are used for present position until three different stars have been acquired (steady illumination of the star ON light). Star acquisition is critical for accurate navigation.</p>
         <h4>Dead Reckon Mode (DR)</h4>
         <p>If the ANS inertial platform fails, navigation may continue using dead reckoning. In DEAD RECKON mode the ANS computer navigates using heading from the INS, true airspeed from the DAFICS (M computer) and inflight winds filled by the RSO. Position error increases proportional to errors in these inputs.</p>
       </section>
       <section>
         <h3>System Errors</h3>
         <p>
-          <span>Error values in Figure 4-48 are based on the high altitude flight profiles. Abnormal flight profiles (low-altitude, race-track, touch-and-go, etc.,) may result in errors in excess of the listed values. The error values listed are probable radial errors (CEP's); therefore, under normal system operation, the listed errors will be exceeded about half the time. When star tracking is lost, a residual position error may develop that will not be totally eliminated when star tracking resumes. It might take as many as</span>
+          <span>Error values in <a href="#fig-4-48">Figure 4-48</a> are based on the high altitude flight profiles. Abnormal flight profiles (low-altitude, race-track, touch-and-go, etc.,) may result in errors in excess of the listed values. The error values listed are probable radial errors (CEP's); therefore, under normal system operation, the listed errors will be exceeded about half the time. When star tracking is lost, a residual position error may develop that will not be totally eliminated when star tracking resumes. It might take as many as</span>
           <u>3 navigation position updates</u>
           <span>(depending on Schuler cycle period) and a steady C star light to eliminate the total residual error.</span>
         </p>
-        <table border="1">
+        <table border="1" id="fig-4-48">
           <caption>Figure 4-48: Navigation Mode Probable Radial Error</caption>
           <thead>
             <tr>
@@ -10483,17 +10483,17 @@
       </section>
       <section>
         <h3>System Components</h3>
-        <p>The navigation system has three major assemblies: the control and display panel, the portable chronometer, and the guidance group. The control and display panel (Figure 4-49), located on the aft cockpit right console, is used to activate the system, select modes of operation, insert and monitor navigational data, modify the mission flight plan, and observe operating status.</p>
+        <p>The navigation system has three major assemblies: the control and display panel, the portable chronometer, and the guidance group. The control and display panel (<a href="#fig-4-49">Figure 4-49</a>), located on the aft cockpit right console, is used to activate the system, select modes of operation, insert and monitor navigational data, modify the mission flight plan, and observe operating status.</p>
         <p>A portable chronometer, in the aft cockpit supplies Greenwich Mean Time (GMT) (accurate to one-hundredth of a second) and the Julian date to establish the orientation of the Earth in inertial space for astro-inertial operations. The chronometer is set in the base shop, using a time standard set up to receive WWV time signals. Day can be set up to 511, thus allowing use of the computer star catalog into the next calendar year. A fully-charged, self-contained battery permits timekeeping for up to 24 hours without other power. Chronometer outputs are enabled only when aircraft power is applied. There is a GO, NO-GO indicator on the chronometer. GO indicates that either external or battery power is available and that the chronometer is operable, but does not indicate that the correct day and time is set. NO-GO indicates that chronometer outputs are unreliable.</p>
         <p>The guidance group contains the electronic and optical-mechanical equipment for navigation and avionics subsystems control. The guidance group is mounted in the fuselage aft of the rear cockpit to provide an upward 73-degree cone of vision for the star-tracking telescope. The axis of the cone is vertical when the aircraft pitch angle is 7-1/2 degrees. The guidance group includes an inertially stabilized platform and associated electronic and electromechanical components required to control (1) its attitude, (2) a star-tracking telescope, and (3) the electronic and electromechanical components for pointing, servo-controlling, and discrimination of telescope photo-detections. A digital computer computes auto-navigation, guidance and avionics control, and maintains a continuously updated account of navigational status and coordinate values. The computer also stores instrument and mathematical coefficients, predetermined data references that define stars, and the mission flight plan. The computer initiates and evaluates self-tests periodically throughout the operating interval. Software corrections to the star data are provided for: (1) the shock wave over the window that refracts the star light and (2) pressure and temperature gradients (differentials) acting on the window causing optical lens effects.</p>
       </section>
       <section data-title="Navigation Control/Display Panel">
         <h3>Navigation Control and Display Panel (NCD)</h3>
-        <p>The NCD (Figure 4-49) on the aft cockpit right console controls the ANS.</p>
+        <p>The NCD (<a href="#fig-4-49">Figure 4-49</a>) on the aft cockpit right console controls the ANS.</p>
         <div class="note">
           <p>The positions of the ANS controls and the last push-button operations are recorded once each 0.832 seconds by the MRS. Events can be marked by using the ANS keyboard.</p>
         </div>
-        <figure>
+        <figure id="fig-4-49">
           <img src="images/4-49.jpg" alt="" />
           <figcaption>Figure 4-49: Navigation Control and Display Panel</figcaption>
         </figure>
@@ -10781,8 +10781,8 @@
         <h4>C/TEST Switch</h4>
         <p>Used to perform a panel light test and to display ANS tape data and internal ANS conditions when used in conjunction with the TEST position of the DATA switch.</p>
         <h4>SELECTED DATA Indicators</h4>
-        <p>The indicators or windows consist of six separate sets of digital displays. Various operating parameters are displayed in the indicators during the panel fill, mission modification, update, and alignment routines as shown in Figure 4-50.</p>
-        <table border="1">
+        <p>The indicators or windows consist of six separate sets of digital displays. Various operating parameters are displayed in the indicators during the panel fill, mission modification, update, and alignment routines as shown in <a href="#fig-4-50">Figure 4-50</a>.</p>
+        <table border="1" id="fig-4-50">
           <caption>Figure 4-50: Data in Selected Data Windows for Panel Routines (TAPE 13)</caption>
           <tbody>
             <tr>
@@ -11466,8 +11466,8 @@
         <p>The ANS operates in typical inertial navigation fashion. Outputs from two 2-axis gyros drive the platform gimbals to isolate three orthogonally mounted accelerometers from changes in aircraft attitude. The gyros and accelerometers are mounted on the platform's azimuth gimbal (stable element). The accelerometer outputs are components of aircraft velocity change. If the azimuth gimbal is not kept level, the accelerometers also measure a component of acceleration due to gravity and position errors are produced.</p>
         <p>In INERTIAL ONLY, the computer uses the accelerometer outputs to calculate aircraft velocity and change in position, and gyro torquing rates. The gyro torquing rates (signals proportional to aircraft velocity plus earth's rate) are applied to the gyros to maintain the azimuth gimbal (and thus the accelerometers) level with respect to the earth. The success of inertial navigation is due to the fact that any system error eventually causes the accelerometers to go off level and measure a component of gravity which introduces an error that tends to cancel the original error. For example, if an accelerometer develops a null shift that appears to be an aircraft acceleration to the north, the platform will be torqued to keep up with the apparent aircraft motion over the earth's surface. Thus if the platform were level, it becomes tipped off level resulting in accelerometer measurement of gravity which looks like aircraft acceleration to the south. This characteristic of inertial systems is called Schuler tuning.</p>
         <p>The star tracking function improves knowledge of accelerometer orientation in azimuth and eliminates the effects of gyro drift. Star search is initiated when astro-inertial mode is selected after completion of alignment. Selection of the star is made by the computer as a function of latitude, longitude, day of year, time of day, aircraft pitch and roll, and location of the sun. Aircraft pitch and roll determine the orientation of the star tracker window. For a given latitude, longitude, time of day and year, a particular star should be at a particular azimuth and elevation. If the star tracker measurements show that the star is not at the expected azimuth and elevation, there is an error in computed latitude and longitude and/or an error in platform orientation. Since the telescope is mounted on the platform, the star tracker measures the angular difference between the physical triad formed by the platform axes and the computational triad formed by the vertical through the computed position and the calculated orientation of the platform in azimuth. Thus the system cannot directly distinguish between a computed position error and a platform orientation error but, based on statistical probabilities determined by prestored error models and flight dynamics preceding the measurement, (as modeled by a Kalman filter, described later) it will attempt to optimally adjust the various navigational parameters.</p>
-        <p>To aid in describing star tracker logic, stars are given arbitrary labels depending on if they are the first, second, or third star tracked after the beginning of an operation. These are listed in Figure 4-51 with definitions and a summary of the usage of star tracker measured errors. In all cases, the end result of tracking two different stars is to align the computational triad with the platform triad or vice versa. A single star cannot be used to correct all errors since errors about the axis from the platform through that star are not measured. After the initial two stars are acquired, the normal interval between loss of track from one star to tracking the next star is about 30 seconds at altitude. Since the platform is almost continually brought into alignment with the computational triad, gyro errors have an almost negligible effect. The predominant ANS errors are those due to gyro drift that develop before stars are acquired and when star tracking is interrupted such as during aerial refueling. The star tracking data is used to update computed values of gyro drift to minimize error growth during any subsequent lapses in star tracking.</p>
-        <table border="1">
+        <p>To aid in describing star tracker logic, stars are given arbitrary labels depending on if they are the first, second, or third star tracked after the beginning of an operation. These are listed in <a href="#fig-4-51">Figure 4-51</a> with definitions and a summary of the usage of star tracker measured errors. In all cases, the end result of tracking two different stars is to align the computational triad with the platform triad or vice versa. A single star cannot be used to correct all errors since errors about the axis from the platform through that star are not measured. After the initial two stars are acquired, the normal interval between loss of track from one star to tracking the next star is about 30 seconds at altitude. Since the platform is almost continually brought into alignment with the computational triad, gyro errors have an almost negligible effect. The predominant ANS errors are those due to gyro drift that develop before stars are acquired and when star tracking is interrupted such as during aerial refueling. The star tracking data is used to update computed values of gyro drift to minimize error growth during any subsequent lapses in star tracking.</p>
+        <table border="1" id="fig-4-51">
           <caption>Figure 4-51: Star Data Usage</caption>
           <thead>
             <tr>
@@ -11528,11 +11528,11 @@
           </tbody>
         </table>
         <p>Star selection, tracker scan rate, and search patterns depend on many factors and are all under computer control. The computer selects a star by going through the star catalog which is arranged in order of decreasing star brightness until it finds a star that is within the window aperture, not within 10° of zenith (not within 5° of zenith for trainer aircraft), and not within 12-1/2° of the sun. The tracker telescope is commanded to search for the selected star using a variable sized pattern which is symmetrical about the computed star position.</p>
-        <p>The star search pattern is an expanding rectangular spiral which starts at the side of the pattern and then passes across the computed star position. See Figure 4-52. Maximum A star pattern size is a function of search rate so that all A star searches are completed within 23 minutes.</p>
+        <p>The star search pattern is an expanding rectangular spiral which starts at the side of the pattern and then passes across the computed star position. See <a href="#fig-4-52">Figure 4-52</a>. Maximum A star pattern size is a function of search rate so that all A star searches are completed within 23 minutes.</p>
         <p>If the star is detected during this search, confirmation and reconfirmation patterns are made. If these are successful, the star is considered tracked, and elevation and azimuth errors are determined by the star actual position relative to its computed position. Search and track operations are discontinued if the star moves out of the window, the sky is too bright, or a position update is performed. The computer then goes to the next brightest star available, except that when a position update is performed, star search begins at the top of the star list (brightest star).</p>
         <p>There are four scan rates which can be used in star search. Scan rate depends on star magnitude and sky brightness. The fastest is used on a bright star in a dim background while the slowest is used on a dim star in a bright background.</p>
-        <p>The search patterns are chosen as a function of the type of alignment and whether an A, B, or C star is being searched. See Figure 4-52. This table also lists the star ON light activity during star tracking operations.</p>
-        <table border="1">
+        <p>The search patterns are chosen as a function of the type of alignment and whether an A, B, or C star is being searched. See <a href="#fig-4-52">Figure 4-52</a>. This table also lists the star ON light activity during star tracking operations.</p>
+        <table border="1" id="tab-4-52">
           <caption>Figure 4-52: Search Patterns and Star-ON Light Indications</caption>
           <thead>
             <tr>
@@ -11854,7 +11854,7 @@
             </tr>
           </tbody>
         </table>
-        <figure>
+        <figure id="fig-4-52">
           <img src="images/4-52.jpg" alt="" />
           <figcaption>Figure 4-52: Search Patterns and Star-ON Light Indications</figcaption>
         </figure>
@@ -11872,8 +11872,8 @@
           </ol>
         </div>
         <h4>Star Tracking Techniques</h4>
-        <p>The star ON light provides the RSO with a guide for actions (listed in Figure 4-53) to optimize star tracking. Star tracking is automatic but the operator can assist the system in overcoming conditions such as overcasts, changes of sky background brightness, long periods of ground time after system initialization to A-I mode, refueling, and periods when tracking is not being accomplished. The operator should attempt to commence tracking stars as soon as possible to prevent or eliminate position error growth.</p>
-        <table border="1">
+        <p>The star ON light provides the RSO with a guide for actions (listed in <a href="#fig-4-53">Figure 4-53</a>) to optimize star tracking. Star tracking is automatic but the operator can assist the system in overcoming conditions such as overcasts, changes of sky background brightness, long periods of ground time after system initialization to A-I mode, refueling, and periods when tracking is not being accomplished. The operator should attempt to commence tracking stars as soon as possible to prevent or eliminate position error growth.</p>
+        <table border="1" id="fig-4-53">
           <caption>Figure 4-53: Crew Actions to Optimize Star Tracking</caption>
           <thead>
             <tr>
@@ -12010,7 +12010,7 @@
         <h3>Mission Tape Program</h3>
         <p>The mission profile is defined in terms of destination points (DP), control points (CP), and fix points (FP), and the sensor operations associated with these points. Destination points delineate the prescribed mission track; they are intersections of the intended great circle legs. Control points and fix points permit automatic activation of imaging sensors, and fix points define preferred navigational references. The mission plan is loaded into the computer memory on a mission tape prior to preflight operations. The mission tape can be programmed to hold up to 256 DP, 256 FP, and 1023 CP (1535 total). Additional temporary memory is provided for 40 point modification operations, known as the "40-List". The modifications may be performed using the Control and Display panel anytime power is supplied to the panel. Up to 40 add and/or replace operations and unlimited skip-to operations, are provided. In addition, there are special Anytime and Opportunity fix point procedures which do not use the 40-List. The mission tape may include a primary flight plan with one or more alternate routes that the crew may elect to follow by exercising the skip-to, direct steer, or track leg update options. The add and replace options of the 40-List permit additional alternate paths to be formulated, and allow last-minute changes to sensor activity on programmed legs.</p>
         <p>The data loaded into specified cells of the computer memory are identified by function and order of use in the mission plan (D00003, C00007, F00021, etc.). Each point is further defined by its coordinates, its sensor-usage, applicable pointing parameters, and reference to the next consecutive point or points. The destination points reference the next point of all three classes.</p>
-        <figure>
+        <figure id="fig-4-54">
           <img src="images/4-54.jpg" alt="" />
           <figcaption>Figure 4-54: Typical Destination-Point Plan</figcaption>
         </figure>
@@ -12027,12 +12027,12 @@
         <p>Fixed-Range-To-Turn is used by the mission planners for turns that indicate critical sensor legs and turns where strict adherence to the planned turn line is required. In this mode, the mission planner specifies a constant turn radius at a particular DP. The TSA point is a fixed distance plus a variable distance from the DP. The fixed distance is determined by the programmed turn radius and the change in course; it would be equal to turn radius on a 90° turn. The variable distance ranges from 0 to 4.5 nm, depending on ground speed, and compensates for the distance required to roll into the turn. During the turn, commanded bank angle is the sum of two components. One component is the nominal bank required to achieve the programmed turn radius at the current ground speed. The second component trims bank angle trim as a function of the radial speed and position relative to the programmed radius so that the aircraft follows the planned turn line throughout the turn. If a transient causes the aircraft to deviate from the turn line, bank angle trim varies within ±10° to return to the turn line.</p>
         <p>Range to destination as displayed on the HSI and the NCD includes distance around a turn rather than the length of the great circle from present position to destination. This distance around the turn is also used in computing time to turn for the NORMAL display.</p>
         <p>Turn steering automatically terminates when aircraft track is within 2° of the command course, the new track is crossed, or the theoretical tangency point is passed.</p>
-        <p>The sum of the nominal commanded bank angle and the bank angle trim is limited to the ANS maximum bank angle command of 45 degrees. Refer to Figures 4-14 and 4-15 for bank angle vs speed and turn radius information.</p>
+        <p>The sum of the nominal commanded bank angle and the bank angle trim is limited to the ANS maximum bank angle command of 45 degrees. Refer to Figures <a href="#fig-4-14">4-14</a> and <a href="#fig-4-15">4-15</a> for bank angle vs speed and turn radius information.</p>
         <div class="note">
           <p>During preflight planning, do not schedule any turns above Mach 2.9 which have a radius smaller than can be maintained using a 42° bank angle.</p>
         </div>
         <p>Turns should be planned to require at least three degrees less than the planned bank angles limits. This provides a margin to accommodate aircraft trim requirements and/or greater ground speed than expected. However, when below Mach 2.9, bank angles of up to 44 degrees may be scheduled if justified by operational requirements. Crews should monitor ANS ground speed prior to and during turns and prevent ground speed from exceeding the maximum value at which the planned track can be accomplished within bank angle limits.</p>
-        <p>When scheduling turns with greater than 35° bank angle, allow for expected altitude loss if maximum power will not maintain level flight. Refer to Parts V &amp; VI of the Performance Data appendix and to the ceiling altitude data, Figure 6-8, in Section VI. When scheduling turns requiring 42° bank angle at speeds above Mach 3.0, consider the altitude at the turn (which is a function of weight) and the programmed Mach. For a given weight and bank angle it may be necessary to decrease altitude, which at a given Mach may increase the KEAS to the KEAS limit. Turns at maximum scheduled bank angles must not be programmed for such heavy weights that the maximum KEAS limit for normal operation would be exceeded. A descent of approximately 2500 to 3000 feet below the maximum range altitude may have to be made before entering a 42° bank turn.</p>
+        <p>When scheduling turns with greater than 35° bank angle, allow for expected altitude loss if maximum power will not maintain level flight. Refer to Parts V &amp; VI of the Performance Data appendix and to <a href="6.htm#fig-6-8">the ceiling altitude data, Figure 6-8, in Section VI</a>. When scheduling turns requiring 42° bank angle at speeds above Mach 3.0, consider the altitude at the turn (which is a function of weight) and the programmed Mach. For a given weight and bank angle it may be necessary to decrease altitude, which at a given Mach may increase the KEAS to the KEAS limit. Turns at maximum scheduled bank angles must not be programmed for such heavy weights that the maximum KEAS limit for normal operation would be exceeded. A descent of approximately 2500 to 3000 feet below the maximum range altitude may have to be made before entering a 42° bank turn.</p>
         <p>In normal operation, the aircraft will follow the turn line and roll out onto the next leg within 0.2 nm. ASARS will be unaffected by maneuvering. For the TECH camera(s), roll and pitch rate should be less than 0.3° per second for good photography. During most of the settle out distance, roll rates will be slight and suitable for good photography.</p>
         <p>During a SKIP TO operation, the same fixed turn radius is used, but a different TSA and turn line will result if the next leg is different from the planned leg.</p>
         <h5>Manual Steering</h5>
@@ -12044,8 +12044,8 @@
         <p>The ASARS utilizes control point information to generate required parameters which are sent via a 64 word serial data bus. It contains such items as: aircraft velocities, target vectors, gravity anomaly values and radar operating modes. This information allows the ASARS computer to generate the desired imaging commands.</p>
         <p>The mode commands to the TECH(s) are updated at each CP so that more than one sensor can be turned on or off at a single point. Dedicated CP's are required for ASARS operation. All CP's and FP's on a leg are processed on that leg, even if a mission planning error or a panel-filled change puts a CP or FP past the start turn point at the end of a leg.</p>
         <p>Control point information is displayed on the NCD panel. With the DATA SELECT switch in NORMAL the NCD can display either ASARS or non-ASARS fixpoint and control point ID's in SELECTED DATA window numbers 3 and 6. ASARS or non-ASARS information is alternately selectable via the ENTER/DISPLAY switch. ASARS control points in NORMAL are designated by AXXXX vice CXXXX for non-ASARS control points.</p>
-        <p>ASARS control point mode information can be displayed on the NCD panel. This information is displayed in SELECTED DATA window number 3 with the DATA SELECT switch in CONT PT. ASARS control point mode information is shown in Figure 4-55.</p>
-        <table border="1">
+        <p>ASARS control point mode information can be displayed on the NCD panel. This information is displayed in SELECTED DATA window number 3 with the DATA SELECT switch in CONT PT. ASARS control point mode information is shown in <a href="#fig-4-55">Figure 4-55</a>.</p>
+        <table border="1" id="fig-4-55">
           <caption>Figure 4-55: ASARS Control Point MODE</caption>
           <tbody>
             <tr>
@@ -12154,7 +12154,7 @@
         <h5>Fix Points (FPs)</h5>
         <p>FPs are accurately known and readily identifiable points along the mission path that are used in measuring ANS position error with the ASARS and Inflight Processor Display (IPD), viewsight or TACAN. FPs are used to determine ANS error at the time of the fix. The ANS can be corrected by depressing the UPDATE button, or the routine can be terminated without updating the ANS by depressing the MAN CLEAR push-button. FPs using ASARS can be used to improve ASARS pointing information without updating the ANS by pressing READ ERROR on the Radar Control panel but not pressing UPDATE.</p>
         <p>The ASARS is automatically turned on prior to a planned fixpoint. Fixpoints define the end of an acquisition swath and may also be planned during a search swath. When a fixpoint is approaching, the IPD FIX legend appears and flashes. At the planned fixpoint the FIX legend will go steady, the moving imagery display freezes and crosshairs appear. At this time the IPD RUN/HOLD button indicates HOLD. The RSO uses the joystick to position the crosshairs over the fixpoint. Depressing the IPD READ ERROR button sends north-south and east-west errors to the ANS and pointing information is corrected and used for all subsequent ASARS operations. The ASARS IPD will then resume preplanned operations and the RSO has the option of updating the ANS or clearing the errors. Clearing the ANS errors does not remove the ASARS pointing information correction.</p>
-        <figure>
+        <figure id="fig-4-56">
           <img src="images/4-56.jpg" alt="" />
           <figcaption>Figure 4-56: Typical Add/Replace Plan for Fix and Control Points</figcaption>
         </figure>
@@ -12168,11 +12168,11 @@
         <h3>Mission Modification</h3>
         <p>The tape-filled mission program can be modified through the NCD panel. Up to 40 sets of data (40-List) may be entered to replace or add to previously stored mission points. In addition, the operator can skip any number of tape-filled or panel-filled destination points, or change destination. There are also special panel-filled fixpoints called Anytime or Opportunity fixpoints that are exclusive of the 40-List.</p>
         <h4>Add or Replace CP-FP-DP Routine</h4>
-        <p>The mission tape is stored in the tape-filled memory of the computer. Panel-filled data for mission modification is stored in the panel-filled memory of the computer. Only Add or Replace modifications use the 40 panel-filled memory cells. Data required for each type of point, both panel-filled 40 List and tape-filled points, is listed in Figure 4-11 (non-ASARS). If necessary, the RSO can clear any or all of the mission modification data entered into the panel-filled memory and enter new data in the same 40 memory spaces. Detailed knowledge of the tape-filled mission is required to modify that mission, especially when control points or fixpoints are added or replaced.</p>
+        <p>The mission tape is stored in the tape-filled memory of the computer. Panel-filled data for mission modification is stored in the panel-filled memory of the computer. Only Add or Replace modifications use the 40 panel-filled memory cells. Data required for each type of point, both panel-filled 40 List and tape-filled points, is listed in <a href="#fig-4-11">Figure 4-11</a> (non-ASARS). If necessary, the RSO can clear any or all of the mission modification data entered into the panel-filled memory and enter new data in the same 40 memory spaces. Detailed knowledge of the tape-filled mission is required to modify that mission, especially when control points or fixpoints are added or replaced.</p>
         <h4>Point-ID Code (Non-ASARS)</h4>
         <p>Every tape-filled or 40-List mission point has an identification code. The code consists of a letter and five digits, referred to in the following text as digits 1, 2, 3, 4, and 5, counting from the left. This is the order in which the point-ID code is entered in the NCD panel. A letter C/C1, F/F1 or D designates the point as a control point, fixpoint, or destination point, respectively, and appears in the left-most display of the SELECTED DATA window 6 when a mission point is selected for display. When modifying a mission, this part of the ID code is entered by selecting FIXPOINT, CONT PT, or DEST POINT on the DATA switch.</p>
         <p>Digits 3 thru 5 of the ID code denote the number assigned to each tape-filled CP, FP, and DP. Tape-filled points are numbered starting with 001 for the first CP, FP, and DP. In general, the points on the primary mission are numbered in sequence followed by the points on alternate legs. However, the sequence is not really important since the next point number of each type is listed with each tape-filled mission point; i.e., the data for DP 002 can define DP013 as the next DP, or vice versa. The same applies to CP's and FP's.</p>
-        <p>As shown on Figure 4-54, DP's which are the start points for alternate legs are doubly defined. This means that the same geographic point is contained in two different locations with different number and different next-point numbers (example: D00003 and D00011). The alternate leg is selected by skipping to D00011 when on leg 1. Note that the alternate path rejoins the primary mission at D00007; thus, both D00006 and D00012 list D00007 as the next DP. 40-List (ADD or REPLACE) points are defined relative to tape-filled points; digits 3 thru 5 define the tape-filled point to be replaced, or the tape-filled or panel-replaced point following the point(s) to be added.</p>
+        <p>As shown on <a href="#fig-4-54">Figure 4-54</a>, DP's which are the start points for alternate legs are doubly defined. This means that the same geographic point is contained in two different locations with different number and different next-point numbers (example: D00003 and D00011). The alternate leg is selected by skipping to D00011 when on leg 1. Note that the alternate path rejoins the primary mission at D00007; thus, both D00006 and D00012 list D00007 as the next DP. 40-List (ADD or REPLACE) points are defined relative to tape-filled points; digits 3 thru 5 define the tape-filled point to be replaced, or the tape-filled or panel-replaced point following the point(s) to be added.</p>
         <p>Digit 2 is the "add" number for panel-filled ADD points. Digit 2 can range from 1 to 7 for the first through seventh points to be added ahead of the tape-filled or panel-replaced point of the same type defined by digits 3 thru 5, where add point X10YZ is the first add point encountered in the mission, ahead of point 000YZ with add point X20YZ the second, etc. Digit 2 is zero for tape-filled points or replaced points. Digit 2 is the left-most digit in the SELECTED DATA window 6 when a mission modification is performed or a mission point is displayed.</p>
         <p>Digit 1 is a zero for all tape-filled points, replaced control or fix points, and 40-list destination points. When adding fix or control points, however, digit 1 is used by the computer to determine the track leg location of the new added point. If the add point is after the last tape-filled point of its type on its track leg, this digit is 1; if the add point is before the last tape-filled point of its type on its track leg, then the digit is a zero. Digit 1 appears as C1 or F1 in the letter position of the SELECTED DATA window 6 during a mission modification or mission point display operation (when ID code is entered). It also appears when a point is displayed.</p>
         <h4>Point-ID Code (ASARS)</h4>
@@ -12181,7 +12181,7 @@
         <h4>Sensor Selection Code (Non-ASARS)</h4>
         <p>The three-digit sensor selection code designates which sensor shall be turned on and/or remain on, at a panel-filled control point.</p>
         <p>The first and second digits control L and R TECH camera operation. The third digit is always zero. When control points are added or replaced, take care not to disrupt prior turn-on commands to the TECH cameras. If, for example, the L TECH was automatically turned on 50 nm prior to an add R TECH control point, and the mission planner intended it to remain on for a total 100 nm swath, the add-control point sensor assignment code would be 110. This would tell the computer to leave the L TECH on at the new control point and that the R TECH will be turned on. This is necessary because each CP will turn sensors off without an "on" marker in the sensor code.</p>
-        <table border="1">
+        <table border="1" id="fig-4-57">
           <caption>Figure 4-57: Sensor Selection Code</caption>
           <thead>
             <tr>
@@ -12235,8 +12235,8 @@
         <p>The left-right marker designates which TECH camera to operate. When adding or replacing TECH camera control points, insert L000 or R000 for control points to the left or right of course respectively. Verify code insertion in the SELECTED DATA window 5 (R or L plus three numeric digits).</p>
         <h4>ASARS Control Point Code</h4>
         <p>A five digit code designates which feature of the ASARS will be activated at a panel-filled control point.</p>
-        <p>Digit 1 is used to select the dual spot mode. Digit 2 selects rewind and/or downlink options. Digit 3 specifies resolution and frequency characteristics. Digit 4 defines the mode and Digit 5 controls the recorder status. Digits 1 thru 4 are displayed in SELECTED DATA window 5 as they are entered. Selection of 1 for Digit number 5 will be indicated by illumination of the TECH L light. These codes are shown in Figure 4-58.</p>
-        <table border="1">
+        <p>Digit 1 is used to select the dual spot mode. Digit 2 selects rewind and/or downlink options. Digit 3 specifies resolution and frequency characteristics. Digit 4 defines the mode and Digit 5 controls the recorder status. Digits 1 thru 4 are displayed in SELECTED DATA window 5 as they are entered. Selection of 1 for Digit number 5 will be indicated by illumination of the TECH L light. These codes are shown in <a href="#fig-4-58">Figure 4-58</a>.</p>
+        <table border="1" id="fig-4-58">
           <caption>Figure 4-58: ASARS Control Point CODE</caption>
           <tbody>
             <tr>
@@ -12324,7 +12324,7 @@
         <p>
           <span>Any filled 40-List points located</span>
           <u>after</u>
-          <span>the current "next tape-filled point" of each type will be utilized in the normal ANS sequence and no Track Leg Update is required (see Figure 4-56).</span>
+          <span>the current "next tape-filled point" of each type will be utilized in the normal ANS sequence and no Track Leg Update is required (see <a href="#fig-4-56">Figure 4-56</a>).</span>
         </p>
         <div class="note">
           <p>A FP/CP/DP in the 40-List must be deleted before a correction/modification can be made to that numbered point.</p>
@@ -12334,11 +12334,11 @@
         <p>The ANS does not automatically stop processing CPs and FPs on the original tape-filled leg when navigating on a leg from a tape-filled DP to an added or replaced DP; or from a replaced DP to any type of DP. In these cases, the CPs and FPs on the original leg are processed relative to the new leg. In general, pointing and mapping commands will be incorrect, and unless all CPs and FPs can be projected on to the new leg, a sensor could be commanded on but not off. Therefore, the sensors should be operated in their manual modes or tape-filled CPs and FPs should be replaced. No CPs and FPs are processed when navigating from an added DP to any type of DP.</p>
         <p>After a power dropout, pressing RAPID or MODE START on the ground with the MAL light flashing will erase the 40-List. Anytime a rapid or gyrocompass ground alignment is performed, 40-List data must be re-entered. 40-List data is not deleted if the HOT switch is pressed with the MAL light flashing or a cold air start is performed. Therefore, 40-List data is retained for a ground hot start, cold air start, or a hot air start. Pressing the MODE START switch without the MAL light flashing has no effect on the 40-List.</p>
         <h4>Turn Radius for Panel-Filled DPs</h4>
-        <p>A turn radius can be filled with any panel-filled DP to get a fixed-range-to-turn at that DP. This data is filled in nautical miles with three digits and appears in the SELECTED DATA window 3. If no turn radius is filled, the system calculates the turn radius based on current ground speed and a 32° bank angle. Figure 4-59 lists turn radius values for various Mach numbers and bank angles.</p>
+        <p>A turn radius can be filled with any panel-filled DP to get a fixed-range-to-turn at that DP. This data is filled in nautical miles with three digits and appears in the SELECTED DATA window 3. If no turn radius is filled, the system calculates the turn radius based on current ground speed and a 32° bank angle. <a href="#fig-4-59">Figure 4-59</a> lists turn radius values for various Mach numbers and bank angles.</p>
         <div class="note">
           <p>A turn radius for a bank angle greater than 35° will only be commanded by the autopilot if the original programmed bank angle for that turn start point (TSP) was greater than 35°. The autopilot will otherwise be limited to 35°.</p>
         </div>
-        <table border="1">
+        <table border="1" id="fig-4-59">
           <caption>Figure 4-59: ANS Bank Angle vs. Turn Radius for Various Mach Numbers (FAT = -56°)</caption>
           <thead>
             <tr>
@@ -13315,7 +13315,7 @@
             </tr>
           </tbody>
         </table>
-        <figure>
+        <figure id="fig-4-60">
           <img src="images/4-60.jpg" alt="" />
           <figcaption>Figure 4-60: ANS Turn Radius vs. True Airspeed &amp; Bank Angle</figcaption>
         </figure>
@@ -13331,7 +13331,7 @@
         <p>The Opportunity viewsight fix allows the RSO to update ANS present position using a visually identified point which has not been tape or panel-filled into the ANS. In this procedure the RSO aligns the cursor and presses the READ switch as in a normal viewsight fix routine. As the coordinates of the opportunity point are not previously stored in the computer, the initial display of ANS corrections is meaningless. However, these initial corrections are cleared when the RSO fills the latitude, longitude, and elevation of the opportunity point. When the ENTER/DISPLAY switch is pressed after coordinate entry, new errors are displayed. The RSO can then either clear the errors or enter the corrections.</p>
         <p>The RSO can repeat the coordinate entry if an error is made in the initial entry by pressing the ENTER/DISPLAY switch and reentering all data required. However, if ERR is displayed in the MODE window, MAN CLEAR must be pressed to terminate the routine and no update is possible.</p>
         <h4>Skip to DP Routine</h4>
-        <p>The following examples refer to Figure 4-54.</p>
+        <p>The following examples refer to <a href="#fig-4-54">Figure 4-54</a>.</p>
         <p>When the skip-to routine is performed, the following DP number associated with the current next DP is replaced with the skipped-to DP number. This procedure can be used to select an alternate route in flight. For example, perform skip to D00011 while en route from D00001 to D00002 and before reaching the range-to-turn to D00003, to select the alternate route from D00002 to D00011 to D00012, etc. This procedure could also be used to skip any portion of the programmed mission. For example, to skip from D00004 to D00006, perform a "skip to D00006" while en route from D00003 to D00004 and before reaching the range-to-turn to D00005. Do not perform a skip from a doubly defined destination to its alternate destination since this creates a zero-length leg and unpredictable navigation results. For example, do not perform a "skip to D00011" after reaching the range-to-turn to D00003 and en route to D00003 since the leg from D00003 to D00011 has zero length.</p>
         <p>Skipping to a DP after starting great circle navigation does not erase CP or FP operation on the original programmed leg following the current next DP. Consequently, skipping to D00011 to select the alternate route does not eliminate the sensor operation on the leg from D00002 to D00003. On the other hand, skipping to D00006 while en route to D00004 will not eliminate the CP's and FP's along the original leg from D00004 to D00005, and the system will process these points. In this case, the sensors could be operated in their manual modes until back on the programmed mission course.</p>
         <h4>Direct Steer</h4>
@@ -13346,8 +13346,8 @@
       </section>
       <section data-title="Operation">
         <h3>ANS Operation</h3>
-        <p>The ANS must be warmed up and aligned before flight. The methods for ground and air alignment and their association with various navigation modes is outlined in Figure 4-61.</p>
-        <table border="1">
+        <p>The ANS must be warmed up and aligned before flight. The methods for ground and air alignment and their association with various navigation modes is outlined in <a href="#fig-4-61">Figure 4-61</a>.</p>
+        <table border="1" id="fig-4-61">
           <caption>Figure 4-61: Navigation Modes vs. Alignment Methods</caption>
           <thead>
             <tr>
@@ -13466,7 +13466,7 @@
         <p>Prior to ground alignment, verify that the prescribed mission program is in the computer and that the portable chronometer is installed and operating. Power and cooling air are required continuously through warmup, alignment, and navigation. Once alignment has started, a power interruption of more than 1 second will require realignment. Normally, warmup and alignment are performed on ground power and cooling air with transfer to aircraft power and cooling air after engine start, but can be performed on aircraft power and cooling air after engine start.</p>
         <p>Tape 13 is compatible with increased altitude resolution from DAFICS. This feature requires hardware changes to DAFICS. To verify correct system configuration the RSO must check proper altitude scaling by performing the Altitude Scaling Test routine. This routine compares the ANS altitude to the TDI. The altitude readings must agree, otherwise, notify maintenance.</p>
         <p>When operating from an alternate base without ANS support personnel, the chronometer day/time accuracy must be checked. If a flight with an accurate chronometer installed terminates at an alternate base, the chronometer can be (a) maintained indefinitely in an accurate GO state by connecting ground power and cooling to the aircraft with the MODE switch OFF and the aft cockpit ANS essential DC circuit breaker in, or (b) left in the aircraft after normal shutdown procedures are completed. In the latter case, if the battery ON/OFF switch is left in the ON position, the chronometer battery will run down in approximately 24 hours and the chronometer will stop. After power is reapplied to the aircraft and the battery ON/OFF switch is in the ON position, the chronometer should display a GO status and begin to charge its internal battery. If the chronometer is in a GO status, but merely incorrectly set, fill DAY/TIME during C/A and operate in the ASTRO INERTIAL mode. (In a ground hot start, the C/A mode lasts only 60 seconds.) After filling DAY/TIME, the difference between RSO filled values and chronometer values is retained as a bias term to update the computer time following power dropouts of less than 1 second. Thus, astro inertial navigation should function normally. Power dropouts that exceed 1 second will not be compensated for.</p>
-        <p>After filling DAY/TIME a Hot Air Start cannot be performed and a new ground alignment or Cold Air Start is required. Chronometer options are listed in Figure 4-62.</p>
+        <p>After filling DAY/TIME a Hot Air Start cannot be performed and a new ground alignment or Cold Air Start is required. Chronometer options are listed in <a href="#fig-4-62">Figure 4-62</a>.</p>
         <div class="note">
           <p>
             <span>Takeoff without a chronometer or with a NO/GO is permitted but not recommended. ANS mode options are the same for any of these conditions, but are subject to conditions discussed under Power Dropout and Chronometer Failure in this section under</span>
@@ -13476,7 +13476,7 @@
             <span>this section.</span>
           </p>
         </div>
-        <table border="1">
+        <table border="1" id="fig-4-62">
           <caption>Figure 4-62: Chronometer/Operation Options</caption>
           <thead>
             <tr>
@@ -15326,8 +15326,9 @@
         <p>The LIMIT portion of the indicator is unlighted when temperatures within the ANS are normal. The red LIMIT can illuminate either steady or flashing. A steady light indicates that the temperature of the astroinertial instrument housing or the cooling air at the computer inlet is above nominal limits. Steady illumination after initial turn-on is caused by system over-temperature. A flashing light indicates that ANS cooling airflow is less then 2.5 pounds per minute. To prevent damage, turn the ANS off when the temperature LIMIT indicator comes on.</p>
         <p>When the LIMIT light illuminates, the RSO's annunciator panel ANS FAIL light, and the pilot's annunciator panel ANS REF caution light illuminate.</p>
         <p>When the TEMP TOLR light is unlighted, the platform temperature is in the range for optimum system performance. The amber TOLR light illuminates either steady or flashing. Steady illumination signifies that platform temperature is below normal A flashing light signifies that temperature is above normal.</p>
-        <p>Figure 4-18 lists ANS temperature warning indications, conditions and recommended actions.</p>
+        <p><a href="#fig-4-18">Figure 4-18</a> lists ANS temperature warning indications, conditions and recommended actions.</p>
         <table border="1">
+          <!-- Note: Duplicate of Figure 4-18, duplicate number -->
           <caption>Figure 4-60: ANS Temperature Warnings</caption>
           <thead>
             <tr>
@@ -15468,11 +15469,12 @@
           </p>
         </div>
         <h4>Malfunction Indicator (MAL Light)</h4>
-        <p>The MODE window usually indicates action to be taken when the MAL light is flashing. Several of the conditions for a MAL light are synonymous with conditions for nav-not-ready indications described under the Warning Indication section. Figure 4-19 lists general ANS malfunction and nav-not-ready conditions.</p>
+        <p>The MODE window usually indicates action to be taken when the MAL light is flashing. Several of the conditions for a MAL light are synonymous with conditions for nav-not-ready indications described under the Warning Indication section. <a href="#fig-4-19">Figure 4-19</a> lists general ANS malfunction and nav-not-ready conditions.</p>
         <div class="note">
           <p>When the MAL light illuminates, the RSO's annunciator panel ANS FAIL light, and the pilot's annunciator panel ANS REF caution light illuminate.</p>
         </div>
         <table border="1">
+          <!-- Note: Duplicate of Figure 4-19, duplicate number -->
           <caption>Figure 4-61: ANS Warning Indications</caption>
           <thead>
             <tr>
@@ -15896,7 +15898,7 @@
         <p>If the aircraft is at index (turn start) and a destination point is specified which does not exist in the mission tape, the next destination point in the normal mission tape sequence is assumed and the aircraft is automatically directed to that point. The MODE window displays DP * and the SELECTED DATA windows flash their contents at a one and a half second rate. MAN CLEAR and DISPLAY must be pressed to restore normal NCD panel operation and to verify correct navigation. If not on the correct track, DIR STEER or Track Leg Update as required.</p>
         <h4>Warning Indications</h4>
         <p>
-          <span>The ANS uses a variety of cockpit warnings. Figure 4-19 lists these displays. In some cases, these displays alert the RSO to problems that may affect</span>
+          <span>The ANS uses a variety of cockpit warnings. <a href="#fig-4-19">Figure 4-19</a> lists these displays. In some cases, these displays alert the RSO to problems that may affect</span>
           <u>eventual</u>
           <span>mission success. In other cases, however, these display indicators warn the crew that ANS outputs are inaccurate and/or</span>
           <u>unsafe</u>
