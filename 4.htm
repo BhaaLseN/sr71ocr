@@ -556,7 +556,7 @@
             </tr>
             <tr>
               <td>
-                <p>RUNWAY HEADING AUGMENT</p>
+                <p>RUNWAY HEADING ALIGNMENT</p>
               </td>
               <td>
                 <p>Computed runway true heading, XXX°XX.X'</p>
@@ -980,7 +980,7 @@
               </td>
               <td></td>
               <td>
-                <p>TYYI (Normal)</p>
+                <p>TYY1 (Normal)</p>
                 <p>TYY2 (Trainer)</p>
                 <p>Where YY=year</p>
               </td>
@@ -1679,7 +1679,7 @@
             <p>Axis 3 Wind</p>
           </li>
         </ol>
-        <p>Each of these parameters has a calculated error probability which is initialized as a function of the type of alignment accomplished. During a ground alignment system position is monitored to detect deviations from the entered coordinates. These deviations are fed as measurements to the filter which utilizes them to refine the first ten listed parameters. When star measurements are obtained, the first thirteen parameters are refined, and when airborne, all sixteen elements are estimated and continually refined. Because of wind variability and the accuracy (+30 knots) of True Air Speed, the airspeed measurement has essentially zero influence on the first thirteen parameters except in the case of a cold and hot air start. When fixpoint measurements are inserted by the operator, the filter adjusts the 16 parameters according to the ratio of their current estimated error state to the programmed accuracy of the fixpoint device (.25 n.m. for SLR,.5 n.m, for Viewsight, and 1.0 n.m. for TACAN). The system incorporates 100 percent of a fixpoint if the correction is more than 5.0 n.m..</p>
+        <p>Each of these parameters has a calculated error probability which is initialized as a function of the type of alignment accomplished. During a ground alignment system position is monitored to detect deviations from the entered coordinates. These deviations are fed as measurements to the filter which utilizes them to refine the first ten listed parameters. When star measurements are obtained, the first thirteen parameters are refined, and when airborne, all sixteen elements are estimated and continually refined. Because of wind variability and the accuracy (+30 knots) of True Air Speed, the airspeed measurement has essentially zero influence on the first thirteen parameters except in the case of a cold and hot air start. When fixpoint measurements are inserted by the operator, the filter adjusts the 16 parameters according to the ratio of their current estimated error state to the programmed accuracy of the fixpoint device (.25 n.m. for SLR, .5 n.m. for Viewsight, and 1.0 n.m. for TACAN). The system incorporates 100 percent of a fixpoint if the correction is more than 5.0 n.m..</p>
         <h4>Dead Reckoning</h4>
         <p>Dead reckoning is performed simultaneously and separately from inertial navigation. During normal operation in ASTRO INERTIAL or INERTIAL ONLY, the dead reckoning latitude and longitude do not appear to the RSO unless the display Present Position routine is performed. However, prior to continuous star tracking in a cold or hot air start, or when DEAD RECKON is selected, dead reckon data is used as the source of present position and heading for all displays, great circle navigation and guidance, and sensor control. DEAD RECKON is the only mode in which present position can be entered after navigation is started; this may be done as often as desired. When DEAD RECKON is selected, the ANS generates all its normal outputs and continues astroinertial or inertial only navigation so that the DEAD RECKON mode can be selected for training while permitting return to ASTRO INERTIAL or INERTIAL ONLY modes. In normal operation, when dead reckon data is not used for ANS outputs, the dead reckoned latitude, longitude, and difference between INS heading and ANS true heading (magnetic variation), if applicable, are updated every four minutes using inertial data.</p>
         <p>Dead reckoning is the process of computing change in position using heading, speed, and elapsed time. True airspeed from DAFICS (M computer) is used with RSO entered values of wind speed and direction to approximate ground speed. Heading is provided from the INS and is magnetic heading except that ANS inertial heading is used following coarse alignment in a hot or cold air start.</p>
@@ -1708,7 +1708,7 @@
         <p>Turn steering automatically terminates when aircraft track is within 2° of the command course, the new track is crossed, or the theoretical tangency point is passed.</p>
         <p>The sum of the nominal commanded bank angle and the bank angle trim is limited to the ANS maximum bank angle command of 45 degrees. Refer to Figures 4-14 and 4-15 for bank angle vs speed and turn radius information.</p>
         <div class="note">
-          <p>During pre flight planning, do not schedule any turns above Mach 2.9 which have a radius smaller than can be maintained using a 42° bank angle.</p>
+          <p>During preflight planning, do not schedule any turns above Mach 2.9 which have a radius smaller than can be maintained using a 42° bank angle.</p>
         </div>
         <p>Turns should be planned to require at least three degrees less than the planned bank angles limits. This provides a margin to accommodate aircraft trim requirements and/or greater ground speed than expected. However, when below Mach 2.9, bank angles of up to 44 degrees may be scheduled if justified by operational requirements. Crews should monitor ANS ground speed prior to and during turns and prevent ground speed from exceeding the maximum value at which the planned track can be accomplished within bank angle limits.</p>
         <p>When scheduling turns with greater than 35° bank angle, allow for expected altitude loss if maximum power will not maintain level flight. Refer to Parts V &amp; VI of the Performance Data appendix and to the ceiling altitude data, Figure 6-8, in Section VI. When scheduling turns requiring 42° bank angle at speeds above Mach 3.0, consider the altitude at the turn (which is a function of weight) and the programmed Mach. For a given weight and bank angle it may be necessary to decrease altitude, which at a given Mach may increase the KEAS to the KEAS limit. Turns at maximum scheduled bank angles must not be programmed for such heavy weights that the maximum KEAS limit for normal operation would be exceeded. A descent of approximately 2500 to 3000 feet below the maximum range altitude may have to be made before entering a 42° bank turn.</p>
@@ -2654,7 +2654,7 @@
           <span>the current "next tape-filled point" of each type will be utilized in the normal ANS sequence and no Track Leg Update is required (see Figure 4-10).</span>
         </p>
         <div class="note">
-          <p>A FP/CP/DP in the 40-List must be deleted before a correction/modifi-cation can be made to that numbered point.</p>
+          <p>A FP/CP/DP in the 40-List must be deleted before a correction/modification can be made to that numbered point.</p>
         </div>
         <p>Points may be added before replaced tape-filled DP's. A maximum of seven points of one type can be added in between two tape-filled points of that type. Points cannot be added after the last tape-filled point of that type. FP's and CP's cannot be added into track legs that contain no tape-filled FPs or CPs except an Anytime Fixpoint (described later) can be added to a leg that has no tape-filled FPs. If a FP is replaced, any sensor activity programmed at the original tape filled-point is negated, that is, will not occur. For example, if a camera was to be turned on at a radar FP or turned off, and that FP is replaced, the programmed camera activity will not take place. The sensors should then be operated in the Manual Mode. If a FP is added, there is no effect on the programmed camera activity. Adding a viewsight FP does not affect programmed radar activity.</p>
         <p>The ANS does not automatically stop processing CP's and FP's on the original tape-filled leg when navigating on a leg from a tape-filled DP to an added or replaced DP; or from a replaced DP to any type of DP. In these cases, the CP's and FP's on the original leg are processed relative to the new leg. In general, pointing and mapping commands will be incorrect, and unless all CP's and FP's can be projected on to the new leg, a sensor could be commanded on but not off. Therefore, the sensors should be operated in their manual modes or tape-filled CP's and FP's should be replaced. No CP's and FP's are processed when navigating from an added DP to any type of DP.</p>
@@ -3660,8 +3660,8 @@
         <p>The RSO can repeat the coordinate entry if an error is made in the initial entry by pressing the ENTER/DISPLAY switch and reentering all data required. However, if ERR is displayed in the MODE window, MAN CLEAR must be pressed to terminate the routine and no update is possible.</p>
         <h4>Skip to DP Routine</h4>
         <p>The following examples refer to Figure 4-8.</p>
-        <p>When the skip-to routine is performed, the following DP number associated with the current next DP is replaced with the skipped-to DP number. This procedure can be used to select an alternate route in flight. For example, perform skip to D00011 while enroute from D00001 to D00002 and before reaching the range-to-turn to D00003, to select the alternate route from D00002 to D00011 to D00012, etc. This procedure could also be used to skip any portion of the programmed mission. For example, to skip from D00004 to D00006, perform a "skip to D00006" while enroute from D00003 to D00004 and before reaching the range-to-turn to D00005. Do not perform a skip from a doubly defined destination to its alternate destination since this creates a zero-length leg and unpredictable navigation results. For example, do not perform a "skip to D00011" after reaching the range-to-turn to D00003 and enroute to D00003 since the leg from D00003 to D00011 has zero length.</p>
-        <p>Skipping to a DP after starting great circle navigation does not erase CP or FP operation on the original programmed leg following the current next DP. Consequently, skipping to D00011 to select the alternate route does not eliminate the sensor operation on the leg from D00002 to D00003. On the other hand, skipping to D00006 while enroute to D00004 will not eliminate the CP's and FP's along the original leg from D00004 to D00005, and the system will process these points. In this case, the sensors should be operated in their manual modes until back on the programmed mission course.</p>
+        <p>When the skip-to routine is performed, the following DP number associated with the current next DP is replaced with the skipped-to DP number. This procedure can be used to select an alternate route in flight. For example, perform skip to D00011 while en route from D00001 to D00002 and before reaching the range-to-turn to D00003, to select the alternate route from D00002 to D00011 to D00012, etc. This procedure could also be used to skip any portion of the programmed mission. For example, to skip from D00004 to D00006, perform a "skip to D00006" while en route from D00003 to D00004 and before reaching the range-to-turn to D00005. Do not perform a skip from a doubly defined destination to its alternate destination since this creates a zero-length leg and unpredictable navigation results. For example, do not perform a "skip to D00011" after reaching the range-to-turn to D00003 and en route to D00003 since the leg from D00003 to D00011 has zero length.</p>
+        <p>Skipping to a DP after starting great circle navigation does not erase CP or FP operation on the original programmed leg following the current next DP. Consequently, skipping to D00011 to select the alternate route does not eliminate the sensor operation on the leg from D00002 to D00003. On the other hand, skipping to D00006 while en route to D00004 will not eliminate the CP's and FP's along the original leg from D00004 to D00005, and the system will process these points. In this case, the sensors should be operated in their manual modes until back on the programmed mission course.</p>
         <h4>Direct Steer</h4>
         <p>The direct-steer procedure results in an immediate change in destination. When commanded, the ANS computes a new great circle course from the present position to the destination point selected or coordinates entered by the RSO. The aircraft turns to the new course immediately after the DIR STEER switch is pressed. The ANS computes new great circle courses to the selected DP or coordinates until the aircraft has turned to within 2 degrees relative bearing to the destination. This results in the most direct path to the destination. If aircraft track subsequently deviates more than 2 degrees from command course, the direct steer is automatically restarted. When the DIRECT STEER procedure is performed, ANS operate commands to the sensors are turned off. The ADD ANYTIME FP and OPPORTUNITY Viewsight Fix procedures are usable while in DIRECT STEER if the aircraft track remains within 2 degrees of the bearing to the DP during the Fix procedure.</p>
         <h4>Track Leg Update</h4>
@@ -3891,11 +3891,11 @@
           <p>The alignment mode cannot be changed subsequent to the first MODE START or RAPID switch operation without turning the MODE switch to OFF or WARM UP and back to the desired mode. Merely moving the MODE switch to the alternate mode and pressing the MODE START switch does not change the mode of alignment.</p>
         </div>
         <h4>Ground Hot Start</h4>
-        <p>An abbreviated ground alignment is provided when the aircraft has not moved since the ANS was turned off following a normal ground alignment or operation in an operate mode. In this mode the RSO presses the HOT switch after power and cooling air are on. The ANS uses the true heading and present position stored in memory at the end of the previous operation. The ground hot start alignment consists of a variable time coarse alignment followed by a 30 second leveling period during which RESTART (RES) is displayed. The time in C/A should not exceed 90 seconds from the time HOT is pressed. Platform leveling is inhibited until 45 seconds after power is applied, then coarse alignment begins if HOT has been pressed. If HOT is not pressed, platform leveling is inhibited. When the platform tilt error is less than 10 arc minutes, the ANS enters the RES mode for 30 seconds of fine alignment. Failure to enter the RES mode means that the platform was unable to level to less than 10 arc minutes. The platform cannot recover from greater than 2-1/2 of tilt during a ground hot start. If the ANS will not come out of C/A, a rapid or gyrocompass alignment must be performed. Completion of a ground hot start alignment is indicated by the appearance of F/A in the MODE window.</p>
+        <p>An abbreviated ground alignment is provided when the aircraft has not moved since the ANS was turned off following a normal ground alignment or operation in an operate mode. In this mode the RSO presses the HOT switch after power and cooling air are on. The ANS uses the true heading and present position stored in memory at the end of the previous operation. The ground hot start alignment consists of a variable time coarse alignment followed by a 30 second leveling period during which RESTART (RES) is displayed. The time in C/A should not exceed 90 seconds from the time HOT is pressed. Platform leveling is inhibited until 45 seconds after power is applied, then coarse alignment begins if HOT has been pressed. If HOT is not pressed, platform leveling is inhibited. When the platform tilt error is less than 10 arc minutes, the ANS enters the RES mode for 30 seconds of fine alignment. Failure to enter the RES mode means that the platform was unable to level to less than 10 arc minutes. The platform cannot recover from greater than 2-1/2° of tilt during a ground hot start. If the ANS will not come out of C/A, a rapid or gyrocompass alignment must be performed. Completion of a ground hot start alignment is indicated by the appearance of F/A in the MODE window.</p>
         <div class="note">
           <p>If star tracking is not possible due to aircraft location or sky conditions, leave the system in F/A. Otherwise place the system in ASTRO INERTIAL mode by setting the MODE switch to ASTRO INERTIAL and press MODE START. When A-I appears in the MODE window, inertial data is used for all ANS updates and displays and the star tracker will start searching for an "A" star.</p>
         </div>
-        <p>The ANS uses the landing gear switch to distinguish between a ground hot start and a hot air start. Air mass damping is not performed following a ground hot start. Before a ground hot start, ground cooling air should be provided at 75°F if possible. Loading a new mission tape destroys the stored values of position and heading. If the stored heading is not accurate within 0.1 and the star ON light is off, a runway heading alignment should be performed following the ground hot start.</p>
+        <p>The ANS uses the landing gear switch to distinguish between a ground hot start and a hot air start. Air mass damping is not performed following a ground hot start. Before a ground hot start, ground cooling air should be provided at 75°F if possible. Loading a new mission tape destroys the stored values of position and heading. If the stored heading is not accurate within 0.1° and the star ON light is off, a runway heading alignment should be performed following the ground hot start.</p>
         <h4>Takeoff</h4>
         <p>If the runway heading alignment routine is used, maintain takeoff roll parallel to runway centerline. This alignment is automatically terminated at lift-off by a switch on the left main landing gear strut. The RSO must press the UPDATE or MAN CLEAR push-button to end the procedure.</p>
         <h4>In-Flight</h4>
@@ -3908,7 +3908,7 @@
         <p>Should there be an airborne power interruption or temporary malfunction, it may be possible to realign the ANS using the air start procedure. A period of coarse alignment to level the platform is followed by a period when it may be possible to accurately level the platform for precision navigation by performing a series of fixes.</p>
         <p>Present position can be entered any time after initiating the air start procedure and is updated continuously thereafter by dead reckoning computations. If present position has not been filled by the time the coarse align phase has been completed, the MODE window will indicate ENT (Enter data).</p>
         <p>The system also commences great circle navigation and sensor control using dead reckoning position as a reference in computing steering commands, true heading, range and bearing to points of interest, NORMAL display data, etc. True heading must be checked for accuracy and updated as required. Magnetic variation may be used to correct true heading when the ANS is in the C/A mode. Afterwards the TRUE HEADING UPDATE routine must be performed. Also, if accurate navigation is desired prior to star ON light illumination, the FILL WIND procedure should be used initially in the coarse align mode and repeated as wind conditions change until star ON steady illumination. Position fixes (TACAN, viewsight, or radar) may be used to update the dead reckon frame during this period. Remote updates may be used to update the inertial frame.</p>
-        <p>After coarse alignment is completed, the MODE window display changes to RES and the system commences internal airspeeddamped navigation using dead-reckon data as a starting point. In one minute the first airmass damping correction is made and corrections of diminishing magnitude are made every minute for the duration of the flight. These corrections do not cause auto-nav steering transients. Inertial present position can be displayed and compared with dead-reckon present position by using the DISPLAY PRESENT POS procedure. Star search begins when A-I appears in the MODE window. To optimize star acquisition, the aircraft should be flown straight and level.</p>
+        <p>After coarse alignment is completed, the MODE window display changes to RES and the system commences internal airspeed damped navigation using dead-reckon data as a starting point. In one minute the first airmass damping correction is made and corrections of diminishing magnitude are made every minute for the duration of the flight. These corrections do not cause auto-nav steering transients. Inertial present position can be displayed and compared with dead-reckon present position by using the DISPLAY PRESENT POS procedure. Star search begins when A-I appears in the MODE window. To optimize star acquisition, the aircraft should be flown straight and level.</p>
         <p>Acquisition of star A is indicated by flashing of the star ON indicator. When B star is acquired the star ON light goes out.</p>
         <p>When the star ON indicator goes on steady, indicating that continuous star tracking is in progress, inertial data is used to update all ANS outputs and internal dead-reckon computations. If the autopilot is engaged in the auto-nav mode, an aircraft maneuver will occur. Position fixes should be made and the system updated as required.</p>
       </section>
@@ -4303,7 +4303,7 @@
             </li>
             <li>
               <p>Update Present Position as required.</p>
-              <p>AU inertial position error may not be yet removed even though the star light is illuminated.</p>
+              <p>All inertial position error may not be yet removed even though the star light is illuminated.</p>
             </li>
           </ol>
         </section>
@@ -5130,7 +5130,7 @@
               <p>DATA switch - DEST POINT, FIX POINT, CONT PT.</p>
             </li>
             <li>
-              <p>Enter ID code (five digits) of FP, CP or DP to be deleted. AU digits appear in SD-6 window.</p>
+              <p>Enter ID code (five digits) of FP, CP or DP to be deleted. All digits appear in SD-6 window.</p>
             </li>
             <li>
               <p>ID CODE 99999 - Enter.</p>
@@ -5797,7 +5797,7 @@
                 <p>ANS REF AND CAUTION ON</p>
               </td>
               <td>
-                <p>HSI RANCE SHUTTER CLOSED</p>
+                <p>HSI RANGE SHUTTER CLOSED</p>
               </td>
               <td>
                 <p>ATTITUDE IND OFF FLAG IN VIEW</p>
@@ -6296,7 +6296,7 @@
     <section data-title="Inertial Navigation System">
       <h1>Inertial Navigation System (INS)</h1>
       <p>The SKN-2417 INS is the source of inertially derived magnetic reference for the basic flight instruments and radio navigation aids. It also provides aircraft attitude and navigation information. The INS consists of the inertial navigation unit (INU), the inertial control panel (ICP) and the INU battery.</p>
-      <p>The system provides present position, ground speed and steering, distance, and enroute time to 10 destinations and 3 mark points. Destination points may be entered or changed any time the system has power applied and are retained in the computer memory after power is removed. Mark points are entered in memory by a panel routine which allows sequential and repetitive marking of present position in the 3 mark points A, B and C.</p>
+      <p>The system provides present position, ground speed and steering, distance, and en route time to 10 destinations and 3 mark points. Destination points may be entered or changed any time the system has power applied and are retained in the computer memory after power is removed. Mark points are entered in memory by a panel routine which allows sequential and repetitive marking of present position in the 3 mark points A, B and C.</p>
       <p>Heading information is furnished to the:</p>
       <ol class="list-number">
         <li>
@@ -6357,7 +6357,7 @@
                 <p>1</p>
               </td>
               <td>
-                <p>FUNCTION SWITCH</p>
+                <p>FUNCTION Switch</p>
               </td>
             </tr>
             <tr>
@@ -6365,7 +6365,7 @@
                 <p>2</p>
               </td>
               <td>
-                <p>DATA SWITCH</p>
+                <p>DATA Switch</p>
               </td>
             </tr>
             <tr>
@@ -6373,7 +6373,7 @@
                 <p>3</p>
               </td>
               <td>
-                <p>ALPHA DISPLAY</p>
+                <p>ALPHA Display</p>
               </td>
             </tr>
             <tr>
@@ -6381,7 +6381,7 @@
                 <p>4</p>
               </td>
               <td>
-                <p>INS POWER PUSH-BUTTON</p>
+                <p>INS POWER Push-Button</p>
               </td>
             </tr>
             <tr>
@@ -6389,7 +6389,7 @@
                 <p>5</p>
               </td>
               <td>
-                <p>LEFT AND RIGHT ALPHANUMERIC DISPLAYS</p>
+                <p>Left and Right Alphanumeric Displays</p>
               </td>
             </tr>
             <tr>
@@ -6397,7 +6397,7 @@
                 <p>6</p>
               </td>
               <td>
-                <p>MODE SELECT LIGHT</p>
+                <p>MODE SELECT Light</p>
               </td>
             </tr>
             <tr>
@@ -6405,7 +6405,7 @@
                 <p>7</p>
               </td>
               <td>
-                <p>MODE SELECT PUSH-BUTTON</p>
+                <p>MODE SELECT Push-Button</p>
               </td>
             </tr>
             <tr>
@@ -6413,7 +6413,7 @@
                 <p>8</p>
               </td>
               <td>
-                <p>DATA OPTION PUSH-BUTTON</p>
+                <p>DATA OPTION Push-Button</p>
               </td>
             </tr>
             <tr>
@@ -6421,7 +6421,7 @@
                 <p>9</p>
               </td>
               <td>
-                <p>KEYBOARD ENABLE LIGHT</p>
+                <p>KEYBOARD ENABLE Light</p>
               </td>
             </tr>
             <tr>
@@ -6429,7 +6429,7 @@
                 <p>10</p>
               </td>
               <td>
-                <p>MARK PUSH-BUTTON</p>
+                <p>MARK Push-Button</p>
               </td>
             </tr>
             <tr>
@@ -6437,7 +6437,7 @@
                 <p>11</p>
               </td>
               <td>
-                <p>UPDATE PUSH-BUTTON</p>
+                <p>UPDATE Push-Button</p>
               </td>
             </tr>
             <tr>
@@ -6445,7 +6445,7 @@
                 <p>12</p>
               </td>
               <td>
-                <p>KEYBOARD ENABLE PUSH-BUTTON</p>
+                <p>KEYBOARD ENABLE Push-Button</p>
               </td>
             </tr>
             <tr>
@@ -6453,7 +6453,7 @@
                 <p>13</p>
               </td>
               <td>
-                <p>KEYBOARD PUSHBUTTONS</p>
+                <p>KEYBOARD Push-Buttons</p>
               </td>
             </tr>
             <tr>
@@ -6461,7 +6461,7 @@
                 <p>14</p>
               </td>
               <td>
-                <p>CLEAR PUSH-BUTTON</p>
+                <p>CLEAR Push-Button</p>
               </td>
             </tr>
             <tr>
@@ -6469,7 +6469,7 @@
                 <p>15</p>
               </td>
               <td>
-                <p>ENTER PUSH-BUTTON</p>
+                <p>ENTER Push-Button</p>
               </td>
             </tr>
             <tr>
@@ -6477,7 +6477,7 @@
                 <p>16</p>
               </td>
               <td>
-                <p>NAV READY LIGHT</p>
+                <p>NAV READY Light</p>
               </td>
             </tr>
             <tr>
@@ -6485,7 +6485,7 @@
                 <p>17</p>
               </td>
               <td>
-                <p>DESTINATION WHEEL</p>
+                <p>DESTINATION Wheel</p>
               </td>
             </tr>
           </tbody>
@@ -6553,7 +6553,7 @@
                 <p>ALPHA DISPLAY</p>
               </td>
               <td>
-                <p>LETT DISPLAY</p>
+                <p>LEFT DISPLAY</p>
               </td>
               <td>
                 <p>RIGHT DISPLAY</p>
@@ -7270,7 +7270,7 @@
           <p>High resolution, side-looking radar (SLR) for mapping (CAPRE).</p>
         </li>
         <li>
-          <p>ELINT Improvement Program/Electro-magnetic Reconnaissance (EIP).</p>
+          <p>ELINT Improvement Program/Electromagnetic Reconnaissance (EIP).</p>
         </li>
         <li>
           <p>Optical bar camera (OBC).</p>
@@ -7577,7 +7577,7 @@
           <p>When V/R is selected, the Bus V/H is fed into and modified in the camera for head position only.</p>
         </li>
         <li>
-          <p>FMC switch - V/H; V/H source switch -NAV.</p>
+          <p>FMC switch - V/H; V/H source switch - NAV.</p>
           <p>V/H is used for the upwing camera during operation in turns with bank angles of 30 or 45 degrees.</p>
           <p>When V/H is selected, the Bus V/H is fed into and modified in the camera head for mirror position and a preset bank angle of 30° or 45°. This preset bank angle is set in the camera and cannot be changed by the RSO.</p>
           <div class="note">
@@ -7774,7 +7774,7 @@
         <h4>Mode Selector Switch</h4>
         <p>A self-illuminated mode selector push-button switch displays an illuminated MODE legend in the top half when power is applied to the radar. The bottom half of the switch has two legends. A (automatic), and M (manual) which illuminate alternately as the push-button is depressed. A indicates automatic SLR operation. M illuminates during manual operation and during normal system shutdown.</p>
         <h4>Standby-Operate Switch</h4>
-        <p>The self-illuminated standby (STBY)/operate (OPR) push-button switch illuminates when the radar system warm-up period is completed (approximately 6 minutes after power has been applied). In the manual mode, the STBY na dOPR light illuminate alternately when the push-button is depressed. In the automatic mode, the light indicates operate/standby commands received from the ANS.</p>
+        <p>The self-illuminated standby (STBY)/operate (OPR) push-button switch illuminates when the radar system warm-up period is completed (approximately 6 minutes after power has been applied). In the manual mode, the STBY and OPR light illuminate alternately when the push-button is depressed. In the automatic mode, the light indicates operate/standby commands received from the ANS.</p>
         <h4>STAB Selector Switch</h4>
         <p>Not functional. Stabilization is provided automatically by the ANS at all times.</p>
         <h4>SIDE Selector Switch</h4>
@@ -8413,7 +8413,7 @@
         <p>The tape transport operates at 60 or 120 inches per second. A 14-inch reel which supplies 9200 feet of one-inch magnetic tape provides 30 or 15 minutes of recording time per flight. There is no cockpit display of the tape remaining. If the recorder is operated manually, the RSO should log accumulated operating time.</p>
         <p>When recorder operation is commanded by the EIP system, recording of ELINT analog data is continuous. This capability permits more comprehensive collection and analysis of ELINT signals.</p>
         <h4>EIP System Control Switch</h4>
-        <p>The EIP system and the digital recorder are controlled by the ELINT power switch on the PWR &amp; SENSOR control paneL The switch has a white illuminated ELINT legend, a green ON light that illuminates alternately as the switch is depressed, and a red FAIL light that illuminates to indicate failure of the digital recorder. The RSO's master caution light and the SENSOR FAIL annunciator light illuminate if the ELINT FAIL light illuminates.</p>
+        <p>The EIP system and the digital recorder are controlled by the ELINT power switch on the PWR &amp; SENSOR control panel. The switch has a white illuminated ELINT legend, a green ON light that illuminates alternately as the switch is depressed, and a red FAIL light that illuminates to indicate failure of the digital recorder. The RSO's master caution light and the SENSOR FAIL annunciator light illuminate if the ELINT FAIL light illuminates.</p>
         <h4>Recorder Control Switch</h4>
         <p>The continuous analog recorder (or, if programmed by maintenance, the digital recorder) is controlled by an alternate action RCDR push-button switch on the PWR 8c SENSOR Control Panel. Illumination of its white RCDR legend is controlled by the right console lights rheostat. A green STBY legend illuminates when the ELINT power switch is ON and the continuous analog recorder is in standby. A green RUN legend illuminates and STBY is extinguished when the recorder switch is pressed. The RUN legend indicates a manual-run command, it is not a positive indication that the recorder is operating. STBY illuminates and RUN extinguishes when the RCDR switch is pressed again. Any interruption of power to the recorder, such as pressing the ELINT switch off, will automatically cause it to revert to standby.</p>
         <div class="note">
@@ -8632,7 +8632,7 @@
                 <p>1</p>
               </td>
               <td>
-                <p>GRID ILLUMINATION CONTROL</p>
+                <p>Grid Illumination Control</p>
               </td>
             </tr>
             <tr>
@@ -8640,7 +8640,7 @@
                 <p>2</p>
               </td>
               <td>
-                <p>VIEWSIGHT RATE CONTROL</p>
+                <p>Viewsight Rate Control</p>
               </td>
             </tr>
             <tr>
@@ -8648,7 +8648,7 @@
                 <p>3</p>
               </td>
               <td>
-                <p>V/H MONITOR SWITCH</p>
+                <p>V/H Monitor Switch</p>
               </td>
             </tr>
             <tr>
@@ -8656,7 +8656,7 @@
                 <p>4</p>
               </td>
               <td>
-                <p>VIEWSIGHT RETICLE ILLUM CONTROL</p>
+                <p>Viewsight Reticle Illum Control</p>
               </td>
             </tr>
             <tr>
@@ -8664,7 +8664,7 @@
                 <p>5</p>
               </td>
               <td>
-                <p>MAP DRIVE SWITCH</p>
+                <p>Map Drive Switch</p>
               </td>
             </tr>
             <tr>
@@ -8672,7 +8672,7 @@
                 <p>6</p>
               </td>
               <td>
-                <p>MAP RATE CONTROL AND IND</p>
+                <p>Map Rate Control and Ind</p>
               </td>
             </tr>
             <tr>
@@ -8680,7 +8680,7 @@
                 <p>7</p>
               </td>
               <td>
-                <p>SLEW CONTROL SWITCH</p>
+                <p>Slew Control Switch</p>
               </td>
             </tr>
             <tr>
@@ -8688,7 +8688,7 @@
                 <p>8</p>
               </td>
               <td>
-                <p>FlLM SELECT SWITCH</p>
+                <p>Film Select Switch</p>
               </td>
             </tr>
             <tr>
@@ -8696,7 +8696,7 @@
                 <p>9</p>
               </td>
               <td>
-                <p>PROJECTOR ILLUMINATION SWITCH</p>
+                <p>Projector Illumination Switch</p>
               </td>
             </tr>
           </tbody>
@@ -8791,7 +8791,7 @@
               <p>1</p>
             </td>
             <td>
-              <p>RETICLE ILLUMINATION SWITCH</p>
+              <p>Reticle Illumination Switch</p>
             </td>
           </tr>
           <tr>
@@ -8799,7 +8799,7 @@
               <p>2</p>
             </td>
             <td>
-              <p>BEZEL PUSH-BUTTON SWITCH</p>
+              <p>Bezel Push-Button Switch</p>
             </td>
           </tr>
           <tr>
@@ -8807,7 +8807,7 @@
               <p>3</p>
             </td>
             <td>
-              <p>FIELD OF VIEW (FOV) SWITCH</p>
+              <p>Field Of View (FOV) Switch</p>
             </td>
           </tr>
           <tr>
@@ -8815,7 +8815,7 @@
               <p>4</p>
             </td>
             <td>
-              <p>UNUSED</p>
+              <p>Unused</p>
             </td>
           </tr>
           <tr>
@@ -8823,7 +8823,7 @@
               <p>5</p>
             </td>
             <td>
-              <p>SYMBOLOGY BRIGHTNESS SWITCH</p>
+              <p>Symbology Brightness Switch</p>
             </td>
           </tr>
           <tr>
@@ -8831,7 +8831,7 @@
               <p>6</p>
             </td>
             <td>
-              <p>MAP RATE CONTROL</p>
+              <p>Map Rate Control</p>
             </td>
           </tr>
           <tr>
@@ -8839,7 +8839,7 @@
               <p>7</p>
             </td>
             <td>
-              <p>SLEW CONTROL SWITCH</p>
+              <p>Slew Control Switch</p>
             </td>
           </tr>
           <tr>
@@ -8847,7 +8847,7 @@
               <p>8</p>
             </td>
             <td>
-              <p>PROJECTOR ILLUMINATION SWITCH</p>
+              <p>Projector Illumination Switch</p>
             </td>
           </tr>
           <tr>
@@ -8855,7 +8855,7 @@
               <p>9</p>
             </td>
             <td>
-              <p>MAP DRIVE SWITCH</p>
+              <p>Map Drive Switch</p>
             </td>
           </tr>
           <tr>
@@ -8863,7 +8863,7 @@
               <p>10</p>
             </td>
             <td>
-              <p>FILM SELECT SWITCH</p>
+              <p>Film Select Switch</p>
             </td>
           </tr>
           <tr>
@@ -8871,7 +8871,7 @@
               <p>11</p>
             </td>
             <td>
-              <p>VIDEO CONTRAST SWITCH</p>
+              <p>Video Contrast Switch</p>
             </td>
           </tr>
           <tr>
@@ -8879,7 +8879,7 @@
               <p>12</p>
             </td>
             <td>
-              <p>AMBIENT BRIGHTNESS SENSOR</p>
+              <p>Ambient Brightness Sensor</p>
             </td>
           </tr>
           <tr>
@@ -8887,7 +8887,7 @@
               <p>13</p>
             </td>
             <td>
-              <p>VIDEO BRIGHTNESS SWITCH</p>
+              <p>Video Brightness Switch</p>
             </td>
           </tr>
         </tbody>
@@ -9218,7 +9218,7 @@
         </li>
       </ol>
       <h4>ANS/MRS Dual Format Processor and ANS Recorder</h4>
-      <p>The ANS/MRS dual format processor provides the signals necessary for recording 128 and 32 word ANS telemetry simultaneously. The 128 word format is recorded on the ANS (NAV) recorder and the 32 word format is recorded on the MRS. The essential AC (30) and monitored DC busses provide power for the signal formatter and ANS recorder through circuit breakers in the C-bay. Recording time available with the ANS recorder is approximately eight hours. System control is accomplished by use of the NAV RCDR switch on the PWR &amp; SENSOR panel. ON must be illuminated in the switch to record 32 and 128 word format recordings.</p>
+      <p>The ANS/MRS dual format processor provides the signals necessary for recording 128 and 32 word ANS telemetry simultaneously. The 128 word format is recorded on the ANS (NAV) recorder and the 32 word format is recorded on the MRS. The essential AC (30) and monitored DC buses provide power for the signal formatter and ANS recorder through circuit breakers in the C-bay. Recording time available with the ANS recorder is approximately eight hours. System control is accomplished by use of the NAV RCDR switch on the PWR &amp; SENSOR panel. ON must be illuminated in the switch to record 32 and 128 word format recordings.</p>
       <p>Illumination of the FAIL legend in the NAV RCDR power switch after an ON condition indicates that the ANS recorder is not operating. The ANS recorder is inoperable if recycling the power switch to a NAV RCDR ON condition does not extinguish the FAIL light; however, MRS recording can continue.</p>
     </section>
     <section data-title="Center of Gravity Calculator">
@@ -9374,7 +9374,7 @@
         </div>
         <h4>Test Switch</h4>
         <p>An alternate action switch, with a white TEST legend, is below the RESET switch. When illuminated, a green ON legend visible in the lower half of the switch. It is used with the SYSTEM SELECT switch to start or stop the self-test for individual systems. To start a test, set the SYSTEM SELECT switch to the desired system and press the TEST switch. Illumination of GO in the Go display during the sequence indicates a satisfactory self-test unless a Fail display indication also appears for that system. (See Fail Indications/Malfunction Procedures for the individual systems.) The self-test ON legend will extinguish automatically after a self-test is started (10 seconds for A2; 12 seconds for C2; 26 seconds for H; and 5 seconds for M). A self-test can be terminated during the sequence by repositioning the SYSTEM SELECT switch or by pressing the TEST switch again to extinguish ON. However, a self-test of the same system or of another system cannot be started until completion of the self-test time-out period for the interrupted system; for example, 12 seconds for DEF C2.</p>
-        <p>The DEF A2 system must be tested in O mode; therefore an external transmission occurs. DEF H can be tested in either the S or O mode. The choice is dependent on whether an external transmission legends illuminated) is desired.</p>
+        <p>The DEF A2 system must be tested in O mode; therefore an external transmission occurs. DEF H can be tested in either the S or O mode. The choice is dependent on whether an external transmission (<span class="redacted">REDACTED</span> legends illuminated) is desired.</p>
         <h4>System Select Switch</h4>
         <p>A five-position rotary SYSTEM SELECT switch enables self-testing the individual systems, and selects DEF H AUTO/MAN operating mode indicators. The corresponding system legend (A, C, M, or LO/HI for H) in the Go display illuminates when an installed system is selected with the SYSTEM SELECT switch. System selection must be made before initiating mode selection or a self-test. Selecting OFF, or repositioning of the switch while a self-test is in progress terminates the self-test. Do not initiate self-test of another system until completion of the full time programmed for the first self-test.</p>
         <div class="note">
@@ -9510,9 +9510,9 @@
           <p>In the operate mode, the <span class="redacted">REDACTED</span> high voltage supplies and the pulser circuit are monitored. If any of these circuits fail, the A and FAIL legends on the control panel Fail display and the DEF FAIL legend on the DEF warning panel illuminate.</p>
           <p>If the above conditions are present and the XMIT light does not illuminate during self-test or in response to a threat while in operate, an under/over voltage condition or tube ionization could be present. In this case, remaining O (S extinguished) for no more than twenty seconds after completion of the DEF A2 System Self-Test before returning to the S mode. Remaining in operate after the System Self-Test is complete will enable the system Fault Generator. The generator monitors various fault signals and system current levels. If a fault is detected, the Fault indicator is enabled and the appropriate MRS signal is generated. A 4-6 second timer is then allowed to check fault processing circuits. In essence, the system will attempt to correct the malfunction and return to normal fault-free operation. Fault Generator activation should clear any transitory fault condition. If corrected, the system will be reset and provide normal Self-Test indications on subsequent Self-Tests.</p>
           <p>If the system fault is not corrected by Fault Generator activation, attempt to reset the system by recycling the power switch off for 10 seconds to ON.</p>
-          <p>If the XMIT portion of the system is disabled, remain in the S mode to receive threat warning indications observed to be operable during the SelfTest.</p>
+          <p>If the XMIT portion of the system is disabled, remain in the S mode to receive threat warning indications observed to be operable during the Self-Test.</p>
           <div class="caution">
-            <p>If the following indications are present during the DEF A2 System SelfTest, do not allow the system to remain in O (Self-Test completed) more than 20 seconds to prevent equipment damage: XMIT Light extinguished, A and FAIL legends on the control panel Fail Display and DEF FAIL legend on the DEF Warning Panel illuminated.</p>
+            <p>If the following indications are present during the DEF A2 System Self-Test, do not allow the system to remain in O (Self-Test completed) more than 20 seconds to prevent equipment damage: XMIT Light extinguished, A and FAIL legends on the control panel Fail Display and DEF FAIL legend on the DEF Warning Panel illuminated.</p>
           </div>
           <div class="note">
             <p>Either <span class="redacted">REDACTED</span> side can cause a FAIL indication. The <span class="redacted">REDACTED</span> side will operate normally if the <span class="redacted">REDACTED</span> side fails; however, if the <span class="redacted">REDACTED</span> high voltage power supply fails, the system will return automatically to the S condition, and attempt to update the operate condition at six-second intervals. The FAIL legend will blink at six-second intervals. For operational missions, leave the system in O; otherwise, return to S.</p>
@@ -9643,7 +9643,7 @@
       </div>
       <p class="redacted">REDACTED</p>
       <p>
-        <span class="redacted">REDACTED</span> and provides an output to the AR-1700 recorder of the EIP system. The IU then controls the jamming pulses generated by the transmitting systems. The transmitting systems are designated as low-band <span class="redacted">REDACTED</span> and high band <span class="redacted">REDACTED</span> coverage). Each consists of <span class="redacted">REDACTED</span>.</p>
+        <span class="redacted">REDACTED</span> and provides an output to the AR-1700 recorder of the EIP system. The IU then controls the jamming pulses generated by the transmitting systems. The transmitting systems are designated as low-band <span class="redacted">REDACTED</span> and high band (<span class="redacted">REDACTED</span> coverage). Each consists of <span class="redacted">REDACTED</span>.</p>
       <p>During manual operation, each band can be driven by commands from the DEF control panel to <span class="redacted">REDACTED</span> (<span class="redacted">REDACTED</span> three modes).</p>
       <p>During <span class="redacted">REDACTED</span> operation, except for system transmit functions, the DEF H operates identically to <span class="redacted">REDACTED</span> operation. Upon receiving information from DEF C2, DEF H will transmit predetermined <span class="redacted">REDACTED</span> frequencies as determined by the LO and HI Mode selections. The <span class="redacted">REDACTED</span> jamming in the <span class="redacted">REDACTED</span> state is either computer controlled predetermined broad band <span class="redacted">REDACTED</span> depending on whether <span class="redacted">REDACTED</span> selected. If either of these modes selected, <span class="redacted">REDACTED</span> jamming is <span class="redacted">REDACTED</span> the corresponding band.</p>
       <p class="redacted">REDACTED.</p>
@@ -10080,7 +10080,7 @@
       <p>DEF M indications on the DEF control panel are provided to the MRS for postflight analysis. Except for electrical power and cooling requirements, DEF M does not interface with any other aircraft or DEF systems.</p>
       <p>The DEF M unit, located on a rack in the D-bay, is ground programmable through the User Data Memory module (UDM). Programs are selected in <span class="redacted">REDACTED</span> bands; each band center is programmable in <span class="redacted">REDACTED</span>. The bands may overlap, be adjacent or nonadjacent, in any combination.</p>
       <p>DEF M uses a single <span class="redacted">REDACTED</span> antenna <span class="redacted">REDACTED</span> and is time-shared between the receive and transmit functions. The antenna is located on the fuselage bottom centerline at FS 315, forward of the viewsight window and is protected by a slightly protruding fiberglass radome.</p>
-      <p>Electrical power is supplied to DEF M from the essential AC and monitored DC busses through circuit breakers in the C-bay. See Figure 4-42.</p>
+      <p>Electrical power is supplied to DEF M from the essential AC and monitored DC buses through circuit breakers in the C-bay. See Figure 4-42.</p>
       <p>Cooling air is supplied to the DEF M unit through an inlet plenum and hose connected to the D-bay cooling air duct. Air flow is from the right mission bay air manifold which is controlled by the right bay air shut-off valve.</p>
       <figure>
         <img src="images/4-42.jpg" alt="" />
@@ -10504,7 +10504,7 @@
                 <p>1</p>
               </td>
               <td>
-                <p>PRESENT POSITION WINDOWS</p>
+                <p>Present Position Windows</p>
               </td>
             </tr>
             <tr>
@@ -10512,7 +10512,7 @@
                 <p>2</p>
               </td>
               <td>
-                <p>TEMPERATURE MONITOR LIGHTS</p>
+                <p>Temperature Monitor Lights</p>
               </td>
             </tr>
             <tr>
@@ -10520,7 +10520,7 @@
                 <p>3</p>
               </td>
               <td>
-                <p>TIME-TO-TURN WINDOW</p>
+                <p>Time-To-Turn Window</p>
               </td>
             </tr>
             <tr>
@@ -10528,7 +10528,7 @@
                 <p>4</p>
               </td>
               <td>
-                <p>HOT/TACAN SWITCH</p>
+                <p>HOT/TACAN Switch</p>
               </td>
             </tr>
             <tr>
@@ -10536,7 +10536,7 @@
                 <p>5</p>
               </td>
               <td>
-                <p>MALFUNCTION LIGHT</p>
+                <p>Malfunction Light</p>
               </td>
             </tr>
             <tr>
@@ -10544,7 +10544,7 @@
                 <p>6</p>
               </td>
               <td>
-                <p>RAPID/RECALL SWITCH</p>
+                <p>RAPID/RECALL Switch</p>
               </td>
             </tr>
             <tr>
@@ -10552,7 +10552,7 @@
                 <p>7</p>
               </td>
               <td>
-                <p>RANGE TO DESTINATION POINT WINDOW</p>
+                <p>Range to Destination Point Window</p>
               </td>
             </tr>
             <tr>
@@ -10560,7 +10560,7 @@
                 <p>8</p>
               </td>
               <td>
-                <p>NEXT DESTINATION POINT WINDOW</p>
+                <p>Next Destination Point Window</p>
               </td>
             </tr>
             <tr>
@@ -10568,7 +10568,7 @@
                 <p>9</p>
               </td>
               <td>
-                <p>DIM SWITCH</p>
+                <p>Dim Switch</p>
               </td>
             </tr>
             <tr>
@@ -10576,7 +10576,7 @@
                 <p>10</p>
               </td>
               <td>
-                <p>SELECTED DATA WINDOWS</p>
+                <p>SELECTED DATA Windows</p>
               </td>
             </tr>
             <tr>
@@ -10584,7 +10584,7 @@
                 <p>11</p>
               </td>
               <td>
-                <p>MODE WINDOW</p>
+                <p>MODE Window</p>
               </td>
             </tr>
             <tr>
@@ -10592,7 +10592,7 @@
                 <p>12</p>
               </td>
               <td>
-                <p>MODE SWITCH</p>
+                <p>MODE Switch</p>
               </td>
             </tr>
             <tr>
@@ -10600,7 +10600,7 @@
                 <p>13</p>
               </td>
               <td>
-                <p>MODE START SWITCH</p>
+                <p>MODE START Switch</p>
               </td>
             </tr>
             <tr>
@@ -10608,7 +10608,7 @@
                 <p>14</p>
               </td>
               <td>
-                <p>DATA SWITCH</p>
+                <p>DATA Switch</p>
               </td>
             </tr>
             <tr>
@@ -10616,7 +10616,7 @@
                 <p>15</p>
               </td>
               <td>
-                <p>MAG/GRID SWITCH</p>
+                <p>MAG/GRID Switch</p>
               </td>
             </tr>
             <tr>
@@ -10624,7 +10624,7 @@
                 <p>16</p>
               </td>
               <td>
-                <p>UPDATE SWITCH</p>
+                <p>UPDATE Switch</p>
               </td>
             </tr>
             <tr>
@@ -10632,7 +10632,7 @@
                 <p>17</p>
               </td>
               <td>
-                <p>ENTER/DISPLAY SWITCH</p>
+                <p>ENTER/DISPLAY Switch</p>
               </td>
             </tr>
             <tr>
@@ -10640,7 +10640,7 @@
                 <p>18</p>
               </td>
               <td>
-                <p>C/TEST SWITCH</p>
+                <p>C/TEST Switch</p>
               </td>
             </tr>
             <tr>
@@ -10648,7 +10648,7 @@
                 <p>19</p>
               </td>
               <td>
-                <p>SKIP TO SWITCH</p>
+                <p>SKIP TO Switch</p>
               </td>
             </tr>
             <tr>
@@ -10656,7 +10656,7 @@
                 <p>20</p>
               </td>
               <td>
-                <p>LOOK THRU SWITCH</p>
+                <p>LOOK THRU Switch</p>
               </td>
             </tr>
             <tr>
@@ -10664,7 +10664,7 @@
                 <p>21</p>
               </td>
               <td>
-                <p>DP/TURN SWITCH</p>
+                <p>DP/TURN Switch</p>
               </td>
             </tr>
             <tr>
@@ -10672,7 +10672,7 @@
                 <p>22</p>
               </td>
               <td>
-                <p>DELETE SWITCH</p>
+                <p>DELETE Switch</p>
               </td>
             </tr>
             <tr>
@@ -10680,7 +10680,7 @@
                 <p>23</p>
               </td>
               <td>
-                <p>DIRECT STEER SWITCH</p>
+                <p>DIRECT STEER Switch</p>
               </td>
             </tr>
             <tr>
@@ -10688,7 +10688,7 @@
                 <p>24</p>
               </td>
               <td>
-                <p>BACK SPACE SWITCH</p>
+                <p>BACK SPACE Switch</p>
               </td>
             </tr>
             <tr>
@@ -10696,7 +10696,7 @@
                 <p>25</p>
               </td>
               <td>
-                <p>MANUAL CLEAR SWITCH</p>
+                <p>MANUAL CLEAR Switch</p>
               </td>
             </tr>
             <tr>
@@ -10704,7 +10704,7 @@
                 <p>26</p>
               </td>
               <td>
-                <p>MANUAL KEYBOARD AND POSITION PREFIX REFERENCE SWITCHES</p>
+                <p>Manual Keyboard and Position Prefix Reference Switches</p>
               </td>
             </tr>
             <tr>
@@ -10712,7 +10712,7 @@
                 <p>27</p>
               </td>
               <td>
-                <p>SENSOR OPERATION INDICATOR LIGHTS</p>
+                <p>Sensor Operation Indicator Lights</p>
               </td>
             </tr>
             <tr>
@@ -10720,7 +10720,7 @@
                 <p>28</p>
               </td>
               <td>
-                <p>WIND DIRECTION AND WIND VELOCITY WINDOWS</p>
+                <p>Wind Direction and Wind Velocity Windows</p>
               </td>
             </tr>
           </tbody>
@@ -10764,7 +10764,7 @@
         <p>Used to display data pertaining to the destination point (DP) after the DP now approaching.</p>
         <h4>SKIP TO Switch</h4>
         <p>Used to command the ANS to skip to a selected DP from the current next DP.</p>
-        <h4>RAPTD/RECALL Switch</h4>
+        <h4>RAPID/RECALL Switch</h4>
         <p>Used to select rapid ground alignment or to recall data for display of the previously panel-filled TACAN point.</p>
         <h4>DELETE Switch</h4>
         <p>Used to delete a particular panel-filled mission point from the 40-List of panel-filled points or the entire 40-List.</p>
@@ -10811,7 +10811,7 @@
             </tr>
             <tr>
               <td>
-                <p>RUNWAY HEADING AUGMENT</p>
+                <p>RUNWAY HEADING ALIGNMENT</p>
               </td>
               <td>
                 <p>Computed runway true heading, XXX°XX.X'</p>
@@ -11239,7 +11239,7 @@
               </td>
               <td></td>
               <td>
-                <p>TYYI (Normal)</p>
+                <p>TYY1 (Normal)</p>
                 <p>TYY2 (Trainer)</p>
                 <p>Where YY=year</p>
               </td>
@@ -12032,7 +12032,7 @@
           <p>During preflight planning, do not schedule any turns above Mach 2.9 which have a radius smaller than can be maintained using a 42° bank angle.</p>
         </div>
         <p>Turns should be planned to require at least three degrees less than the planned bank angles limits. This provides a margin to accommodate aircraft trim requirements and/or greater ground speed than expected. However, when below Mach 2.9, bank angles of up to 44 degrees may be scheduled if justified by operational requirements. Crews should monitor ANS ground speed prior to and during turns and prevent ground speed from exceeding the maximum value at which the planned track can be accomplished within bank angle limits.</p>
-        <p>When scheduling turns with greater than 35° bank angle, allow for expected altitude loss if maximum power will not maintain level flight. Refer to Parts V &amp; VI of the Performance Data appendix and to the ceiling altitude data, Figure 6-8, in Section VL When scheduling turns requiring 42° bank angle at speeds above Mach 3.0, consider the altitude at the turn (which is a function of weight) and the programmed Mach. For a given weight and bank angle it may be necessary to decrease altitude, which at a given Mach may increase the KEAS to the KEAS limit. Turns at maximum scheduled bank angles must not be programmed for such heavy weights that the maximum KEAS limit for normal operation would be exceeded. A descent of approximately 2500 to 3000 feet below the maximum range altitude may have to be made before entering a 42° bank turn.</p>
+        <p>When scheduling turns with greater than 35° bank angle, allow for expected altitude loss if maximum power will not maintain level flight. Refer to Parts V &amp; VI of the Performance Data appendix and to the ceiling altitude data, Figure 6-8, in Section VI. When scheduling turns requiring 42° bank angle at speeds above Mach 3.0, consider the altitude at the turn (which is a function of weight) and the programmed Mach. For a given weight and bank angle it may be necessary to decrease altitude, which at a given Mach may increase the KEAS to the KEAS limit. Turns at maximum scheduled bank angles must not be programmed for such heavy weights that the maximum KEAS limit for normal operation would be exceeded. A descent of approximately 2500 to 3000 feet below the maximum range altitude may have to be made before entering a 42° bank turn.</p>
         <p>In normal operation, the aircraft will follow the turn line and roll out onto the next leg within 0.2 nm. ASARS will be unaffected by maneuvering. For the TECH camera(s), roll and pitch rate should be less than 0.3° per second for good photography. During most of the settle out distance, roll rates will be slight and suitable for good photography.</p>
         <p>During a SKIP TO operation, the same fixed turn radius is used, but a different TSA and turn line will result if the next leg is different from the planned leg.</p>
         <h5>Manual Steering</h5>
@@ -13332,8 +13332,8 @@
         <p>The RSO can repeat the coordinate entry if an error is made in the initial entry by pressing the ENTER/DISPLAY switch and reentering all data required. However, if ERR is displayed in the MODE window, MAN CLEAR must be pressed to terminate the routine and no update is possible.</p>
         <h4>Skip to DP Routine</h4>
         <p>The following examples refer to Figure 4-54.</p>
-        <p>When the skip-to routine is performed, the following DP number associated with the current next DP is replaced with the skipped-to DP number. This procedure can be used to select an alternate route in flight. For example, perform skip to D00011 while enroute from D00001 to D00002 and before reaching the range-to-turn to D00003, to select the alternate route from D00002 to D00011 to D00012, etc. This procedure could also be used to skip any portion of the programmed mission. For example, to skip from D00004 to D00006, perform a "skip to D00006" while enroute from D00003 to D00004 and before reaching the range-to-turn to D00005. Do not perform a skip from a doubly defined destination to its alternate destination since this creates a zero-length leg and unpredictable navigation results. For example, do not perform a "skip to D00011" after reaching the range-to-turn to D00003 and enroute to D00003 since the leg from D00003 to D00011 has zero length.</p>
-        <p>Skipping to a DP after starting great circle navigation does not erase CP or FP operation on the original programmed leg following the current next DP. Consequently, skipping to D00011 to select the alternate route does not eliminate the sensor operation on the leg from D00002 to D00003. On the other hand, skipping to D00006 while enroute to D00004 will not eliminate the CP's and FP's along the original leg from D00004 to D00005, and the system will process these points. In this case, the sensors could be operated in their manual modes until back on the programmed mission course.</p>
+        <p>When the skip-to routine is performed, the following DP number associated with the current next DP is replaced with the skipped-to DP number. This procedure can be used to select an alternate route in flight. For example, perform skip to D00011 while en route from D00001 to D00002 and before reaching the range-to-turn to D00003, to select the alternate route from D00002 to D00011 to D00012, etc. This procedure could also be used to skip any portion of the programmed mission. For example, to skip from D00004 to D00006, perform a "skip to D00006" while en route from D00003 to D00004 and before reaching the range-to-turn to D00005. Do not perform a skip from a doubly defined destination to its alternate destination since this creates a zero-length leg and unpredictable navigation results. For example, do not perform a "skip to D00011" after reaching the range-to-turn to D00003 and en route to D00003 since the leg from D00003 to D00011 has zero length.</p>
+        <p>Skipping to a DP after starting great circle navigation does not erase CP or FP operation on the original programmed leg following the current next DP. Consequently, skipping to D00011 to select the alternate route does not eliminate the sensor operation on the leg from D00002 to D00003. On the other hand, skipping to D00006 while en route to D00004 will not eliminate the CP's and FP's along the original leg from D00004 to D00005, and the system will process these points. In this case, the sensors could be operated in their manual modes until back on the programmed mission course.</p>
         <h4>Direct Steer</h4>
         <p>The direct-steer procedure results in an immediate change in destination. When commanded, the ANS computes a new great circle course from the present position to the destination point selected or coordinates entered by the RSO. The aircraft turns to the new course immediately after the DIR STEER switch is pressed. The ANS computes new great circle courses to the selected DP or coordinates until the aircraft has turned to within 2 degrees relative bearing to the destination. This results in the most direct path to the destination. If aircraft track subsequently deviates more than 2 degrees from command course, the direct steer is automatically restarted. When the DIRECT STEER procedure is performed, ANS operate commands to the sensors are turned off. The ADD ANYTIME FP and OPPORTUNITY Viewsight Fix procedures are usable while in DIRECT STEER if the aircraft track remains within 2 degrees of the bearing to the DP during the Fix procedure.</p>
         <h4>Track Leg Update</h4>
@@ -13555,7 +13555,7 @@
         </div>
         <p>The optimum method of alignment is gyrocompassing. The 30-minute fine-alignment phase includes gyrocompassing. Gyro compassing determines the orientation of the platform relative to true north. Fine alignment accurately levels the platform to the local vertical.</p>
         <p>An alternate method of ground alignment is the rapid alignment. In this mode, the system automatically goes directly to a 12-minute fine-align period from coarse align. During fine align, the gyros are rated and the platform is leveled. Since gyrocompassing is not performed, a runway heading alignment should be performed during takeoff following a rapid alignment unless the aircraft true heading in the parking location is known within 0.1 degree or the star ON light illuminates before flight.</p>
-        <p>Completion of fine alignment (and gyrocompassing) is indicated by display of present position coordinates in the PRESENT LATI-TUDE/LONGITUDE windows. For optimum navigation performance, remain in fine-alignment until just before taxi. If the aircraft will be stationary for 5 minutes or more after a navigation mode has been initiated, use the Ground Alignment Correct procedure. This procedure puts the system back into fine align and removes any velocity error induced by taxiing. Star tracking will continue during the alignment if it was in progress.</p>
+        <p>Completion of fine alignment (and gyrocompassing) is indicated by display of present position coordinates in the PRESENT LATITUDE/LONGITUDE windows. For optimum navigation performance, remain in fine-alignment until just before taxi. If the aircraft will be stationary for 5 minutes or more after a navigation mode has been initiated, use the Ground Alignment Correct procedure. This procedure puts the system back into fine align and removes any velocity error induced by taxiing. Star tracking will continue during the alignment if it was in progress.</p>
         <h4>Alignment Mode Selection</h4>
         <p>The ANS is aligned by setting the MODE switch to ALIGN, ASTRO INERTIAL or INERTIAL ONLY and pressing either the MODE START switch or the RAPID switch.</p>
         <p>For a gyrocompassing alignment, set the MODE switch to ALIGN, ASTRO INERTIAL or INERTIAL ONLY and press the MODE START switch. At the completion of Fine Align the ANS automatically enters the mode selected with the MODE switch. If ALIGN was selected the ANS remains in Fine Align until a navigation mode is selected or the aircraft is moved (in which case the system automatically enters the ASTRO INERTIAL mode).</p>
@@ -13565,11 +13565,11 @@
           <p>The alignment mode cannot be changed subsequent to the first MODE START or RAPID switch operation without turning the MODE switch to OFF or WARM UP and back to the desired mode. Merely moving the MODE switch to the alternate mode and pressing the MODE START switch does not change the mode of alignment.</p>
         </div>
         <h4>Ground Hot Start</h4>
-        <p>An abbreviated ground alignment is provided when the aircraft has not moved since the ANS was turned off following a normal ground alignment or operation in an operate mode. In this mode the RSO presses the HOT switch after power and cooling air are on. The ANS uses the true heading and present position stored in memory at the end of the previous operation. The ground hot start alignment consists of a variable time coarse alignment followed by a 30 second leveling period during which RESTART (RES) is displayed. The time in C/A should not exceed 90 seconds from the time HOT is pressed. Platform leveling is inhibited until 45 seconds after power is applied, then coarse alignment begins if HOT has been pressed. If HOT is not pressed, platform leveling is inhibited. When the platform tilt error is less than 10 arc minutes, the ANS enters the RES mode for 30 seconds of fine alignment. Failure to enter the RES mode means that the platform was unable to level to less than 10 arc minutes. The platform cannot recover from greater than 2-1/2 of tilt during a ground hot start. If the ANS will not come out of C/A, a rapid or gyrocompass alignment must be performed. Completion of a ground hot start alignment is indicated by the appearance of F/A in the MODE window.</p>
+        <p>An abbreviated ground alignment is provided when the aircraft has not moved since the ANS was turned off following a normal ground alignment or operation in an operate mode. In this mode the RSO presses the HOT switch after power and cooling air are on. The ANS uses the true heading and present position stored in memory at the end of the previous operation. The ground hot start alignment consists of a variable time coarse alignment followed by a 30 second leveling period during which RESTART (RES) is displayed. The time in C/A should not exceed 90 seconds from the time HOT is pressed. Platform leveling is inhibited until 45 seconds after power is applied, then coarse alignment begins if HOT has been pressed. If HOT is not pressed, platform leveling is inhibited. When the platform tilt error is less than 10 arc minutes, the ANS enters the RES mode for 30 seconds of fine alignment. Failure to enter the RES mode means that the platform was unable to level to less than 10 arc minutes. The platform cannot recover from greater than 2-1/2° of tilt during a ground hot start. If the ANS will not come out of C/A, a rapid or gyrocompass alignment must be performed. Completion of a ground hot start alignment is indicated by the appearance of F/A in the MODE window.</p>
         <div class="note">
           <p>If star tracking is not possible due to aircraft location or sky conditions, leave the system in F/A. Otherwise place the system in ASTRO INERTIAL mode by setting the MODE switch to ASTRO INERTIAL and press MODE START. When A-I appears in the MODE window, inertial data is used for all ANS updates and displays and the star tracker will start searching for an "A" star.</p>
         </div>
-        <p>The ANS uses the landing gear switch to distinguish between a ground hot start and a hot air start. Air mass damping is not performed following a ground hot start. Before a ground hot start, ground cooling air should be provided at 75°F if possible. Loading a new mission tape destroys the stored values of position and heading. If the stored heading is not accurate within 0.1 and the star ON light is off, a runway heading alignment should be performed following the ground hot start.</p>
+        <p>The ANS uses the landing gear switch to distinguish between a ground hot start and a hot air start. Air mass damping is not performed following a ground hot start. Before a ground hot start, ground cooling air should be provided at 75°F if possible. Loading a new mission tape destroys the stored values of position and heading. If the stored heading is not accurate within 0.1° and the star ON light is off, a runway heading alignment should be performed following the ground hot start.</p>
         <h4>Takeoff</h4>
         <p>If the runway heading alignment routine is used, maintain takeoff roll parallel to runway centerline. This alignment is automatically terminated at lift-off by a switch on the left main landing gear strut. The RSO must press the UPDATE or MAN CLEAR push-button to end the procedure.</p>
         <h4>In-Flight</h4>
@@ -13582,7 +13582,7 @@
         <p>Should there be an airborne power interruption or temporary malfunction, it may be possible to realign the. ANS using the air start procedure. A period of coarse alignment to level the platform is followed by a period when it may be possible to accurately level the platform for precision navigation by performing a series of fixes.</p>
         <p>Present position can be entered any time after initiating the air start procedure and is updated continuously thereafter by dead-reckoning computations. If present position has not been filled by the time the coarse align phase has been completed, the MODE window will indicate ENT (Enter data).</p>
         <p>The system also commences great circle navigation and sensor control using dead reckoning position as a reference in computing steering commands, true heading, range and bearing to points of interest, NORMAL display data, etc. True heading must be checked for accuracy and updated as required. Magnetic variation may be used to correct true heading when the ANS is in the C/A mode. Afterwards the TRUE HEADING UPDATE routine must be performed. Also, if accurate navigation is desired prior to star ON light illumination, the FILL WIND procedure should be used initially in the coarse align mode and repeated as wind conditions change until star ON steady illumination. Position fixes (TACAN, viewsight, or ASARS) may be used to update the dead reckon frame during this period. Remote updates may be used to update the inertial frame.</p>
-        <p>After coarse alignment is completed, the MODE window display changes to RES and the system commences internal airspeeddamped navigation using dead-reckon data as a starting point. In one minute the first airmass damping correction is made and corrections of diminishing magnitude are made every minute for the duration of the flight. These corrections do not cause auto-nav steering transients. Inertial present position can be displayed and compared with dead-reckon present position by using the DISPLAY PRESENT POS procedure. Star search begins when A-I appears in the MODE window. To optimize star acquisition, the aircraft should be flown straight and level.</p>
+        <p>After coarse alignment is completed, the MODE window display changes to RES and the system commences internal airspeed damped navigation using dead-reckon data as a starting point. In one minute the first airmass damping correction is made and corrections of diminishing magnitude are made every minute for the duration of the flight. These corrections do not cause auto-nav steering transients. Inertial present position can be displayed and compared with dead-reckon present position by using the DISPLAY PRESENT POS procedure. Star search begins when A-I appears in the MODE window. To optimize star acquisition, the aircraft should be flown straight and level.</p>
         <p>Acquisition of star A is indicated by flashing of the star ON indicator. When B star is acquired the star ON light goes out.</p>
         <p>When the star ON indicator goes on steady, indicating that continuous star tracking is in progress, inertial data is used to update all ANS outputs and internal dead-reckon computations. If the autopilot is engaged in the auto-nav mode, an aircraft maneuver will occur. Position fixes should be made and the system updated as required.</p>
       </section>
@@ -14475,7 +14475,7 @@
             </li>
             <li>
               <p>TACAN switch - Press.</p>
-              <p>Press when TACAN system values have been noted on BDHI. AU SELECTED DATA displays will clear.</p>
+              <p>Press when TACAN system values have been noted on BDHI. All SELECTED DATA displays will clear.</p>
             </li>
             <li>
               <p>TACAN mag bearing value - Enter (XXX°).</p>
@@ -14891,8 +14891,7 @@
               <p>Press RIGHT or LEFT push-button and enter camera CP code (L/R plus 000). Entered data appears in SD-5 window.</p>
             </li>
             <li>
-              <p>For all CPs enter sensors on-off code (three digits). First entered digit is LH</p>
-              <p>TECH camera, second is RH TECH camera. Enter 0 for off at CP, and 1 for on at CP. Corresponding sensor operation indicators illuminate to indicate sensor selection for the CP.</p>
+              <p>For all CPs enter sensors on-off code (three digits). First entered digit is LH TECH camera, second is RH TECH camera. Enter 0 for off at CP, and 1 for on at CP. Corresponding sensor operation indicators illuminate to indicate sensor selection for the CP.</p>
             </li>
           </ol>
           <p>If a Fixed-Range-To-Turn is desired:</p>
@@ -15506,7 +15505,7 @@
                 <p>ANS REF AND CAUTION ON</p>
               </td>
               <td>
-                <p>HSI RANCE SHUTTER CLOSED</p>
+                <p>HSI RANGE SHUTTER CLOSED</p>
               </td>
               <td>
                 <p>ATTITUDE IND OFF FLAG IN VIEW</p>
