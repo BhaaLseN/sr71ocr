@@ -6,7 +6,10 @@ For the original source see [www.sr-71.org](https://www.sr-71.org/blackbird/manu
 ## TODO List
 - [x] Spellcheck
 - [ ] Cross-check the OCR against the original (again)
-- [ ] Create cross-references for plain-text (mainly figures and other sections)
+- [x] Create cross-references for plain-text (mainly figures and other sections)
+- [ ] Tag unit-differences (°C vs. °F, lb vs. kg, ...)
+- [ ] Tag acronyms and abbreviations
+- [ ] Use consistent spacing for units/values and symbols
 - [x] Turn Warnings/Cautions/Notes into actual markup
 - [x] Move figures closer to their usage (or at least the most appropriate sub/section)
   - [x] Section I
@@ -21,10 +24,12 @@ For the original source see [www.sr-71.org](https://www.sr-71.org/blackbird/manu
 - [x] Split the large files into section
   - [ ] Split the large files into multiple files
 - [ ] Vectorize, redraw or at least touch-up images
+- [ ] Rotate (or tag) large landscape images
 - [ ] Complete the manual:
   - [ ] Lost/missing: 1-28A, 1-28B (Instrument Panel with SB?)
   - [ ] Lost/missing: 1-174, 1-175 (TACAN Operation, Windshield, Canopies)
   - [ ] Classified: 4-150 through 4-160 (ASARS-1)
+  - [ ] Lost/missing: A6-60, A6-62, A6-64 (Figures A6-16, A6-18 and A6-20)
 - [ ] OCR the other manuals:
   - [ ] Functional Check Flight Procedures [SR-71-6CF-1](https://www.sr-71.org/blackbird/sr-71-6cf-1/)
   - [ ] The YF-12A Utility Flight Manual [YF-12A-1](https://www.sr-71.org/blackbird/yf-12a-1/)
