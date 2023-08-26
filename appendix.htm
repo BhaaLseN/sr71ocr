@@ -32,7 +32,7 @@
                 <p>Introduction</p>
               </td>
               <td>
-                <p>A1-1</p>
+                <p><a href="#part1">A1-1</a></p>
               </td>
             </tr>
             <tr>
@@ -43,7 +43,7 @@
                 <p>Takeoff and Landing Performance</p>
               </td>
               <td>
-                <p>A2-1</p>
+                <p><a href="#part2">A2-1</a></p>
               </td>
             </tr>
             <tr>
@@ -54,7 +54,7 @@
                 <p>Climb and Descent Performance</p>
               </td>
               <td>
-                <p>A3-1</p>
+                <p><a href="#part3">A3-1</a></p>
               </td>
             </tr>
             <tr>
@@ -65,7 +65,7 @@
                 <p>Subsonic Cruise Performance</p>
               </td>
               <td>
-                <p>A4-1</p>
+                <p><a href="#part4">A4-1</a></p>
               </td>
             </tr>
             <tr>
@@ -76,7 +76,7 @@
                 <p>Supersonic Cruise Performance</p>
               </td>
               <td>
-                <p>A5-1</p>
+                <p><a href="#part5">A5-1</a></p>
               </td>
             </tr>
             <tr>
@@ -87,7 +87,7 @@
                 <p>Mission Planning Data</p>
               </td>
               <td>
-                <p>A6-1</p>
+                <p><a href="#part6">A6-1</a></p>
               </td>
             </tr>
           </tbody>
@@ -919,7 +919,7 @@
           </tbody>
         </table>
       </section>
-      <article data-title="Part I: Introduction">
+      <article data-title="Part I: Introduction" id="part1">
         <h1>PART I</h1>
         <h2>INTRODUCTION</h2>
         <section data-title="Table of Contents">
@@ -1171,7 +1171,7 @@
         </section>
         <section>
           <h3>Fuel and Fuel Density</h3>
-          <p>Performance and operating weight are based on JP-7 (PWA-535) fuel at a fuel density of 6.57 pounds per gallon. The effect on operational capabilities must be considered if fuel density is different from this nominal value. Typical variation of JP-7 fuel density with temperature is shown in Figure A1-11. With full fuel tanks, the fuel load varies 1220 pounds for each 0.1 pound per gallon change in fuel density.</p>
+          <p>Performance and operating weight are based on JP-7 (PWA-535) fuel at a fuel density of 6.57 pounds per gallon. The effect on operational capabilities must be considered if fuel density is different from this nominal value. Typical variation of JP-7 fuel density with temperature is shown in <a href="#fig-A1-11">Figure A1-11</a>. With full fuel tanks, the fuel load varies 1220 pounds for each 0.1 pound per gallon change in fuel density.</p>
         </section>
         <section>
           <h3>Airspeed Systems</h3>
@@ -1183,12 +1183,12 @@
         <section>
           <h3>Position Error Corrections</h3>
           <h4>Pitot-Static Instruments</h4>
-          <p>Figures A1-1 and A1-2 supply position error corrections for the altimeter and airspeed indicator. Subsonic corrections were obtained from inflight and ground run calibrations. Supersonic corrections were obtained from wind tunnel calibrations.</p>
-          <figure>
+          <p>Figures <a href="#fig-A1-1">A1-1</a> and <a href="#fig-A1-2">A1-2</a> supply position error corrections for the altimeter and airspeed indicator. Subsonic corrections were obtained from inflight and ground run calibrations. Supersonic corrections were obtained from wind tunnel calibrations.</p>
+          <figure id="fig-A1-1">
             <img src="images/A1-1.jpg" alt="" />
             <figcaption>Figure A1-1: Position Error Corrections vs Mach</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A1-2">
             <img src="images/A1-2.jpg" alt="" />
             <figcaption>Figure A1-2: Position Error Corrections vs IAS</figcaption>
           </figure>
@@ -1200,18 +1200,18 @@
           <p>
             <span>Standard corrections for compressibility effects on</span>
             <u>KIAS</u>
-            <span>are provided by Figure A1-3. To obtain KEAS, subtract these corrections from</span>
+            <span>are provided by <a href="#fig-A1-3">Figure A1-3</a>. To obtain KEAS, subtract these corrections from</span>
             <u>KIAS</u>
             <span>after the position error corrections have been made.</span>
           </p>
-          <figure>
+          <figure id="fig-A1-3">
             <img src="images/A1-3.jpg" alt="" />
             <figcaption>Figure A1-3: Airspeed Compressibility Correction Chart (applicable after Position Error Correction)</figcaption>
           </figure>
           <p>
             <span>A comparison of KEAS from the TDI and</span>
             <u>KIAS</u>
-            <span>from the normal ship system is shown on Figure A1-4. This Figure is the basis for the normal climb and descent and limit</span>
+            <span>from the normal ship system is shown on <a href="#fig-A1-4">Figure A1-4</a>. This Figure is the basis for the normal climb and descent and limit</span>
             <u>indicated</u>
             <span>airspeed values provided by the placard on the TDI. For example, at 400 KEAS, the normal ship system indicates 422</span>
             <u>KIAS</u>
@@ -1219,51 +1219,51 @@
             <u>KIAS</u>
             <span>at 50,000 feet indicated pressure altitude. Other combinations of indicated altitude and</span>
             <u>KIAS</u>
-            <span>can be determined from Figure A1-4 and used to determine KEAS if the TDI fails.</span>
+            <span>can be determined from <a href="#fig-A1-4">Figure A1-4</a> and used to determine KEAS if the TDI fails.</span>
           </p>
-          <figure>
+          <figure id="fig-A1-4">
             <img src="images/A1-4.jpg" alt="" />
             <figcaption>Figure A1-4: Approximate differences between IAS and EAS indications</figcaption>
           </figure>
         </section>
         <section>
           <h3>True Mach Number vs Equivalent Airspeed</h3>
-          <p>Figures A1-5 and A1-6 show the relationship between true Mach number, pressure altitude, and equivalent airspeed (KEAS), based on a "gamma" of 1.4. (γ = 1.4 is the standard specific heat ratio for air below 350°C. It decreases slightly at higher temperatures.) Figure A1-6 is a rearrangement and expansion of part of the material on sheet 3 of Figure A1-5. It is applicable between FL 650 and FL 860 from Mach 2.55 to Mach 3.35. It is also reproduced in the pilot's and RSO's checklists. In flight, it can be used to check the TDI Mach-KEAS-Altitude display.</p>
-          <figure>
+          <p>Figures <a href="#fig-A1-5">A1-5</a> and <a href="#fig-A1-6">A1-6</a> show the relationship between true Mach number, pressure altitude, and equivalent airspeed (KEAS), based on a "gamma" of 1.4. (γ = 1.4 is the standard specific heat ratio for air below 350°C. It decreases slightly at higher temperatures.) <a href="#fig-A1-6">Figure A1-6</a> is a rearrangement and expansion of part of the material on <a href="#fig-A1-5-3">sheet 3 of Figure A1-5</a>. It is applicable between FL 650 and FL 860 from Mach 2.55 to Mach 3.35. It is also reproduced in the pilot's and RSO's checklists. In flight, it can be used to check the TDI Mach-KEAS-Altitude display.</p>
+          <figure id="fig-A1-5">
             <img src="images/A1-5_1.jpg" alt="" />
             <figcaption>Figure A1-5 (Sheet 1 of 3): True Mach Number vs Equivalent Airspeed</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A1-5-2">
             <img src="images/A1-5_2.jpg" alt="" />
             <figcaption>Figure A1-5 (Sheet 2 of 3): True Mach Number vs Equivalent Airspeed</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A1-5-3">
             <img src="images/A1-5_3.jpg" alt="" />
             <figcaption>Figure A1-5 (Sheet 3 of 3): True Mach Number vs Equivalent Airspeed</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A1-6">
             <img src="images/A1-6.jpg" alt="" />
             <figcaption>Figure A1-6: TDI Mach-KEAS-Altitude Relationship above FL 650</figcaption>
           </figure>
         </section>
         <section>
           <h3>Mach-Airspeed-Temperature Relationship</h3>
-          <p>Ambient air temperature and true airspeed can be obtained from CIT and TDI Mach as shown on the Mach-Airspeed-Temperature charts, Figures A1-7 and A1-8. For example, as shown on Figure A1-7, at a TDI Mach of 3.05 and CIT of 300°C the ambient temperature is -072°C and the true airspeed is 1686 knots. The effect of adiabatic compression and temperature rise on atmospheric characteristics has been included by using a variable γ parameter.</p>
-          <figure>
+          <p>Ambient air temperature and true airspeed can be obtained from CIT and TDI Mach as shown on the Mach-Airspeed-Temperature charts, Figures <a href="#fig-A1-7">A1-7</a> and <a href="#fig-A1-8">A1-8</a>. For example, as shown on <a href="#fig-A1-7">Figure A1-7</a>, at a TDI Mach of 3.05 and CIT of 300°C the ambient temperature is -072°C and the true airspeed is 1686 knots. The effect of adiabatic compression and temperature rise on atmospheric characteristics has been included by using a variable γ parameter.</p>
+          <figure id="fig-A1-7">
             <img src="images/A1-7.jpg" alt="" />
             <figcaption>Figure A1-7: Mach-Airspeed-Temperature Conversion</figcaption>
           </figure>
-          <p>Figure A1-8 is a rearrangement and expansion of Figure A1-7 between Mach 2.55 and 3.35. Special emphasis is given to the CIT range above 300°C to provide increased reading accuracy for true airspeeds encountered at normal cruise speeds. This chart is also reproduced in the pilot's and RSO's checklists. In flight, it can be used with the ANS true airspeed output to crosscheck the TDI and pitot-static system Mach displays at normal cruise speeds. It can also be used to check ambient temperature so that the effects of FAT on cruise and maneuvering capability can be anticipated.</p>
-          <figure>
+          <p><a href="#fig-A1-8">Figure A1-8</a> is a rearrangement and expansion of <a href="#fig-A1-7">Figure A1-7</a> between Mach 2.55 and 3.35. Special emphasis is given to the CIT range above 300°C to provide increased reading accuracy for true airspeeds encountered at normal cruise speeds. This chart is also reproduced in the pilot's and RSO's checklists. In flight, it can be used with the ANS true airspeed output to crosscheck the TDI and pitot-static system Mach displays at normal cruise speeds. It can also be used to check ambient temperature so that the effects of FAT on cruise and maneuvering capability can be anticipated.</p>
+          <figure id="fig-A1-8">
             <img src="images/A1-8.jpg" alt="" />
             <figcaption>Figure A1-8: Mach-Airspeed-Temperature Conversions above Mach 2.6</figcaption>
           </figure>
         </section>
         <section>
           <h3>Standard Atmosphere</h3>
-          <p>The 1956 ARDC standard atmosphere table, Figure A1-9, provides reference temperature, pressure, air density, and sonic speed information which may be of assistance in flight planning. Figure A1-10 compares the 1956 ARDC standard atmosphere and the MIL-STD-210A tropic atmosphere temperature vs altitude schedules.</p>
+          <p>The 1956 ARDC standard atmosphere table, <a href="#fig-A1-9">Figure A1-9</a>, provides reference temperature, pressure, air density, and sonic speed information which may be of assistance in flight planning. <a href="#fig-A1-10">Figure A1-10</a> compares the 1956 ARDC standard atmosphere and the MIL-STD-210A tropic atmosphere temperature vs altitude schedules.</p>
           <h3>ARDC Model Atmosphere - 1956</h3>
-          <table border="1">
+          <table border="1" id="fig-A1-9">
             <caption>Figure A1-9: Standard Atmosphere Table</caption>
             <thead>
               <tr>
@@ -5860,30 +5860,30 @@
           <p>Constant Temperature P<sub>1</sub>/P<sub>0</sub> = V<sub>1</sub>/V<sub>0</sub></p>
           <p>Reversible Adiabatic P<sub>1</sub>/P<sub>0</sub> = (V<sub>0</sub>/V<sub>1</sub>)<sup>γ</sup> T<sub>1</sub>/T<sub>0</sub> = (V<sub>0</sub>/V<sub>1</sub>)<sup>γ</sup> = (P<sub>1</sub>/P<sub>0</sub>) <sup>γ-1/γ</sup></p>
           <p>Polytropic P<sub>1</sub>V<sub>1</sub>n = P<sub>0</sub>V<sub>0</sub>n T<sub>1</sub>/T<sub>0</sub>= (V<sub>1</sub>/V<sub>0</sub>)<sup>1-n</sup> = (P<sub>1</sub>/P<sub>0</sub>)<sup>n-1/n</sup></p>
-          <figure>
+          <figure id="fig-A1-10">
             <img src="images/A1-10.jpg" alt="" />
             <figcaption>Figure A1-10: Free Air Temperature Variation with Altitude</figcaption>
           </figure>
         </section>
         <section>
           <h3>Standard Units Conversion</h3>
-          <p>The standard units conversion chart, Figure A1-11, provides a means for conversion of temperature, distance, and speed between English and metric units.</p>
-          <figure>
+          <p>The standard units conversion chart, <a href="#fig-A1-11">Figure A1-11</a>, provides a means for conversion of temperature, distance, and speed between English and metric units.</p>
+          <figure id="fig-A1-11">
             <img src="images/A1-11.jpg" alt="" />
             <figcaption>Figure A1-11: Standard Units Conversion Chart</figcaption>
           </figure>
         </section>
         <section>
           <h3>W/δ AS A FUNCTION OF GROSS WEIGHT AND ALTITUDE</h3>
-          <p>Figure A1-12 presents the relationship between the cruise parameter W/δ and airplane gross weight and altitude.</p>
-          <figure>
+          <p><a href="#fig-A1-12">Figure A1-12</a> presents the relationship between the cruise parameter W/δ and airplane gross weight and altitude.</p>
+          <figure id="fig-A1-12">
             <img src="images/A1-12.jpg" alt="" />
             <figcaption>Figure A1-12: W/δ as a Function of Gross Weight and Altitude</figcaption>
           </figure>
         </section>
         <section>
           <h3>BANK ANGLE vs LOAD FACTOR</h3>
-          <p>The following table provides the load factors associated with bank angles up to 70 during coordinated level turns. (Refer to Section V for load factor limits.)</p>
+          <p>The following table provides the load factors associated with bank angles up to 70 during coordinated level turns. (Refer to <a href="5.htm#load-factor-limits">Section V</a> for load factor limits.)</p>
           <table border="1">
             <thead>
               <tr>
@@ -6018,13 +6018,13 @@
               </tr>
             </tbody>
           </table>
-          <figure>
+          <figure id="fig-A1-13">
             <img src="images/A1-13.jpg" alt="" />
             <figcaption>Figure A1-13: Typical Variation of Fuel Density with Temperature</figcaption>
           </figure>
         </section>
       </article>
-      <article data-title="Part II: Takeoff and Landing Performance">
+      <article data-title="Part II: Takeoff and Landing Performance" id="part2">
         <h1>Part II</h1>
         <h2>Takeoff and Landing Performance</h2>
         <section data-title="Table of Contents">
@@ -6249,13 +6249,13 @@
             <p>Refusal speed and landing distance information is conservative when the ambient temperature is hotter than 32°C (90°F) because it does not reflect Pratt and Whitney EC 173960 which decreased J-58 idle RPM to 3975 above 32°C.</p>
           </div>
           <h4>Crosswind Component &amp; Rated Tire Speed Chart</h4>
-          <p>The upper part of Figure A2-1 is used to convert wind velocity and direction into runway and crosswind components. The lower portion of the chart is used to determine whether takeoff and landing speeds will exceed rated tire speed.</p>
-          <figure>
+          <p>The upper part of <a href="#fig-A2-1">Figure A2-1</a> is used to convert wind velocity and direction into runway and crosswind components. The lower portion of the chart is used to determine whether takeoff and landing speeds will exceed rated tire speed.</p>
+          <figure id="fig-A2-1">
             <img src="images/A2-1.jpg" alt="" />
             <figcaption>Figure A2-1: Crosswind component and rated tire speed conversion charts</figcaption>
           </figure>
         </section>
-        <section>
+        <section id="takeoff-performance">
           <h3>Takeoff Performance</h3>
           <p>Charts are furnished for normal, alternate (maximum speed), and maximum performance (minimum distance) takeoff procedures. Takeoff climbout distances are included for normal performance takeoffs. The information supplied by the charts is supplied in the Pilot's and RSO's checklists.</p>
           <h4>Normal Performance Takeoff</h4>
@@ -6279,21 +6279,21 @@
           <div class="note">
             <p>Do not reduce takeoff speed below the maximum performance takeoff speed schedule.</p>
           </div>
-          <p>Figure A2-2 shows the ground run distance associated with the normal performance takeoff speed.</p>
-          <figure>
+          <p><a href="#fig-A2-2">Figure A2-2</a> shows the ground run distance associated with the normal performance takeoff speed.</p>
+          <figure id="fig-A2-2">
             <img src="images/A2-2.jpg" alt="" />
             <figcaption>Figure A2-2: Normal performance takeoff</figcaption>
           </figure>
           <h4>Takeoff Climbout Distance</h4>
-          <p>Figure A2-3 shows the distance from liftoff to heights of 50 feet and 200 feet above the runway when using the normal performance takeoff procedure.</p>
-          <figure>
+          <p><a href="#fig-A2-3">Figure A2-3</a> shows the distance from liftoff to heights of 50 feet and 200 feet above the runway when using the normal performance takeoff procedure.</p>
+          <figure id="fig-A2-3">
             <img src="images/A2-3.jpg" alt="" />
             <figcaption>Figure A2-3: Takeoff climb out distance</figcaption>
           </figure>
           <p>
             <u>Example:</u>
           </p>
-          <p>For a field pressure altitude of sea level, ambient temperature of 86°F (30°C), and a takeoff gross weight of 120,000 lb, determine the normal performance takeoff distance with a 10 knot headwind and 1% downhill runway slope. Refer to Figures A2-2 and A2-3. (Takeoff distance with predicted wind and slope is 4800 feet. The distances from liftoff to 50 feet and 200 feet above the runway are 3050 feet and 5500 feet, respectively. Total distance to 50 feet is 7850 feet, and to 200 feet is 10,300 feet.)</p>
+          <p>For a field pressure altitude of sea level, ambient temperature of 86°F (30°C), and a takeoff gross weight of 120,000 lb, determine the normal performance takeoff distance with a 10 knot headwind and 1% downhill runway slope. Refer to Figures <a href="#fig-A2-2">A2-2</a> and <a href="#fig-A2-3">A2-3</a>. (Takeoff distance with predicted wind and slope is 4800 feet. The distances from liftoff to 50 feet and 200 feet above the runway are 3050 feet and 5500 feet, respectively. Total distance to 50 feet is 7850 feet, and to 200 feet is 10,300 feet.)</p>
           <h4>Alternate (Maximum Speed) Takeoff</h4>
           <figure>
             <img src="images/A2c.jpg" alt="" />
@@ -6318,11 +6318,11 @@
             <u>Example:</u>
           </p>
           <p>
-            <span>For the normal performance takeoff example, find the takeoff speed and distance for an alternate procedure takeoff. Refer to Figure A2-4. (Takeoff speed is 237</span>
+            <span>For the normal performance takeoff example, find the takeoff speed and distance for an alternate procedure takeoff. Refer to <a href="#fig-A2-4">Figure A2-4</a>. (Takeoff speed is 237</span>
             <u>KIAS</u>
             <span>. Takeoff distance is 6250 feet.)</span>
           </p>
-          <figure>
+          <figure id="fig-A2-4">
             <img src="images/A2-4.jpg" alt="" />
             <figcaption>Figure A2-4: Alternate (maximum speed) takeoff performance</figcaption>
           </figure>
@@ -6332,27 +6332,27 @@
             <figcaption>Maximum performance (minimum distance) takeoff</figcaption>
           </figure>
           <p>For the maximum performance (minimum distance) takeoff procedure, takeoff speed is scheduled according to gross weight and corresponds to a lift coefficient of 0.60. Since tail clearance at lift-off will be at a minimum, this procedure is recommended only when required by field length and/or tailwind conditions.</p>
-          <p>Figure A2-5 presents maximum performance takeoff distances. Takeoff speeds are listed with the corresponding gross weights. Rotation speeds are also shown, based on 4.5 seconds from rotation to lift-off.</p>
+          <p><a href="#fig-A2-5">Figure A2-5</a> presents maximum performance takeoff distances. Takeoff speeds are listed with the corresponding gross weights. Rotation speeds are also shown, based on 4.5 seconds from rotation to lift-off.</p>
           <p>
             <u>Example:</u>
           </p>
           <p>
             <span>For a field pressure altitude of sea level, ambient temperature of 86°F (30°C), and a takeoff gross weight of 120,000 lb, determine the maximum performance takeoff distance, rotation speed, and takeoff speed with a 10 knot headwind and</span>
             <span>1%</span>
-            <span>downhill runway slope. Refer to Figure A2-5. (Rotation speed is 160</span>
+            <span>downhill runway slope. Refer to <a href="#fig-A2-5">Figure A2-5</a>. (Rotation speed is 160</span>
             <u>KIAS</u>
             <span>. Takeoff speed is 192</span>
             <u>KIAS</u>
             <span>. Takeoff distance is 3950 feet.)</span>
           </p>
-          <figure>
+          <figure id="fig-A2-5">
             <img src="images/A2-5.jpg" alt="" />
             <figcaption>Figure A2-5: Maximum performance (minimum distance) takeoff</figcaption>
           </figure>
         </section>
         <section>
           <h4>Takeoff Fuel Allowance</h4>
-          <p>Fuel load at engine start should be adjusted to allow for fuel consumption prior to takeoff. Use 150 lb per minute for planning purposes. Fuel consumption during the takeoff run is approximately 1000 pounds. Refer to the subsonic climb performance charts, Figures A3-1 and A3-2 for fuel planning data.</p>
+          <p>Fuel load at engine start should be adjusted to allow for fuel consumption prior to takeoff. Use 150 lb per minute for planning purposes. Fuel consumption during the takeoff run is approximately 1000 pounds. Refer to the subsonic climb performance charts, Figures <a href="#fig-A3-1">A3-1</a> and <a href="#fig-A3-2">A3-2</a> for fuel planning data.</p>
         </section>
         <section>
           <h3>Acceleration Check</h3>
@@ -6361,15 +6361,15 @@
             <figcaption>Acceleration check</figcaption>
           </figure>
           <p>
-            <span>Figure A2-6 provides a means of checking takeoff acceleration performance during the first part of the takeoff ground run. Normally the check is indicated airspeed reached at the 3000 foot marker. However, any combination of speed and acceleration check distance can be used. The acceleration check should be accomplished below 165</span>
+            <span><a href="#fig-A2-6">Figure A2-6</a> provides a means of checking takeoff acceleration performance during the first part of the takeoff ground run. Normally the check is indicated airspeed reached at the 3000 foot marker. However, any combination of speed and acceleration check distance can be used. The acceleration check should be accomplished below 165</span>
             <u>KIAS</u>
             <span>and the acceleration check distance reduced, if necessary, to achieve this speed.</span>
           </p>
-          <figure>
+          <figure id="fig-A2-6">
             <img src="images/A2-6_1.jpg" alt="" />
             <figcaption>Figure A2-6 (Sheet 1 of 2): Acceleration check</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A2-6-2">
             <img src="images/A2-6_2.jpg" alt="" />
             <figcaption>Figure A2-6 (Sheet 2 of 2): Acceleration check</figcaption>
           </figure>
@@ -6378,35 +6378,35 @@
             <u>Example:</u>
           </p>
           <p>
-            <span>For the normal performance takeoff example, i.e., sea level altitude, 86°F temperature, 120,000 lb gross weight, 10 knot headwind, and 1% downhill runway slope, find the acceleration check speed corresponding to 2800 feet during the takeoff run. (3000 foot marker less 200 feet lineup allowance.) Refer to Figure A2-6. (Acceleration check speed is 156</span>
+            <span>For the normal performance takeoff example, i.e., sea level altitude, 86°F temperature, 120,000 lb gross weight, 10 knot headwind, and 1% downhill runway slope, find the acceleration check speed corresponding to 2800 feet during the takeoff run. (3000 foot marker less 200 feet lineup allowance.) Refer to <a href="#fig-A2-6">Figure A2-6</a>. (Acceleration check speed is 156</span>
             <u>KIAS</u>
             <span>.)</span>
           </p>
         </section>
         <section>
           <h4>Refusal Speed</h4>
-          <p>Refusal speed is the maximum speed from which the aircraft can be brought to a stop in a given accelerate-stop distance, usually the available runway length. Maximum refusal speed is the maximum speed from which the aircraft can be brought to a stop without exceeding the energy capacity of the brakes. Either the scheduled rotation speed or the refusal speed with drag chute can be listed on the TOL data card. Refusal speeds on dry and wet runways, with and without drag chute, may be obtained from Figures A2-7, A2-9, and A2-10. Maximum refusal speeds when brake energy is limited, for dry and wet runways, with and without drag chute, may be obtained from Figures A2-8 and A2-11. (On a wet runway, with WET selected and drag chute deployed, the brakes do not absorb enough energy to exceed the brake energy rating. Therefore no data is presented for this condition.) Refusal speeds are given as a function of RCR, ambient temperature, pressure altitude, and gross weight. Brake energy capacity is assumed to be 90% of full rated one-stop capability, thus allowing some normal use prior to a refused takeoff. It is also assumed that brake application is not delayed when airspeed is above the rated brake energy speed (Figure 5-8, Section V). Therefore, the maximum refusal speed (brake energy limited) charts should always be used with the refusal speed charts to ensure that brake energy capacity is not exceeded.</p>
+          <p>Refusal speed is the maximum speed from which the aircraft can be brought to a stop in a given accelerate-stop distance, usually the available runway length. Maximum refusal speed is the maximum speed from which the aircraft can be brought to a stop without exceeding the energy capacity of the brakes. Either the scheduled rotation speed or the refusal speed with drag chute can be listed on the TOL data card. Refusal speeds on dry and wet runways, with and without drag chute, may be obtained from Figures <a href="#fig-A2-7">A2-7</a>, <a href="#fig-A2-9">A2-9</a>, and <a href="#fig-A2-10">A2-10</a>. Maximum refusal speeds when brake energy is limited, for dry and wet runways, with and without drag chute, may be obtained from Figures <a href="#fig-A2-8">A2-8</a> and <a href="#fig-A2-11">A2-11</a>. (On a wet runway, with WET selected and drag chute deployed, the brakes do not absorb enough energy to exceed the brake energy rating. Therefore no data is presented for this condition.) Refusal speeds are given as a function of RCR, ambient temperature, pressure altitude, and gross weight. Brake energy capacity is assumed to be 90% of full rated one-stop capability, thus allowing some normal use prior to a refused takeoff. It is also assumed that brake application is not delayed when airspeed is above the rated brake energy speed (<a href="5.htm#fig-5-8">Figure 5-8, Section V</a>). Therefore, the maximum refusal speed (brake energy limited) charts should always be used with the refusal speed charts to ensure that brake energy capacity is not exceeded.</p>
           <div class="note">
             <p>Brake application should not be delayed when the abort speed is greater than the rated brake energy speed. The increased distance traveled at high speed will increase the risk of tire failure, which in turn will decrease the brake energy capacity available for stopping.</p>
           </div>
           <p>For abort conditions where brake burn-out will occur before a stop can be made, either the takeoff should be continued, if possible, or a barrier engagement should be anticipated. Various factors may contribute to less than optimum performance, such as blown tires, delayed drag chute deployment, etc.</p>
-          <figure>
+          <figure id="fig-A2-7">
             <img src="images/A2-7.jpg" alt="" />
             <figcaption>Figure A2-7: Refusal speed with Drag Chute (Dry Runway, Variable RCR)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A2-8">
             <img src="images/A2-8.jpg" alt="" />
             <figcaption>Figure A2-8: Maximum refusal speed - brake energy limited*</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A2-9">
             <img src="images/A2-9.jpg" alt="" />
             <figcaption>Figure A2-9: Refusal speed with Drag Chute (Wet Runway, Variable RCR)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A2-10">
             <img src="images/A2-10.jpg" alt="" />
             <figcaption>Figure A2-10: Refusal speed without Drag Chute (Dry or Wet Runway, Variable RCR)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A2-11">
             <img src="images/A2-11.jpg" alt="" />
             <figcaption>Figure A2-11: Maximum refusal speed - brake energy limited*</figcaption>
           </figure>
@@ -6440,9 +6440,9 @@
             <u>Example:</u>
           </p>
           <p>
-            <span>For a field pressure altitude of sea level, temperature of 86°F, and gross weight of 120,000 lb find the refusal speed with drag chute for a 12,000 ft accelerate and stop distance. The runway is dry (RCR=23). Refer to Figures A2-7 and A2-8. (Refusal speed from Figure A2-7 is 206</span>
+            <span>For a field pressure altitude of sea level, temperature of 86°F, and gross weight of 120,000 lb find the refusal speed with drag chute for a 12,000 ft accelerate and stop distance. The runway is dry (RCR=23). Refer to Figures <a href="#fig-A2-7">A2-7</a> and <a href="#fig-A2-8">A2-8</a>. (Refusal speed from <a href="#fig-A2-7">Figure A2-7</a> is 206</span>
             <u>KIAS.</u>
-            <span>Maximum refusal speed, brake energy limited, from figure A2-8, is 221</span>
+            <span>Maximum refusal speed, brake energy limited, from <a href="#fig-A2-8">Figure A2-8</a>, is 221</span>
             <u>KIAS</u>
             <span>.)</span>
           </p>
@@ -6457,7 +6457,7 @@
             <u>Example:</u>
           </p>
           <p>
-            <span>Find the refusal speed without drag chute for the conditions of the previous example. Refer to Figures A2-10 and A2-11. (Refusal speed from Figure A2-10 is 188</span>
+            <span>Find the refusal speed without drag chute for the conditions of the previous example. Refer to Figures <a href="#fig-A2-10">A2-10</a> and <a href="#fig-A2-11">A2-11</a>. (Refusal speed from <a href="#fig-A2-10">Figure A2-10</a> is 188</span>
             <u>KIAS</u>
             <span>. Maximum refusal speed, brake energy limited, is 179</span>
             <u>KIAS</u>
@@ -6466,8 +6466,8 @@
         </section>
         <section>
           <h3>Single-Engine Climb Capability</h3>
-          <p>In the event of engine failure after lift-off, marginal control during climbout will be available even if immediate corrective action is taken. Takeoff speeds are normally higher than minimum single-engine control speeds for steady flight. (Refer to Takeoff Emergencies, Section III.)</p>
-          <p>Figures A2-12 and A2-13 show single-engine level flight speeds and minimum aerodynamic control speeds, in and out of ground effect, with the gear down or retracted. ("In ground effect" refers to operation as close to the ground as airplane geometry will permit.) Ground effect diminishes rapidly as height increases and the aircraft is essentially out of ground effect at heights above one-half wing span (approximately 30 feet above the ground).</p>
+          <p>In the event of engine failure after lift-off, marginal control during climbout will be available even if immediate corrective action is taken. Takeoff speeds are normally higher than minimum single-engine control speeds for steady flight. (Refer to <a href="3.htm#takeoff-emergency">Takeoff Emergencies, Section III</a>.)</p>
+          <p>Figures <a href="#fig-A2-12">A2-12</a> and <a href="#fig-A2-13">A2-13</a> show single-engine level flight speeds and minimum aerodynamic control speeds, in and out of ground effect, with the gear down or retracted. ("In ground effect" refers to operation as close to the ground as airplane geometry will permit.) Ground effect diminishes rapidly as height increases and the aircraft is essentially out of ground effect at heights above one-half wing span (approximately 30 feet above the ground).</p>
           <p>The charts include the effects of pressure altitude, temperature, and gross weight. One engine is assumed to be windmilling and the other engine developing maximum afterburning thrust. The single-engine level flight speed data out of ground effect are based on flight tests with full rudder deflection and the C.G. at 20% MAC.</p>
           <p>For performance at other C.G. positions the gross weight should be increased/decreased 1500 lbs for each percent the C.G. is forward/aft of 20% MAC, i.e.</p>
           <ul class="list-none">
@@ -6499,7 +6499,7 @@
             <dt>C.G.</dt>
             <dd>20% MAC</dd>
           </dl>
-          <p>Refer to Figures 3-2, A2-12, and A2-13.</p>
+          <p>Refer to Figures <a href="3.htm#fig-3-2">3-2</a>, <a href="#fig-A2-12">A2-12</a>, and <a href="#fig-A2-13">A2-13</a>.</p>
           <p>
             <span>With the gear up or down, the minimum control speed is 209</span>
             <u>KIAS</u>
@@ -6511,7 +6511,7 @@
             <u>KIAS</u>
             <span>at 6 and 10 angle of attack, respectively.</span>
           </p>
-          <p>Refer to Figure A2-12.</p>
+          <p>Refer to <a href="#fig-A2-12">Figure A2-12</a>.</p>
           <p>
             <span>With the gear down, in ground effect, level flight can not be maintained under these ambient conditions at a gross weight of 120,000 lb. The maximum gross weight would be 116,500 lb and 248</span>
             <u>KIAS</u>
@@ -6522,7 +6522,7 @@
             <u>KIAS</u>
             <span>.</span>
           </p>
-          <p>Refer to Figure A2-13.</p>
+          <p>Refer to <a href="#fig-A2-13">Figure A2-13</a>.</p>
           <p>
             <span>With the gear down, out of ground effect, level flight can not be maintained under these conditions. The maximum gross weight would be 103,500 lb and 247</span>
             <u>KIAS</u>
@@ -6541,7 +6541,7 @@
             <u>KIAS</u>
             <span>. Since the gear would ordinarily be retracting during acceleration, this value represents a target speed for transition to a shallow climb. The best single-engine climb speed with</span>
             <u>gear up, out of ground effect</u>
-            <span>, is shown on Figure A2-14. This chart also presents rate of climb information for off-optimum climb speeds.</span>
+            <span>, is shown on <a href="#fig-A2-14">Figure A2-14</a>. This chart also presents rate of climb information for off-optimum climb speeds.</span>
           </p>
           <p>
             <u>Example:</u>
@@ -6557,7 +6557,7 @@
             <dt>C.G.</dt>
             <dd>20% MAC</dd>
           </dl>
-          <p>Refer to Figure A2-14.</p>
+          <p>Refer to <a href="#fig-A2-14">Figure A2-14</a>.</p>
           <p>
             <span>The optimum climb speed is 335</span>
             <u>KIAS</u>
@@ -6568,15 +6568,15 @@
             <u>KIAS</u>
             <span>the rate of climb would be 760 feet per minute.</span>
           </p>
-          <figure>
+          <figure id="fig-A2-12">
             <img src="images/A2-12.jpg" alt="" />
             <figcaption>Figure A2-12: Single-Engine level flight speeds (in Ground Effect)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A2-13">
             <img src="images/A2-13.jpg" alt="" />
             <figcaption>Figure A2-13: Single-Engine level flight speeds (out of Ground Effect)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A2-14">
             <img src="images/A2-14.jpg" alt="" />
             <figcaption>Figure A2-14: Single-Engine maximum thrust rate of climb</figcaption>
           </figure>
@@ -6590,7 +6590,7 @@
             <figcaption>Approach and Landing speed schedules</figcaption>
           </figure>
           <p>
-            <span>Final approach and landing speed schedules are shown on Figure A2-15. Normal performance final approach and landing speeds are 175</span>
+            <span>Final approach and landing speed schedules are shown on <a href="#fig-A2-15">Figure A2-15</a>. Normal performance final approach and landing speeds are 175</span>
             <u>KIAS</u>
             <span>and 155</span>
             <u>KIAS</u>
@@ -6600,20 +6600,20 @@
             <u>Example:</u>
           </p>
           <p>
-            <span>Determine the final approach and landing speeds for a landing at 80,000 lb gross weight. Refer to Figure A2-15. (Final approach speed is 185</span>
+            <span>Determine the final approach and landing speeds for a landing at 80,000 lb gross weight. Refer to <a href="#fig-A2-15">Figure A2-15</a>. (Final approach speed is 185</span>
             <u>KIAS</u>
             <span>. Landing speed is 165</span>
             <u>KIAS</u>
             <span>.)</span>
           </p>
           <p>
-            <span>Determine the final approach and landing speeds for a landing at 116,000 lb gross weight. Refer to Figure A2-15. (Note that this is a heavyweight condition and the maximum performance landing speed schedule must be used. Final approach speed is 221</span>
+            <span>Determine the final approach and landing speeds for a landing at 116,000 lb gross weight. Refer to <a href="#fig-A2-15">Figure A2-15</a>. (Note that this is a heavyweight condition and the maximum performance landing speed schedule must be used. Final approach speed is 221</span>
             <u>KIAS</u>
             <span>. Landing speed is 191</span>
             <u>KIAS</u>
             <span>.)</span>
           </p>
-          <figure>
+          <figure id="fig-A2-15">
             <img src="images/A2-15.jpg" alt="" />
             <figcaption>Figure A2-15: Normal pattern and landing speed schedules</figcaption>
           </figure>
@@ -6635,13 +6635,13 @@
           <p>
             <u>Examples:</u>
           </p>
-          <p>For a field pressure altitude of sea level, ambient temperature of 86°F (30°C), and a gross weight of 80,000 lb, find the normal performance landing ground roll distance, with drag chute, with a 10 knot headwind and 1% downhill runway slope. The runway is dry. (RCR=23.) Refer to Figure A2-16. (Landing ground roll distance is 4100 feet.)</p>
-          <p>For the same conditions as the previous example, find the Normal Performance landing ground roll distance without drag chute. Refer to Figure A2-17. (Note that runway slope must be corrected by gross weight rather than RCR. Landing ground roll distance is 6900 feet.)</p>
-          <figure>
+          <p>For a field pressure altitude of sea level, ambient temperature of 86°F (30°C), and a gross weight of 80,000 lb, find the normal performance landing ground roll distance, with drag chute, with a 10 knot headwind and 1% downhill runway slope. The runway is dry. (RCR=23.) Refer to <a href="#fig-A2-16">Figure A2-16</a>. (Landing ground roll distance is 4100 feet.)</p>
+          <p>For the same conditions as the previous example, find the Normal Performance landing ground roll distance without drag chute. Refer to <a href="#fig-A2-17">Figure A2-17</a>. (Note that runway slope must be corrected by gross weight rather than RCR. Landing ground roll distance is 6900 feet.)</p>
+          <figure id="fig-A2-16">
             <img src="images/A2-16.jpg" alt="" />
             <figcaption>Figure A2-16: Landing distance (Normal Performance Technique, Dry Runway with Drag Chute)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A2-17">
             <img src="images/A2-17.jpg" alt="" />
             <figcaption>Figure A2-17: Landing distance (Normal Performance Technique, Dry Runway without Drag Chute)</figcaption>
           </figure>
@@ -6656,30 +6656,30 @@
           <p>
             <u>Example:</u>
           </p>
-          <p>For a field pressure altitude of sea level, ambient temperature of 86°F (30°C), and a gross weight of 80,000 lb, find the maximum performance landing ground roll distance, without drag chute, with a 10 knot headwind and 1% downhill runway slope. The runway is wet and ungrooved. (RCR=14.) Refer to Figure A2-21. (Landing ground roll distance is 9250 feet.)</p>
-          <figure>
+          <p>For a field pressure altitude of sea level, ambient temperature of 86°F (30°C), and a gross weight of 80,000 lb, find the maximum performance landing ground roll distance, without drag chute, with a 10 knot headwind and 1% downhill runway slope. The runway is wet and ungrooved. (RCR=14.) Refer to <a href="#fig-A2-21">Figure A2-21</a>. (Landing ground roll distance is 9250 feet.)</p>
+          <figure id="fig-A2-18">
             <img src="images/A2-18.jpg" alt="" />
             <figcaption>Figure A2-18: Landing distance (Maximum Performance Technique, Dry Runway with Drag Chute)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A2-19">
             <img src="images/A2-19.jpg" alt="" />
             <figcaption>Figure A2-19: Landing distance (Maximum Performance Technique, Dry Runway without Drag Chute)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A2-20">
             <img src="images/A2-20.jpg" alt="" />
             <figcaption>Figure A2-20: Landing distance (Maximum Performance Technique, Wet Runway with Drag Chute)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A2-21">
             <img src="images/A2-21.jpg" alt="" />
             <figcaption>Figure A2-21: Landing distance (Maximum Performance Technique, Wet Runway without Drag Chute)</figcaption>
           </figure>
           <h4>Landing Air Distance</h4>
-          <p>Figure A2-22 shows the distance traveled during landing flare from a height of 50 feet to touchdown. The chart can be used for either normal or maximum performance landing procedures.</p>
+          <p><a href="#fig-A2-22">Figure A2-22</a> shows the distance traveled during landing flare from a height of 50 feet to touchdown. The chart can be used for either normal or maximum performance landing procedures.</p>
           <p>
             <u>Example:</u>
           </p>
-          <p>For a field pressure altitude of sea level, ambient temperature of 86°F (30°C), and a gross weight of 80,000 lb, find the landing air distance for a normal performance landing with a 10 knot headwind. Refer to Figure A2-22. (Landing air distance is 2750 feet.)</p>
-          <figure>
+          <p>For a field pressure altitude of sea level, ambient temperature of 86°F (30°C), and a gross weight of 80,000 lb, find the landing air distance for a normal performance landing with a 10 knot headwind. Refer to <a href="#fig-A2-22">Figure A2-22</a>. (Landing air distance is 2750 feet.)</p>
+          <figure id="fig-A2-22">
             <img src="images/A2-22.jpg" alt="" />
             <figcaption>Figure A2-22: Landing Air Distance</figcaption>
           </figure>
@@ -6690,7 +6690,7 @@
           <img src="images/A2b.jpg" alt="" />
         </section>
       </article>
-      <article data-title="Part III: Climb and Descent Performance">
+      <article data-title="Part III: Climb and Descent Performance" id="part3">
         <h1>PART III</h1>
         <h2>CLIMB AND DESCENT PERFORMANCE</h2>
         <section data-title="Table of Contents">
@@ -7001,19 +7001,19 @@
         </section>
         <section>
           <h3>Normal Climb</h3>
-          <p>Time, fuel and distance requirements for the normal 450 KEAS climb schedule are shown in Figures A3-1 through A3-16. Allowances are tabulated on Figure A3-1 and A3-2 for ground operation, for takeoff at altitudes other than Sea Level, and for climb after refueling. Figures A3-9 and A3-10 summarize normal climb acceleration performance from brake release for a standard day and tropic day, respectively. A normal operating range of gross weights is presented.</p>
+          <p>Time, fuel and distance requirements for the normal 450 KEAS climb schedule are shown in Figures <a href="#fig-A3-1">A3-1</a> through <a href="#fig-A3-16">A3-16</a>. Allowances are tabulated on <a href="#fig-A3-1">Figure A3-1</a> and <a href="#fig-A3-2">A3-2</a> for ground operation, for takeoff at altitudes other than Sea Level, and for climb after refueling. Figures <a href="#fig-A3-9">A3-9</a> and <a href="#fig-A3-10">A3-10</a> summarize normal climb acceleration performance from brake release for a standard day and tropic day, respectively. A normal operating range of gross weights is presented.</p>
           <h4>Subsonic Climb Performance</h4>
-          <p>Figures A3-1 and A3-2 provide two engine climb performance from brake release at Sea Level to Mach 0.90 at 30,000 feet for standard and tropic atmospheres, respectively. The data can be used on an incremental basis for climbs between other altitudes in this range. Performance is supplied for initial gross weights from 90,000 pounds to 140,000 pounds. Correction grids are provided for temperature deviations of ±10°C.</p>
-          <figure>
+          <p>Figures <a href="#fig-A3-1">A3-1</a> and <a href="#fig-A3-2">A3-2</a> provide two engine climb performance from brake release at Sea Level to Mach 0.90 at 30,000 feet for standard and tropic atmospheres, respectively. The data can be used on an incremental basis for climbs between other altitudes in this range. Performance is supplied for initial gross weights from 90,000 pounds to 140,000 pounds. Correction grids are provided for temperature deviations of ±10°C.</p>
+          <figure id="fig-A3-1">
             <img src="images/A3-1.jpg" alt="" />
             <figcaption>Figure A3-1: Subsonic climb performance (Normal Procedure Climb, 1956 ARDC Standard Day)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-2">
             <img src="images/A3-2.jpg" alt="" />
             <figcaption>Figure A3-2: Subsonic climb performance (Normal Procedure Climb, MIL-STD-210A Tropic Day)</figcaption>
           </figure>
           <h4>Transonic Acceleration Performance</h4>
-          <p>Figures A3-2 through A3-8 show the time, distance, and fuel required for transonic acceleration. Performance is supplied for initial gross weights from 90,000 pounds to 140,000 pounds at temperatures ranging ±10°C from the standard and tropic atmospheres. The charts also provide total time, distance and fuel required to accelerate to Mach 1.25 at 30,000 feet after refueling at Mach 0.75 and 25,000 feet. The added allowances are based on the use of minimum afterburner for the subsonic acceleration, or for acceleration and climb to the initiation of maximum afterburner power at Mach 0.90.</p>
+          <p>Figures <a href="#fig-A3-2">A3-2</a> through <a href="#fig-A3-8">A3-8</a> show the time, distance, and fuel required for transonic acceleration. Performance is supplied for initial gross weights from 90,000 pounds to 140,000 pounds at temperatures ranging ±10°C from the standard and tropic atmospheres. The charts also provide total time, distance and fuel required to accelerate to Mach 1.25 at 30,000 feet after refueling at Mach 0.75 and 25,000 feet. The added allowances are based on the use of minimum afterburner for the subsonic acceleration, or for acceleration and climb to the initiation of maximum afterburner power at Mach 0.90.</p>
           <h2>Sample Use of Charts</h2>
           <p>Determine the time, fuel, and distance required for a standard day climb from sea level takeoff to Mach 3.0 at 70,600 feet. Gross weight at engine start is 136,800 pounds.</p>
           <table border="1">
@@ -7208,73 +7208,73 @@
           <p>Performance charts are included for three types of maximum power acceleration techniques.</p>
           <ol class="list-number">
             <li>
-              <p>Climb-and-descent: Climb at Mach 0.90 from 30,000 feet to 33,000 feet, and then descend at 3000 fpm to Mach 1.25 at 30,000 feet. (See Figure A3-5.)</p>
+              <p>Climb-and-descent: Climb at Mach 0.90 from 30,000 feet to 33,000 feet, and then descend at 3000 fpm to Mach 1.25 at 30,000 feet. (See <a href="#fig-A3-5">Figure A3-5</a>.)</p>
             </li>
             <li>
-              <p>Level acceleration: Accelerate from Mach 0.90 to Mach 1.25 at 30,000 feet. (See Figure A3-6.)</p>
+              <p>Level acceleration: Accelerate from Mach 0.90 to Mach 1.25 at 30,000 feet. (See <a href="#fig-A3-6">Figure A3-6</a>.)</p>
             </li>
             <li>
-              <p>Level acceleration and climb: Accelerate from Mach 0.90 to 450 KEAS at 25,000 feet and climb at 450 KEAS to Mach 1.25 at 30,000 feet. (See Figure A3-7.)</p>
+              <p>Level acceleration and climb: Accelerate from Mach 0.90 to 450 KEAS at 25,000 feet and climb at 450 KEAS to Mach 1.25 at 30,000 feet. (See <a href="#fig-A3-7">Figure A3-7</a>.)</p>
             </li>
           </ol>
-          <p>Figure A3-8 presents a performance comparison of the transonic acceleration techniques for an initial gross weight of 140,000 pounds at Mach 0.75 and 25,000 feet. The chart illustrates the effect of ambient temperature and shows that at ambient temperatures below standard, all three techniques have similar fuel consumption but the climb-and-descent technique improves range since more distance is covered for the same fuel consumption. At temperatures hotter than standard, the climb-and-descent technique reduces fuel consumed 700 to 900 pounds in a tropic atmosphere (approximately 13°C hotter than standard between 25,000 feet and 30,000 feet), and as much as 1300 to 1900 pounds at a temperature deviation 22°C hotter than standard.</p>
+          <p><a href="#fig-A3-8">Figure A3-8</a> presents a performance comparison of the transonic acceleration techniques for an initial gross weight of 140,000 pounds at Mach 0.75 and 25,000 feet. The chart illustrates the effect of ambient temperature and shows that at ambient temperatures below standard, all three techniques have similar fuel consumption but the climb-and-descent technique improves range since more distance is covered for the same fuel consumption. At temperatures hotter than standard, the climb-and-descent technique reduces fuel consumed 700 to 900 pounds in a tropic atmosphere (approximately 13°C hotter than standard between 25,000 feet and 30,000 feet), and as much as 1300 to 1900 pounds at a temperature deviation 22°C hotter than standard.</p>
           <p>Any necessary heading changes should be made prior to the transonic acceleration, as turns would seriously degrade performance during this phase. A 32° banked turn at 25,000 feet, initiated between Mach 0.75 and 0.80 at 140,000 pounds will increase time, distance, and fuel used by 0.5 minutes, 5 nautical miles, and 500 pounds, respectively, for a ninety degree change in aircraft heading.</p>
-          <figure>
+          <figure id="fig-A3-5">
             <img src="images/A3-5.jpg" alt="" />
             <figcaption>Figure A3-5: Transonic acceleration performance (Climb and Descent Technique)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-6">
             <img src="images/A3-6.jpg" alt="" />
             <figcaption>Figure A3-6: Transonic acceleration performance (Level Acceleration Technique)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-7">
             <img src="images/A3-7.jpg" alt="" />
             <figcaption>Figure A3-7: Transonic acceleration performance (Level Acceleration and Climb Technique)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-8">
             <img src="images/A3-8.jpg" alt="" />
             <figcaption>Figure A3-8: Transonic acceleration performance</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-9">
             <img src="images/A3-9.jpg" alt="" />
             <figcaption>Figure A3-9: Normal procedure climb (Standard Day)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-10">
             <img src="images/A3-10.jpg" alt="" />
             <figcaption>Figure A3-10: Normal procedure climb (Tropic Day)</figcaption>
           </figure>
           <h4>Supersonic Acceleration &amp; Climb</h4>
-          <p>Performance for the supersonic climbing acceleration is provided by Figures A3-11 through A3-16. Data is provided for standard and tropic atmospheres including temperature deviations of ±10°C. Enter the chart with the end-of-transonic acceleration weight determined from Figures A3-5 through A3-8.</p>
+          <p>Performance for the supersonic climbing acceleration is provided by Figures <a href="#fig-A3-11">A3-11</a> through <a href="#fig-A3-16">A3-16</a>. Data is provided for standard and tropic atmospheres including temperature deviations of ±10°C. Enter the chart with the end-of-transonic acceleration weight determined from Figures <a href="#fig-A3-5">A3-5</a> through <a href="#fig-A3-8">A3-8</a>.</p>
           <p>When a constant Mach climb is required to reach cruise altitude after attaining the desired Mach, climb at Maximum afterburning power. For planning purposes, 4000 ft/min rate of climb and 900 pounds/minute fuel flow.</p>
-          <figure>
+          <figure id="fig-A3-11">
             <img src="images/A3-11.jpg" alt="" />
             <figcaption>Figure A3-11: Supersonic climb performance - normal procedure climb (Standard Day)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-12">
             <img src="images/A3-12.jpg" alt="" />
             <figcaption>Figure A3-12: Supersonic climb performance - normal procedure climb (Standard Day +10°C)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-13">
             <img src="images/A3-13.jpg" alt="" />
             <figcaption>Figure A3-13: Supersonic climb performance - normal procedure climb (Standard Day -10°C)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-14">
             <img src="images/A3-14.jpg" alt="" />
             <figcaption>Figure A3-14: Supersonic climb performance - normal procedure climb (Tropic Day)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-15">
             <img src="images/A3-15.jpg" alt="" />
             <figcaption>Figure A3-15: Supersonic climb performance - normal procedure climb (Tropic Day +10°C)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-16">
             <img src="images/A3-16.jpg" alt="" />
             <figcaption>Figure A3-16: Supersonic climb performance - normal procedure climb (Tropic Day -10°C)</figcaption>
           </figure>
         </section>
         <section>
           <h3>400 KEAS Climb</h3>
-          <p>Figure A3-17 summarizes time, fuel, and distance required from takeoff for an alternate, 400 KEAS supersonic climb schedule at a nominal takeoff gross weight of 130,000 lb.</p>
-          <figure>
+          <p><a href="#fig-A3-17">Figure A3-17</a> summarizes time, fuel, and distance required from takeoff for an alternate, 400 KEAS supersonic climb schedule at a nominal takeoff gross weight of 130,000 lb.</p>
+          <figure id="fig-A3-17">
             <img src="images/A3-17.jpg" alt="" />
             <figcaption>Figure A3-17: Profile climb performance - 400 KEAS</figcaption>
           </figure>
@@ -7285,16 +7285,16 @@
             <img src="images/A3b.jpg" alt="" />
             <figcaption>Single Engine Climb</figcaption>
           </figure>
-          <p>Figures A3-3 and A3-4 show the time, fuel, and distance requirements for single engine climb from sea level to the altitudes at which 300 ft/min rate of climb is reached. Performance is shown for Standard and Tropic days, respectively. These charts can be used on an incremental basis to determine requirements for climbing to single engine cruise altitudes. (See Part IV of this appendix and Section HI.) The data are based on Maximum afterburning climb at 400 KEAS to Mach 0.85, then Mach 0.85 to the 300 ft/min ceiling. (If the climb is continued above this ceiling, a cruise-climb at 200-250 ft/min rate of climb will result.)</p>
+          <p>Figures <a href="#fig-A3-3">A3-3</a> and <a href="#fig-A3-4">A3-4</a> show the time, fuel, and distance requirements for single engine climb from sea level to the altitudes at which 300 ft/min rate of climb is reached. Performance is shown for Standard and Tropic days, respectively. These charts can be used on an incremental basis to determine requirements for climbing to single engine cruise altitudes. (See <a href="#part4">Part IV of this appendix</a> and <a href="3.htm">Section III</a>.) The data are based on Maximum afterburning climb at 400 KEAS to Mach 0.85, then Mach 0.85 to the 300 ft/min ceiling. (If the climb is continued above this ceiling, a cruise-climb at 200-250 ft/min rate of climb will result.)</p>
           <p>
             <u>Example:</u>
           </p>
-          <p>Find the time, distance and fuel required for a single engine climb from sea level to 20,000 feet. The initial climb gross weight is 115,000 pounds and the forecast ambient temperature for the climb is approximately 10°C hotter than a Tropic atmosphere. Enter Figure A3-4 at a gross weight of 115,000 pounds, follow the temperature guidelines at 10°C hot. Proceed to a pressure altitude of 20,000 feet and read distance traveled as 98 nautical miles, time of 12.2 minutes and 13,100 pounds of fuel used. Rate of climb at an average altitude of 10,000 feet is 1600 feet per minute.</p>
-          <figure>
+          <p>Find the time, distance and fuel required for a single engine climb from sea level to 20,000 feet. The initial climb gross weight is 115,000 pounds and the forecast ambient temperature for the climb is approximately 10°C hotter than a Tropic atmosphere. Enter <a href="#fig-A3-4">Figure A3-4</a> at a gross weight of 115,000 pounds, follow the temperature guidelines at 10°C hot. Proceed to a pressure altitude of 20,000 feet and read distance traveled as 98 nautical miles, time of 12.2 minutes and 13,100 pounds of fuel used. Rate of climb at an average altitude of 10,000 feet is 1600 feet per minute.</p>
+          <figure id="fig-A3-3">
             <img src="images/A3-3.jpg" alt="" />
             <figcaption>Figure A3-3: Single-Engine Climb (ARDC Standard Day)</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-4">
             <img src="images/A3-4.jpg" alt="" />
             <figcaption>Figure A3-4: Single-Engine Climb (MIL-STD-210A Tropic Day)</figcaption>
           </figure>
@@ -7305,56 +7305,56 @@
             <img src="images/A3a.jpg" alt="" />
             <figcaption>Two engine descent performance</figcaption>
           </figure>
-          <p>Time, fuel, and distance requirements for 350 KEAS descents are shown in Figures A3-18 thru A3-21. Figure A3-18 applies to on-course descents when 720°C EGT is set at the start of descent and 6900 RPM is set at Mach 2.5. Ambient temperature has very little effect on the performance shown. (On a Tropic day, total distance from start of descent increases 10 nautical miles and time increases 0.5 minutes.) Figure A3-21 shows the performance which would result for the same power schedule when a 180° turn is required. Figure A3-19 shows performance for on-course descents when Military thrust is set at the start of descent and 6900 RPM is set at Mach 2.5. This power schedule results in a total distance increase of approximately 10 nautical miles over the 720°C EGT descent schedule. Figure A3-20 shows performance for on-course descents when Military thrust is set at the start of descent and 720°C EGT is set at Mach 2.5. This power schedule results in a total distance increase of approximately 70 nautical miles over the 720°C EGT descent schedule, but uses approximately 1700 lb. more fuel.</p>
+          <p>Time, fuel, and distance requirements for 350 KEAS descents are shown in Figures <a href="#fig-A3-18">A3-18</a> thru <a href="#fig-A3-21">A3-21</a>. <a href="#fig-A3-18">Figure A3-18</a> applies to on-course descents when 720°C EGT is set at the start of descent and 6900 RPM is set at Mach 2.5. Ambient temperature has very little effect on the performance shown. (On a Tropic day, total distance from start of descent increases 10 nautical miles and time increases 0.5 minutes.) <a href="#fig-A3-21">Figure A3-21</a> shows the performance which would result for the same power schedule when a 180° turn is required. <a href="#fig-A3-19">Figure A3-19</a> shows performance for on-course descents when Military thrust is set at the start of descent and 6900 RPM is set at Mach 2.5. This power schedule results in a total distance increase of approximately 10 nautical miles over the 720°C EGT descent schedule. <a href="#fig-A3-20">Figure A3-20</a> shows performance for on-course descents when Military thrust is set at the start of descent and 720°C EGT is set at Mach 2.5. This power schedule results in a total distance increase of approximately 70 nautical miles over the 720°C EGT descent schedule, but uses approximately 1700 lb. more fuel.</p>
           <p>
             <u>Example:</u>
           </p>
-          <p>Find the time, distance and fuel required for a two engine on-course descent from Mach 3.10 at 80,000 feet, descending at 350 KEAS to 15,000 feet. EGT is set at 720°C at the start of the descent, 6900 RPM at Mach 2.5 and 6100 RPM below 31,300 feet. Enter Figure A3-18 at 80,000 feet and Mach 3.10 and read 8.5 minutes, 168 nautical miles and 1190 pounds of fuel for the descent to 31,300 feet. Re-enter at the final altitude of 15,000 feet and the 6100 RPM line and read 4.8 minutes, 39 nautical miles and 1100 pounds of fuel. Total time, distance and fuel are 13.3 minutes, 207 nautical miles and 2290 pounds.</p>
+          <p>Find the time, distance and fuel required for a two engine on-course descent from Mach 3.10 at 80,000 feet, descending at 350 KEAS to 15,000 feet. EGT is set at 720°C at the start of the descent, 6900 RPM at Mach 2.5 and 6100 RPM below 31,300 feet. Enter <a href="#fig-A3-18">Figure A3-18</a> at 80,000 feet and Mach 3.10 and read 8.5 minutes, 168 nautical miles and 1190 pounds of fuel for the descent to 31,300 feet. Re-enter at the final altitude of 15,000 feet and the 6100 RPM line and read 4.8 minutes, 39 nautical miles and 1100 pounds of fuel. Total time, distance and fuel are 13.3 minutes, 207 nautical miles and 2290 pounds.</p>
           <p>
             <u>Example:</u>
           </p>
-          <p>Find the track time, distance and fuel required for a two engine descent from Mach 3.20 at 79,800 feet descending at 350 KEAS to 25,000 feet. A 120 degree turn is to be completed above 50,000 feet. EGT is set at 720°C at the start of the descent, 6900 RPM at Mach 2.5 and 6100 RPM below 31,300 feet. Enter figure A3-21 at 120 degrees of turn and note that the turn is completed at an altitude of 59,500 feet. Read time in the descending turn to that altitude as 4.1 minutes, penetration distance as 58 nautical miles and 560 pounds of fuel used. Enter the ground track profile at the 58 nautical mile penetration distance and read 100 nautical miles traveled at a course offset distance of 60 nautical miles. Enter Figure A3-18 at 59,500 feet (end of turn altitude) and read time, distance and fuel required in the descent to Mach 1.0 at 31,300 feet as 3.8 minutes, 52 nautical miles and 540 pounds. Re-enter at the final altitude of 25,000 feet on the 6100 RPM line and read time, distance and fuel required as 1.3 minutes, 13 nautical miles and 260 pounds. Total time, distance and fuel for the turning descent is 9.2 minutes, 165 nautical miles and 1360 pounds.</p>
-          <figure>
+          <p>Find the track time, distance and fuel required for a two engine descent from Mach 3.20 at 79,800 feet descending at 350 KEAS to 25,000 feet. A 120 degree turn is to be completed above 50,000 feet. EGT is set at 720°C at the start of the descent, 6900 RPM at Mach 2.5 and 6100 RPM below 31,300 feet. Enter <a href="#fig-A3-21">Figure A3-21</a> at 120 degrees of turn and note that the turn is completed at an altitude of 59,500 feet. Read time in the descending turn to that altitude as 4.1 minutes, penetration distance as 58 nautical miles and 560 pounds of fuel used. Enter the ground track profile at the 58 nautical mile penetration distance and read 100 nautical miles traveled at a course offset distance of 60 nautical miles. Enter <a href="#fig-A3-18">Figure A3-18</a> at 59,500 feet (end of turn altitude) and read time, distance and fuel required in the descent to Mach 1.0 at 31,300 feet as 3.8 minutes, 52 nautical miles and 540 pounds. Re-enter at the final altitude of 25,000 feet on the 6100 RPM line and read time, distance and fuel required as 1.3 minutes, 13 nautical miles and 260 pounds. Total time, distance and fuel for the turning descent is 9.2 minutes, 165 nautical miles and 1360 pounds.</p>
+          <figure id="fig-A3-18">
             <img src="images/A3-18.jpg" alt="" />
             <figcaption>Figure A3-18: Two engine descent performance</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-19">
             <img src="images/A3-19.jpg" alt="" />
             <figcaption>Figure A3-19: Two engine descent performance</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-20">
             <img src="images/A3-20.jpg" alt="" />
             <figcaption>Figure A3-20: Two engine descent performance</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-21">
             <img src="images/A3-21.jpg" alt="" />
             <figcaption>Figure A3-21: Two engine turning descent</figcaption>
           </figure>
         </section>
         <section>
           <h3>Single-Engine Descent</h3>
-          <p>Figures A3-22 and A3-23 show performance requirements for on-course, single engine supersonic descents with Maximum and Minimum afterburning power, respectively, selected at the start of descent. The charts are indexed to an altitude of 50,000 feet and show the effects of operating at reduced power below that altitude.</p>
-          <figure>
+          <p>Figures <a href="#fig-A3-22">A3-22</a> and <a href="#fig-A3-23">A3-23</a> show performance requirements for on-course, single engine supersonic descents with Maximum and Minimum afterburning power, respectively, selected at the start of descent. The charts are indexed to an altitude of 50,000 feet and show the effects of operating at reduced power below that altitude.</p>
+          <figure id="fig-A3-22">
             <img src="images/A3-22.jpg" alt="" />
             <figcaption>Figure A3-22: Single-Engine descent performance</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A3-23">
             <img src="images/A3-23.jpg" alt="" />
             <figcaption>Figure A3-23: Single-Engine descent performance</figcaption>
           </figure>
-          <p>Figure A3-24 shows the performance to be expected at Maximum afterburning power when a 180° turn is required. (A turning descent at less than Maximum afterburning power may result in exceeding the rate of descent limitations in Section V.)</p>
-          <figure>
+          <p><a href="#fig-A3-24">Figure A3-24</a> shows the performance to be expected at Maximum afterburning power when a 180° turn is required. (A turning descent at less than Maximum afterburning power may result in exceeding the rate of descent limitations in <a href="5.htm#descent">Section V</a>.)</p>
+          <figure id="fig-A3-24">
             <img src="images/A3-24.jpg" alt="" />
             <figcaption>Figure A3-24: Single-Engine turning descent</figcaption>
           </figure>
         </section>
       </article>
-      <article data-title="Part IV: Subsonic Cruise Performance">
+      <article data-title="Part IV: Subsonic Cruise Performance" id="part4">
         <h1>PART IV</h1>
         <h2>SUBSONIC CRUISE PERFORMANCE</h2>
         <section data-title="Table of Contents">
           <table border="1">
-            <h3>Table of Contents</h3>
+            <caption>Table of Contents</caption>
             <thead>
               <tr>
                 <td></td>
@@ -7662,165 +7662,165 @@
         </section>
         <section>
           <h3>Specific Range - Two Engine</h3>
-          <p>Specific Range vs Mach for two engine operation is shown in Figures A4-1 thru A4-17 for altitudes from Sea Level to 40,000 ft. All performance information has been corrected to a C.G. of 22% MAC. Operation at C.G. positions forward of 22% reduces range approximately 1% for each percent C.G. shift, as noted on the specific range curves. The curves show performance for the operational range of gross weights at each altitude and cover the speed range from maximum endurance to Military thrust. Subscales of equivalent airspeed and calibrated airspeed are provided. The recommended loiter speed schedule is included for each altitude.</p>
+          <p>Specific Range vs Mach for two engine operation is shown in Figures <a href="#fig-A4-1">A4-1</a> thru <a href="#fig-A4-17">A4-17</a> for altitudes from Sea Level to 40,000 ft. All performance information has been corrected to a C.G. of 22% MAC. Operation at C.G. positions forward of 22% reduces range approximately 1% for each percent C.G. shift, as noted on the specific range curves. The curves show performance for the operational range of gross weights at each altitude and cover the speed range from maximum endurance to Military thrust. Subscales of equivalent airspeed and calibrated airspeed are provided. The recommended loiter speed schedule is included for each altitude.</p>
           <div class="note">
             <p>The subsonic minimum airspeed restriction of 300 KEAS above 25,000 feet has been observed in all performance presented except the specific range curves.</p>
           </div>
-          <figure>
+          <figure id="fig-A4-1">
             <img src="images/A4-1.jpg" alt="" />
             <figcaption>Figure A4-1: Subsonic specific range - two engines, sea level</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-2">
             <img src="images/A4-2.jpg" alt="" />
             <figcaption>Figure A4-2: Subsonic specific range - two engines, 5000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-3">
             <img src="images/A4-3.jpg" alt="" />
             <figcaption>Figure A4-3: Subsonic specific range - two engines, 10.000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-4">
             <img src="images/A4-4.jpg" alt="" />
             <figcaption>Figure A4-4: Subsonic specific range - two engines, 15,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-5">
             <img src="images/A4-5.jpg" alt="" />
             <figcaption>Figure A4-5: Subsonic specific range - two engines, 20,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-6">
             <img src="images/A4-6.jpg" alt="" />
             <figcaption>Figure A4-6: Subsonic specific range - two engines, 22,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-7">
             <img src="images/A4-7.jpg" alt="" />
             <figcaption>Figure A4-7: Subsonic specific range - two engines, 24,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-8">
             <img src="images/A4-8.jpg" alt="" />
             <figcaption>Figure A4-8: Subsonic specific range - two engines, 25,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-9">
             <img src="images/A4-9.jpg" alt="" />
             <figcaption>Figure A4-9: Subsonic specific range - two engines, 26,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-10">
             <img src="images/A4-10.jpg" alt="" />
             <figcaption>Figure A4-10: Subsonic specific range - two engines, 28,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-11">
             <img src="images/A4-11.jpg" alt="" />
             <figcaption>Figure A4-11: Subsonic specific range - two engines, 30,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-12">
             <img src="images/A4-12.jpg" alt="" />
             <figcaption>Figure A4-12: Subsonic specific range - two engines, 32,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-13">
             <img src="images/A4-13.jpg" alt="" />
             <figcaption>Figure A4-13: Subsonic specific range - two engines, 34,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-14">
             <img src="images/A4-14.jpg" alt="" />
             <figcaption>Figure A4-14: Subsonic specific range - two engines, 35,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-15">
             <img src="images/A4-15.jpg" alt="" />
             <figcaption>Figure A4-15: Subsonic specific range - two engines, 36,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-16">
             <img src="images/A4-16.jpg" alt="" />
             <figcaption>Figure A4-16: Subsonic specific range - two engines, 38,000 ft. altitude</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-17">
             <img src="images/A4-17.jpg" alt="" />
             <figcaption>Figure A4-17: Subsonic specific range - two engines, 40,000 ft. altitude</figcaption>
           </figure>
         </section>
         <section>
           <h3>Subsonic Maximum Range Cruise-Climb</h3>
-          <p>Figure A4-18 shows the range available by cruise-climbing at Mach 0.88 and at 380,000 lb W/δ. The curve is indexed to an end-of-cruise gross weight of 70,000 lbs (approximately 10,000 lb of fuel remaining) as a convenience in flight planning. (10,000 lbs is an arbitrary fuel remaining value and is not mandatory for termination of cruise.) The curve can also be used on an incremental basis for any desired start and end cruise condition.</p>
+          <p><a href="#fig-A4-18">Figure A4-18</a> shows the range available by cruise-climbing at Mach 0.88 and at 380,000 lb W/δ. The curve is indexed to an end-of-cruise gross weight of 70,000 lbs (approximately 10,000 lb of fuel remaining) as a convenience in flight planning. (10,000 lbs is an arbitrary fuel remaining value and is not mandatory for termination of cruise.) The curve can also be used on an incremental basis for any desired start and end cruise condition.</p>
           <p>
             <u>Example:</u>
           </p>
-          <p>For a gross weight of 90,000 lbs (approx. 30,000 lbs of fuel remaining) determine the distance remaining to 70,000 lbs gross weight and distance flown between 90,000 lbs gross weight and 80,000 lbs gross weight. Enter Figure A4-18 at 90,000 lbs gross weight and read the distance to 70,000 lbs directly as 725 nautical miles. At 80,000 lbs read the distance to 70,000 lbs as 375 nautical miles. The distance flown between 90,000 lbs and 80,000 lbs is (725-375) or 350 nautical miles. Cruise at 32,400 feet.</p>
+          <p>For a gross weight of 90,000 lbs (approx. 30,000 lbs of fuel remaining) determine the distance remaining to 70,000 lbs gross weight and distance flown between 90,000 lbs gross weight and 80,000 lbs gross weight. Enter <a href="#fig-A4-18">Figure A4-18</a> at 90,000 lbs gross weight and read the distance to 70,000 lbs directly as 725 nautical miles. At 80,000 lbs read the distance to 70,000 lbs as 375 nautical miles. The distance flown between 90,000 lbs and 80,000 lbs is (725-375) or 350 nautical miles. Cruise at 32,400 feet.</p>
           <p>An additional 190 nautical miles is available by ending cruise at 65,000 lbs gross weight (approximately 5000 lbs of fuel remaining).</p>
-          <figure>
+          <figure id="fig-A4-18">
             <img src="images/A4-18.jpg" alt="" />
             <figcaption>Figure A4-18: Subsonic Maximum Range; .88 Mach Cruise-climb To 300 KEAS</figcaption>
           </figure>
         </section>
         <section data-title="Range Factor Summary &amp; Max Specific Range">
           <h3>Range Factor Summary</h3>
-          <p>The Range Factor Summary shown in Figure A4-19 defines the maximum specific range capability in terms of the gross weight/altitude parameter, W/δ. The Mach schedule required to obtain this performance is shown on the lower portion of the curve. The curve covers the complete operating weight and power range of the airplane, up to and including Military thrust. Maximum range capability (cruise-climb) is obtained at a W/δ of 380,000 lb and at Mach 0.88.</p>
-          <p>Figure A4-20 depicts the information given by the Range Factor Summary in terms of Maximum Specific Range as a function of gross weight and altitude.</p>
-          <figure>
+          <p>The Range Factor Summary shown in <a href="#fig-A4-19">Figure A4-19</a> defines the maximum specific range capability in terms of the gross weight/altitude parameter, W/δ. The Mach schedule required to obtain this performance is shown on the lower portion of the curve. The curve covers the complete operating weight and power range of the airplane, up to and including Military thrust. Maximum range capability (cruise-climb) is obtained at a W/δ of 380,000 lb and at Mach 0.88.</p>
+          <p><a href="#fig-A4-20">Figure A4-20</a> depicts the information given by the Range Factor Summary in terms of Maximum Specific Range as a function of gross weight and altitude.</p>
+          <figure id="fig-A4-19">
             <img src="images/A4-19.jpg" alt="" />
             <figcaption>Figure A4-19: Subsonic Range Factor</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-20">
             <img src="images/A4-20.jpg" alt="" />
             <figcaption>Figure A4-20: Maximum specific range</figcaption>
           </figure>
         </section>
         <section>
           <h3>Buddy Mission at Mach 0.75</h3>
-          <p>The buddy mission schedule, Mach 0.75, is based on performance compatibility with KC-135 tanker aircraft. Figure A4-21 shows the specific range available in cruise-climb or at constant altitude with constant Mach 0.75 cruise speed. Greater range capability is obtained by cruise-climbing.</p>
+          <p>The buddy mission schedule, Mach 0.75, is based on performance compatibility with KC-135 tanker aircraft. <a href="#fig-A4-21">Figure A4-21</a> shows the specific range available in cruise-climb or at constant altitude with constant Mach 0.75 cruise speed. Greater range capability is obtained by cruise-climbing.</p>
           <p>
             <u>Example:</u>
           </p>
-          <p>Determine the range available at 24,000 ft at an initial gross weight of 90,000 lb if 10,000 lbs of fuel is to be consumed. Enter Figure A4-21 at 90,000 lbs at 24,000 ft and read the specific range available as 28.5 nautical miles per 1000 lbs of fuel. At 80,000 lb and 24,000 ft read the specific range as 29.7 nautical miles per 1000 lbs of fuel. The average specific range is 29.1 nautical miles per 1000 lbs and the range available for 10,000 lbs of fuel consumed is 291 nautical miles.</p>
-          <figure>
+          <p>Determine the range available at 24,000 ft at an initial gross weight of 90,000 lb if 10,000 lbs of fuel is to be consumed. Enter <a href="#fig-A4-21">Figure A4-21</a> at 90,000 lbs at 24,000 ft and read the specific range available as 28.5 nautical miles per 1000 lbs of fuel. At 80,000 lb and 24,000 ft read the specific range as 29.7 nautical miles per 1000 lbs of fuel. The average specific range is 29.1 nautical miles per 1000 lbs and the range available for 10,000 lbs of fuel consumed is 291 nautical miles.</p>
+          <figure id="fig-A4-21">
             <img src="images/A4-21.jpg" alt="" />
             <figcaption>Figure A4-21: Constant Mach cruise at 0.75 Mach</figcaption>
           </figure>
         </section>
         <section>
           <h3>Loiter Performance</h3>
-          <p>Figure A4-22 presents loiter performance in terms of minutes per 1000 lbs of fuel consumed. A loiter profile in Figure A4-23 provides time available from various initial fuel remaining values to 10,000 pounds remaining. (70,000 lb gross weight). The profile is keyed to the same speed schedule as the specific endurance chart.</p>
+          <p><a href="#fig-A4-22">Figure A4-22</a> presents loiter performance in terms of minutes per 1000 lbs of fuel consumed. A loiter profile in <a href="#fig-A4-23">Figure A4-23</a> provides time available from various initial fuel remaining values to 10,000 pounds remaining. (70,000 lb gross weight). The profile is keyed to the same speed schedule as the specific endurance chart.</p>
           <p>
             <u>Example:</u>
           </p>
-          <p>Determine the loiter time available at 20,000 ft at an initial gross weight of 90,000 lbs if 10,000 lbs of fuel is to be consumed. Enter Figure A4-22 at 90,000 lbs gross weight and 20,000 ft and read loiter time available as 3.75 minutes per 1000 lbs of fuel. At 80,000 lbs and 20,000 ft read 4.01 minutes per 1000 lbs of fuel. The average loiter time available is 3.9 minutes per 1000 lbs of fuel or 39 minutes for 10,000 lbs of fuel.</p>
-          <figure>
+          <p>Determine the loiter time available at 20,000 ft at an initial gross weight of 90,000 lbs if 10,000 lbs of fuel is to be consumed. Enter <a href="#fig-A4-22">Figure A4-22</a> at 90,000 lbs gross weight and 20,000 ft and read loiter time available as 3.75 minutes per 1000 lbs of fuel. At 80,000 lbs and 20,000 ft read 4.01 minutes per 1000 lbs of fuel. The average loiter time available is 3.9 minutes per 1000 lbs of fuel or 39 minutes for 10,000 lbs of fuel.</p>
+          <figure id="fig-A4-22">
             <img src="images/A4-22.jpg" alt="" />
             <figcaption>Figure A4-22: Specific Endurance</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-23">
             <img src="images/A4-23.jpg" alt="" />
             <figcaption>Figure A4-23: Loiter Profile</figcaption>
           </figure>
         </section>
         <section>
           <h3>Subsonic Mission Profile</h3>
-          <p>Figure A4-24 presents the constant altitude, cruise climb, and Military thrust range in terms of distance to go to 70,000 lbs gross weight (approximately 10,000 lbs of fuel remaining). The curve may also be used on an incremental basis.</p>
+          <p><a href="#fig-A4-24">Figure A4-24</a> presents the constant altitude, cruise climb, and Military thrust range in terms of distance to go to 70,000 lbs gross weight (approximately 10,000 lbs of fuel remaining). The curve may also be used on an incremental basis.</p>
           <p>Cruise speeds for constant altitude cruise are tabulated on the chart. Climb performance tables are also provided which apply to takeoff (brake release) at nominal gross weights of 140,000, 120,000, and 100,000 lb. The climb data are based on Maximum thrust takeoff with power reduction to Minimum afterburning following gear retraction.</p>
           <p>
             <u>Example:</u>
           </p>
-          <p>Determine the range available at an initial gross weight of 125,000 lbs if cruise is to be terminated at 10,000 lbs remaining (approximately 70,000 lbs gross weight). Figure A4-24 shows that by cruising at 25,000 feet at an initial gross weight of 125,000 lbs the range will be 1554 nautical miles to 10,000 lbs of fuel remaining. This range increases to 1703 nautical miles by cruising at 30,000 feet. Maximum range is available by cruise climbing at Mach 0.88. Under this condition cruise would be initiated at 27,700 feet to 300 KEAS at 32,400 feet and constant altitude cruise to 10,000 lbs remaining. Distance traveled would be 1746 nautical miles.</p>
-          <figure>
+          <p>Determine the range available at an initial gross weight of 125,000 lbs if cruise is to be terminated at 10,000 lbs remaining (approximately 70,000 lbs gross weight). <a href="#fig-A4-24">Figure A4-24</a> shows that by cruising at 25,000 feet at an initial gross weight of 125,000 lbs the range will be 1554 nautical miles to 10,000 lbs of fuel remaining. This range increases to 1703 nautical miles by cruising at 30,000 feet. Maximum range is available by cruise climbing at Mach 0.88. Under this condition cruise would be initiated at 27,700 feet to 300 KEAS at 32,400 feet and constant altitude cruise to 10,000 lbs remaining. Distance traveled would be 1746 nautical miles.</p>
+          <figure id="fig-A4-24">
             <img src="images/A4-24.jpg" alt="" />
             <figcaption>Figure A4-24: Subsonic mission profile</figcaption>
           </figure>
         </section>
         <section>
           <h3>Single-Engine Specific Range</h3>
-          <p>Specific range vs Mach for one engine operation at Military, Minimum A/B and Maximum A/B thrust is presented in Figures A4-25 through A4-27. The cruise altitudes are single engine ceiling capabilities with corresponding nautical miles per 1000 pounds of fuel. The optimum cruise Mach is included for each thrust setting.</p>
-          <p>Refer to Section III, Emergency Procedures, for single engine maximum range capabilities at each throttle setting to 5000 pounds of fuel remaining.</p>
-          <figure>
+          <p>Specific range vs Mach for one engine operation at Military, Minimum A/B and Maximum A/B thrust is presented in Figures <a href="#fig-A4-25">A4-25</a>through <a href="#fig-A4-27">A4-27</a>. The cruise altitudes are single engine ceiling capabilities with corresponding nautical miles per 1000 pounds of fuel. The optimum cruise Mach is included for each thrust setting.</p>
+          <p>Refer to <a href="3.htm">Section III, Emergency Procedures</a>, for single engine maximum range capabilities at each throttle setting to 5000 pounds of fuel remaining.</p>
+          <figure id="fig-A4-25">
             <img src="images/A4-25.jpg" alt="" />
             <figcaption>Figure A4-25: Subsonic Single-Engine Specific Range - Military</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-26">
             <img src="images/A4-26.jpg" alt="" />
             <figcaption>Figure A4-26: Subsonic Single-Engine Specific Range - Minimum A/B</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A4-27">
             <img src="images/A4-27.jpg" alt="" />
             <figcaption>Figure A4-27: Subsonic Single-Engine Specific Range - Maximum A/B</figcaption>
           </figure>
         </section>
       </article>
-      <article data-title="Part V: Supersonic Cruise Performance">
+      <article data-title="Part V: Supersonic Cruise Performance" id="part5">
         <h1>PART V</h1>
         <h2>SUPERSONIC SPECIFIC RANGE DATA</h2>
         <section data-title="Table of Contents">
@@ -7930,236 +7930,236 @@
           <p>
             <u>Example:</u>
           </p>
-          <p>At Mach 3.20, with a CIT of 380°C (-56.5°C FAT) (Figure A5-5), the maximum specific range at a gross weight of 90,000 lb is 54.1 nm/1000 lb of fuel at an altitude of 78,700 feet. For a 30° banked turn, maximum range altitude decreases to 75,700 feet and specific range decreases to 46.8 nm/1000 lb of fuel. Fuel flow per engine is 16,900 lb/hr at maximum range and increases to 19,700 lb/hr in a 30° banked turn at the lower altitude. For the same gross weight at a CIT of 370°C (Figure A5-3) the maximum specific range is 55.0 nm/1000 lb of fuel at an altitude of 79,000 feet while an increase in CIT to 390°C (Figure A5-8) only decreases specific range to 54.0 nm/1000 lb but altitude decreases to 78,400 feet.</p>
-          <figure>
+          <p>At Mach 3.20, with a CIT of 380°C (-56.5°C FAT) (<a href="#fig-A5-5">Figure A5-5</a>), the maximum specific range at a gross weight of 90,000 lb is 54.1 nm/1000 lb of fuel at an altitude of 78,700 feet. For a 30° banked turn, maximum range altitude decreases to 75,700 feet and specific range decreases to 46.8 nm/1000 lb of fuel. Fuel flow per engine is 16,900 lb/hr at maximum range and increases to 19,700 lb/hr in a 30° banked turn at the lower altitude. For the same gross weight at a CIT of 370°C (<a href="#fig-A5-3">Figure A5-3</a>) the maximum specific range is 55.0 nm/1000 lb of fuel at an altitude of 79,000 feet while an increase in CIT to 390°C (<a href="#fig-A5-8">Figure A5-8</a>) only decreases specific range to 54.0 nm/1000 lb but altitude decreases to 78,400 feet.</p>
+          <figure id="fig-A5-1">
             <img src="images/A5-1.jpg" alt="" />
             <figcaption>Figure A5-1: Specific Range at Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-2">
             <img src="images/A5-2.jpg" alt="" />
             <figcaption>Figure A5-2: Mach 3.20 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-3">
             <img src="images/A5-3.jpg" alt="" />
             <figcaption>Figure A5-3: Specific Range at Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-4">
             <img src="images/A5-4.jpg" alt="" />
             <figcaption>Figure A5-4: Mach 3.20 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-5">
             <img src="images/A5-5.jpg" alt="" />
             <figcaption>Figure A5-5: Specific Range at Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-6">
             <img src="images/A5-6.jpg" alt="" />
             <figcaption>Figure A5-6: Mach 3.20 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-7">
             <img src="images/A5-7.jpg" alt="" />
             <figcaption>Figure A5-7: Specific Range at Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-8">
             <img src="images/A5-8.jpg" alt="" />
             <figcaption>Figure A5-8: Mach 3.20 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-9">
             <img src="images/A5-9.jpg" alt="" />
             <figcaption>Figure A5-9: Specific Range at Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-10">
             <img src="images/A5-10.jpg" alt="" />
             <figcaption>Figure A5-10: Mach 3.20 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-11">
             <img src="images/A5-11.jpg" alt="" />
             <figcaption>Figure A5-11: Specific Range at Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-12">
             <img src="images/A5-12.jpg" alt="" />
             <figcaption>Figure A5-12: Mach 3.20 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-13">
             <img src="images/A5-13.jpg" alt="" />
             <figcaption>Figure A5-13: Specific Range at Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-14">
             <img src="images/A5-14.jpg" alt="" />
             <figcaption>Figure A5-14: Mach 3.15 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-15">
             <img src="images/A5-15.jpg" alt="" />
             <figcaption>Figure A5-15: Specific Range at Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-16">
             <img src="images/A5-16.jpg" alt="" />
             <figcaption>Figure A5-16: Mach 3.15 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-17">
             <img src="images/A5-17.jpg" alt="" />
             <figcaption>Figure A5-17: Specific Range at Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-18">
             <img src="images/A5-18.jpg" alt="" />
             <figcaption>Figure A5-18: Mach 3.15 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-19">
             <img src="images/A5-19.jpg" alt="" />
             <figcaption>Figure A5-19: Specific Range at Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-20">
             <img src="images/A5-20.jpg" alt="" />
             <figcaption>Figure A5-20: Mach 3.15 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-21">
             <img src="images/A5-21.jpg" alt="" />
             <figcaption>Figure A5-21: Specific Range at Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-22">
             <img src="images/A5-22.jpg" alt="" />
             <figcaption>Figure A5-22: Mach 3.15 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-23">
             <img src="images/A5-23.jpg" alt="" />
             <figcaption>Figure A5-23: Specific Range at Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-24">
             <img src="images/A5-24.jpg" alt="" />
             <figcaption>Figure A5-24: Mach 3.15 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-25">
             <img src="images/A5-25.jpg" alt="" />
             <figcaption>Figure A5-25: Specific Range at Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-26">
             <img src="images/A5-26.jpg" alt="" />
             <figcaption>Figure A5-26: Mach 3.15 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-27">
             <img src="images/A5-27.jpg" alt="" />
             <figcaption>Figure A5-27: Specific Range at Mach 3.10</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-28">
             <img src="images/A5-28.jpg" alt="" />
             <figcaption>Figure A5-28: Mach 3.10 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-29">
             <img src="images/A5-29.jpg" alt="" />
             <figcaption>Figure A5-29: Specific Range at Mach 3.10</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-30">
             <img src="images/A5-30.jpg" alt="" />
             <figcaption>Figure A5-30: Mach 3.10 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-31">
             <img src="images/A5-31.jpg" alt="" />
             <figcaption>Figure A5-31: Specific Range at Mach 3.10</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-32">
             <img src="images/A5-32.jpg" alt="" />
             <figcaption>Figure A5-32: Mach 3.10 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-33">
             <img src="images/A5-33.jpg" alt="" />
             <figcaption>Figure A5-33: Specific Range at Mach 3.10</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-34">
             <img src="images/A5-34.jpg" alt="" />
             <figcaption>Figure A5-34: Mach 3.10 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-35">
             <img src="images/A5-35.jpg" alt="" />
             <figcaption>Figure A5-35: Specific Range at Mach 3.10</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-36">
             <img src="images/A5-36.jpg" alt="" />
             <figcaption>Figure A5-36: Mach 3.10 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-37">
             <img src="images/A5-37.jpg" alt="" />
             <figcaption>Figure A5-37: Specific Range at Mach 3.0</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-38">
             <img src="images/A5-38.jpg" alt="" />
             <figcaption>Figure A5-38: Mach 3.0 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-39">
             <img src="images/A5-39.jpg" alt="" />
             <figcaption>Figure A5-39: Specific Range at Mach 3.0</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-40">
             <img src="images/A5-40.jpg" alt="" />
             <figcaption>Figure A5-40: Mach 3.0 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-41">
             <img src="images/A5-41.jpg" alt="" />
             <figcaption>Figure A5-41: Specific Range at Mach 3.0</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-42">
             <img src="images/A5-42.jpg" alt="" />
             <figcaption>Figure A5-42: Mach 3.0 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-43">
             <img src="images/A5-43.jpg" alt="" />
             <figcaption>Figure A5-43: Specific Range at Mach 3.0</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-44">
             <img src="images/A5-44.jpg" alt="" />
             <figcaption>Figure A5-44: Mach 3.0 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-45">
             <img src="images/A5-45.jpg" alt="" />
             <figcaption>Figure A5-45: Specific Range at Mach 3.0</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-46">
             <img src="images/A5-46.jpg" alt="" />
             <figcaption>Figure A5-46: Mach 3.0 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-47">
             <img src="images/A5-47.jpg" alt="" />
             <figcaption>Figure A5-47: Specific Range at Mach 2.80</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-48">
             <img src="images/A5-48.jpg" alt="" />
             <figcaption>Figure A5-48: Mach 2.8 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-49">
             <img src="images/A5-49.jpg" alt="" />
             <figcaption>Figure A5-49: Specific Range at Mach 2.80</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-50">
             <img src="images/A5-50.jpg" alt="" />
             <figcaption>Figure A5-50: Mach 2.8 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-51">
             <img src="images/A5-51.jpg" alt="" />
             <figcaption>Figure A5-51: Specific Range at Mach 2.80</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-52">
             <img src="images/A5-52.jpg" alt="" />
             <figcaption>Figure A5-52: Mach 2.8 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-53">
             <img src="images/A5-53.jpg" alt="" />
             <figcaption>Figure A5-53: Specific Range at Mach 2.80</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-54">
             <img src="images/A5-54.jpg" alt="" />
             <figcaption>Figure A5-54: Mach 2.8 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-55">
             <img src="images/A5-55.jpg" alt="" />
             <figcaption>Figure A5-55: Specific Range at Mach 2.80</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-56">
             <img src="images/A5-56.jpg" alt="" />
             <figcaption>Figure A5-56: Mach 2.8 Range Factor Parameter</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-57">
             <img src="images/A5-57.jpg" alt="" />
             <figcaption>Figure A5-57: Specific Range at Mach 2.40</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A5-58">
             <img src="images/A5-58.jpg" alt="" />
             <figcaption>Figure A5-58: Mach 2.4 Range Factor Parameter</figcaption>
           </figure>
@@ -8186,7 +8186,7 @@
           <p>Fuel flow/engine = 1835 x 80,000 / 2 x 4810 = 15,250 Lb/hr.</p>
         </section>
       </article>
-      <article data-title="Part VI: Mission Planning Data">
+      <article data-title="Part VI: Mission Planning Data" id="part6">
         <h1>PART VI</h1>
         <h2>MISSION PLANNING</h2>
         <section data-title="Table of Contents">
@@ -8315,140 +8315,140 @@
           <p>
             <u>Example:</u>
           </p>
-          <p>Refer to Figure A6-4, sheet 2 of 2. Find the total distance and time for a 3.15 Mach long range cruise at a forecast ambient temperature of -56°C at cruise. A profile is planned consisting of a heavy weight takeoff at sea level, normal performance climb, cruise without turns, and descent to 20,000 ft starting at 7500 lb fuel remaining. Planned fuel load at brake release is 75,200 lb fuel remaining and read distance and time as 2361 nmi, and 1 hr. 28 min. Re-enter on the 7500 lb remaining descent line at 20,000 feet and read distance and time as 442 nmi, and 21.2 min. Add the distances and times and obtain 2803 nmi and 1 hr, 49.2 min.</p>
-          <p>If forecast temperatures indicate cold day cruise conditions the distance will be increased by two increments. The cruise distance will be longer due to the colder temperature, and the climb distance will be longer due to the climb to higher altitude. Referring again to Figure A6-4, sheet 2 of 2, the shaded diamonds show where the climb intercepts the four cruise lines. For the heavy weight takeoff case the cold day intercept shows a distance of 2062 nm for a cruise at -67.5°C. Extend the climb curve (constant Mach climb) to the altitude where the cold day cruise begins and read a distance of 1999 nm. The difference between these distances (2062 - 1999 = 63) is the increase in range due to cold day cruise conditions. The corresponding time increment is 2.2 minutes for the additional 63 nm of cruise. This results in a total range and time of 2866 nm and 1 hr, 51.4 min.</p>
+          <p>Refer to <a href="#fig-A6-4-2">Figure A6-4, sheet 2 of 2</a>. Find the total distance and time for a 3.15 Mach long range cruise at a forecast ambient temperature of -56°C at cruise. A profile is planned consisting of a heavy weight takeoff at sea level, normal performance climb, cruise without turns, and descent to 20,000 ft starting at 7500 lb fuel remaining. Planned fuel load at brake release is 75,200 lb fuel remaining and read distance and time as 2361 nmi, and 1 hr. 28 min. Re-enter on the 7500 lb remaining descent line at 20,000 feet and read distance and time as 442 nmi, and 21.2 min. Add the distances and times and obtain 2803 nmi and 1 hr, 49.2 min.</p>
+          <p>If forecast temperatures indicate cold day cruise conditions the distance will be increased by two increments. The cruise distance will be longer due to the colder temperature, and the climb distance will be longer due to the climb to higher altitude. Referring again to <a href="#fig-A6-4-2">Figure A6-4, sheet 2 of 2</a>, the shaded diamonds show where the climb intercepts the four cruise lines. For the heavy weight takeoff case the cold day intercept shows a distance of 2062 nm for a cruise at -67.5°C. Extend the climb curve (constant Mach climb) to the altitude where the cold day cruise begins and read a distance of 1999 nm. The difference between these distances (2062 - 1999 = 63) is the increase in range due to cold day cruise conditions. The corresponding time increment is 2.2 minutes for the additional 63 nm of cruise. This results in a total range and time of 2866 nm and 1 hr, 51.4 min.</p>
         </section>
         <section>
           <h3>Turning Performance</h3>
-          <p>A generalized supersonic turn performance chart is presented in Figure A6-15. Turn radius is provided for bank angles from 10° to 45° at true airspeeds (knots) that include Mach from 2.0 to 3.2 at ambient temperatures from -40°C to -70°C. Turn distance and time are plotted for various turn radii and degrees of turn.</p>
-          <p>Maximum afterburner turn capabilities for constant Mach and altitude are presented in Figures A6-16 through A6-20. Performance is shown for various Mach, compressor inlet temperatures and bank angles from 30° to 45. The charts also include the minimum gross weight for pre-planning turns (various bank angles) so that the cruise Mach can be maintained without exceeding the maximum air speeds for normal operation (V<sub>H</sub>).</p>
+          <p>A generalized supersonic turn performance chart is presented in <a href="#fig-A6-15">Figure A6-15</a>. Turn radius is provided for bank angles from 10° to 45° at true airspeeds (knots) that include Mach from 2.0 to 3.2 at ambient temperatures from -40°C to -70°C. Turn distance and time are plotted for various turn radii and degrees of turn.</p>
+          <p>Maximum afterburner turn capabilities for constant Mach and altitude are presented in Figures <a href="#fig-A6-16">A6-16</a> through <a href="#fig-A6-20">A6-20</a>. Performance is shown for various Mach, compressor inlet temperatures and bank angles from 30° to 45. The charts also include the minimum gross weight for pre-planning turns (various bank angles) so that the cruise Mach can be maintained without exceeding the maximum air speeds for normal operation (V<sub>H</sub>).</p>
           <p>These data, in conjunction with the specific range data presented in Part V of this appendix, provide sufficient information to include various turns in the mission plan.</p>
           <p>
             <u>Example:</u>
           </p>
-          <p>For a turn of 180° at Mach 3.00 a forecast ambient temperature of -56.5°C and a bank angle of 30° find the turn radius, distance, and time. Enter Figure A6-15 at Mach 3.00 and -56.5°C ambient temperature and note that true airspeed is 1720 knots. Proceed horizontally to 30°C bank angle and read turn radius as 74.5 nautical miles. Proceed downward to 180° of turn and read turn distance as 235 nautical miles flown.</p>
+          <p>For a turn of 180° at Mach 3.00 a forecast ambient temperature of -56.5°C and a bank angle of 30° find the turn radius, distance, and time. Enter <a href="#fig-A6-15">Figure A6-15</a> at Mach 3.00 and -56.5°C ambient temperature and note that true airspeed is 1720 knots. Proceed horizontally to 30°C bank angle and read turn radius as 74.5 nautical miles. Proceed downward to 180° of turn and read turn distance as 235 nautical miles flown.</p>
           <p>Proceed horizontally to 1720 KTAS and read the turn time as 8.1 minutes.</p>
-          <figure>
+          <figure id="fig-A6-1">
             <img src="images/A6-1_1.jpg" alt="" />
             <figcaption>Figure A6-1 (Sheet 1 of 2): Long Range Cruise Summary - Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-1-2">
             <img src="images/A6-1_2.jpg" alt="" />
             <figcaption>Figure A6-1 (Sheet 2 of 2): Long Range Cruise Summary - Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-2">
             <img src="images/A6-2_1.jpg" alt="" />
             <figcaption>Figure A6-2 (Sheet 1 of 2): Intermediate Altitude Cruise Summary - Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-2-2">
             <img src="images/A6-2_2.jpg" alt="" />
             <figcaption>Figure A6-2 (Sheet 2 of 2): Intermediate Altitude Cruise Summary - Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-3">
             <img src="images/A6-3_1.jpg" alt="" />
             <figcaption>Figure A6-3 (Sheet 1 of 2): Maximum Altitude Cruise Summary - Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-3-2">
             <img src="images/A6-3_2.jpg" alt="" />
             <figcaption>Figure A6-3 (Sheet 2 of 2): Maximum Altitude Cruise Summary - Mach 3.20</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-4">
             <img src="images/A6-4_1.jpg" alt="" />
             <figcaption>Figure A6-4 (Sheet 1 of 2): Long Range Cruise Summary - Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-4-2">
             <img src="images/A6-4_2.jpg" alt="" />
             <figcaption>Figure A6-4 (Sheet 2 of 2): Long Range Cruise Summary - Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-5">
             <img src="images/A6-5_1.jpg" alt="" />
             <figcaption>Figure A6-5 (Sheet 1 of 2): Intermediate Altitude Cruise Summary - Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-5-2">
             <img src="images/A6-5_2.jpg" alt="" />
             <figcaption>Figure A6-5 (Sheet 2 of 2): Intermediate Altitude Cruise Summary - Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-6">
             <img src="images/A6-6_1.jpg" alt="" />
             <figcaption>Figure A6-6 (Sheet 1 of 2): Maximum Altitude Cruise Summary - Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-6-2">
             <img src="images/A6-6_2.jpg" alt="" />
             <figcaption>Figure A6-6 (Sheet 2 of 2): Maximum Altitude Cruise Summary - Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-7">
             <img src="images/A6-7_1.jpg" alt="" />
             <figcaption>Figure A6-7 (Sheet 1 of 2): Long Range Cruise Summary - Mach 3.10</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-7-2">
             <img src="images/A6-7_2.jpg" alt="" />
             <figcaption>Figure A6-7 (Sheet 2 of 2): Long Range Cruise Summary - Mach 3.10</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-8">
             <img src="images/A6-8_1.jpg" alt="" />
             <figcaption>Figure A6-8 (Sheet 1 of 2): Intermediate Altitude Cruise Summary - Mach 3.10</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-8-2">
             <img src="images/A6-8_2.jpg" alt="" />
             <figcaption>Figure A6-8 (Sheet 2 of 2): Intermediate Altitude Cruise Summary - Mach 3.10</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-9">
             <img src="images/A6-9_1.jpg" alt="" />
             <figcaption>Figure A6-9 (Sheet 1 of 2): Maximum Altitude Cruise Summary - Mach 3.10</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-9-2">
             <img src="images/A6-9_2.jpg" alt="" />
             <figcaption>Figure A6-9 (Sheet 2 of 2): Maximum Altitude Cruise Summary - Mach 3.10</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-10">
             <img src="images/A6-10_1.jpg" alt="" />
             <figcaption>Figure A6-10 (Sheet 1 of 2): Long Range Cruise Summary - Mach 3.00</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-10-2">
             <img src="images/A6-10_2.jpg" alt="" />
             <figcaption>Figure A6-10 (Sheet 2 of 2): Long Range Cruise Summary - Mach 3.00</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-11">
             <img src="images/A6-11_1.jpg" alt="" />
             <figcaption>Figure A6-11 (Sheet 1 of 2): Intermediate Altitude Cruise Summary - Mach 3.00</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-11-2">
             <img src="images/A6-11_2.jpg" alt="" />
             <figcaption>Figure A6-11 (Sheet 2 of 2): Intermediate Altitude Cruise Summary - Mach 3.00</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-12">
             <img src="images/A6-12_1.jpg" alt="" />
             <figcaption>Figure A6-12 (Sheet 1 of 2): Maximum Altitude Cruise Summary - Mach 3.00</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-12-2">
             <img src="images/A6-12_2.jpg" alt="" />
             <figcaption>Figure A6-12 (Sheet 2 of 2): Maximum Altitude Cruise Summary - Mach 3.00</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-13">
             <img src="images/A6-13_1.jpg" alt="" />
             <figcaption>Figure A6-13 (Sheet 1 of 2): Long Range Cruise Summary - Mach 2.80</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-13-2">
             <img src="images/A6-13_2.jpg" alt="" />
             <figcaption>Figure A6-13 (Sheet 2 of 2): Long Range Cruise Summary - Mach 2.80</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-14">
             <img src="images/A6-14_1.jpg" alt="" />
             <figcaption>Figure A6-14 (Sheet 1 of 2): Long Range Cruise Summary - Mach 2.40</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-14-2">
             <img src="images/A6-14_2.jpg" alt="" />
             <figcaption>Figure A6-14 (Sheet 2 of 2): Long Range Cruise Summary - Mach 2.40</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-15">
             <img src="images/A6-15.jpg" alt="" />
             <figcaption>Figure A6-15: Turning performance</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-17">
             <img src="images/A6-17.jpg" alt="" />
             <figcaption>Figure A6-17: Maximum A/B turn capability at Mach 3.15</figcaption>
           </figure>
-          <figure>
+          <figure id="fig-A6-19">
             <img src="images/A6-19.jpg" alt="" />
             <figcaption>Figure A6-19: Maximum A/B turn capability at Mach 3.00</figcaption>
           </figure>
